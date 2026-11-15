@@ -9,7 +9,7 @@
     "scope": "Sélection étendue de 26 modèles de 6 marques, autour de 280 à 650 €, plus des références à surveiller. Ce n'est pas un inventaire exhaustif du marché.",
     "priceNotice": "Instantané du 15 novembre 2026, pas des prix en temps réel. Prix article TTC affiché ; frais, TVA de destination, vendeur, variante, disponibilité et délai à recontrôler au panier. Aucune commande n'a été effectuée.",
     "evidenceNotice": "Fiches fabricant, essais indépendants, avis clients et jugements éditoriaux sont distingués. NC signifie non confirmé ou non relevé, jamais absence certaine. Les chiffres de laboratoire ne sont pas directement comparables entre organismes.",
-    "privacyNotice": "Aucun compte, serveur, publicité, traceur, police distante ou appel réseau automatique. Les liens externes ne s'ouvrent que sur demande. Préférences et prix personnels sont conservés dans le navigateur si son stockage local est disponible."
+    "privacyNotice": "Aucun compte, publicité, outil d'analyse ou police distante dans l'application. Préférences et prix personnels restent dans le navigateur. Les photos se chargent depuis les sites officiels et leurs CDN, sans en-tête Referer : ces hôtes voient les requêtes d'images et l'adresse IP, mais ne reçoivent ni vos réglages ni vos relevés personnels. Les données restent utilisables sans les photos."
   },
   "sources": [
     {"id":"rr-shop","type":"Prix fabricant","label":"Roborock France : catalogue public, variantes et disponibilités","url":"https://fr.roborock.com/products.json?limit=250","note":"Les variantes Set sont distinctes des variantes standard. Prix et état de disponibilité lus dans le catalogue public ; complétés par les fiches .js pour le 2 Pro Set et le Curv 2 Flow."},

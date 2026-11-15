@@ -5,7 +5,8 @@ OWN-WORLD: User-directed white and friendly blue, cool neutral dividers,
 Segoe UI and readable comparison tables. The cp token API is retained.
 Manufacturer facts, tests, customer reports and uncertainty stay distinct.
 STORY: Choose a buying scope, inspect useful differences, measure the space,
-then verify the actual delivered offer. No purchase or network automation.
+then verify the delivered offer. No purchases or live-price requests; official
+photos load on demand.
 FIRST VIEWPORT: Compact title and navigation, a concise decision strip,
 quiet filters at left and the inventory in view. No oversized promotional hero.
 FORM: Operate, a white-and-blue buying workbench with explicit evidence.
@@ -16,7 +17,7 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Comparateur local et sourcé d'aspirateurs robots laveurs pour la Belgique, budget 500 €, Black Friday 2026 et Home Assistant.">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; connect-src 'none'; font-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob: __IMAGE_HOSTS__; connect-src 'none'; font-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'">
   <title>Le bon robot — Comparateur Belgique</title>
   <script>
     (() => {
@@ -28,6 +29,7 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
   <style>
     :root {
       color-scheme: light;
+      --topbar-height: 68px;
       --cp-bg: #ffffff;
       --cp-bg-elevated: #f8fafc;
       --cp-surface: #ffffff;
@@ -159,15 +161,8 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
     .tabs button:hover { background: var(--cp-accent-soft); }
     .tabs button[aria-current="page"]:hover { background: var(--cp-accent-hover); }
     #content { min-height: 420px; }
-    .editor-pick { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 20px; padding: 20px 24px; background: var(--cp-accent-soft); border: 1px solid var(--cp-border); border-radius: 14px; margin-bottom: 16px; }
-    .editor-pick h2 { font-size: 19px; margin-bottom: 8px; }
-    .editor-pick p { max-width: 78ch; font-size: 14px; }
-    .editor-pick .pick-actions { display: flex; flex-direction: column; justify-content: center; align-items: stretch; gap: 8px; min-width: 168px; }
-    .eyeline { display: inline; font-weight: 600; color: var(--cp-accent); }
-    .shortlist-links { display: flex; gap: 8px 20px; flex-wrap: wrap; font-size: 13px; margin-bottom: 20px; }
-    .shortlist-links button { font-size: 13px; text-align: left; }
     .result-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 12px; }
-    .result-head h2 { margin: 0; font-size: 19px; }
+    .result-head > :is(h1,h2) { margin: 0; font-size: 19px; }
     .result-head select { width: auto; min-width: 195px; font-size: 13px; }
     .segmented { display: inline-flex; border: 1px solid var(--cp-border); border-radius: 10px; overflow: hidden; }
     .segmented button { border: 0; border-radius: 0; min-height: 36px; font-size: 13px; }
@@ -179,7 +174,7 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
     th, td { padding: 15px 16px; vertical-align: top; border-bottom: 1px solid var(--cp-border); }
     tbody tr:last-child > * { border-bottom: 0; }
     tbody tr:hover > td, tbody tr:hover > th { background: var(--cp-bg-elevated); }
-    .models-table { min-width: 930px; }
+    .models-table { min-width: 840px; }
     .models-table .select-cell { width: 42px; padding-right: 2px; padding-top: 23px; }
     .models-table .name-cell { min-width: 210px; max-width: 290px; }
     .name-button { display: block; min-height: 0; border: 0; border-radius: 0; background: none; padding: 0; text-align: left; font-size: 15px; font-weight: 650; line-height: 1.35; color: var(--cp-text); margin: 0 0 5px; }
@@ -192,29 +187,92 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
     .row-selected > td { background: var(--cp-accent-soft); }
     .risk-line { font-size: 12px; font-weight: 600; color: var(--cp-accent); margin-top: 7px; }
     .mini-source { display: inline-block; font-size: 12px; margin-right: 10px; margin-top: 4px; }
-    .card-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(280px,1fr)); gap: 16px; }
-    .robot-card { background: var(--cp-surface); border: 1px solid var(--cp-border); border-radius: 14px; padding: 20px; min-width: 0; box-shadow: var(--cp-shadow); }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(250px,1fr)); gap: 24px 20px; }
+    .robot-card { background: var(--cp-surface); border: 1px solid var(--cp-border); border-radius: 12px; padding: 16px; min-width: 0; display: flex; flex-direction: column; }
     .robot-card.selected { border-color: var(--cp-accent); }
-    .robot-card h3 { margin: 10px 0; }
+    .robot-card h3 { margin: 12px 0 8px; }
     .robot-card .name-button { font-size: 18px; }
-    .robot-card .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
-    .robot-card p { font-size: 13px; margin-top: 12px; }
-    .card-specs { margin: 14px 0; border-top: 1px solid var(--cp-border); }
-    .card-specs div { display: flex; justify-content: space-between; gap: 12px; padding-top: 9px; font-size: 13px; }
-    .card-specs span:last-child { text-align: right; max-width: 62%; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; min-height: 28px; }
+    .card-top .check { font-size: 12px; min-height: 32px; align-items: center; }
+    .card-photo { display: block; width: 100%; padding: 8px; border: 0; border-radius: 8px; margin-top: 8px; background: var(--cp-surface); }
+    .card-photo:hover { background: var(--cp-bg-elevated); }
+    .photo-frame { display: block; position: relative; width: 100%; height: 164px; }
+    .product-photo { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .photo-status { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: var(--cp-text-soft); font-size: 12px; }
+    .photo-status svg { width: 32px; height: 32px; }
+    .photo-origin { display: inline-block; font-size: 11px; color: var(--cp-text-soft); margin-top: 4px; }
+    .photo-note { display: block; font-size: 11px; color: var(--cp-text-soft); }
+    .photo-missing { height: 164px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: var(--cp-text-soft); font-size: 12px; background: var(--cp-bg-elevated); border-radius: 8px; }
+    .photo-missing svg { width: 40px; height: 40px; }
+    .photo-frame.photo-list { width: 80px; height: 76px; flex: 0 0 auto; }
+    .photo-missing.photo-list { width: 80px; height: 76px; }
+    .photo-missing.photo-list span { display: none; }
+    .model-identity { display: flex; align-items: center; gap: 12px; }
+    .model-identity > div { min-width: 0; }
+    .price-meta { display: block; font-size: 12px; color: var(--cp-text-soft); margin-top: 4px; line-height: 1.4; }
+    .compact-price { min-height: 48px; }
+    .compact-price .money { font-size: 23px; }
+    .mini-specs { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin: 16px 0 12px; font-size: 13px; }
+    .mini-specs > span, .ha-mark, .sensor { display: inline-flex; align-items: center; gap: 5px; }
+    .ui-icon { width: 18px; height: 18px; flex: 0 0 auto; vertical-align: middle; }
+    .mop-mark { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+    .mop-mark svg { width: 42px; height: 30px; color: var(--cp-accent); flex: 0 0 auto; }
+    .ha-mark { color: var(--cp-text-muted); font-size: 12px; }
+    .sensor-strip { display: flex; flex-wrap: wrap; gap: 8px 14px; padding-top: 12px; border-top: 1px solid var(--cp-border); color: var(--cp-text-muted); font-size: 12px; }
+    .card-bottom { margin-top: auto; }
+    .card-bottom > .text { margin-top: 10px; font-size: 13px; }
+    .risk-brief { margin: 12px 0 0; font-size: 12px; }
+    .risk-brief summary { font-weight: 600; color: var(--cp-accent); }
+    .risk-brief p { margin: 8px 0 0; font-weight: 400; color: var(--cp-text); }
+    .buying-note { margin: 10px 0 0; font-size: 12px; font-weight: 600; color: var(--cp-accent); }
+    .inventory-context { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin: 0 0 16px; font-size: 12px; color: var(--cp-text-soft); }
+    .inventory-context summary { color: var(--cp-text-muted); }
+    .inventory-context details[open] { flex-basis: 100%; }
+    .inventory-context details p { margin: 8px 0; max-width: 75ch; }
+    .disclosure { border-bottom: 1px solid var(--cp-border); margin: 0; }
+    .disclosure > summary { padding: 16px 0; font-size: 14px; font-weight: 600; }
+    .disclosure-body { padding: 4px 0 24px; }
+    .disclosure-body > p { max-width: 75ch; }
+    .disclosure .section:last-child { margin-bottom: 0; }
+    .disclosure-body .section + .section { margin-top: 24px; }
+    .photo-credits { color: var(--cp-text-soft); font-size: 12px; line-height: 1.5; margin-top: 10px; }
+    .photo-credits a { font-size: inherit; }
+    .photo-credits-list { padding-left: 20px; font-size: 13px; }
+    .legend-line { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; color: var(--cp-text-muted); font-size: 12px; }
     .empty { border: 1px dashed var(--cp-border-strong); border-radius: 12px; padding: 32px; background: var(--cp-surface); max-width: 780px; }
     .empty p { max-width: 65ch; }
     .method-note { margin: 14px 0 24px; font-size: 13px; color: var(--cp-text-soft); max-width: 95ch; }
     .sticky-compare { position: fixed; bottom: 16px; left: 300px; right: 24px; max-width: 1450px; margin: auto; z-index: 11; border: 1px solid var(--cp-border); border-radius: 12px; padding: 12px 16px; background: var(--cp-surface); box-shadow: var(--cp-shadow); display: flex; justify-content: space-between; align-items: center; gap: 16px; }
     .sticky-compare p { margin: 0; font-size: 13px; }
-    .compare-table { min-width: 720px; table-layout: fixed; }
-    .compare-table thead th { position: sticky; top: 0; }
-    .compare-table th:first-child { width: 176px; position: sticky; left: 0; z-index: 2; background: var(--cp-surface-soft); }
-    .compare-table th:not(:first-child) { width: 250px; }
-    .compare-table td { min-width: 220px; overflow-wrap: anywhere; }
+    .comparison-board { --criterion-width: 160px; --robot-width: 240px; margin-bottom: 20px; }
+    .comparison-board table { width: 100%; min-width: calc(var(--criterion-width) + var(--model-count) * var(--robot-width)); table-layout: fixed; }
+    .comparison-board col.criterion-column { width: var(--criterion-width); }
+    .compare-table th:first-child { position: sticky; left: 0; z-index: 4; background: var(--cp-surface-soft); }
+    .compare-table td { min-width: 0; overflow-wrap: anywhere; }
+    .compare-table th { overflow-wrap: anywhere; }
+    .comparison-sticky { position: sticky; top: var(--topbar-height); z-index: 8; background: var(--cp-surface); border-radius: 12px 12px 0 0; box-shadow: var(--cp-shadow); }
+    .comparison-head-scroll { overflow-x: auto; overflow-y: hidden; overscroll-behavior-x: none; scrollbar-width: none; border: 1px solid var(--cp-border); border-bottom: 0; border-radius: 12px 12px 0 0; }
+    .comparison-head-scroll::-webkit-scrollbar { display: none; }
+    .compare-heading-table th { background: var(--cp-bg-elevated); padding: 10px 16px; }
+    .compare-heading-table th:first-child { position: sticky; left: 0; z-index: 3; background: var(--cp-surface-soft); }
+    .compare-heading-table .name-button { min-height: 44px; margin: 0; width: 100%; }
+    .compare-scroll { border-radius: 0 0 12px 12px; overflow-x: auto; overflow-y: hidden; overscroll-behavior-x: none; }
+    .comparison-board :is(th,td) { scroll-margin-top: calc(var(--topbar-height) + 100px); }
+    .scroll-hint { font-size: 12px; color: var(--cp-text-soft); margin: 0 0 12px; }
     .compare-table .group-row th { background: var(--cp-bg-elevated); color: var(--cp-accent); font-size: 14px; padding-top: 18px; }
+    .compare-table .group-row th { position: static; }
+    .compare-table .group-row th > span { position: sticky; left: 16px; }
     .compare-table .same-row { color: var(--cp-text-soft); }
     .compare-table .changed td { background: var(--cp-accent-soft); }
+    .compare-core .photo-frame { height: 120px; margin-bottom: 8px; }
+    .compare-core .photo-missing { height: 120px; margin-bottom: 12px; }
+    .compare-core .money { font-size: 20px; }
+    .compare-core .name-button { font-size: 16px; }
+    .compare-core .price-meta { font-weight: 400; }
+    .compare-core th, .compare-core td { padding: 14px 16px; }
+    .compare-core .mop-mark { flex-direction: column; align-items: flex-start; gap: 4px; }
+    .compare-core .changed td { background: var(--cp-surface); }
+    .compare-core .same-row { color: var(--cp-text); }
     .section { margin-bottom: 32px; }
     .section + .section { padding-top: 28px; border-top: 1px solid var(--cp-border); }
     .two-col { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 24px; }
@@ -234,13 +292,19 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
     .sources-list h3 { margin: 7px 0 4px; font-size: 15px; }
     .sources-list p { max-width: 92ch; font-size: 13px; margin: 6px 0; }
     .sources-list .source-url { display: block; font-size: 12px; overflow-wrap: anywhere; }
-    .detail-header { padding-bottom: 20px; border-bottom: 1px solid var(--cp-border); margin-bottom: 24px; }
-    .detail-header h2 { font-size: 30px; margin-bottom: 10px; }
-    .detail-lead { display: grid; grid-template-columns: minmax(0,1fr) 230px; gap: 24px; margin-top: 18px; }
-    .detail-price { padding: 18px; background: var(--cp-surface); border: 1px solid var(--cp-border); border-radius: 12px; }
-    .detail-price .money { font-size: 27px; }
-    .key-facts { display: flex; flex-wrap: wrap; gap: 12px 24px; margin: 16px 0; font-size: 14px; }
-    .key-facts strong { display: block; font-size: 16px; }
+    .detail-header { padding-bottom: 16px; margin-bottom: 8px; }
+    .detail-header :is(h1,h2) { font-size: 30px; margin-bottom: 10px; }
+    .product-overview { display: grid; grid-template-columns: minmax(200px,.85fr) minmax(0,1.15fr); align-items: center; gap: 32px; padding: 8px 0 28px; margin-bottom: 8px; }
+    .detail-visual .photo-frame, .detail-visual .photo-missing { height: 280px; }
+    .detail-visual { margin: 0; text-align: center; }
+    .detail-summary .money { font-size: 30px; }
+    .detail-summary .mini-specs { gap: 16px 24px; margin: 24px 0; }
+    .detail-summary .mop-mark svg { width: 58px; height: 42px; }
+    .detail-summary .sensor-strip { margin-bottom: 20px; padding-top: 16px; gap: 12px 20px; }
+    .detail-summary .buying-note, .detail-summary .risk-brief { margin-bottom: 16px; }
+    .detail-summary .row-actions button { min-height: 44px; }
+    .detail-facts { display: flex; flex-wrap: wrap; gap: 16px 24px; margin: 20px 0; font-size: 12px; color: var(--cp-text-muted); }
+    .detail-facts strong { display: block; margin-bottom: 3px; font-size: 16px; color: var(--cp-text); font-weight: 600; }
     .facts { margin: 0; }
     .facts > div { display: grid; grid-template-columns: minmax(145px,.8fr) minmax(0,1.3fr); gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--cp-border); font-size: 14px; }
     .facts dt { color: var(--cp-text-soft); }
@@ -288,7 +352,9 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
     .suffix-list > div { display: grid; grid-template-columns: 150px minmax(0,1fr); gap: 20px; padding: 15px 0; border-bottom: 1px solid var(--cp-border); }
     .suffix-list dt { font-weight: 650; color: var(--cp-accent); }
     .suffix-list dd { margin: 0; }
-    .export-box { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--cp-border); }
+    .export-box { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--cp-border); font-size: 13px; }
+    .export-box > summary { font-weight: 600; }
+    .export-box[open] > summary { margin-bottom: 16px; }
     .export-box select { margin: 8px 0; }
     footer { padding-top: 32px; margin-top: 36px; border-top: 1px solid var(--cp-border); max-width: 105ch; font-size: 12px; color: var(--cp-text-soft); }
     .desktop-hint { display: none; }
@@ -300,8 +366,6 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
       main { padding: 24px 20px 110px; }
       .topbar { padding: 0 20px; }
       .sticky-compare { left: 256px; right: 16px; }
-      .editor-pick { grid-template-columns: 1fr; gap: 12px; }
-      .editor-pick .pick-actions { flex-direction: row; justify-content: flex-start; }
       .three-col { grid-template-columns: 1fr 1fr; }
       .tco-inputs { grid-template-columns: 1fr 1fr; }
     }
@@ -316,13 +380,13 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
       .sticky-compare { left: 16px; }
       .top-actions > .fine { display: none; }
       .two-col { grid-template-columns: 1fr; gap: 24px; }
-      .detail-lead { grid-template-columns: 1fr; gap: 16px; }
-      .detail-price { max-width: 400px; }
+      .product-overview { gap: 24px; }
       .page-heading .meta-badge { display: none; }
       .desktop-hint { display: block; }
       .page-heading { margin-bottom: 14px; }
     }
     @media(max-width: 540px) {
+      :root { --topbar-height: 60px; }
       .topbar { height: 60px; padding: 0 16px; gap: 8px; }
       .wordmark { font-size: 16px; gap: 7px; }
       .top-actions { gap: 4px; }
@@ -333,11 +397,37 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
       .page-heading p { font-size: 13px; }
       .tabs { margin-bottom: 20px; }
       .tabs button { padding: 10px 11px; }
-      .editor-pick { padding: 18px; }
-      .editor-pick .pick-actions { flex-direction: column; }
-      .editor-pick h2 { font-size: 19px; }
-      .shortlist-links { gap: 4px; }
-      .shortlist-links button { display: block; width: 100%; }
+      .card-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+      .robot-card { padding: 12px; }
+      .robot-card .name-button { font-size: 15px; }
+      .card-top { gap: 4px; }
+      .card-top .badge { font-size: 10px; padding: 2px 4px; }
+      .card-top .check span { display: none; }
+      .card-photo { padding: 4px 0; }
+      .photo-frame, .photo-missing { height: 120px; }
+      .compact-price .money { font-size: 20px; }
+      .price-meta { font-size: 11px; }
+      .robot-card .mini-specs { gap: 6px 12px; margin: 12px 0; font-size: 12px; }
+      .robot-card .mop-mark svg { width: 32px; height: 24px; }
+      .robot-card .sensor-strip .sensor { display: none; }
+      .robot-card .sensor-strip { margin-top: 12px; font-size: 11px; }
+      .robot-card .ha-mark { font-size: 11px; }
+      .card-bottom > .text { font-size: 12px; min-height: 36px; }
+      .product-overview { grid-template-columns: minmax(0,1fr); gap: 16px; padding-bottom: 20px; }
+      .detail-visual .photo-frame, .detail-visual .photo-missing { height: 180px; }
+      .detail-summary .mini-specs { margin: 20px 0; }
+      .detail-summary .money { font-size: 27px; }
+      .detail-header :is(h1,h2) { margin-bottom: 4px; }
+      .comparison-board { --criterion-width: 104px; --robot-width: calc((100% - var(--criterion-width)) / 2); }
+      .compare-data-table :is(th,td) { padding: 12px 10px; font-size: 12px; }
+      .compare-heading-table th { padding: 8px 10px; }
+      .compare-heading-table .name-button { font-size: 12px; line-height: 1.35; }
+      .compare-heading-table .brand { font-size: 11px; }
+      .compare-heading-table th:first-child { font-size: 12px; }
+      .compare-core .photo-frame { height: 90px; }
+      .compare-core .money { font-size: 17px; }
+      .compare-core .card-photo { padding: 0; margin-top: 0; }
+      .compare-core th, .compare-core td { padding: 12px 10px; }
       .three-col, .form-grid, .size-selectors { grid-template-columns: 1fr; }
       .tco-inputs { grid-template-columns: 1fr 1fr; }
       .sticky-compare { bottom: 10px; left: 10px; right: 10px; padding: 10px 12px; gap: 10px; }
@@ -349,18 +439,13 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
       .result-head { align-items: flex-start; }
       .result-head .toolbar { width: 100%; }
       .result-head select { flex: 1; min-width: 150px; }
-      .detail-header h2 { font-size: 26px; }
+      .detail-header :is(h1,h2) { font-size: 26px; }
       .callout { padding: 14px 16px; }
       .sizing-form { padding: 16px; }
       .range-pair, .suffix-list > div { grid-template-columns: 1fr; gap: 10px; }
       .mobile-only { display: inline; }
       .desktop-only { display: none; }
       .page-heading h1 { font-size: 25px; line-height: 1.2; }
-      .editor-pick { padding: 14px 16px; gap: 12px; }
-      .editor-pick h2 { font-size: 17px; margin: 0; }
-      .editor-pick p, .shortlist-links { display: none; }
-      .editor-pick .pick-actions { flex-direction: row; gap: 8px; }
-      .editor-pick .pick-actions button { flex: 1; padding: 8px 7px; font-size: 12px; }
     }
     @media(prefers-reduced-motion: no-preference) {
       button { transition: background-color 140ms ease-out, border-color 140ms ease-out; }
@@ -381,6 +466,9 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
       .compare-table th:not(:first-child) { width: auto; }
       .compare-table td { min-width: 0; }
       .comparison-section { page: comparison; }
+      .comparison-sticky { display: none; }
+      .comparison-head-scroll { overflow: visible; }
+      .compare-data-table thead.sr-only { position: static; width: auto; height: auto; margin: 0; overflow: visible; clip: auto; white-space: normal; display: table-header-group; }
       @page comparison { size: A4 landscape; }
       .prose { max-width: none; }
       .prose h2 { break-after: avoid; }
@@ -400,9 +488,8 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
       Le bon robot
     </a>
     <div class="top-actions">
-      <span class="fine">Belgique · 15 novembre 2026 · hors ligne</span>
+      <span class="fine">Belgique</span>
       <button id="theme-button" class="small" type="button" aria-label="Changer le thème">Thème</button>
-      <button type="button" class="small" data-act="print">Imprimer</button>
     </div>
   </header>
   <div class="shell">
@@ -411,24 +498,27 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
         <summary>Vos critères <span id="filter-count" class="fine"></span></summary>
         <form id="filters">
           <div class="filter-group">
-            <div class="field"><label for="search">Rechercher un modèle</label><input id="search" type="search" placeholder="Saros, L40s, rouleau…" data-setting="q" autocomplete="off"></div>
+            <div class="field"><label for="search">Modèle</label><input id="search" type="search" placeholder="Saros, L40s…" data-setting="q" autocomplete="off"></div>
             <div class="field">
               <div class="budget-row"><label for="budget-number" class="field-label">Budget</label><div class="budget-input"><input id="budget-number" type="number" min="100" max="2000" step="1" value="500" data-setting="budget" aria-label="Budget en euros"><span>€</span></div></div>
               <input id="budget-range" type="range" min="100" max="2000" step="10" value="500" data-setting="budget" aria-label="Ajuster le budget">
-              <label class="check"><input type="checkbox" data-setting="stretch"><span>Voir aussi jusqu'à <strong id="stretch-label">650 €</strong><br><span class="fine">+150 €, dépassement signalé</span></span></label>
+              <label class="check"><input type="checkbox" data-setting="stretch"><span>Jusqu'à <strong id="stretch-label">650 €</strong> (+150 €)</span></label>
             </div>
-            <div class="field"><label for="purchase-scope">Prix utilisé pour le tri</label><select id="purchase-scope" data-setting="purchase"><option value="be">Offres accessibles Belgique</option><option value="amazon">Amazon Belgique uniquement</option><option value="cross">Inclure FR / DE à confirmer</option></select></div>
+            <div class="field"><label for="purchase-scope">Offres</label><select id="purchase-scope" data-setting="purchase"><option value="be">Belgique</option><option value="amazon">Amazon Belgique</option><option value="cross">Belgique + FR / DE à vérifier</option></select></div>
             <div class="field"><label for="brand-filter">Marque</label><select id="brand-filter" data-setting="brand"><option value="">Toutes les marques</option></select></div>
-            <div class="field"><label for="mop-filter">Lavage</label><select id="mop-filter" data-setting="mop"><option value="">Patins et rouleaux</option><option value="rouleau">Rouleau rincé en continu</option><option value="rotatifs">Deux patins rotatifs</option></select></div>
+            <div class="field"><label for="mop-filter">Lavage</label><select id="mop-filter" data-setting="mop"><option value="">Tous les mécanismes</option><option value="rouleau">Rouleau rincé</option><option value="rotatifs">2 patins rotatifs</option></select></div>
           </div>
           <div class="filter-group">
-            <div class="field"><label for="ha-filter">Home Assistant</label><select id="ha-filter" data-setting="ha"><option value="">Toutes les situations</option><option value="core">Core : famille documentée</option><option value="hacs">HACS : modèle nommé</option><option value="local">Toutes fonctions hors cloud confirmées</option></select></div>
+            <div class="field"><label for="ha-filter">Home Assistant</label><select id="ha-filter" data-setting="ha"><option value="">Tous</option><option value="core">Core documenté</option><option value="hacs">HACS documenté</option><option value="local">Entièrement hors cloud confirmé</option></select></div>
+            <details class="filter-details">
+              <summary>Caméras & autres critères</summary>
             <div class="field"><label for="camera-filter">Caméra de reconnaissance</label><select id="camera-filter" data-setting="camera"><option value="">Avec, sans ou NC</option><option value="yes">Caméra confirmée</option><option value="no">Sans RGB établie</option></select></div>
-            <div class="field"><label for="remote-camera-filter">Caméra accessible à distance</label><select id="remote-camera-filter" data-setting="remoteCamera"><option value="">Toutes les situations</option><option value="yes">Vidéo en direct confirmée</option><option value="no">Pas de vidéo en direct documentée</option><option value="unknown">Accès vidéo non confirmé</option></select><p class="fine" style="margin-top:6px">Caméra IA ≠ vidéo consultable. La vidéo de l'app ne prouve pas sa disponibilité dans HA.</p></div>
+            <div class="field"><label for="remote-camera-filter">Vidéo dans l'app</label><select id="remote-camera-filter" data-setting="remoteCamera"><option value="">Oui, non ou NC</option><option value="yes">Oui, confirmé</option><option value="no">Non, documenté</option><option value="unknown">NC</option></select><p class="fine" style="margin-top:6px">Caméra IA ≠ vidéo distante ≠ vidéo dans HA.</p></div>
             <label class="check"><input type="checkbox" data-setting="heat"><span>Chauffage du lavage confirmé</span></label>
             <label class="check"><input type="checkbox" data-setting="tested"><span>Avec essai indépendant exploité</span></label>
             <label class="check"><input type="checkbox" data-setting="frandroidOnly"><span>Avec un test Frandroid exact</span></label>
-            <label class="check"><input type="checkbox" data-setting="unknownPrices"><span>Inclure les prix non confirmés / absents</span></label>
+            <label class="check"><input type="checkbox" data-setting="unknownPrices"><span>Inclure les prix NC</span></label>
+            </details>
             <details class="filter-details">
               <summary>Place disponible</summary>
               <div class="field"><label for="clearance-filter">Hauteur libre sous les meubles (cm)</label><input id="clearance-filter" type="number" min="0" max="100" step="0.1" placeholder="Sans limite" data-setting="clearance"></div>
@@ -449,22 +539,23 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
             </details>
           </div>
           <div class="sidebar-note">
-            <button type="button" class="small" data-act="reset-filters">Réinitialiser les filtres</button>
-            <p class="fine" style="margin-top:12px">Vos prix personnels et votre sélection sont conservés. Tout reste dans ce navigateur.</p>
+            <button type="button" class="small" data-act="reset-filters">Réinitialiser</button>
           </div>
-          <div class="export-box">
-            <label for="export-type" class="field-label">Emporter la recherche</label>
+          <details class="export-box">
+            <summary>Exports & réglages</summary>
+            <label for="export-type" class="field-label">Exporter</label>
             <select id="export-type"><option value="report">Analyse complète (.md)</option><option value="csv">Tableau filtré (.csv)</option><option value="data">Données et sources (.json)</option><option value="settings">Vos préférences et relevés (.json)</option></select>
             <div class="row-actions"><button type="button" class="small" data-act="export">Exporter</button><button type="button" class="small" data-act="import">Importer vos réglages</button></div>
             <input id="import-file" class="sr-only" type="file" accept=".json,application/json" aria-label="Importer un fichier de préférences">
-            <p class="fine" style="margin-top:10px">Déplacer le fichier HTML peut changer son stockage. Exportez vos réglages avant.</p>
-          </div>
+            <button type="button" class="small" data-act="print">Imprimer</button>
+            <p class="fine" style="margin-top:10px">Réglages et prix personnels : ce navigateur uniquement. Exportez-les pour les transférer.</p>
+          </details>
         </form>
       </details>
     </aside>
     <main>
       <div class="page-heading">
-        <div><h1><span class="desktop-only">Le bon robot pour votre quotidien.</span><span class="mobile-only">Quel robot pour vos sols ?</span></h1><p class="muted">Prix belges, lavage, dimensions et domotique en clair.<br>26 modèles · Budget de départ 500 € · Sols durs en priorité.</p></div>
+        <h1>Quel robot pour vos sols ?</h1>
         <span class="meta-badge" id="dataset-badge">26 modèles · 6 marques</span>
       </div>
       <div id="notice" class="notice" role="status" hidden><span id="notice-text"></span><button type="button" class="text small" data-act="dismiss" aria-label="Fermer le message">Fermer</button></div>
@@ -474,15 +565,14 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
         <button type="button" data-nav="ranges">Gammes</button>
         <button type="button" data-nav="compare">Comparer <span id="compare-count">0</span></button>
         <button type="button" data-nav="sizes">Dimensions</button>
-        <button type="button" data-nav="offers">Prix & coût</button>
+        <button type="button" data-nav="offers">Prix</button>
         <button type="button" data-nav="analysis">Analyse</button>
         <button type="button" data-nav="ha">Home Assistant</button>
         <button type="button" data-nav="sources">Sources</button>
       </nav>
       <div id="content" tabindex="-1"></div>
       <footer>
-        <p><strong>Recherche du 15 novembre 2026.</strong> Prix archivés, pas de synchronisation automatique. Avant achat : total TTC belge, port, vendeur, variante, délai, dimensions installées et firmware à vérifier. NC signifie non confirmé ou non relevé, pas absence certaine.</p>
-        <p>Ce fichier fonctionne sans installation ni connexion. Les avis visibles et les essais cités ne mesurent pas la fiabilité de tous les lots. Aucun achat ni changement de compte n'a été effectué.</p>
+        <details><summary>Prix archivés · NC ≠ Non · Méthode</summary><p style="margin-top:12px">Recherche du 15 novembre 2026, sans prix en temps réel. Avant achat : total TTC belge, port, vendeur, variante, délai, installation et firmware à vérifier. NC = non confirmé ou non relevé, jamais une absence certaine.</p><p>Les essais et avis cités ne mesurent pas la fiabilité de tous les lots. L'indice porte sur l'équipement documenté, pas la qualité de nettoyage. Comparaison et réglages fonctionnent hors ligne ; seules les photos officielles nécessitent une connexion. Aucun réglage ni prix personnel n'est transmis aux fabricants.</p></details>
       </footer>
     </main>
   </div>
@@ -490,7 +580,7 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
     <p id="tray-label"></p>
     <div class="row-actions"><button type="button" class="text small" data-act="clear-selection">Vider</button><button type="button" class="primary" data-nav="compare" id="tray-button">Comparer</button></div>
   </div>
-  <noscript><div class="callout">Ce comparateur autonome a besoin de JavaScript pour ses filtres et tableaux. Aucune connexion Internet n'est requise. L'analyse Markdown fournie séparément reste lisible sans JavaScript.</div></noscript>
+  <noscript><div class="callout">Activez JavaScript pour utiliser les filtres et tableaux. Aucun compte n'est nécessaire.</div></noscript>
   <script id="market-data" type="application/json">__MARKET_DATA__</script>
   <script>
   (() => {
@@ -519,7 +609,7 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
     const defaults = () => ({
       version:1,q:"",brand:"",mop:"",ha:"",camera:"",remoteCamera:"",frandroidOnly:false,budget:500,stretch:true,purchase:"be",heat:false,tested:false,unknownPrices:true,
       clearance:0,margin:5,dockHeight:0,weights:{...PRESETS.hard},preset:"hard",selected:[],view:"models",sort:"editorial",
-      cards:window.matchMedia("(max-width:680px)").matches,differences:false,current:"rr-10r",sourceQuery:"",sourceType:"",
+      cards:true,differences:false,current:"rr-10r",sourceQuery:"",sourceType:"",
       diagramA:"rr-10r",diagramB:"rr-flow",diagramMode:"front",
       niche:{width:0,depth:0,height:0,front:70,top:30,side:5},
       tco:{years:3,consumables:50,detergent:20,kwh:30,rate:.35},
@@ -603,6 +693,58 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
     }
     function haProfile(m) { return DATA.haProfiles[m.ha]; }
     function haKind(m) { return m.haConditional?"conditional":haProfile(m).kind; }
+    function icon(name) {
+      const paths = {
+        image:'<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.5"/><path d="m3 17 5-5 4 4 4-6 5 7"/>',
+        height:'<path d="M5 3v18m-3-3 3 3 3-3M2 6l3-3 3 3M12 5h8v15h-8zM12 10h3m-3 5h3"/>',
+        camera:'<path d="M8 5 6 8H3v12h18V8h-3l-2-3z"/><circle cx="12" cy="13" r="3.5"/>',
+        video:'<rect x="3" y="6" width="12" height="12" rx="2"/><path d="m15 10 6-3v10l-6-3z"/>',
+        home:'<path d="m3 11 9-8 9 8M5 10v11h14V10M10 21v-7h4v7"/>',
+        info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/>'
+      };
+      return `<svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name]}</svg>`;
+    }
+    function mopGraphic(m) {
+      const roller=m.mop==="rouleau";
+      const drawing=roller
+        ? '<rect x="6" y="6" width="44" height="28" rx="12" fill="none"/><rect x="13" y="17" width="30" height="11" rx="5" fill="var(--cp-accent-soft)"/><path d="M18 18v9m6-9v9m6-9v9m6-9v9M24 7c0 3-4 4-4 7m12-7c0 3-4 4-4 7" fill="none"/>'
+        : '<path d="M8 24a21 21 0 0 1 40 0" fill="none"/><circle cx="19" cy="24" r="9" fill="var(--cp-accent-soft)"/><circle cx="38" cy="24" r="9" fill="var(--cp-accent-soft)"/><path d="m14 21 5-3 4 4m-5 8-4-4m28-5-5-3-4 4m5 8 4-4" fill="none"/>';
+      return `<span class="mop-mark" title="${roller?"Rouleau rincé en continu":"Deux patins rotatifs"}"><svg viewBox="0 0 56 40" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${drawing}</svg><span>${roller?"Rouleau":"2 patins"}</span></span>`;
+    }
+    function productPhoto(m, variant="") {
+      if (!m.photo) return `<span class="photo-missing ${variant}" role="img" aria-label="Photo non disponible pour ${esc(labelOf(m))}">${icon("image")}<span>Photo non disponible</span></span>`;
+      return `<span class="photo-frame ${variant}" data-photo-state="loading"><img class="product-photo" data-photo-model="${m.id}" src="${esc(m.photo.src)}" alt="${esc(m.photo.alt)}" width="${m.photo.width}" height="${m.photo.height}" loading="${variant==="photo-detail"?"eager":"lazy"}" decoding="async" referrerpolicy="no-referrer"><span class="photo-status" aria-hidden="true">Chargement…</span></span>`;
+    }
+    function photoCredit(m) {
+      return m.photo?`<figcaption class="photo-credits">${external(m.photo.sourceUrl,`Photo : ${m.photo.credit}`)} · droits réservés${m.photo.note?`<span class="photo-note">${esc(m.photo.note)}</span>`:""}</figcaption>`:"";
+    }
+    function photoOrigin(m) {
+      return m.photo?external(m.photo.sourceUrl,`Photo : ${m.photo.credit}`,"photo-origin")+(m.photo.note?`<span class="photo-note">${esc(m.photo.note)}</span>`:""):"";
+    }
+    function photoCreditsList() {
+      const photographed=DATA.models.filter(m=>m.photo);
+      return `<p>Photos affichées depuis les sites officiels, sans copie des fichiers dans ce dépôt ni licence de redistribution présumée. Elles nécessitent une connexion ; les données et réglages restent utilisables sans elles.</p>${photographed.length?`<ul class="photo-credits-list">${photographed.map(m=>`<li><strong>${esc(labelOf(m))}</strong> — ${external(m.photo.sourceUrl,m.photo.credit)} · ${external(m.photo.imageUrl,"Image d'origine")}</li>`).join("")}</ul>`:"<p>Aucun visuel identifié et accessible à afficher.</p>"}`;
+    }
+    function haShortText(m) {
+      const h=haProfile(m),kind=haKind(m);
+      const route=h.label.includes("Core")?"Core":h.label.includes("HACS")?"HACS":"HA";
+      return `${route}${["conditional","uncertain"].includes(kind)?" ?":""} · ${m.ha==="rr"?"hybride":m.ha==="eu-e25"?"cloud NC":"cloud"}`;
+    }
+    function haSummary(m) {
+      const full=`${haProfile(m).label}. ${haProfile(m).local}${m.haConditional?". Variante exacte à confirmer":""}`;
+      return `<span class="ha-mark" title="${esc(full)}" aria-label="${esc(full)}">${icon("home")}${esc(haShortText(m))}</span>`;
+    }
+    function cameraChips(m) {
+      return `<span class="sensor" title="${esc(cameraText(m))}">${icon("camera")}RGB ${bool(m.camera)}</span><span class="sensor" title="${esc(remoteCameraText(m))}">${icon("video")}Vidéo app ${bool(m.remoteCamera.available)}</span>`;
+    }
+    function buyingAlert(m) {
+      const short=m.id==="dr-aqua"?"Fuites signalées · correctif BE NC":m.id==="mo-s70"?"Rouleau à sec signalé · correctif NC":m.risk;
+      const risk=m.risk?`<details class="risk-brief"><summary>${esc(short)}</summary><p>${esc(m.risk)}</p></details>`:"";
+      const offer=bestOffer(m);
+      const delay=offer&&!offer.manual&&m.id==="dr-l40s"&&/7 janvier/.test(offer.delivery||"")?`<p class="buying-note" title="${esc(offer.delivery)}">Standard : 7 janvier · rapide à vérifier</p>`:"";
+      const dimensions=m.dimState!=="qualified"?`<p class="buying-note" title="${esc(m.dimNote)}">Base : cotes à confirmer</p>`:"";
+      return risk+delay+dimensions;
+    }
     function offerUrl(o) { return o.url || sourceMap.get(o.source)?.url || ""; }
     function offerTotal(o) { return o.price + (o.shipping ?? 0); }
     function eligible(o) {
@@ -696,8 +838,13 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
     }
     function labelOf(m) { return `${m.brand} ${m.name}`; }
     function modelButton(m,cls="name-button") { return `<button type="button" class="${cls}" data-model="${m.id}"><span class="brand">${esc(m.brand)}</span>${esc(m.name)}</button>`; }
-    function priceHtml(m) {
+    function priceHtml(m, compact=false) {
       const o=bestOffer(m);
+      if (compact) {
+        if (!o) return `<div class="compact-price"><span class="money">Prix NC</span>${state.overrides[m.id]?'<span class="price-meta">Votre relevé hors périmètre</span>':""}</div>`;
+        const total=offerTotal(o);
+        return `<div class="compact-price"><span class="money">${money(total)}</span>${total>state.budget?` <span class="badge warning">+${money(total-state.budget)} / budget</span>`:""}<span class="price-meta">${esc(o.shop)}${o.manual?" · votre prix":""}${o.shipping===null?" · + port NC":""}${o.be===null?" · BE à confirmer":""}</span></div>`;
+      }
       if (!o) {
         const alt=m.offers.find(x=>x.secondaryOffer);
         return `<span class="money">NC</span><span class="cell-sub">${state.overrides[m.id]?"Votre relevé est hors du périmètre choisi.":alt?`${money(alt.price)} en autres offres non confirmées`:"Pas de prix éligible relevé."}</span>`;
@@ -713,8 +860,11 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
       const n=equipment(m);
       return `<span class="score">${n.score===null?"—":n.score}<small>${n.score===null?"":"/100"}</small></span><span class="cell-sub">${n.score===null?"Pondérations à zéro":`${n.coverage} % documenté`}</span>`;
     }
-    function selectionInput(m,origin) { return `<label class="check" style="margin:0"><input type="checkbox" data-select="${m.id}" data-origin="${origin}" ${state.selected.includes(m.id)?"checked":""} aria-label="Comparer ${esc(labelOf(m))}"><span class="sr-only">Comparer ${esc(m.name)}</span></label>`; }
-    function badges(m) { return `<span class="badge ${m.tested?"proof":""}">${m.tested?"Essai exploité":"Fiche / recul limité"}</span>${m.frandroid.status==="tested"?` ${external(m.frandroid.url,`Frandroid ${m.frandroid.score}/10`,"badge proof")}`:""}${m.risk?` <span class="badge warning">Vigilance</span>`:""}${state.overrides[m.id]?` <span class="badge">Votre prix</span>`:""}`; }
+    function selectionInput(m,origin) { return `<label class="check" style="margin:0"><input type="checkbox" data-select="${m.id}" data-origin="${origin}" ${state.selected.includes(m.id)?"checked":""} aria-label="Comparer ${esc(labelOf(m))}"><span class="${origin==="card"?"":"sr-only"}">Comparer${origin==="card"?"":" "+esc(m.name)}</span></label>`; }
+    function badges(m) {
+      const evidence=m.frandroid.status==="tested"?external(m.frandroid.url,`Frandroid ${m.frandroid.score}/10`,"badge proof"):`<span class="badge" title="Test Frandroid exact non repéré ; voir les essais et sources de la fiche">${m.tested?"Autre essai cité":"Fiche seule"}</span>`;
+      return evidence+(state.overrides[m.id]?` <span class="badge">Votre prix</span>`:"");
+    }
     function emptyHtml() {
       return `<div class="empty"><h2>Aucun modèle ne remplit ces critères.</h2><p>${state.ha==="local"?"Aucun de ces robots n'est documenté comme entièrement indépendant du cloud pour toutes ses fonctions. Matter peut offrir des commandes locales limitées, sans remplacer toutes les fonctions de l'application.":"Le budget, les cotes inconnues ou le périmètre d'achat peuvent écarter des modèles. Les données manquantes ne sont pas transformées en garanties."}</p><div class="row-actions"><button data-act="reset-filters">Réinitialiser les filtres</button><button data-nav="ha">Comprendre Home Assistant</button></div></div>`;
     }
@@ -723,14 +873,23 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
     }
     function renderModels() {
       const list=filtered();
-      return `<section class="editor-pick"><div><h2><span class="desktop-only">Le choix polyvalent autour de 500 € : Saros 10R.</span><span class="mobile-only">Choix polyvalent : Saros 10R, environ 500&nbsp;€.</span></h2><p>Faible hauteur, évitement étayé par un essai et Home Assistant Core. <strong>499,99 € affichés en direct</strong>, livraison Belgique annoncée.</p><p class="fine">Sélection éditoriale du 15 novembre · Variante standard et TVA belge finale à vérifier. Les alternatives restent comparables ci-dessous.</p></div><div class="pick-actions"><button class="primary" data-model="rr-10r">Voir la recommandation</button><button data-act="finalists">Comparer les finalistes</button></div></section>
-      <div class="shortlist-links"><button class="text" data-model="rr-edge2">Amazon BE : Qrevo Edge 2 →</button><button class="text" data-model="ec-t90">Priorité rouleau : T90 Pro Omni →</button><button class="text" data-model="dr-l40s">Dreame à 399 € : L40s, attention au délai →</button></div>
-      <div class="result-head"><h2>${list.length} modèles affichés <span class="fine">/ ${DATA.models.length}</span></h2><div class="toolbar">${sortControl()}<div class="segmented" aria-label="Présentation"><button data-act="layout-table" aria-pressed="${!state.cards}">Tableau</button><button data-act="layout-cards" aria-pressed="${state.cards}">Cartes</button></div></div></div>
-      <p class="fine" id="price-scope-note">Prix du périmètre : <strong>${state.purchase==="amazon"?"Amazon Belgique":state.purchase==="cross"?"Belgique + offres étrangères non validées BE":"offres dont l'accès Belgique est documenté"}</strong>. Les frais inconnus restent signalés. Votre propre relevé, s'il existe, remplace le prix de référence archivé.</p>
-      ${list.length?(state.cards?`<div class="card-grid">${list.map(m=>`<article class="robot-card ${state.selected.includes(m.id)?"selected":""}"><div class="card-top">${badges(m)}${selectionInput(m,"card")}</div><h3>${modelButton(m)}</h3><div>${priceHtml(m)}</div><div class="card-specs"><div><span>Lavage</span><span>${m.mop==="rouleau"?"Rouleau rincé":"Deux patins"} · ${washText(m)}</span></div><div><span>Hauteur robot</span><span>${heightText(m)}</span></div><div><span>HA</span><span>${esc(haProfile(m).label)}</span></div><div><span>Indice équipement</span><span>${scoreHtml(m)}</span></div></div><p>${esc(m.verdict)}</p><button class="small" data-model="${m.id}">Fiche, avis et offres</button></article>`).join("")}</div>`:
-      `<div class="table-wrap" tabindex="0" aria-label="Tableau des modèles, défilement horizontal possible"><table class="models-table"><caption>Cocher 2 à 4 modèles pour comparer. Cliquer sur un nom pour ouvrir sa fiche. Prix et sources au 15 novembre 2026.</caption><thead><tr><th scope="col"><span class="sr-only">Sélection</span></th><th scope="col">Modèle / recul</th><th scope="col">Prix relevé</th><th scope="col">Lavage / station</th><th scope="col">Gabarit</th><th scope="col">Home Assistant</th><th scope="col">Équipement</th></tr></thead><tbody>${list.map(m=>`<tr class="${state.selected.includes(m.id)?"row-selected":""}"><td class="select-cell">${selectionInput(m,"table")}</td><td class="name-cell">${modelButton(m)}${badges(m)}${m.risk?`<div class="risk-line">Lire la réserve avant achat.</div>`:""}</td><td>${priceHtml(m)}</td><td>${m.mop==="rouleau"?"Rouleau rincé en continu":"Deux patins rotatifs"}<span class="cell-sub">${washText(m)} · ${drying(m)}</span><span class="cell-sub">Extension lavage : ${bool(m.edgeMop)}</span></td><td>${heightText(m)}<span class="cell-sub">Base : ${esc(dim(m.dock,m.dockRaw))}</span>${m.dimState!=="qualified"?`<span class="cell-sub">⚠ Cotes partielles / axes à confirmer</span>`:""}</td><td>${esc(haProfile(m).label)}<span class="cell-sub">${esc(haProfile(m).local)}</span></td><td>${scoreHtml(m)}<button class="text small" data-model="${m.id}" aria-label="Détail de l'indice de ${esc(m.name)}">Détail</button></td></tr>`).join("")}</tbody></table></div>`):emptyHtml()}
-      <p class="method-note">L'indice décrit des fonctions documentées, pas la qualité de nettoyage ni la fiabilité. Une inconnue n'apporte aucun point ; la couverture est affichée. Les modèles sans cote nécessaire ne passent pas un filtre d'encombrement.</p>
-      <details class="section"><summary><strong>Autres références repérées, pas suffisamment recoupées pour être classées</strong></summary>${DATA.watchlist.map(m=>`<div class="recommendation"><h3>${esc(m.name)} · ${esc(m.price)}</h3><p>${esc(m.note)}</p>${m.url?external(m.url,"Référence repérée"):""}</div>`).join("")}</details>`;
+      const scope=state.purchase==="amazon"?"Amazon Belgique":state.purchase==="cross"?"BE + FR / DE à vérifier":"Offres Belgique";
+      return `<section aria-label="Inventaire des robots">
+      <div class="result-head"><h2>${list.length} robots <span class="fine">/ ${DATA.models.length}</span></h2><div class="toolbar">${sortControl()}<div class="segmented" aria-label="Présentation"><button data-act="layout-cards" aria-pressed="${state.cards}">Grille</button><button data-act="layout-table" aria-pressed="${!state.cards}">Liste</button></div></div></div>
+      <div class="inventory-context"><span id="price-scope-note">${scope} · total connu, port NC signalé</span><button class="text small" data-act="finalists">Comparer nos 3 choix →</button><details><summary>Repères de lecture</summary><p>Prix archivés, TVA finale à vérifier. Votre prix personnel remplace l'archive pour le tri. L'indice décrit l'équipement documenté, pas la qualité de nettoyage ; une donnée NC n'apporte aucun point.</p><div class="legend-line">${mopGraphic({mop:"rotatifs"})}${mopGraphic({mop:"rouleau"})}<span>NC ≠ Non</span><span>Vidéo app ≠ vidéo HA</span></div></details></div>
+      ${list.length?(state.cards?`<div class="card-grid">${list.map(m=>{
+        const score=equipment(m);
+        return `<article class="robot-card ${state.selected.includes(m.id)?"selected":""}" data-model-card="${m.id}">
+          <div class="card-top">${badges(m)}${selectionInput(m,"card")}</div>
+          <button class="card-photo" data-model="${m.id}" aria-label="Ouvrir la fiche de ${esc(labelOf(m))}">${productPhoto(m)}</button>${photoOrigin(m)}
+          <h3>${modelButton(m)}</h3>${priceHtml(m,true)}
+          <div class="mini-specs">${mopGraphic(m)}<span title="Hauteur du robot">${icon("height")}${heightText(m)}</span></div>
+          ${haSummary(m)}${buyingAlert(m)}
+          <div class="card-bottom"><div class="sensor-strip">${cameraChips(m)}<span title="Indice d'équipement, pas une note de nettoyage">${score.score===null?"Équip. NC":`Équip. ${score.score}/100`}</span></div><button class="text" data-model="${m.id}">Fiche & offres →</button></div>
+        </article>`;
+      }).join("")}</div>`:
+      `<div class="table-wrap" tabindex="0" aria-label="Liste des robots, défilement horizontal"><table class="models-table"><caption class="sr-only">Cocher deux à quatre modèles pour les comparer. Ouvrir une fiche pour les preuves et les réserves complètes.</caption><thead><tr><th scope="col"><span class="sr-only">Sélection</span></th><th scope="col">Robot</th><th scope="col">Prix archivé</th><th scope="col">Lavage / hauteur</th><th scope="col">Home Assistant</th><th scope="col">Caméras</th><th scope="col">Équipement</th></tr></thead><tbody>${list.map(m=>`<tr class="${state.selected.includes(m.id)?"row-selected":""}"><td class="select-cell">${selectionInput(m,"table")}</td><td class="name-cell"><div class="model-identity">${productPhoto(m,"photo-list")}<div>${modelButton(m)}${photoOrigin(m)}</div></div>${buyingAlert(m)}</td><td>${priceHtml(m,true)}</td><td>${mopGraphic(m)}<span class="cell-sub">${heightText(m)}</span></td><td>${haSummary(m)}</td><td><div class="mini-specs">${cameraChips(m)}</div></td><td>${scoreHtml(m)}${badges(m)}</td></tr>`).join("")}</tbody></table></div>`):emptyHtml()}
+      <details class="disclosure" style="margin-top:24px"><summary>Autres références repérées</summary><div class="disclosure-body">${DATA.watchlist.map(m=>`<div class="recommendation"><h3>${esc(m.name)} · ${esc(m.price)}</h3><p>${esc(m.note)}</p>${m.url?external(m.url,"Source"):""}</div>`).join("")}</div></details></section>`;
     }
     function factsFor(m) {
       const ha=haProfile(m);
@@ -792,11 +951,16 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
         ]]
       ];
     }
-    function renderCompare() {
-      const list=state.selected.map(id=>modelMap.get(id));
-      if (list.length<2) return `<section><h2>Les différences, côte à côte.</h2><p>Choisissez deux à quatre modèles. La sélection reste conservée quand vous changez de filtre.</p><div class="row-actions"><button class="primary" data-act="finalists">Saros 10R · Edge 2 · Qrevo 2 Pro</button><button data-act="roller-finalists">Comparer 3 rouleaux</button><button data-nav="models">Choisir les modèles</button></div>${list.length?`<p style="margin-top:20px">Déjà sélectionné : ${esc(labelOf(list[0]))}.</p>`:""}</section>`;
+    function comparisonBoard(list,body,kind) {
+      const columns=`<colgroup><col class="criterion-column">${list.map(()=>"<col>").join("")}</colgroup>`;
+      return `<div class="comparison-board compare-${kind}" data-comparison="${kind}" style="--model-count:${list.length}">
+        <div class="comparison-sticky" role="group" aria-label="Robots de chaque colonne"><div class="comparison-head-scroll" data-compare-head><table class="compare-heading-table" role="presentation">${columns}<thead><tr><th>Critère</th>${list.map(m=>`<th>${modelButton(m)}</th>`).join("")}</tr></thead></table></div></div>
+        <div class="table-wrap compare-scroll" data-compare-body tabindex="0" aria-label="Comparaison ${kind==="core"?"essentielle":"complète"}, défilement horizontal"><table class="compare-table compare-data-table">${columns}<caption class="sr-only">Les noms des robots restent visibles pendant le défilement. Les critères sont dans la première colonne.</caption><thead class="sr-only"><tr><th scope="col">Critère</th>${list.map(m=>`<th scope="col">${esc(labelOf(m))}</th>`).join("")}</tr></thead><tbody>${body}</tbody></table></div>
+      </div>`;
+    }
+    function fullComparison(list) {
       const groups=factsFor(list[0]);
-      return `<section class="comparison-section"><div class="result-head"><h2>${list.length} robots, les différences utiles</h2><label class="check"><input type="checkbox" data-action-setting="differences" ${state.differences?"checked":""}>Seulement les différences</label></div><p class="fine">« NC » ne signifie pas « Non ». Vidéo via l'app constructeur ≠ vidéo dans HA. Les dates de sortie précisent leur provenance et leur marché ; les notes Frandroid gardent la date initiale du test et restent séparées de l'indice d'équipement.</p><div class="table-wrap" tabindex="0"><table class="compare-table"><caption>Comparaison des caractéristiques, preuves et limites. Prix du périmètre choisi à gauche.</caption><thead><tr><th scope="col">Critère</th>${list.map(m=>`<th scope="col">${modelButton(m)}<button class="text small" data-unselect="${m.id}">Retirer</button></th>`).join("")}</tr></thead><tbody>${groups.map(([group,rows],gi)=>{
+      const body=groups.map(([group,rows],gi)=>{
         const rendered=rows.map(([label],ri)=>{
           const values=list.map(m=>factsFor(m)[gi][1][ri][1]());
           const different=new Set(values).size>1;
@@ -807,8 +971,36 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
             return `<td>${esc(v)}${link}</td>`;
           }).join("")}</tr>`;
         }).join("");
-        return rendered?`<tr class="group-row"><th colspan="${list.length+1}">${esc(group)}</th></tr>${rendered}`:"";
-      }).join("")}<tr><th scope="row">Sources de la fiche</th>${list.map(m=>`<td>${sourceLinks([...m.sources,...haProfile(m).sources,...m.offers.map(o=>o.source).filter(Boolean)])}</td>`).join("")}</tr></tbody></table></div></section>`;
+        return rendered?`<tr class="group-row"><th colspan="${list.length+1}"><span>${esc(group)}</span></th></tr>${rendered}`:"";
+      }).join("")+`<tr><th scope="row">Sources de la fiche</th>${list.map(m=>`<td>${sourceLinks([...m.sources,...haProfile(m).sources,...m.offers.map(o=>o.source).filter(Boolean)])}</td>`).join("")}</tr>`;
+      return comparisonBoard(list,body,"complete");
+    }
+    function renderCompare() {
+      const list=state.selected.map(id=>modelMap.get(id));
+      if (list.length<2) return `<section><h2>Comparer 2 à 4 robots</h2>${list.length?`<p>${esc(labelOf(list[0]))} sélectionné.</p>`:""}<div class="row-actions"><button class="primary" data-nav="models">Choisir les robots</button><button data-act="finalists">Nos 3 choix</button><button data-act="roller-finalists">3 rouleaux</button></div></section>`;
+      const rows=[
+        ["Lavage",m=>m.mop,m=>mopGraphic(m)],
+        ["Hauteur robot",heightText],
+        ["Base L × P × H",m=>dim(m.dock,m.dockRaw)],
+        ["Lavage en station",washText],
+        ["Détergent auto",m=>bool(m.detergent)],
+        ["Caméra RGB",m=>bool(m.camera)],
+        ["Vidéo dans l'app",m=>bool(m.remoteCamera.available)],
+        ["Home Assistant",haShortText,haSummary],
+        ["Repère de sortie",releaseText],
+        ["Frandroid",frandroidScore,m=>m.frandroid.status==="tested"?`${external(m.frandroid.url,`${m.frandroid.score}/10`)}<span class="cell-sub">${dateText(m.frandroid.published)}</span>`:"NC · test non repéré"],
+        ["À vérifier",m=>buyingAlert(m)||"—",m=>buyingAlert(m)||"—"]
+      ];
+      const pictures=`<tr class="comparison-pictures"><th scope="row">Prix archivé<span class="cell-sub">${DATA.meta.date.split("-").reverse().join("/")}</span></th>${list.map(m=>`<td><button class="card-photo" data-model="${m.id}" aria-label="Fiche de ${esc(labelOf(m))}">${productPhoto(m)}</button>${priceHtml(m,true)}${photoOrigin(m)}<button class="text small" data-unselect="${m.id}" aria-label="Retirer ${esc(labelOf(m))}">Retirer</button></td>`).join("")}</tr>`;
+      const summary=rows.map(([label,value,renderValue])=>{
+          const values=list.map(value),different=new Set(values).size>1;
+          if (state.differences&&!different) return "";
+          return `<tr class="${different?"changed":"same-row"}"><th scope="row">${esc(label)}</th>${list.map((m,i)=>`<td>${renderValue?renderValue(m):esc(values[i])}</td>`).join("")}</tr>`;
+      }).join("");
+      return `<section class="comparison-section"><div class="result-head"><h2>${list.length} robots, côte à côte</h2><label class="check"><input type="checkbox" data-action-setting="differences" ${state.differences?"checked":""}>Différences seules</label></div><p class="fine">NC ≠ Non · Vidéo de l'app ≠ vidéo dans Home Assistant.</p><p class="scroll-hint">Faites défiler ↕ · Balayez les colonnes ↔</p>
+        ${comparisonBoard(list,pictures+summary,"core")}
+        <details class="disclosure"><summary>Tout l'équipement, les réserves et les sources</summary><div class="disclosure-body"><p class="fine">Les dates gardent leur provenance et leur marché. Notes Frandroid et indice d'équipement restent séparés.</p>${fullComparison(list)}</div></details>
+      </section>`;
     }
     function offerTable(list, includeModel=true) {
       const rows=list.flatMap(m=>{
@@ -840,18 +1032,33 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
     function renderDetail() {
       const m=modelMap.get(state.current),h=haProfile(m),n=equipment(m);
       const sections=factsFor(m);
-      return `<article><div class="detail-header"><button class="text no-print" data-nav="${lastView==="detail"?"models":lastView}">← Revenir</button><h2>${esc(labelOf(m))}</h2><div class="pills">${badges(m)}<span class="badge">Génération ${m.year}</span></div><div class="detail-lead"><div><p style="font-size:17px">${esc(m.verdict)}</p>${m.risk?`<div class="callout"><strong>Vigilance documentée.</strong><p>${esc(m.risk)}</p></div>`:""}<div class="key-facts"><span><strong>${m.mop==="rouleau"?"Rouleau rincé":"Deux patins"}</strong>technologie de lavage</span><span><strong>${heightText(m)}</strong>hauteur du robot</span><span><strong>${number(m.pa,0)} Pa</strong>revendiqués, pas une note</span></div><div class="row-actions no-print"><button class="primary" data-toggle-select="${m.id}">${state.selected.includes(m.id)?"Retirer de la comparaison":"Ajouter à la comparaison"}</button><button data-act="dimension-model" data-id="${m.id}">Voir le gabarit</button></div></div><div class="detail-price">${priceHtml(m)}<p class="fine" style="margin-top:12px">Les frais inconnus et la TVA finale restent à vérifier. Relevés datés, pas une synchronisation.</p></div></div></div>
+      return `<article class="detail-page"><div class="detail-header"><button class="text no-print" data-nav="${lastView==="detail"?"models":lastView}">← Revenir</button><h2>${esc(labelOf(m))}</h2></div>
+      <div class="product-overview"><figure class="detail-visual">${productPhoto(m,"photo-detail")}${photoCredit(m)}</figure><div class="detail-summary">
+        <span class="fine">Prix archivé · ${DATA.meta.date.split("-").reverse().join("/")}</span>${priceHtml(m,true)}<div class="mini-specs">${mopGraphic(m)}<span title="Hauteur du robot">${icon("height")}${heightText(m)}</span>${haSummary(m)}</div>
+        <div class="sensor-strip">${cameraChips(m)}</div>
+        <div class="detail-facts"><span><strong>${esc(dim(m.dock,m.dockRaw))}</strong>Base L × P × H</span><span title="${esc(releaseText(m))}"><strong>${releaseMonth(m)}</strong>Repère de sortie · ${esc(m.release.market)}</span><span><strong>${m.frandroid.status==="tested"?`${m.frandroid.score}/10`:"NC"}</strong>Frandroid${m.frandroid.status==="tested"?` · ${dateText(m.frandroid.published)}`:" · test non repéré"}</span></div>
+        ${buyingAlert(m)}<div class="row-actions no-print"><button class="primary" data-toggle-select="${m.id}">${state.selected.includes(m.id)?"Retirer de la comparaison":"Comparer ce robot"}</button><button data-act="dimension-model" data-id="${m.id}">Gabarit</button></div>
+      </div></div>
+      <details class="disclosure"><summary>Notre avis & les réserves</summary><div class="disclosure-body"><p class="prose">${esc(m.verdict)}</p>
       <section class="section two-col"><div><h3>Ce qui fait la différence</h3><ul>${m.pros.map(t=>`<li>${esc(t)}</li>`).join("")}</ul></div><div><h3>Ce qu'il faut accepter ou vérifier</h3><ul>${m.cons.map(t=>`<li>${esc(t)}</li>`).join("")}</ul></div></section>
+      </div></details><details class="disclosure"><summary>Date de sortie & provenance</summary><div class="disclosure-body">
       <section class="section"><h3>Date de sortie et provenance</h3>${detailFacts([["Date de sortie (mois et année)",releaseText(m)],["Précision sur cette date",m.release.note]])}${sourceLinks(m.release.sources)}</section>
+      </div></details><details class="disclosure"><summary>Prix & offres (${m.offers.length})</summary><div class="disclosure-body">
       <section class="section"><h3>Offres et prix</h3>${offerTable([m],false)}${priceForm(m)}</section>
+      </div></details><details class="disclosure"><summary>Lavage, station & caractéristiques</summary><div class="disclosure-body">
       <section class="section two-col"><div><h3>Lavage et station</h3>${detailFacts(sections[1][1].map(([a,f])=>[a,f()]))}${m.washNote?`<p class="fine" style="margin-top:12px">${esc(m.washNote)}</p>`:""}</div><div><h3>Aspiration, navigation et autonomie</h3>${detailFacts(sections[2][1].map(([a,f])=>[a,f()]))}<p class="fine" style="margin-top:12px">${esc(m.cameraInfo.note)} La vidéo de l'application constructeur ne confirme pas sa disponibilité dans Home Assistant.</p>${sourceLinks([...m.cameraInfo.sources,...m.remoteCamera.sources])}</div></section>
+      </div></details><details class="disclosure"><summary>Dimensions & installation</summary><div class="disclosure-body">
       <section class="section"><h3>Dimensions et installation</h3>${detailFacts(sections[3][1].map(([a,f])=>[a,f()]))}<div class="callout"><p>Conserver de l'espace devant la base, au-dessus pour sortir les réservoirs et pour ventiler / entretenir. Les dimensions du colis ou du corps seul ne valident pas une niche.</p></div></section>
+      </div></details><details class="disclosure"><summary>Home Assistant & protocoles</summary><div class="disclosure-body">
       <section class="section"><h3>Home Assistant et protocoles</h3>${detailFacts(sections[4][1].map(([a,f])=>[a,f()]))}<p style="margin-top:16px">${esc(h.detail)}</p>${sourceLinks(h.sources)}</section>
+      </div></details><details class="disclosure"><summary>Test Frandroid & dates</summary><div class="disclosure-body">
       ${renderFrandroidDetail(m)}
+      </div></details><details class="disclosure"><summary>Essais & avis clients</summary><div class="disclosure-body">
       <section class="section"><h3>Essais : ce qui a réellement été observé</h3><p>${m.tested?"Un essai indépendant complet a été exploité pour cette référence. Les conditions et les réserves de cet essai restent importantes.":"Pas de synthèse complète d'un essai de performance retenue ici. Des sources peuvent servir uniquement aux caractéristiques ou au calendrier : elles ne constituent pas une mesure comparative du nettoyage."}</p>${m.metrics?.length?`<div class="metrics">${m.metrics.map(x=>`<div><strong>${esc(x.value)}</strong><span>${esc(x.label)}</span>${sourceLinks([x.source])}</div>`).join("")}</div>`:""}${sourceLinks(m.sources)}</section>
       <section class="section"><h3>Avis clients : ${m.review.rating===null?"pas de note vérifiée":`${number(m.review.rating,1)}/5`}</h3><p class="fine">${m.review.count?`${esc(m.review.count)} avis dans la famille d'annonce ; `:""}${m.review.sample?`${m.review.sample} avis textuels visibles lus.`:"Aucun corpus textuel spécifique audité."}</p><div class="two-col"><div><h3>Points appréciés</h3>${m.review.plus.length?`<ul>${m.review.plus.map(t=>`<li>${esc(t)}</li>`).join("")}</ul>`:"<p>Pas de synthèse client inventée en l'absence de lecture du corpus.</p>"}</div><div><h3>Réserves rapportées</h3>${m.review.minus.length?`<ul>${m.review.minus.map(t=>`<li>${esc(t)}</li>`).join("")}</ul>`:"<p>Pas de réserve spécifique attribuée aux clients sans source textuelle exploitée. Cela ne signifie pas absence de problème.</p>"}</div></div><p class="fine">${esc(m.review.note)}</p>${m.review.source?sourceLinks([m.review.source]):""}</section>
-      <details class="section"><summary><strong>Comment est calculé son indice d'équipement ? ${n.score===null?"Sans pondération":n.score+"/100"}</strong></summary><p class="fine">Une aide à trier des fonctions, pas une note de qualité. ${n.coverage} % des critères pondérés sont documentés. Les Pa, notes clients, notes Frandroid et résultats de labo ne sont pas additionnés.</p><div class="table-wrap"><table><thead><tr><th>Critère</th><th>Poids /5</th><th>Points fonctionnels /100</th><th>Base du calcul</th></tr></thead><tbody>${Object.entries(n.values).map(([k,v])=>`<tr><th>${esc(WEIGHT_LABELS[k])}</th><td>${state.weights[k]}</td><td>${Math.round(v.score)}${v.coverage<1?" · partiellement NC":""}</td><td>${esc(v.why)}</td></tr>`).join("")}</tbody></table></div></details>
-      <section class="section"><h3>Avant de commander</h3>${renderChecklist()}</section></article>`;
+      </div></details>
+      <details class="disclosure"><summary>Indice d'équipement · ${n.score===null?"NC":n.score+"/100"}</summary><div class="disclosure-body"><p class="fine">Une aide à trier des fonctions, pas une note de qualité. ${n.coverage} % des critères pondérés sont documentés. Les Pa, notes clients, notes Frandroid et résultats de labo ne sont pas additionnés.</p><div class="table-wrap"><table><thead><tr><th>Critère</th><th>Poids /5</th><th>Points fonctionnels /100</th><th>Base du calcul</th></tr></thead><tbody>${Object.entries(n.values).map(([k,v])=>`<tr><th>${esc(WEIGHT_LABELS[k])}</th><td>${state.weights[k]}</td><td>${Math.round(v.score)}${v.coverage<1?" · partiellement NC":""}</td><td>${esc(v.why)}</td></tr>`).join("")}</tbody></table></div></div></details>
+      <details class="disclosure"><summary>Avant achat · votre liste</summary><div class="disclosure-body">${renderChecklist()}</div></details></article>`;
     }
     function renderChecklist() { return `<div class="checklist">${DATA.analysis.checklist.map((t,i)=>`<label class="check"><input type="checkbox" data-check="${i}" ${state.checks.includes(i)?"checked":""}><span>${esc(t)}</span></label>`).join("")}</div>`; }
     function renderRanges() {
@@ -945,9 +1152,24 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
       const renderers={models:renderModels,ranges:renderRanges,compare:renderCompare,detail:renderDetail,sizes:renderSizes,offers:renderOffers,analysis:guideHtml,ha:renderHa,sources:renderSources};
       $("#content").innerHTML=renderers[state.view]();
       if (state.view==="detail") {
-        const extra=document.createElement("section");extra.className="section";extra.innerHTML=`<h3>Recherches marchands supplémentaires</h3><p class="fine">Liens de recherche sans prix garanti. Vérifiez le nom complet et le SKU avant de comparer les montants.</p>${shoppingLinks(modelMap.get(state.current))}`;
+        const extra=document.createElement("details");extra.className="disclosure";extra.innerHTML=`<summary>Autres boutiques</summary><div class="disclosure-body"><p class="fine">Recherches sans prix garanti : vérifiez la référence exacte.</p>${shoppingLinks(modelMap.get(state.current))}</div>`;
         $("#content article").append(extra);
       }
+      if (state.view==="sources") {
+        const credits=document.createElement("details");credits.className="disclosure";
+        credits.innerHTML=`<summary>Photos & crédits · ${DATA.photoResearch.available}/${DATA.models.length}</summary><div class="disclosure-body">${photoCreditsList()}</div>`;
+        $("#content .result-head").insertAdjacentElement("afterend",credits);
+      }
+      $(".page-heading").hidden=state.view!=="models";
+      $("#snapshot").hidden=state.view!=="models";
+      if (state.view!=="models") {
+        const heading=$("#content h2");
+        if (heading) {
+          const title=document.createElement("h1");title.className="surface-title";
+          title.innerHTML=heading.innerHTML;heading.replaceWith(title);
+        }
+      }
+      wireComparisonHeaders();
       $$(".tabs button").forEach(b=>b.setAttribute("aria-current",b.dataset.nav===state.view?"page":"false"));
       $("#compare-count").textContent=String(state.selected.length);
       $("#compare-tray").hidden=state.selected.length===0||state.view==="compare";
@@ -969,6 +1191,7 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
     function go(view, focus=true) {
       if (!["models","ranges","compare","detail","sizes","offers","analysis","ha","sources"].includes(view)) return;
       if (view==="detail"&&state.view!=="detail") lastView=state.view;
+      if (!$("#notice").classList.contains("error")) $("#notice").hidden=true;
       state.view=view;save();render();
       if(focus){$("#content").focus({preventScroll:true});$("#content").scrollIntoView({block:"start",behavior:"instant"});}
     }
@@ -1111,6 +1334,54 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
       state.theme=document.documentElement.dataset.theme==="dark"?"light":"dark";
       document.documentElement.dataset.theme=state.theme;save();applyTheme();
     });
+    function photoFailed(image,error) {
+      const frame=image.closest(".photo-frame"),status=frame.querySelector(".photo-status");
+      frame.dataset.photoState="error";image.hidden=true;
+      status.innerHTML=`${icon("image")}<span>Photo indisponible</span>`;
+      status.hidden=false;status.removeAttribute("aria-hidden");status.setAttribute("role","img");
+      status.setAttribute("aria-label",`Photo indisponible : ${labelOf(modelMap.get(image.dataset.photoModel))}`);
+      console.warn("Photo officielle non chargée",image.dataset.photoModel,error||"Source inaccessible");
+    }
+    document.addEventListener("load",event=>{
+      if (!event.target.matches?.("img[data-photo-model]")) return;
+      const image=event.target;
+      image.decode().then(()=>{
+        if (!image.isConnected) return;
+        const frame=image.closest(".photo-frame");
+        frame.dataset.photoState="loaded";frame.querySelector(".photo-status").hidden=true;
+      }).catch(error=>{if(image.isConnected)photoFailed(image,error);});
+    },true);
+    document.addEventListener("error",event=>{
+      if (event.target.matches?.("img[data-photo-model]")) photoFailed(event.target);
+    },true);
+    function syncComparisonHeaders() {
+      $$("[data-comparison]").forEach(board=>{
+        const head=$("[data-compare-head]",board),body=$("[data-compare-body]",board);
+        head.scrollLeft=body.scrollLeft;
+      });
+    }
+    function wireComparisonHeaders() {
+      $$("[data-comparison]").forEach(board=>{
+        const head=$("[data-compare-head]",board),body=$("[data-compare-body]",board);
+        let leader=body;
+        [head,body].forEach(scroller=>{
+          ["pointerdown","touchstart","wheel","keydown","focusin"].forEach(type=>scroller.addEventListener(type,()=>{leader=scroller;},{passive:true}));
+        });
+        body.addEventListener("scroll",()=>{if(leader===body&&head.scrollLeft!==body.scrollLeft)head.scrollLeft=body.scrollLeft;},{passive:true});
+        head.addEventListener("scroll",()=>{if(leader===head&&body.scrollLeft!==head.scrollLeft)body.scrollLeft=head.scrollLeft;},{passive:true});
+      });
+      syncComparisonHeaders();
+    }
+    window.addEventListener("resize",()=>requestAnimationFrame(syncComparisonHeaders));
+    let printedDetails=[];
+    window.addEventListener("beforeprint",()=>{
+      printedDetails=$$("details:not([open])",$("#content"));
+      printedDetails.forEach(details=>{details.open=true;});
+    });
+    window.addEventListener("afterprint",()=>{
+      printedDetails.forEach(details=>{details.open=false;});
+      printedDetails=[];
+    });
     function init() {
       load();
       $("#brand-filter").insertAdjacentHTML("beforeend",[...new Set(DATA.models.map(m=>m.brand))].sort().map(b=>`<option value="${esc(b)}">${esc(b)}</option>`).join(""));
@@ -1119,7 +1390,7 @@ Signature interaction: same-scale robot and dock gabarits with explicit caveats.
       if(window.matchMedia("(max-width:850px)").matches)$("#filter-panel").open=false;
       $("#dataset-badge").textContent=`${DATA.models.length} modèles · ${new Set(DATA.models.map(m=>m.brand)).size} marques`;
       const age=Math.floor((Date.now()-Date.parse(DATA.meta.date+"T23:59:59+01:00"))/86400000);
-      $("#snapshot").textContent=`Relevés du 15 novembre 2026${age>0?` · archives d'environ ${age} jour${age>1?"s":""}`:""} · ${DATA.models.reduce((n,m)=>n+m.offers.length,0)} relevés d'offres, dont certains non confirmés · ${DATA.sources.length} liens documentés. Pas de prix en temps réel.`;
+      $("#snapshot").textContent=`${dateText(DATA.meta.date)} · ${DATA.models.reduce((n,m)=>n+m.offers.length,0)} prix archivés · ${DATA.sources.length} sources${age>0?` · ${age} j`:""}`;
       syncFilters();applyTheme();render();
     }
     try { init(); }

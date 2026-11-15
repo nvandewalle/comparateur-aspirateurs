@@ -1,0 +1,266 @@
+{
+  "checkedAt": "2026-11-15",
+  "images": [
+    {
+      "id": "dr-gen3",
+      "sourceTitle": "Dreame L10s Ultra Gen 3 Kit Robotstofzuiger",
+      "sourceUrl": "https://be.dreametech.com/fr/products/dreame-l10s-ultra-gen-3-kit-robotstofzuiger",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0886/5198/9284/files/Total-Right-_-_02_554049e7-9467-4265-a1c2-4a1d0eef6460.jpg?v=1764044216&width=480&format=webp",
+      "credit": "Dreame",
+      "alt": "Dreame L10s Ultra Gen 3 Kit",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "id": "dr-l40s",
+      "sourceTitle": "Dreame L40s Pro Ultra Schwarz Saugroboter",
+      "sourceUrl": "https://de.dreametech.com/products/dreame-l40s-pro-ultra-schwarz-saugroboter",
+      "imageUrl": "https://de.dreametech.com/cdn/shop/files/L40S_Pro_Ultra--total-top_43e972a7-cdd2-45e2-8ef9-e5625411656b.jpg?v=1746607010&width=480&format=webp",
+      "credit": "Dreame",
+      "alt": "Dreame L40s Pro Ultra",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "id": "dr-l50ae",
+      "sourceTitle": "Dreame L50 Ultra AE Robotstofzuiger",
+      "sourceUrl": "https://be.dreametech.com/fr/products/dreame-l50-ultra-ae-robotstofzuiger",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0886/5198/9284/files/L50_Ultra_AE-Total-top-_-_1.jpg?v=1773304194&width=480&format=webp",
+      "credit": "Dreame",
+      "alt": "Dreame L50 Ultra AE",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "id": "dr-l50s",
+      "sourceTitle": "Dreame L50s Pro Ultra Robotstofzuiger",
+      "sourceUrl": "https://be.dreametech.com/fr/products/dreame-l50s-pro-ultra-robotstofzuiger",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0886/5198/9284/files/L50s_Pro_Ultra-Total-top.jpg?v=1773304190&width=480&format=webp",
+      "credit": "Dreame",
+      "alt": "Dreame L50s Pro Ultra",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "id": "dr-aqua",
+      "sourceTitle": "Dreame Aqua10 Ultra Roller Complete Robot Aspirateur Laveur",
+      "sourceUrl": "https://be.dreametech.com/fr/products/dreame-aqua-10-ultra-roller-complete-robotstofzuiger",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0886/5198/9284/files/1_085b1019-6489-4ebd-91b4-4c51eb8f69e5.png?v=1762739683&width=480&format=webp",
+      "credit": "Dreame",
+      "alt": "Dreame Aqua10 Ultra Roller Complete",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "id": "rr-qv",
+      "sourceTitle": "Roborock QV 35A Set",
+      "sourceUrl": "https://fr.roborock.com/products/roborock-qv-35a-set",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0250/5552/6957/files/PEW_Set.png?v=1776680604&width=480&format=webp",
+      "credit": "Roborock",
+      "alt": "Roborock QV 35A Set",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "id": "rr-spro",
+      "sourceTitle": "Roborock Qrevo S Pro Aspirateur robot",
+      "sourceUrl": "https://fr.roborock.com/products/roborock-qrevo-s-pro",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0250/5552/6957/files/ca7e7abb9d4464fd78aa232df9c65142_e855a725-19de-4ddb-8419-5ba761fa4493.jpg?v=1776856147&width=480&format=webp",
+      "credit": "Roborock",
+      "alt": "Roborock Qrevo S Pro",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "id": "rr-2pro",
+      "sourceTitle": "Aspirateur robot Roborock Qrevo 2 Pro",
+      "sourceUrl": "https://fr.roborock.com/products/roborock-qrevo-2-pro",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0250/5552/6957/files/2_032cc2e4-0e8e-4c6c-abaa-128cfedafa68.png?v=1789812392&width=480&format=webp",
+      "credit": "Roborock",
+      "alt": "Roborock Qrevo 2 Pro",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "id": "rr-edge2",
+      "sourceTitle": "Roborock Qrevo Edge 2",
+      "sourceUrl": "https://fr.roborock.com/products/roborock-qrevo-edge-2",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0250/5552/6957/files/1_280cf957-a82d-4830-968a-585494c87ec7.png?v=1778727797&width=480&format=webp",
+      "credit": "Roborock",
+      "alt": "Roborock Qrevo Edge 2",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "id": "rr-flow",
+      "sourceTitle": "Roborock Qrevo Curv 2 Flow",
+      "sourceUrl": "https://fr.roborock.com/products/roborock-qrevo-curv-2-flow",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0250/5552/6957/files/Frame_1739328121.jpg?v=1772001327&width=480&format=webp",
+      "credit": "Roborock",
+      "alt": "Roborock Qrevo Curv 2 Flow",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "id": "rr-curvpro",
+      "sourceTitle": "Roborock Qrevo Curv 2 Pro robot aspirateur laveur",
+      "sourceUrl": "https://fr.roborock.com/products/roborock-qrevo-curv-2-pro",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0250/5552/6957/files/14.png?v=1772707816&width=480&format=webp",
+      "credit": "Roborock",
+      "alt": "Roborock Qrevo Curv 2 Pro",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "id": "rr-10r",
+      "sourceTitle": "Roborock Saros 10R Robot Aspirateur avec Station Multifonction 4.0",
+      "sourceUrl": "https://fr.roborock.com/products/roborock-saros-10r",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0250/5552/6957/files/Set_Saros_10R_Set.png?v=1776047478&width=480&format=webp",
+      "credit": "Roborock",
+      "alt": "Roborock Saros 10R, visuel avec accessoires du Set",
+      "note": "Kit illustré : vérifier l'offre",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "id": "mo-e40",
+      "sourceTitle": "Dreame MOVA E40 Ultra Robot aspirateur",
+      "sourceUrl": "https://be.mova.tech/products/mova-e40-ultra-robot-vacuum",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0632/0531/0560/files/Mova_E40_Ultra-Total-2.webp?v=1761205247&width=480&format=webp",
+      "credit": "MOVA",
+      "alt": "MOVA E40 Ultra",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "id": "mo-e50",
+      "sourceTitle": "Dreame MOVA E50 Pro Ultra Robot aspirateur Noir",
+      "sourceUrl": "https://be.mova.tech/products/e50-pro-ultra-robot-aspirateur",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0632/0531/0560/files/E50ProUltra-product-1.png?v=1782800268&width=480&format=webp",
+      "credit": "MOVA",
+      "alt": "MOVA E50 Pro Ultra",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "id": "mo-s70",
+      "sourceTitle": "Dreame MOVA S70 Roller Robot Aspirateur Blanc",
+      "sourceUrl": "https://be.mova.tech/products/s70-roller-aspirateur-robot",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0632/0531/0560/files/S70R-_-BE_4a86f5ef-a57b-4d37-8eb2-b9551513664d.png?v=1787038372&width=480&format=webp",
+      "credit": "MOVA",
+      "alt": "MOVA S70 Roller",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "id": "mo-p50",
+      "sourceTitle": "Dreame MOVA P50 Pro Ultra Robot aspirateur",
+      "sourceUrl": "https://be.mova.tech/products/mova-p50-pro-ultra-robot-vacuum",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0632/0531/0560/files/P50_Pro_Ultra-FR.png?v=1761184532&width=480&format=webp",
+      "credit": "MOVA",
+      "alt": "MOVA P50 Pro Ultra",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "id": "mo-p70",
+      "sourceTitle": "Dreame MOVA P70 Pro Ultra Robot Aspirateur",
+      "sourceUrl": "https://be.mova.tech/products/p70-pro-ultra-robot-aspirateur-noir",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0632/0531/0560/files/p70pu-prodoct-black-01.png?v=1776219750&width=480&format=webp",
+      "credit": "MOVA",
+      "alt": "MOVA P70 Pro Ultra",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "id": "mo-v50",
+      "sourceTitle": "Dreame MOVA V50 Ultra Complete Robot aspirateur",
+      "sourceUrl": "https://be.mova.tech/products/mova-v50-ultra-robot-vacuum",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0632/0531/0560/files/V50-DE_3fd7948b-9832-4af3-aa71-6ffc4cc80505.png?v=1761125056&width=480&format=webp",
+      "credit": "MOVA",
+      "alt": "MOVA V50 Ultra Complete",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "id": "mo-z60",
+      "sourceTitle": "Dreame MOVA Z60 Ultra Roller Standalone Robot aspirateur",
+      "sourceUrl": "https://be.mova.tech/products/z60-ultra-roller-standalone-aspirateur-robot",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0632/0531/0560/files/z60-sa-product-01.jpg?v=1763025836&width=480&format=webp",
+      "credit": "MOVA",
+      "alt": "MOVA Z60 Ultra Roller SA",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "id": "eu-x10",
+      "sourceTitle": "eufy X10 Pro Omni",
+      "sourceUrl": "https://www.eufy.com/eu-en/products/t2351g11",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0555/1167/9128/files/X10_6abcb379-0b2d-416d-a595-3d7f55adec73.png?v=1744803213&width=480&format=webp",
+      "credit": "eufy",
+      "alt": "eufy X10 Pro Omni",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "id": "eu-e25",
+      "sourceTitle": "eufy Robot Vacuum Omni E25",
+      "sourceUrl": "https://www.eufy.com/eu-en/products/t2353g11",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0555/1167/9128/files/T2353111_T2353A10_T2353G11_T2353N11_T2353T11_T2353V11__ProductImage_1_1_1_1_1.png?v=1747887928&width=480&format=webp",
+      "credit": "eufy",
+      "alt": "eufy Omni E25",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "id": "ec-t80",
+      "sourceTitle": "DEEBOT T80 OMNI Aspirateur Robot Laveur Noir avec IA",
+      "sourceUrl": "https://www.ecovacs.com/fr/shop/deebot-robotic-vacuum-cleaner/deebot-t80-omni",
+      "imageUrl": "https://site-static.ecovacs.com/upload/fr/image/product/2025/09/10/081926_4770$id-t80-omni-black-920x920.png?x-oss-process=image%2Fresize%2Cw_480%2Fformat%2Cwebp",
+      "credit": "ECOVACS",
+      "alt": "Ecovacs Deebot T80 Omni",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "id": "ec-t90",
+      "sourceTitle": "DEEBOT T90 PRO OMNI",
+      "sourceUrl": "https://www.ecovacs.com/fr/shop/deebot-robotic-vacuum-cleaner/deebot-t90-pro-omni",
+      "imageUrl": "https://site-static.ecovacs.com/upload/fr/image/product/2026/02/26/050940_5116$deebot-t90-black-new-arrival-920x920-5.png?x-oss-process=image%2Fresize%2Cw_480%2Fformat%2Cwebp",
+      "credit": "ECOVACS",
+      "alt": "Ecovacs Deebot T90 Pro Omni",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "id": "ec-max",
+      "sourceTitle": "DEEBOT T90 MAX PRO OMNI",
+      "sourceUrl": "https://www.ecovacs.com/be-fr/shop/deebot-robotic-vacuum-cleaner/deebot-t90-max-pro-omni",
+      "imageUrl": "https://site-static.ecovacs.com/upload/be/image/product/2026/09/29/021140_7134$t90-max-pro-omni-black-920x920-6.png?x-oss-process=image%2Fresize%2Cw_480%2Fformat%2Cwebp",
+      "credit": "ECOVACS",
+      "alt": "Ecovacs Deebot T90 Max Pro Omni",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "id": "xi-x20",
+      "sourceTitle": "Xiaomi Robot Vacuum X20 Max",
+      "sourceUrl": "https://www.mi.com/global/product/xiaomi-robot-vacuum-x20-max/",
+      "imageUrl": "https://i02.appmifile.com/832_operatorx_operatorx_opx/26/09/2024/1ca4613cd8eaaf6310a023336e88748a.png?thumb=1&w=480&h=480&f=webp&q=80",
+      "credit": "Xiaomi",
+      "alt": "Xiaomi Robot Vacuum X20 Max",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "id": "xi-5",
+      "sourceTitle": "Xiaomi Robot Vacuum 5 Pro - Xiaomi Belgique",
+      "sourceUrl": "https://www.mi.com/be-fr/product/xiaomi-robot-vacuum-5-pro/",
+      "imageUrl": "https://i05.appmifile.com/377_item_be/08/09/2025/4ab349e10a2a4af8a1e915fdafac474b.png?thumb=1&w=480&h=480&f=webp&q=80",
+      "credit": "Xiaomi",
+      "alt": "Xiaomi Robot Vacuum 5 Pro",
+      "width": 480,
+      "height": 480
+    }
+  ]
+}

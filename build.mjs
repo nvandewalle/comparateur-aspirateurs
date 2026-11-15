@@ -120,9 +120,31 @@ for (const guide of data.ranges.brands) {
   for (const pair of guide.pairs) assert(modelIds.has(pair.a) && modelIds.has(pair.b), `Unknown pair ${guide.brand}`);
 }
 for (const r of data.recommendations) assert(modelIds.has(r.id), `Unknown recommendation ${r.id}`);
+const photos = await load("product-images.json");
+assert(validDate(photos.checkedAt) && Array.isArray(photos.images), "Invalid photo catalogue");
+assert(new Set(photos.images.map(photo => photo.id)).size === photos.images.length, "Duplicate product photo");
+for (const photo of photos.images) {
+  const model = data.models.find(m => m.id === photo.id);
+  assert(model, `Photo for unknown model ${photo.id}`);
+  assert(photo.alt && photo.credit && photo.sourceTitle, `Unidentified product photo ${photo.id}`);
+  for (const key of ["sourceUrl","imageUrl"]) {
+    assert(new URL(photo[key]).protocol === "https:", `Invalid photo ${key} ${photo.id}`);
+  }
+  assert(Number.isInteger(photo.width) && photo.width > 0, `Invalid photo width ${photo.id}`);
+  assert(Number.isInteger(photo.height) && photo.height > 0, `Invalid photo height ${photo.id}`);
+  model.photo = {...photo,src:photo.imageUrl};
+}
+data.photoResearch = {
+  checkedAt:photos.checkedAt,
+  available:photos.images.length,
+  missing:data.models.filter(m => !m.photo).map(m => m.id)
+};
+if (data.photoResearch.missing.length) console.warn(`Product photos unavailable: ${data.photoResearch.missing.join(", ")}`);
 let html = await readFile(resolve(root, "comparator.template.html"), "utf8");
 assert(html.split("__MARKET_DATA__").length === 2, "Expected exactly one data placeholder");
 html = html.replace("__MARKET_DATA__", JSON.stringify(data).replaceAll("<", "\\u003c"));
+assert(html.split("__IMAGE_HOSTS__").length === 2, "Expected exactly one image-host placeholder");
+html = html.replace("__IMAGE_HOSTS__", [...new Set(photos.images.map(photo => new URL(photo.imageUrl).origin))].sort().join(" "));
 for (const match of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)) {
   if (/application\/json/i.test(match[1])) continue;
   new Script(match[2], { filename: "comparateur-aspirateurs.html" });
@@ -141,5 +163,7 @@ console.log(JSON.stringify({
   frandroidTests:data.reviewResearch.tested,
   frandroidNotFound:data.reviewResearch.notFound,
   releaseMonths:data.models.filter(m=>m.release.month).length,
-  remoteVideoConfirmed:data.models.filter(m=>m.remoteCamera.available===true).length
+  remoteVideoConfirmed:data.models.filter(m=>m.remoteCamera.available===true).length,
+  photos:data.photoResearch.available,
+  missingPhotos:data.photoResearch.missing
 }, null, 2));
