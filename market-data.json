@@ -1,0 +1,537 @@
+{
+  "meta": {
+    "date": "2026-11-15",
+    "locale": "fr-BE",
+    "budget": 500,
+    "blackFriday": "2026-11-27",
+    "title": "Bien choisir son robot aspirateur-laveur",
+    "profile": "Surtout des sols durs, aspiration et lavage tout-en-un, pas de seuils particuliers. Comparaison volontairement généraliste.",
+    "scope": "Sélection étendue de 26 modèles de 6 marques, autour de 280 à 650 €, plus des références à surveiller. Ce n'est pas un inventaire exhaustif du marché.",
+    "priceNotice": "Instantané du 15 novembre 2026, pas des prix en temps réel. Prix article TTC affiché ; frais, TVA de destination, vendeur, variante, disponibilité et délai à recontrôler au panier. Aucune commande n'a été effectuée.",
+    "evidenceNotice": "Fiches fabricant, essais indépendants, avis clients et jugements éditoriaux sont distingués. NC signifie non confirmé ou non relevé, jamais absence certaine. Les chiffres de laboratoire ne sont pas directement comparables entre organismes.",
+    "privacyNotice": "Aucun compte, serveur, publicité, traceur, police distante ou appel réseau automatique. Les liens externes ne s'ouvrent que sur demande. Préférences et prix personnels sont conservés dans le navigateur si son stockage local est disponible."
+  },
+  "sources": [
+    {"id":"rr-shop","type":"Prix fabricant","label":"Roborock France : catalogue public, variantes et disponibilités","url":"https://fr.roborock.com/products.json?limit=250","note":"Les variantes Set sont distinctes des variantes standard. Prix et état de disponibilité lus dans le catalogue public ; complétés par les fiches .js pour le 2 Pro Set et le Curv 2 Flow."},
+    {"id":"rr-store","type":"Prix fabricant","label":"Roborock : boutique et promotions","url":"https://fr.roborock.com/pages/roborock-store"},
+    {"id":"rr-delivery","type":"Conditions de vente","label":"Roborock France : livraison en Belgique et retours","url":"https://fr.roborock.com/policies/shipping-policy","note":"La Belgique figure explicitement dans les pays livrés ; livraison gratuite des aspirateurs annoncée ; retours sous 30 jours selon conditions. TVA finale non simulée."},
+    {"id":"rr-spro","type":"Fabricant","label":"Roborock Qrevo S Pro : caractéristiques et dimensions","url":"https://fr.roborock.com/pages/roborock-qrevo-s-pro","note":"18 500 Pa ; 350 × 353 × 96,5 mm ; dock 340 × 487 × 519 mm ; 75 °C à la sortie du chauffage, pas sur le sol ; Matter encore annoncé via OTA dans la note 12."},
+    {"id":"rr-2pro","type":"Fabricant","label":"Roborock Qrevo 2 Pro : caractéristiques et dimensions","url":"https://fr.roborock.com/pages/roborock-qrevo-2-pro"},
+    {"id":"rr-2pro-price","type":"Prix fabricant","label":"Qrevo 2 Pro Set : variante à 379,99 € disponible","url":"https://fr.roborock.com/products/roborock-qrevo-2-pro-set","note":"Fiche publique .js consultée : 37999 centimes, blanc et noir disponibles. Ne pas utiliser le prix de la variante standard à la place du Set."},
+    {"id":"rr-edge2","type":"Fabricant","label":"Roborock Qrevo Edge 2 : caractéristiques et dimensions","url":"https://fr.roborock.com/pages/roborock-qrevo-edge-2"},
+    {"id":"rr-flow","type":"Fabricant","label":"Roborock Qrevo Curv 2 Flow : caractéristiques et dimensions","url":"https://fr.roborock.com/pages/roborock-qrevo-curv-2-flow","note":"Rouleau 270 mm ; robot haut de 119 mm ; station 450 × 450 × 450 mm ; Matter annoncé via future OTA dans la note 22."},
+    {"id":"rr-flow-price","type":"Prix fabricant","label":"Qrevo Curv 2 Flow : prix de la fiche officielle","url":"https://fr.roborock.com/products/roborock-qrevo-curv-2-flow"},
+    {"id":"rr-curvpro","type":"Fabricant","label":"Roborock Qrevo Curv 2 Pro : caractéristiques et dimensions","url":"https://fr.roborock.com/pages/roborock-qrevo-curv-2-pro"},
+    {"id":"rr-10r","type":"Fabricant","label":"Roborock Saros 10R : caractéristiques et deux types de station","url":"https://fr.roborock.com/pages/roborock-saros-10r","note":"Station à réservoirs 381 × 475 × 488 mm ; ne pas confondre avec la station raccordée à la plomberie de 300 mm de haut."},
+    {"id":"rr-qv","type":"Fabricant","label":"Roborock QV 35A Set : fiche officielle","url":"https://fr.roborock.com/products/roborock-qv-35a-set","note":"Spécifications et FAQ consultées au navigateur : robot 350 × 353 × 96,5 mm ; station 340 × 487 × 519 mm ; 5 200 mAh ; bac 330 ml. Séchage explicitement à l'air FROID, pas chaud. Espace d'installation conseillé : environ 400 mm de large, 1 200 mm de profondeur, 900 mm de haut. Wi-Fi 2,4 GHz uniquement."},
+    {"id":"dr-shop","type":"Prix fabricant","label":"Dreame Belgique : catalogue public des robots","url":"https://be.dreametech.com/fr/collections/robotstofzuiger/products.json?limit=100","note":"Prix et disponibilité lus dans le catalogue public ; les fiches produit ont également été consultées au navigateur pour les caractéristiques et dimensions."},
+    {"id":"dr-bf","type":"Fabricant","label":"Dreame Belgique : campagne Black Friday","url":"https://be.dreametech.com/fr","note":"Campagne affichée du 5 au 30 novembre 2026. La réduction maximale publicitaire n'est pas utilisée comme preuve d'économie réelle."},
+    {"id":"dr-gen3","type":"Fabricant","label":"Dreame Belgique : L10s Ultra Gen 3 Kit","url":"https://be.dreametech.com/fr/products/dreame-l10s-ultra-gen-3-kit-robotstofzuiger"},
+    {"id":"dr-l50ae","type":"Fabricant","label":"Dreame Belgique : L50 Ultra AE","url":"https://be.dreametech.com/fr/products/dreame-l50-ultra-ae-robotstofzuiger"},
+    {"id":"dr-l50s","type":"Fabricant","label":"Dreame Belgique : L50s Pro Ultra","url":"https://be.dreametech.com/fr/products/dreame-l50s-pro-ultra-robotstofzuiger"},
+    {"id":"dr-aqua","type":"Fabricant","label":"Dreame Belgique : Aqua10 Ultra Roller Complete","url":"https://be.dreametech.com/fr/products/dreame-aqua-10-ultra-roller-complete-robotstofzuiger"},
+    {"id":"mo-shop","type":"Prix fabricant","label":"MOVA Belgique : catalogue public","url":"https://be.mova.tech/products.json?limit=250","note":"Prix et disponibilités du catalogue public. E40 et Z60 Complete indisponibles sur cette boutique lors du relevé ; les offres Amazon sont traitées séparément."},
+    {"id":"mo-e40","type":"Fabricant","label":"MOVA Belgique : E40 Ultra","url":"https://be.mova.tech/products/mova-e40-ultra-robot-vacuum"},
+    {"id":"mo-e50","type":"Fabricant","label":"MOVA Belgique : E50 Pro Ultra","url":"https://be.mova.tech/products/e50-pro-ultra-robot-aspirateur"},
+    {"id":"mo-s70","type":"Fabricant","label":"MOVA Belgique : S70 Roller","url":"https://be.mova.tech/products/s70-roller-aspirateur-robot","note":"Dimensions de base publiées 340 × 255 × 503 mm ; inclusion de la rampe et projection totale avec robot non explicitées. Ne pas interpréter 255 mm comme une profondeur d'installation garantie."},
+    {"id":"mo-p50","type":"Fabricant","label":"MOVA Belgique : P50 Pro Ultra","url":"https://be.mova.tech/products/mova-p50-pro-ultra-robot-vacuum"},
+    {"id":"mo-p70","type":"Fabricant","label":"MOVA Belgique : P70 Pro Ultra","url":"https://be.mova.tech/products/p70-pro-ultra-robot-aspirateur-noir"},
+    {"id":"mo-v50","type":"Fabricant","label":"MOVA Belgique : V50 Ultra Complete","url":"https://be.mova.tech/products/mova-v50-ultra-robot-vacuum","note":"Dimensions de base publiées 458 × 420 × 470 mm sans identification claire des axes ; conservées dans cet ordre."},
+    {"id":"mo-z60","type":"Fabricant","label":"MOVA Belgique : Z60 Ultra Roller Standalone / SA","url":"https://be.mova.tech/products/z60-ultra-roller-standalone-aspirateur-robot","note":"Il s'agit bien d'un robot livré avec station. Standalone / SA ne signifie pas absence de station ; ne pas confondre avec Complete."},
+    {"id":"eu-x10","type":"Fabricant","label":"eufy X10 Pro Omni : fiche et FAQ dimensions","url":"https://www.eufy.com/eu-en/products/t2351g11","note":"La FAQ et le tableau comparatif eufy inversent des axes de la station. FAQ : 366 × 460 × 480 mm ; tableau comparatif : environ 366 × 480 × 460 mm. Dégagement vertical recommandé dans la FAQ : 850 mm."},
+    {"id":"eu-e25","type":"Fabricant","label":"eufy E25 : fiche, connectivité et tableau comparatif","url":"https://www.eufy.com/eu-en/products/t2353g11","note":"Dimensions converties des pouces et arrondies. Certains champs du tableau fabricant sont incohérents avec le texte ; les caractéristiques non tranchées restent NC."},
+    {"id":"eu-ship","type":"Conditions de vente","label":"eufy EU-en : pays livrés","url":"https://www.eufy.com/eu-en/policies/shipping-policy","note":"La Belgique ne figure pas dans cette liste. Le prix de la boutique EU-en n'est donc pas retenu comme offre achetable en Belgique."},
+    {"id":"ec-t80","type":"Fabricant","label":"Ecovacs T80 Omni : fiche officielle","url":"https://www.ecovacs.com/fr/shop/deebot-robotic-vacuum-cleaner/deebot-t80-omni"},
+    {"id":"ec-t90","type":"Fabricant","label":"Ecovacs T90 Pro Omni : fiche officielle","url":"https://www.ecovacs.com/fr/shop/deebot-robotic-vacuum-cleaner/deebot-t90-pro-omni"},
+    {"id":"ec-max","type":"Fabricant","label":"Ecovacs Belgique : T90 Max Pro Omni","url":"https://www.ecovacs.com/be-fr/shop/deebot-robotic-vacuum-cleaner/deebot-t90-max-pro-omni","note":"40 000 Pa, TrueDetect 3D, rouleau 27 cm, station 100 °C. Ne pas transposer les tests du T90 Pro Omni, modèle différent."},
+    {"id":"xi-x20","type":"Fabricant","label":"Xiaomi X20 Max : technologie et limites","url":"https://www.mi.com/global/product/xiaomi-robot-vacuum-x20-max/"},
+    {"id":"xi-x20-dim","type":"Fabricant","label":"Xiaomi X20 Max : spécifications et dimensions","url":"https://www.mi.com/global/product/xiaomi-robot-vacuum-x20-max/specs/"},
+    {"id":"xi-5","type":"Fabricant","label":"Xiaomi Belgique : Robot Vacuum 5 Pro","url":"https://www.mi.com/be-fr/product/xiaomi-robot-vacuum-5-pro/","note":"Le corps de 88 mm n'implique pas l'accès sous un meuble de 88 mm : Xiaomi annonce une hauteur accessible supérieure à 95 mm."},
+    {"id":"xi-5-dim","type":"Fabricant","label":"Xiaomi 5 Pro : dimensions avec et sans rampe","url":"https://www.mi.com/global/product/xiaomi-robot-vacuum-5-pro/specs/"},
+    {"id":"ha-rr","type":"Domotique","label":"Home Assistant Core : Roborock","url":"https://www.home-assistant.io/integrations/roborock/","note":"S, QV, Qrevo, Saros pris en charge selon documentation. Commandes locales avec dépendances cloud ; cartes et routines cloud. TCP 58867, UDP 58866, MQTT sortant 8883. Pas une garantie de fonctionnement hors ligne."},
+    {"id":"ha-dr","type":"Domotique","label":"Dreame Vacuum : intégration HACS de Tasshack","url":"https://github.com/Tasshack/dreame-vacuum"},
+    {"id":"ha-dr-list","type":"Domotique","label":"Dreame Vacuum : liste des modèles et codes exacts","url":"https://dv.tasshack.com/guide/more/supported-devices","note":"804 lignes de modèles consultées au navigateur, y compris les sections MOVA et Mijia repliées. Le nom commercial ne remplace pas le code de l'appareil."},
+    {"id":"ha-dr-local","type":"Domotique","label":"Dreame Vacuum : limites de la connexion locale","url":"https://dv.tasshack.com/configuration/local","note":"LAN exclusivement pour les appareils appairables à Xiaomi Home ; jeton nécessaire ; pas de cartes via cette API locale ; même sous-réseau. Ne s'applique pas automatiquement à un DreameHome ou MOVAhome récent."},
+    {"id":"ha-ec","type":"Domotique","label":"Home Assistant Core : Ecovacs","url":"https://www.home-assistant.io/integrations/ecovacs/","note":"Intégration Core disponible ; support des modèles et fonctions issu de rétro-ingénierie, pas garanti pour chaque nouvelle référence."},
+    {"id":"ha-ec-lib","type":"Domotique","label":"Bibliothèque deebot-client : limites de maintenance et protocoles","url":"https://github.com/DeebotUniverse/client.py","note":"HTTPS et MQTT cloud ; projet contributif. Une intégration Core existante n'établit pas à elle seule le support exact du T90 Max Pro."},
+    {"id":"ha-eu","type":"Domotique","label":"Eufy Clean HACS : modèles et transports","url":"https://github.com/jeppesens/eufy-clean","note":"X10 Pro Omni explicitement testé. La liste consultée ne nomme pas E25 / T2353 : compatibilité riche de ce dernier non validée. MQTT cloud ou Tuya selon modèle ; l'option LAN Tuya n'est pas universelle."},
+    {"id":"ha-xi","type":"Domotique","label":"Xiaomi Home : intégration officielle Xiaomi distribuée via HACS","url":"https://github.com/XiaoMi/ha_xiaomi_home","note":"Officielle du fabricant, mais pas une intégration livrée dans HA Core. OAuth 2.0 ; commandes HTTPS et états MQTT via Xiaomi Cloud. Mode LAN partiel décrit comme non recommandé ; passerelle locale complète essentiellement en Chine."},
+    {"id":"ha-matter","type":"Domotique","label":"Home Assistant : Matter, transport local et limites","url":"https://www.home-assistant.io/integrations/matter/","note":"Matter n'est pas une radio : IP sur Wi-Fi / Ethernet / Thread ; Bluetooth sert notamment à l'appairage. Sur un robot Wi-Fi, pas besoin de présumer un réseau Thread. Les fonctions avancées du fabricant ne sont pas toutes standardisées."},
+    {"id":"test-l40s","type":"Essai indépendant","label":"Labo Maison : essai Dreame L40s Pro Ultra","url":"https://labomaison.com/entretien/aspirateur-robot/dreame-dreame-l40s-pro-ultra/"},
+    {"id":"test-l50s","type":"Essai indépendant","label":"Labo Maison : essai Dreame L50s Pro Ultra","url":"https://labomaison.com/entretien/aspirateur-robot/dreame-l50s-pro-ultra/","note":"Bon en aspiration, mais comportement CleanGenius problématique sur huile / sirop et difficultés avec un tapis long. Ne pas confondre équipement supérieur et progrès mesuré en lavage."},
+    {"id":"fiche-l50ae","type":"Présentation, pas essai","label":"Labo Maison : présentation L50 Ultra AE et station","url":"https://labomaison.com/entretien/aspirateur-robot/dreame-l50-ultra-ae/"},
+    {"id":"fiche-gen3","type":"Présentation, pas essai","label":"Labo Maison : présentation L10s Ultra Gen 3","url":"https://labomaison.com/entretien/aspirateur-robot/dreame-l10s-ultra-gen-3/"},
+    {"id":"test-aqua","type":"Essai indépendant","label":"Labo Maison : essai Aqua10 Ultra Roller Complete","url":"https://labomaison.com/entretien/aspirateur-robot/dreame-aqua10-ultra-roller-complete/"},
+    {"id":"risk-aqua","type":"Signal clients, source secondaire","label":"Vacuum Wars : signalements de fuites Aqua10 Ultra Roller","url":"https://vacuumwars.com/dreame-aqua10-water-leak/","note":"Retour sur des avis Amazon US et une indisponibilité en novembre 2025 ; pas une mesure du taux de panne ni la preuve d'un défaut des lots belges de 2026. Correctif européen non établi dans cette recherche."},
+    {"id":"test-2pro","type":"Essai indépendant","label":"TechRadar : essai Qrevo 2 Pro","url":"https://www.techradar.com/home/robot-vacuums/roborock-qrevo-2-pro-review"},
+    {"id":"test-flow","type":"Essai indépendant","label":"Labo Maison : essai Qrevo Curv 2 Flow","url":"https://labomaison.com/entretien/aspirateur-robot/roborock-qrevo-curv-2-flow/"},
+    {"id":"test-10r","type":"Essai indépendant","label":"Vacuum Wars : essai Saros 10R","url":"https://vacuumwars.com/roborock-saros-10r-review/","note":"Échantillon et firmware de l'essai, pas une promesse pour tous les foyers : 24/24 obstacles, 92 % poils sur tapis, 0 % emmêlement de cheveux de 7 pouces."},
+    {"id":"test-p50","type":"Essai indépendant","label":"Labo Maison : essai MOVA P50 Pro Ultra","url":"https://labomaison.com/entretien/aspirateur-robot/mova-p50-pro-ultra/"},
+    {"id":"test-p70","type":"Essai indépendant","label":"Labo Maison : essai MOVA P70 Pro Ultra","url":"https://labomaison.com/entretien/aspirateur-robot/mova-p70-pro-ultra/"},
+    {"id":"fiche-v50","type":"Présentation, pas essai","label":"Labo Maison : présentation V50 Ultra Complete","url":"https://labomaison.com/entretien/aspirateur-robot/mova-v50-ultra/","note":"La présentation contient un paragraphe contradictoire à propos du rouleau ; la fiche fabricant a priorité : ce modèle a bien deux patins rotatifs."},
+    {"id":"fiche-e40","type":"Présentation, pas essai","label":"Labo Maison : présentation E40 Ultra","url":"https://labomaison.com/entretien/aspirateur-robot/mova-e40-ultra/","note":"Les affirmations de caméra / eau chaude de cette présentation ne sont pas reprises comme confirmées lorsque la source constructeur ne les établit pas."},
+    {"id":"test-e25","type":"Essai indépendant","label":"Vacuum Wars : essai E25 et retour sur le réservoir corrigé","url":"https://vacuumwars.com/eufy-e25-omni-robot-vacuum-review/","note":"115 points taches sèches, 21/24 obstacles, 93 % poils sur tapis. Fuites signalées sur des premiers réservoirs puis correction rapportée ; ne pas en déduire un taux de panne actuel."},
+    {"id":"test-t80","type":"Essai indépendant","label":"Labo Maison : essai Ecovacs T80 Omni","url":"https://labomaison.com/entretien/aspirateur-robot/ecovacs-deebot-t80-omni/"},
+    {"id":"test-t90","type":"Essai indépendant","label":"Labo Maison : essai Ecovacs T90 Pro Omni","url":"https://labomaison.com/entretien/aspirateur-robot/ecovacs-deebot-t90-pro-omni/"},
+    {"id":"test-t90-vw","type":"Essai indépendant","label":"Vacuum Wars : essai Ecovacs T90 Pro Omni","url":"https://vacuumwars.com/ecovacs-deebot-t90-pro-omni-review/","note":"23/24 obstacles ; 157 points sur taches sèches ; 100 % poils dans leur protocole. Ne pas attribuer ces résultats au T90 Max Pro."},
+    {"id":"fiche-t90max","type":"Présentation, pas essai","label":"Labo Maison : présentation T90 Max Pro Omni","url":"https://labomaison.com/entretien/aspirateur-robot/ecovacs-deebot-t90-max-pro-omni/"},
+    {"id":"test-x20","type":"Essai indépendant et prix secondaire","label":"Les Numériques : synthèse du test X20 Max et offres du 13 novembre","url":"https://www.lesnumeriques.com/aspirateur-robot/black-friday-2026-l-aspirateur-robot-xiaomi-robot-vacuum-x20-max-a-329-90-n267434.html"},
+    {"id":"bf-market","type":"Analyse de marché","label":"Les Numériques : promotions robots, 13 novembre 2026","url":"https://www.lesnumeriques.com/aspirateur-robot/pendant-le-black-friday-2026-notre-selection-de-3-robots-aspirateurs-ultra-efficaces-a-prix-casse-n267437.html"},
+    {"id":"be-l40s","type":"Prix et avis clients, navigateur","label":"Amazon Belgique : L40s Pro Ultra","url":"https://www.amazon.com.be/dp/B0DY8V59LY","note":"399 € sur la fiche ; vendu et expédié par Amazon.com.be ; 6 avis visibles de la variante L40s Pro Ultra lus. Livraison standard annoncée au 7 janvier, rapide au 25 novembre : à recontrôler."},
+    {"id":"be-gen3","type":"Prix marchand, navigateur","label":"Amazon Belgique : L10s Ultra Gen 3 Kit-A","url":"https://www.amazon.com.be/dp/B0H2FPG8NY"},
+    {"id":"be-l50ae","type":"Prix marchand, navigateur","label":"Amazon Belgique : L50 Ultra AE-A","url":"https://www.amazon.com.be/dp/B0H2FKQRNG"},
+    {"id":"be-l50s","type":"Prix marchand, navigateur","label":"Amazon Belgique : L50s Pro Ultra-A","url":"https://www.amazon.com.be/dp/B0H2F5YPTN"},
+    {"id":"be-spro","type":"Prix marchand, navigateur","label":"Amazon Belgique : Qrevo S Pro Set","url":"https://www.amazon.com.be/dp/B0GHMV8ML5"},
+    {"id":"be-2pro","type":"Prix marchand, navigateur","label":"Amazon Belgique : Qrevo 2 Pro Set noir","url":"https://www.amazon.com.be/dp/B0GZZ96X7N"},
+    {"id":"be-edge","type":"Prix et avis clients, navigateur","label":"Amazon Belgique : Qrevo Edge 2 blanc","url":"https://www.amazon.com.be/dp/B0GMH82CGG","note":"489,99 € sur la fiche, et non le prix barré 889,99 € ; vendeur Roborock Official EU, expédition Amazon ; famille d'avis contenant aussi Edge S5A : avis de cette variante exclus de la synthèse."},
+    {"id":"be-curvpro","type":"Prix marchand, navigateur","label":"Amazon Belgique : Qrevo Curv 2 Pro","url":"https://www.amazon.com.be/dp/B0FFGQ7L2T"},
+    {"id":"be-10r","type":"Prix et avis clients, navigateur","label":"Amazon Belgique : Saros 10R Set","url":"https://www.amazon.com.be/dp/B0FC2VSX1R","note":"Fiche à 549 €, vendeur Roborock Official EU, livraison affichée 23 novembre. Sept avis visibles Black Set lus ; un regrette le supplément du Set, d'autres soulignent qu'il s'agit d'entretien quotidien et non de remplacement de toute intervention manuelle."},
+    {"id":"be-e40","type":"Prix marchand, navigateur","label":"Amazon Belgique : MOVA E40 Ultra","url":"https://www.amazon.com.be/dp/B0FDLDM33M"},
+    {"id":"be-e50","type":"Prix marchand, navigateur","label":"Amazon Belgique : MOVA E50 Pro Ultra","url":"https://www.amazon.com.be/dp/B0H2JP5WVY"},
+    {"id":"be-s70","type":"Prix et avis clients, navigateur","label":"Amazon Belgique : MOVA S70 Roller","url":"https://www.amazon.com.be/dp/B0GMKFQ78D","note":"399 €, vendu et expédié par Amazon.com.be, livraison affichée 18 novembre ; six avis visibles S70 Roller BK lus, dont deux évoquent un lavage à sec lié au remplissage automatique."},
+    {"id":"be-p50","type":"Prix marchand, navigateur","label":"Amazon Belgique : MOVA P50 Pro Ultra","url":"https://www.amazon.com.be/dp/B0DPZTS99T"},
+    {"id":"be-p70","type":"Prix marchand, navigateur","label":"Amazon Belgique : MOVA P70 Pro Ultra noir","url":"https://www.amazon.com.be/dp/B0GVV2SRGV"},
+    {"id":"be-z60","type":"Prix marchand, navigateur","label":"Amazon Belgique : MOVA Z60 Ultra Roller SA","url":"https://www.amazon.com.be/dp/B0FV98MKC4"},
+    {"id":"be-x10","type":"Prix marchand, navigateur","label":"Amazon Belgique : eufy X10 Pro Omni, autres offres","url":"https://www.amazon.com.be/dp/B0CPDZ3HD9","note":"Pas d'offre mise en avant, autres offres neuves à partir de 599 € ; port et vendeur non relevés. Ce n'est pas une offre principale disponible à ce tarif."},
+    {"id":"be-e25","type":"Prix marchand, navigateur","label":"Amazon Belgique : eufy E25 noir","url":"https://www.amazon.com.be/dp/B0DRBWKQ8Y"},
+    {"id":"be-t80","type":"Prix marchand, navigateur","label":"Amazon Belgique : Ecovacs T80 Omni blanc","url":"https://www.amazon.com.be/dp/B0DZ661PGD"},
+    {"id":"be-t90","type":"Prix marchand, navigateur","label":"Amazon Belgique : Ecovacs T90 Pro Omni blanc","url":"https://www.amazon.com.be/dp/B0GCGVJD71","note":"444 € + 27,73 € de livraison affichée, soit 471,73 €. Une seule unité annoncée ; vendeur non contrôlé."},
+    {"id":"be-max","type":"Prix marchand, navigateur","label":"Amazon Belgique : Ecovacs T90 Max Pro noir","url":"https://www.amazon.com.be/dp/B0H94XNCT3"},
+    {"id":"be-x20","type":"Prix marchand, navigateur","label":"Amazon Belgique : Xiaomi X20 Max EU","url":"https://www.amazon.com.be/dp/B0DFHW2JTT"},
+    {"id":"be-5","type":"Prix marchand, navigateur","label":"Amazon Belgique : Xiaomi 5 Pro","url":"https://www.amazon.com.be/dp/B0FDVHPBSV"},
+    {"id":"be-5-alt","type":"Prix marchand, navigateur","label":"Amazon Belgique : Xiaomi 5 Pro, annonce alternative","url":"https://www.amazon.com.be/dp/B0FVG1BKXP","note":"540,79 €, vendeur et origine du SKU non contrôlés ; ne pas assimiler cette annonce à la fiche principale à 599,99 €."},
+    {"id":"fr-l40s","type":"Prix marchand, navigateur","label":"Amazon France : L40s Pro Ultra","url":"https://www.amazon.fr/dp/B0DY8V59LY"},
+    {"id":"fr-gen3","type":"Prix marchand, navigateur","label":"Amazon France : L10s Ultra Gen 3 Kit","url":"https://www.amazon.fr/dp/B0H2FPG8NY"},
+    {"id":"fr-l50s","type":"Prix marchand, navigateur","label":"Amazon France : L50s Pro Ultra","url":"https://www.amazon.fr/dp/B0GD79DTS7"},
+    {"id":"fr-aqua","type":"Prix marchand, navigateur","label":"Amazon France : Aqua10 Ultra Roller Complete","url":"https://www.amazon.fr/dp/B0FHHYQ58Q"},
+    {"id":"fr-edge","type":"Prix marchand, navigateur","label":"Amazon France : Qrevo Edge 2 blanc, annonce inspectée","url":"https://www.amazon.fr/dp/B0GMH82CGG","note":"903,16 € dans la recherche française consultée ; ne pas supposer qu'un même ASIN coûte le même prix dans chaque pays."},
+    {"id":"de-l40s","type":"Prix marchand, navigateur","label":"Amazon Allemagne : L40s Pro Ultra","url":"https://www.amazon.de/dp/B0DY8V59LY"},
+    {"id":"de-gen3","type":"Prix marchand, navigateur","label":"Amazon Allemagne : L10s Ultra Gen 3 Kit","url":"https://www.amazon.de/dp/B0H2FPG8NY"},
+    {"id":"de-l50ae","type":"Prix marchand, navigateur","label":"Amazon Allemagne : L50 Ultra AE","url":"https://www.amazon.de/dp/B0GD78Z9JT"},
+    {"id":"de-edge","type":"Prix marchand, navigateur","label":"Amazon Allemagne : Qrevo Edge 2 Set noir","url":"https://www.amazon.de/dp/B0GMH56TRH"},
+    {"id":"de-10r","type":"Prix marchand, navigateur","label":"Amazon Allemagne : Saros 10R Set","url":"https://www.amazon.de/dp/B0FC2VSX1R"},
+    {"id":"ret-p70","type":"Prix indexé, non confirmé sur la fiche","label":"Coolblue Belgique : P70 Pro Ultra","url":"https://www.coolblue.be/en/product/977075/mova-p70-pro-ultra.html","note":"499 € dans l'index Brave consulté, mais fiche directe bloquée 403 ; ce tarif n'entre pas dans le calcul du meilleur prix."},
+    {"id":"ret-max","type":"Prix indexé, non confirmé sur la fiche","label":"Hifi Luxembourg : T90 Max Pro noir","url":"https://www.hifi.lu/fr/p/21050326-ecovacs-robot-aspirateur-laveur-deebot-t90-max-pro-omni-noir","note":"479 € dans l'index consulté ; fiche en erreur 500 ; livraison Belgique et port non validés. Tarif exclu du meilleur prix."},
+    {"id":"ret-vdb","type":"Fiche marchand","label":"Vanden Borre Belgique : T90 Max Pro Omni","url":"https://www.vandenborre.be/fr/aspirateur-robot/deebot-t90-max-pro-omni","note":"Fiche caractéristiques accessible mais prix non exposé dans la lecture : aucun prix inventé."}
+  ],
+  "haProfiles": {
+    "rr": {"label":"Core Roborock","kind":"core","local":"Hybride, pas hors ligne garanti","radio":"Wi-Fi ; 2,4 GHz uniquement explicitement indiqué pour Edge 2 et QV 35A. Bande à vérifier dans la notice du SKU pour les autres.","protocol":"API propriétaire LAN TCP 58867 / découverte UDP 58866 ; HTTPS et MQTT/TLS cloud (8883).","detail":"Appairage dans l'app Roborock. Compte et cloud nécessaires au fonctionnement documenté de l'intégration ; cartes et routines toujours cloud. QV / Qrevo / Saros déclarés pris en charge par la documentation Core, sans essai de nos propres appareils.","sources":["ha-rr","ha-matter","rr-qv"]},
+    "dr": {"label":"HACS Dreame Vacuum","kind":"hacs","local":"DreameHome / MOVAhome : dépendance cloud","radio":"Wi-Fi ; bande exacte non relevée pour chaque variante. Ne pas supposer une prise en charge du 5 GHz.","protocol":"API DreameHome / MOVAhome propriétaire, services cloud HTTPS / messagerie. Un broker MQTT local ne remplace pas le cloud constructeur.","detail":"Intégration communautaire Tasshack. Modèles nommés dans la liste de support, codes variables suivant région / révision. Le mode LAN miIO à jeton n'est destiné qu'aux appareils appairables à Xiaomi Home, sans cartes via cette API ; ce n'est pas une voie locale universelle pour ces modèles.","sources":["ha-dr","ha-dr-list","ha-dr-local"]},
+    "ec": {"label":"Core Ecovacs, modèle à confirmer","kind":"conditional","local":"Cloud dans l'installation standard","radio":"Wi-Fi ; bande à vérifier dans la notice du modèle.","protocol":"API cloud HTTPS + MQTT/TLS via deebot-client ; certains anciens appareils utilisent d'autres protocoles.","detail":"L'intégration de marque existe dans Core mais les trois références exactes et toutes leurs fonctions n'ont pas été validées dans une instance HA. Vérifier le modèle / firmware dans deebot-client. Bumper n'est pas une garantie de local pour un robot récent.","sources":["ha-ec","ha-ec-lib","ha-matter"]},
+    "eu-x10": {"label":"HACS Eufy Clean : X10 testé","kind":"hacs","local":"MQTT cloud pour ce parcours","radio":"Wi-Fi et Bluetooth indiqués par eufy ; Bluetooth n'implique pas une commande locale HA.","protocol":"Eufy Clean, transport MQTT cloud. Le plugin propose aussi Tuya LAN pour les appareils éligibles, pas automatiquement pour le X10.","detail":"X10 Pro Omni explicitement testé dans le dépôt jeppesens/eufy-clean. Scènes, pièces, carte et station selon firmware. Ce n'est pas le vieux plugin RoboVac ni une intégration robot native de HA Core.","sources":["ha-eu","eu-x10"]},
+    "eu-e25": {"label":"HA E25 : à valider","kind":"uncertain","local":"Non établi pour ce SKU","radio":"Wi-Fi et Bluetooth confirmés sur le tableau eufy.","protocol":"Écosystème eufy Clean ; transport exact du SKU non validé. Matter évoqué par Vacuum Wars, sans confirmation suffisante sur la fiche fabricant consultée.","detail":"La liste HACS consultée ne nomme pas E25 / T2353. Ne pas transposer le support X10 ni la fonction Tuya LAN du S1 Pro. Si HA est décisif, exiger un retour documenté pour le code produit et le firmware exacts.","sources":["ha-eu","eu-e25","test-e25"]},
+    "xi-x20": {"label":"HACS : Dreame / Xiaomi Home","kind":"hacs","local":"Cloud conseillé pour les fonctions complètes","radio":"Wi-Fi ; bande exacte à vérifier dans la notice D109GL.","protocol":"MIoT / Xiaomi Cloud (HTTPS commandes, MQTT états). Connexion locale miIO à jeton seulement si disponible pour cet appareil, sans cartes via cette API.","detail":"X20 Max xiaomi.vacuum.d109gl explicitement listé dans Dreame Vacuum. Autre voie : intégration Xiaomi Home soutenue par Xiaomi, installée via HACS, pas dans Core. Couverture des fonctions et des cartes variable selon intégration.","sources":["ha-dr-list","ha-dr-local","ha-xi"]},
+    "xi-5": {"label":"HACS Xiaomi Home, support précis à valider","kind":"conditional","local":"Cloud ; local complet non établi","radio":"Wi-Fi ; ne pas en déduire Zigbee, Thread ou une API LAN ouverte.","protocol":"MIoT via Xiaomi Cloud, OAuth 2.0 / HTTPS et MQTT. Mode LAN partiel non recommandé par le dépôt Xiaomi.","detail":"Intégration officielle Xiaomi distribuée via HACS. Pas de preuve de support complet du 5 Pro / OV21GL dans les sources consultées, ni d'équivalence avec le X20 Max pris en charge par Dreame Vacuum.","sources":["ha-xi","ha-dr-list"]}
+  },
+  "models": [
+    {
+      "id":"dr-gen3","brand":"Dreame","name":"L10s Ultra Gen 3 Kit","year":2025,
+      "mop":"rotatifs","pa":25000,"robot":[350,350,97],"raised":null,"dock":[340,457,590],"dimState":"qualified","dimNote":"Fiche BE : 457 × 340 × 590 mm ; L/P normalisés à partir de la fiche Labo Maison (34 × 59 × 45,7 cm, l × h × p). Rampe et dégagement de service en plus si non inclus.",
+      "lift":10.5,"detach":null,"edgeMop":true,"edgeBrush":true,"rinse":false,"camera":false,"nav":"LDS + laser 3DAdapt ; pas de caméra RGB établie","brush":"Rouleau standard ; brosse latérale extensible","anti":"basic","wash":null,"washNote":"Lavage automatique confirmé, chauffage de l'eau non établi : ne pas confondre avec le séchage à air chaud.","dry":true,"dryC":null,"detergent":true,
+      "battery":5200,"bin":250,"bag":3.2,"waterClean":null,"waterDirty":null,"runtime":"231 min revendiquées, aspiration seule silencieuse ; pas une autonomie de lavage mesurée.","ha":"dr","haCode":"dreame.vacuum.r501h / r5023a et autres variantes listées","matter":"Non établi","matterState":"unknown",
+      "sources":["dr-gen3","fiche-gen3","ha-dr-list"],"tested":false,
+      "pros":["Deux extensions (brossette et patin) à prix contenu.","Station qui vide, lave, sèche et gère le détergent."],
+      "cons":["Pas d'essai indépendant de cette variante Kit-A exploité ici.","Chauffage du lavage non confirmé ; hauteur de base 59 cm."],
+      "verdict":"Option complète autour de 329 € si le chauffage du lavage n'est pas prioritaire. À tarif identique, Qrevo S Pro chauffe ses patins mais n'a pas de bras de lavage extensible.",
+      "review":{"rating":4.6,"count":"170","source":"be-gen3","sample":0,"plus":[],"minus":[],"note":"Note du résultat Amazon BE ; thèmes textuels non audités. Sur Amazon FR, des générations différentes partagent visiblement une même famille d'avis."},
+      "offers":[
+        {"shop":"Amazon Belgique","country":"BE","price":329,"shipping":0,"be":true,"available":true,"source":"be-gen3","level":"recherche marchand","variant":"Kit-A","delivery":"23 novembre affiché"},
+        {"shop":"Dreame Belgique","country":"BE","price":329,"shipping":null,"be":true,"available":true,"source":"dr-gen3","level":"catalogue fabricant","variant":"Kit"},
+        {"shop":"Amazon France","country":"FR","price":359,"shipping":null,"be":null,"available":true,"source":"fr-gen3","level":"recherche marchand","variant":"Kit-A"},
+        {"shop":"Amazon Allemagne","country":"DE","price":499,"shipping":null,"be":null,"available":true,"source":"de-gen3","level":"recherche marchand","variant":"Kit"}
+      ]
+    },
+    {
+      "id":"dr-l40s","brand":"Dreame","name":"L40s Pro Ultra","year":2025,
+      "mop":"rotatifs","pa":19000,"robot":[null,null,null],"raised":null,"dock":[457,340,590],"dimState":"qualified","dimNote":"Base retenue pour le comparateur : 45,7 × 34 × 59 cm (L × P × H). L'écart entre 45,5 et 45,7 cm est traité comme un arrondi non bloquant de 2 mm, avec 45,7 cm retenus à votre demande. Les cotes propres au robot restent non recoupées séparément. Prévoir les dégagements habituels pour la rampe et l'accès aux réservoirs.",
+      "lift":null,"detach":true,"edgeMop":true,"edgeBrush":true,"rinse":false,"camera":true,"nav":"LiDAR fixe + caméra RGB ; évitement parfois trop prudent","brush":"HyperStream : deux rouleaux anti-emmêlement","anti":"advanced","wash":75,"dry":true,"dryC":null,"detergent":true,
+      "battery":null,"bin":null,"bag":3.2,"waterClean":4.5,"waterDirty":4,"runtime":"139 min mesurées en CleanGenius ; 80 min en Turbo chez Labo Maison. Recharge un peu plus de 3 h.","ha":"dr","haCode":"dreame.vacuum.r9419a / e / h / t","matter":"Non établi","matterState":"unknown",
+      "sources":["test-l40s","be-l40s","ha-dr-list"],"tested":true,
+      "pros":["Très bon anti-emmêlement constaté lors de l'essai.","Lavage quotidien efficace ; deux bras extensibles ; dosage de détergent."],
+      "cons":["Deux à trois passages possibles sur taches incrustées ; CleanGenius lent.","Reflets parfois mal identifiés ; délais Amazon très variables.","Dimensions séparées du robot à faire confirmer avant un achat contraint par les meubles."],
+      "verdict":"Très bon rapport équipement/prix à 399 € pour l'entretien quotidien. Le délai standard affiché en janvier rend la comparaison avec un robot livré rapidement indispensable.",
+      "review":{"rating":4.4,"count":"environ 2 700","source":"be-l40s","sample":6,"plus":["Installation et application faciles ; gain de temps au quotidien.","Bonne récupération des cheveux et poils ; entretien de la station apprécié."],"minus":["Un avis regrette l'efficacité sur taches incrustées.","Un autre mentionne des chocs et préfère dégager les objets."],"note":"Six avis visibles de la variante L40s Pro Ultra ; sélection non aléatoire, surtout positive. Ce n'est pas un taux de satisfaction ni une mesure de fiabilité."},
+      "offers":[
+        {"shop":"Amazon Belgique","country":"BE","price":399,"shipping":0,"be":true,"available":true,"source":"be-l40s","level":"fiche marchand","variant":"L40s Pro Ultra","seller":"Amazon.com.be","delivery":"Standard 7 janvier ; rapide 25 novembre affichés, frais du rapide à vérifier"},
+        {"shop":"Amazon France","country":"FR","price":418,"shipping":null,"be":null,"available":true,"source":"fr-l40s","level":"recherche marchand"},
+        {"shop":"Amazon Allemagne","country":"DE","price":429,"shipping":null,"be":null,"available":true,"source":"de-l40s","level":"recherche marchand"}
+      ]
+    },
+    {
+      "id":"dr-l50ae","brand":"Dreame","name":"L50 Ultra AE","year":2026,
+      "mop":"rotatifs","pa":28000,"robot":[350,350,97],"raised":null,"dock":[340,457,590],"dimState":"qualified","dimNote":"Ordre BE 457 × 340 × 590 mm ; axes L/P recoupés avec la fiche Labo Maison. Prévoir l'accès aux réservoirs par le dessus.",
+      "lift":10.5,"detach":null,"edgeMop":true,"edgeBrush":true,"rinse":false,"camera":false,"nav":"LDS + évitement laser ; caméra RGB non établie sur la fiche fabricant","brush":"TriCut 3.0, coupe des cheveux","anti":"advanced","wash":100,"dry":true,"dryC":null,"detergent":true,
+      "battery":5200,"bin":null,"bag":null,"waterClean":null,"waterDirty":null,"runtime":"Pas de mesure indépendante retenue.","ha":"dr","haCode":"dreame.vacuum.r502la / r5061a, et autres variantes listées","matter":"Non établi","matterState":"unknown",
+      "sources":["dr-l50ae","fiche-l50ae","ha-dr-list"],"tested":false,
+      "pros":["Station ThermoHub 100 °C ; deux extensions ; TriCut.","Hauteur du robot 97 mm, inférieure à celle du L50s."],
+      "cons":["Pas d'essai indépendant complet dans la présentation consultée.","Ne pas acheter en supposant la caméra / reconnaissance du L50s.","100 °C concerne le système de station, pas une serpillière à 100 °C sur le parquet."],
+      "verdict":"Alternative Dreame à 429 € si l'on veut une station chauffante et moins de hauteur. L50s ajoute notamment le duo de brosses et une reconnaissance plus avancée, pas une garantie de meilleur lavage.",
+      "review":{"rating":4.8,"count":"24","source":"be-l50ae","sample":0,"plus":[],"minus":[],"note":"Très petit échantillon de la variante AE-A ; pas comparable directement à l'ancienne annonce AE et ses centaines d'avis."},
+      "offers":[
+        {"shop":"Amazon Belgique","country":"BE","price":429,"shipping":0,"be":true,"available":true,"source":"be-l50ae","level":"recherche marchand","variant":"AE-A"},
+        {"shop":"Dreame Belgique","country":"BE","price":429,"shipping":null,"be":true,"available":true,"source":"dr-l50ae","level":"catalogue fabricant"},
+        {"shop":"Amazon Allemagne","country":"DE","price":429,"shipping":null,"be":null,"available":true,"source":"de-l50ae","level":"recherche marchand","variant":"AE, pas AE-A"}
+      ]
+    },
+    {
+      "id":"dr-l50s","brand":"Dreame","name":"L50s Pro Ultra","year":2026,
+      "mop":"rotatifs","pa":30000,"robot":[350,350,103.8],"raised":null,"dock":[null,null,590],"dockRaw":"457 × 340 × 590 mm (ordre fabricant)","dimState":"ambiguous","dimNote":"Fabricant : 457 × 340 × 590 mm sans axes ; la fiche Labo Maison donne 45,7 l × 59 h × 34 p cm. Orientation L/P à confirmer avant une niche ; encombrement au sol au moins celui du rectangle 457 × 340 mm.",
+      "lift":10.5,"detach":null,"edgeMop":true,"edgeBrush":true,"rinse":false,"camera":true,"nav":"LiDAR fixe + reconnaissance IA ; caméra étayée par l'essai","brush":"DuoBrush HyperStream anti-emmêlement","anti":"advanced","wash":100,"dry":true,"dryC":null,"detergent":true,
+      "battery":5200,"bin":null,"bag":null,"waterClean":null,"waterDirty":null,"runtime":"175 min mesurées lors de l'essai Labo Maison ; conditions propres à cet essai.","ha":"dr","haCode":"dreame.vacuum.r5039a / e / f / h, r502ka et variantes","matter":"Non établi","matterState":"unknown",
+      "sources":["dr-l50s","test-l50s","ha-dr-list"],"tested":true,
+      "pros":["Brosses duo, deux bras extensibles, station chauffante.","Aspiration et autonomie appréciées dans l'essai."],
+      "cons":["CleanGenius a étalé huile et sirop dans l'essai ; retour au lavage des patins perfectible.","Tapis long pris pour un obstacle dans l'essai.","Plus haut que le L50 AE ; pas un progrès évident pour votre seul usage sols durs."],
+      "verdict":"À 499 €, il ne justifie pas automatiquement 100 € de plus que le L40s à 399 €. Je privilégierais les fonctionnalités utiles et les retours du lot plutôt que les 30 000 Pa.",
+      "review":{"rating":4.6,"count":"47","source":"be-l50s","sample":0,"plus":[],"minus":[],"note":"Petite famille d'avis de la variante -A. Les limites CleanGenius citées ici viennent du test indépendant, pas d'un sondage clients."},
+      "offers":[
+        {"shop":"Amazon Belgique","country":"BE","price":499,"shipping":0,"be":true,"available":true,"source":"be-l50s","level":"recherche marchand","variant":"Pro Ultra-A","delivery":"24 novembre affiché"},
+        {"shop":"Dreame Belgique","country":"BE","price":499,"shipping":null,"be":true,"available":true,"source":"dr-l50s","level":"catalogue fabricant"},
+        {"shop":"Amazon France","country":"FR","price":499,"shipping":null,"be":null,"available":true,"source":"fr-l50s","level":"recherche marchand","delivery":"1er décembre affiché"}
+      ]
+    },
+    {
+      "id":"dr-aqua","brand":"Dreame","name":"Aqua10 Ultra Roller Complete","year":2025,
+      "mop":"rouleau","pa":30000,"robot":[null,null,97.5],"raised":null,"dock":[420,440,500],"dimState":"partial","dimNote":"Hauteur rétractée 97,5 mm ; diamètre et hauteur LiDAR relevé non recoupés. Station 42 l × 50 h × 44 p cm selon le test.",
+      "lift":null,"detach":false,"edgeMop":true,"edgeBrush":true,"rinse":true,"camera":true,"nav":"LiDAR rétractable + double caméra ; navigation appréciée dans l'essai","brush":"Double brosse anti-emmêlement","anti":"advanced","wash":100,"dry":true,"dryC":null,"detergent":true,
+      "battery":null,"bin":null,"bag":null,"waterClean":null,"waterDirty":null,"runtime":"Pas de valeur comparable retenue.","ha":"dr","haCode":"dreame.vacuum.r9535a / h / n et variantes Complete r9547…","matter":"Non établi","matterState":"unknown",
+      "sources":["dr-aqua","test-aqua","risk-aqua","ha-dr-list"],"tested":true,"risk":"Fuites de station rapportées dans des avis US portant sur 2025. Correctif des lots BE 2026 non établi ; demander une confirmation écrite et un retour simple.",
+      "pros":["Rouleau rincé en continu, protection sur tapis et lavage de station à 100 °C.","Bonne navigation dans l'essai Labo Maison."],
+      "cons":["649 €, soit environ 30 % au-dessus du budget.","Signalements historiques de fuites ; bourrage / vidage relevés dans l'essai.","Ne pas confondre Aqua10 Ultra Roller et Aqua10 Roller."],
+      "verdict":"Pas mon dépassement de budget conseillé par défaut. Le rouleau est intéressant, mais plusieurs alternatives coûtent moins de 500 € et l'historique de fuites appelle des garanties.",
+      "review":{"rating":4.0,"count":"environ 1 300 (Amazon FR)","source":"fr-aqua","sample":0,"plus":[],"minus":["Fuites de station et eau au sol dans des avis US analysés par Vacuum Wars."],"note":"Signal secondaire historique, pas taux de panne actuel en Belgique. Aucune extrapolation du pourcentage d'avis négatifs en probabilité de défaillance."},
+      "offers":[
+        {"shop":"Dreame Belgique","country":"BE","price":649,"shipping":null,"be":true,"available":true,"source":"dr-aqua","level":"catalogue fabricant","variant":"Complete"},
+        {"shop":"Amazon France","country":"FR","price":649,"shipping":null,"be":null,"available":true,"source":"fr-aqua","level":"recherche marchand","variant":"Complete"}
+      ]
+    },
+    {
+      "id":"rr-qv","brand":"Roborock","name":"QV 35A Set","year":2025,
+      "mop":"rotatifs","pa":8000,"robot":[350,353,96.5],"raised":null,"dock":[340,487,519],"dimState":"qualified","dimNote":"Cotes propres à la fiche QV 35A, pas héritées du Qrevo S. FAQ : garder environ 400 mm de large × 1 200 mm de profondeur × 900 mm de haut pour l'installation et le service.","install":[400,1200,900],
+      "lift":null,"detach":false,"edgeMop":false,"edgeBrush":false,"rinse":false,"camera":false,"nav":"LiDAR + Reactive Tech, sans reconnaissance RGB établie","brush":"Brosse caoutchouc, brossette anti-enchevêtrement","anti":"basic","wash":null,"washNote":"Lavage automatique confirmé, eau chaude non établie.","dry":true,"dryC":null,"dryType":"froid","detergent":null,
+      "battery":5200,"bin":330,"bag":null,"waterClean":null,"waterDirty":null,"runtime":"Non relevée.","ha":"rr","haCode":"Série QV annoncée prise en charge dans HA Core","matter":"Non établi pour QV 35A","matterState":"unknown",
+      "sources":["rr-qv","rr-shop","ha-rr"],"tested":false,
+      "pros":["Station de lavage complète dans la zone des 300 €.","Écosystème Roborock et parcours HA Core."],
+      "cons":["Pas de patin extensible ni de chauffage du lavage établi ; séchage à l'air froid confirmé.","À 299,99 €, le Qrevo S Pro chauffe ses patins au même prix boutique."],
+      "verdict":"Référence de budget à ne retenir qu'avec un écart de prix réel face au S Pro, après confirmation des dimensions.",
+      "review":{"rating":null,"count":null,"sample":0,"plus":[],"minus":[],"note":"Aucun corpus client spécifique suffisamment vérifié."},
+      "offers":[{"shop":"Roborock France → Belgique","country":"FR","price":299.99,"shipping":0,"be":true,"available":true,"source":"rr-qv","level":"catalogue fabricant","variant":"Set","note":"Livraison BE confirmée par la politique ; TVA de destination à contrôler."}]
+    },
+    {
+      "id":"rr-spro","brand":"Roborock","name":"Qrevo S Pro","year":2026,
+      "mop":"rotatifs","pa":18500,"robot":[350,353,96.5],"raised":null,"dock":[340,487,519],"dimState":"qualified","dimNote":"Cotes constructeur ; accès aux réservoirs et sortie du robot en plus.",
+      "lift":10,"detach":false,"edgeMop":false,"edgeBrush":false,"rinse":false,"camera":false,"nav":"LiDAR + lumière structurée Reactive Tech","brush":"Rouleau entièrement caoutchouc ; brossette courbe anti-emmêlement","anti":"basic","wash":75,"dry":true,"dryC":45,"detergent":false,
+      "battery":null,"bin":null,"bag":null,"waterClean":null,"waterDirty":null,"runtime":"Non mesurée dans les sources retenues.","ha":"rr","haCode":"Famille Qrevo, selon la documentation Core","matter":"Annoncé via une future OTA sur la fiche ; activation actuelle non vérifiée","matterState":"ota",
+      "sources":["rr-spro","ha-rr","be-spro"],"tested":false,
+      "pros":["299,99 € boutique avec lavage des patins à 75 °C et séchage 45 °C.","Base moins haute que beaucoup de Dreame (51,9 cm)."],
+      "cons":["Pas d'extension de lavage : bordures moins bien couvertes par conception.","Évitement sans caméra ; petits câbles à ranger.","Pas de dosage automatique de détergent confirmé."],
+      "verdict":"Le choix économe Roborock, pas le meilleur pour les plinthes. Le 2 Pro à 379,99 € ajoute notamment le patin extensible et le retrait des patins.",
+      "review":{"rating":4.4,"count":"environ 1 200","source":"be-spro","sample":0,"plus":[],"minus":[],"note":"Note de famille Amazon ; avis textuels non audités ici."},
+      "offers":[
+        {"shop":"Roborock France → Belgique","country":"FR","price":299.99,"shipping":0,"be":true,"available":true,"source":"rr-spro","level":"catalogue fabricant","variant":"S Pro Set","url":"https://fr.roborock.com/products/roborock-qrevo-s-pro"},
+        {"shop":"Amazon Belgique","country":"BE","price":329.99,"shipping":0,"be":true,"available":true,"source":"be-spro","level":"recherche marchand","variant":"Set","delivery":"19 novembre affiché"}
+      ]
+    },
+    {
+      "id":"rr-2pro","brand":"Roborock","name":"Qrevo 2 Pro","year":2026,
+      "mop":"rotatifs","pa":25000,"robot":[352,350,96.6],"raised":null,"dock":[402,494,450],"dimState":"qualified","dimNote":"Station basse (45 cm), mais largeur de 40,2 cm. Cotes constructeur, pas volume de maintenance.",
+      "lift":15,"detach":true,"edgeMop":true,"edgeBrush":false,"rinse":false,"camera":false,"nav":"LiDAR fixe + Reactive Tech sans caméra RGB","brush":"DuoDivide ; brossette réversible, pas bras latéral extensible","anti":"advanced","wash":75,"dry":true,"dryC":45,"detergent":false,
+      "battery":null,"bin":null,"bag":null,"waterClean":null,"waterDirty":null,"runtime":"TechRadar : environ cinq pièces avant recharge dans son usage ; pas un protocole d'autonomie comparable.","ha":"rr","haCode":"Famille Qrevo, selon la documentation Core","matter":"Prise en charge annoncée ; domotique testée par TechRadar, fonctions / contrôleur exacts à vérifier","matterState":"vendor",
+      "sources":["rr-2pro","test-2pro","ha-rr"],"tested":true,
+      "pros":["Patin extensible et patins laissés à la base pour aspirer les tapis.","DuoDivide ; station de 45 cm de haut ; bon lavage intensif dans l'essai."],
+      "cons":["USB coincé dans l'essai TechRadar : un capteur de profondeur n'est pas une reconnaissance de tous les câbles.","Lavage maximum plus lent et plus humide ; pas de dosage automatique."],
+      "verdict":"Le compromis raisonnable autour de 380–400 € : ne pas payer davantage pour des seuils que vous n'avez pas. Très pertinent si le sol est dégagé.",
+      "review":{"rating":4.3,"count":"212","source":"be-2pro","sample":0,"plus":[],"minus":[],"note":"Note Amazon BE de la famille Set ; les remarques sur le câble et le lavage viennent de l'essai indépendant."},
+      "offers":[
+        {"shop":"Roborock France → Belgique","country":"FR","price":379.99,"shipping":0,"be":true,"available":true,"source":"rr-2pro-price","level":"fiche fabricant","variant":"2 Pro Set, blanc / noir"},
+        {"shop":"Amazon Belgique","country":"BE","price":399.99,"shipping":0,"be":true,"available":true,"source":"be-2pro","level":"recherche marchand","variant":"Set noir","delivery":"23 novembre affiché"}
+      ]
+    },
+    {
+      "id":"rr-edge2","brand":"Roborock","name":"Qrevo Edge 2","year":2026,
+      "mop":"rotatifs","pa":25000,"robot":[352,352,79.8],"raised":null,"dock":[340,487,521],"dimState":"qualified","dimNote":"79,8 mm avec le système rétracté ; conserver une marge sous un meuble, pas un ajustement au millimètre.",
+      "lift":null,"detach":true,"edgeMop":true,"edgeBrush":true,"rinse":false,"camera":true,"nav":"LiDAR RetractSense + caméra RGB / lumière structurée Reactive AI","brush":"DuoDivide + brossette FlexiArm","anti":"advanced","wash":80,"dry":true,"dryC":55,"detergent":null,
+      "battery":null,"bin":null,"bag":null,"waterClean":null,"waterDirty":null,"runtime":"Mesure indépendante non retenue.","ha":"rr","haCode":"Famille Qrevo, selon la documentation Core","matter":"Mentionné par le fabricant ; disponibilité exacte à vérifier sur le firmware reçu","matterState":"vendor",
+      "sources":["rr-edge2","be-edge","ha-rr"],"tested":false,
+      "pros":["79,8 mm ; caméra ; deux bras extensibles ; retrait des patins.","Offre Amazon BE sous les 500 € avec vendeur identifié."],
+      "cons":["Pas d'essai indépendant complet exploité pour cette variante récente.","Famille Amazon mêlant aussi Edge S5A : la note ne décrit pas seulement Edge 2.","Dosage automatique de détergent non établi."],
+      "verdict":"Mon choix polyvalent si vous privilégiez Amazon BE et les meubles bas : 489,99 € observés. Boutique directe à 479,99 €, écart d'environ 10 € seulement.",
+      "review":{"rating":4.4,"count":"1 044, famille multivariantes","source":"be-edge","sample":5,"plus":["Nettoyage quotidien et passage sous les meubles appréciés.","Mise en route et station automatiques jugées pratiques."],"minus":["Un avis indique une prise en main de l'application à prévoir.","Un autre rappelle qu'un nettoyage complet manuel reste parfois nécessaire."],"note":"Cinq avis visibles non explicitement attribués à Edge S5A retenus. Les avis Silver / Edge S5A ont été écartés ; les couleurs seules ne garantissent pas le sous-modèle."},
+      "offers":[
+        {"shop":"Amazon Belgique","country":"BE","price":489.99,"shipping":0,"be":true,"available":true,"source":"be-edge","level":"fiche marchand","variant":"Edge 2 blanc","seller":"Roborock Official EU ; expédié par Amazon","delivery":"19 novembre affiché","note":"Plus bas affiché sur 30 jours : 539,99 € ; économie de 50 €, pas de 400 € par rapport au prix barré."},
+        {"shop":"Roborock France → Belgique","country":"FR","price":479.99,"shipping":0,"be":true,"available":true,"source":"rr-store","level":"catalogue fabricant","variant":"Edge 2 Set","url":"https://fr.roborock.com/products/roborock-qrevo-edge-2"},
+        {"shop":"Amazon France","country":"FR","price":903.16,"shipping":null,"be":null,"available":true,"source":"fr-edge","level":"recherche marchand","variant":"Edge 2 blanc"},
+        {"shop":"Amazon Allemagne","country":"DE","price":898.79,"shipping":null,"be":null,"available":true,"source":"de-edge","level":"recherche marchand","variant":"Edge 2 Set noir"}
+      ]
+    },
+    {
+      "id":"rr-flow","brand":"Roborock","name":"Qrevo Curv 2 Flow","year":2026,
+      "mop":"rouleau","pa":20000,"robot":[353,353,119],"raised":null,"dock":[450,450,450],"dimState":"qualified","dimNote":"Attention au robot de 11,9 cm : beaucoup plus haut que Curv 2 Pro / Saros 10R malgré une base basse.",
+      "lift":15,"detach":false,"edgeMop":true,"edgeBrush":false,"rinse":true,"camera":true,"nav":"LiDAR fixe + Reactive AI RGB ; plus de 200 objets revendiqués","brush":"DuoDivide, deux brossettes fixes","anti":"advanced","wash":75,"dry":true,"dryC":55,"detergent":false,
+      "battery":null,"bin":null,"bag":null,"waterClean":4,"waterDirty":3,"runtime":"Labo Maison estime environ 166 min ; 111 m² nettoyés en passant de 100 à 35 % dans son essai, pas une garantie de surface.","ha":"rr","haCode":"Famille Qrevo, selon la documentation Core","matter":"Annoncé via future OTA, note 22 de la fiche","matterState":"ota",
+      "sources":["rr-flow","test-flow","ha-rr"],"tested":true,
+      "pros":["Rouleau 27 cm rincé en continu ; pression constructeur 15 N.","Navigation et application appréciées dans l'essai ; consommation d'eau modérée."],
+      "cons":["Robot très haut ; pas de dosage automatique de détergent.","Les brossettes continuaient dans les liquides lors de l'essai.","Entretien du réservoir sale du robot ; odeur et bruit de séchage signalés par le testeur."],
+      "verdict":"Rouleau intéressant à 479 € si les meubles laissent 12 cm et si l'entretien du circuit sale convient. Ce n'est pas automatiquement meilleur qu'un bon modèle à patins.",
+      "review":{"rating":null,"count":null,"sample":0,"plus":[],"minus":[],"note":"Pas de corpus client spécifique audité. Les limites citées sont celles de l'essai Labo Maison."},
+      "offers":[
+        {"shop":"Roborock France → Belgique","country":"FR","price":479,"shipping":0,"be":true,"available":true,"source":"rr-flow-price","level":"fiche fabricant"},
+        {"shop":"Amazon France, via Labo Maison","country":"FR","price":479,"shipping":null,"be":null,"available":null,"source":"test-flow","level":"comparateur secondaire"}
+      ]
+    },
+    {
+      "id":"rr-curvpro","brand":"Roborock","name":"Qrevo Curv 2 Pro","year":2025,
+      "mop":"rotatifs","pa":25000,"robot":[350,352,79.8],"raised":null,"dock":[450,450,450],"dimState":"qualified","dimNote":"Robot rétracté 79,8 mm ; base large de 45 cm mais haute de 45 cm seulement.",
+      "lift":null,"detach":true,"edgeMop":true,"edgeBrush":true,"rinse":false,"camera":true,"nav":"LiDAR rétractable + reconnaissance RGB Reactive AI","brush":"DuoDivide + FlexiArm","anti":"advanced","wash":100,"dry":true,"dryC":55,"detergent":null,
+      "battery":null,"bin":null,"bag":null,"waterClean":null,"waterDirty":null,"runtime":"Non relevée dans un protocole comparable.","ha":"rr","haCode":"Famille Qrevo, selon la documentation Core","matter":"Toujours décrit comme future OTA sur la fiche consultée ; activation non vérifiée","matterState":"ota",
+      "sources":["rr-curvpro","ha-rr"],"tested":false,
+      "pros":["Patins 12 N revendiqués ; lavage en station 100 °C ; base basse.","Retrait des patins, brosses extensibles et hauteur réduite."],
+      "cons":["549 €, +49 € ; le châssis / gestion des tapis apportent peu à votre absence de seuils.","Pas d'essai indépendant complet exploité ici ; Matter OTA à vérifier."],
+      "verdict":"Dépassement de budget défendable surtout pour une base de 45 cm de haut ou les tapis. Pas nécessaire par défaut face au Saros 10R direct à 499,99 €.",
+      "review":{"rating":4.1,"count":"378","source":"be-curvpro","sample":0,"plus":[],"minus":[],"note":"Note Amazon BE ; thèmes non audités."},
+      "offers":[
+        {"shop":"Amazon Belgique","country":"BE","price":549,"shipping":0,"be":true,"available":true,"source":"be-curvpro","level":"recherche marchand"},
+        {"shop":"Roborock France → Belgique","country":"FR","price":549,"shipping":0,"be":true,"available":true,"source":"rr-store","level":"catalogue fabricant","url":"https://fr.roborock.com/products/roborock-qrevo-curv-2-pro"}
+      ]
+    },
+    {
+      "id":"rr-10r","brand":"Roborock","name":"Saros 10R","year":2025,
+      "mop":"rotatifs","pa":22000,"robot":[350,353,79.8],"raised":null,"dock":[381,475,488],"dimState":"qualified","dimNote":"Station à réservoirs. La variante plomberie (300 mm de haut) n'est pas l'offre comparée ici.",
+      "lift":22,"liftNote":"Jusqu'à 22 mm avec élévation du châssis, pas le débattement des seuls patins.","detach":true,"edgeMop":true,"edgeBrush":true,"rinse":false,"camera":true,"nav":"StarSight 2.0 ToF 3D + caméra RGB / VertiBeam ; pas de tourelle LiDAR","brush":"DuoDivide + FlexiArm Riser","anti":"advanced","wash":80,"dry":true,"dryC":55,"detergent":true,
+      "battery":null,"bin":null,"bag":null,"waterClean":null,"waterDirty":null,"runtime":"Recharge annoncée en 2,5 h ; pas d'autonomie en lavage directement comparable retenue.","ha":"rr","haCode":"Série Saros déclarée prise en charge dans Core","matter":"Prise en charge annoncée par Roborock ; activer / vérifier le firmware et le contrôleur","matterState":"vendor",
+      "sources":["rr-10r","test-10r","ha-rr"],"tested":true,
+      "pros":["Robot très bas, détergent automatique, retrait des patins.","24/24 obstacles et 92 % poils sur tapis dans le test Vacuum Wars de 2025.","HA Core documenté ; application et réglages très complets."],
+      "cons":["549 € sur Amazon BE Set contre 499,99 € direct pour le robot standard.","Très bon équipement, mais pas un rouleau rincé en continu.","Le résultat du test n'empêche pas de ranger les câbles ni de vérifier une mise à jour."],
+      "verdict":"Mon choix polyvalent le plus étayé à environ 500 € si la boutique directe vous convient. À 499,99 € affichés, contrôler la TVA belge finale ; Amazon BE demande environ 49 € de plus pour le Set.",
+      "review":{"rating":4.0,"count":"363, famille Set","source":"be-10r","sample":7,"plus":["Nettoyage quotidien et navigation nettement meilleurs que d'anciens robots selon plusieurs avis.","Faible hauteur et réglages d'aspiration / lavage appréciés ; gestion de l'eau jugée simple."],"minus":["Un avis regrette le supplément payé pour le Set sans avantage matériel perçu.","Application demandant un apprentissage initial ; nettoyage manuel ponctuel encore nécessaire."],"note":"Sept avis visibles Black Set lus, sélection non aléatoire. Le Set ne transforme pas les patins rotatifs en une autre technologie. Résultats d'obstacles et poils : essai Vacuum Wars, pas avis clients."},
+      "metrics":[{"label":"Obstacles évités","value":"24 / 24","source":"test-10r"},{"label":"Poils aplatis sur tapis","value":"92 %","source":"test-10r"},{"label":"Emmêlement, cheveux de 7 pouces","value":"0 %","source":"test-10r"}],
+      "offers":[
+        {"shop":"Roborock France → Belgique","country":"FR","price":499.99,"shipping":0,"be":true,"available":true,"source":"rr-shop","level":"catalogue fabricant","variant":"Saros 10R standard, pas Set","url":"https://fr.roborock.com/products/roborock-saros-10r","note":"Le Set de la même fiche coûte 999,99 € ; sélectionner la variante standard. TVA de destination à contrôler."},
+        {"shop":"Amazon Belgique","country":"BE","price":549,"shipping":0,"be":true,"available":true,"source":"be-10r","level":"fiche marchand","variant":"Saros 10R Set","seller":"Roborock Official EU","delivery":"23 novembre affiché"},
+        {"shop":"Amazon Allemagne","country":"DE","price":997.46,"shipping":null,"be":null,"available":true,"source":"de-10r","level":"recherche marchand","variant":"Set"}
+      ]
+    },
+    {
+      "id":"mo-e40","brand":"MOVA","name":"E40 Ultra","year":2025,
+      "mop":"rotatifs","pa":19000,"robot":[null,null,97],"raised":null,"dock":[340,457,590],"dimState":"partial","dimNote":"Station d'après Labo Maison ; dimensions au sol du robot non recoupées séparément.",
+      "lift":10.5,"detach":null,"edgeMop":true,"edgeBrush":false,"rinse":false,"camera":false,"nav":"LDS + laser frontal à ligne unique ; caméra non établie","brush":"Rouleau et brossette anti-emmêlement ; contenu CleanChop à vérifier dans le kit","anti":"basic","wash":null,"washNote":"La description fabricant confirme le lavage, pas sa température. L'affirmation d'eau chaude d'une présentation secondaire n'est pas considérée confirmée.","dry":true,"dryC":null,"detergent":null,
+      "battery":null,"bin":null,"bag":3.2,"waterClean":null,"waterDirty":null,"runtime":"Non relevée.","ha":"dr","haCode":"mova.vacuum.r5732a / r9504a","matter":"Non établi","matterState":"unknown",
+      "sources":["mo-e40","fiche-e40","ha-dr-list"],"tested":false,
+      "pros":["279 € Amazon BE ; patin extensible ; station qui sèche et vide.","Alternative de budget à Xiaomi avec support HACS nommé."],
+      "cons":["Température de lavage et kit anti-cheveux à confirmer.","Modèle non disponible sur la boutique directe lors du relevé."],
+      "verdict":"Option petit budget intéressante à 279 €, avec moins de certitudes sur le chauffage et le recul. Ne pas payer 379 € en supposant l'équipement du E50.",
+      "review":{"rating":4.2,"count":"614","source":"be-e40","sample":0,"plus":[],"minus":[],"note":"Note Amazon BE ; thèmes textuels non audités."},
+      "offers":[
+        {"shop":"Amazon Belgique","country":"BE","price":279,"shipping":0,"be":true,"available":true,"source":"be-e40","level":"recherche marchand"},
+        {"shop":"MOVA Belgique","country":"BE","price":279,"shipping":null,"be":true,"available":false,"source":"mo-e40","level":"catalogue fabricant","note":"Indisponible ; prix exclu du meilleur prix disponible."}
+      ]
+    },
+    {
+      "id":"mo-e50","brand":"MOVA","name":"E50 Pro Ultra","year":2026,
+      "mop":"rotatifs","pa":30000,"robot":[350,350,97],"raised":null,"dock":[340,480,496.5],"dimState":"qualified","dimNote":"Dimensions constructeur ; base de 49,65 cm de haut, avec accès aux bacs à prévoir.",
+      "lift":10.5,"detach":null,"edgeMop":true,"edgeBrush":false,"rinse":false,"camera":false,"nav":"LDS + laser frontal à ligne unique","brush":"Caoutchouc en V ; CleanChop vendu séparément selon la fiche","anti":"basic","wash":100,"dry":true,"dryC":null,"detergent":null,
+      "battery":5200,"bin":300,"bag":3.2,"waterClean":5,"waterDirty":null,"runtime":"Pas de mesure indépendante retenue.","ha":"dr","haCode":"mova.vacuum.r6710a / g / h / t","matter":"Non établi","matterState":"unknown",
+      "sources":["mo-e50","ha-dr-list"],"tested":false,
+      "pros":["379 € ; station 100 °C et patins 12 N / 260 tr/min revendiqués.","Réservoir propre 5 L ; patin extensible."],
+      "cons":["33 avis seulement sur l'annonce BE ; pas d'essai indépendant complet exploité.","Pas de caméra RGB ; brosse coupe-cheveux en option.","Ne pas déduire le comportement du P70 de la fiche de pression identique."],
+      "verdict":"Très bien équipé sur le papier autour de 379 €, mais moins de recul que Qrevo 2 Pro / L40s. Achat à condition de vérifier les retours et le kit exact.",
+      "review":{"rating":4.0,"count":"33","source":"be-e50","sample":0,"plus":[],"minus":[],"note":"Petit échantillon, thèmes non audités ; les 30 000 Pa n'en sont pas une validation."},
+      "offers":[
+        {"shop":"Amazon Belgique","country":"BE","price":379,"shipping":0,"be":true,"available":true,"source":"be-e50","level":"recherche marchand","delivery":"18 novembre affiché"},
+        {"shop":"MOVA Belgique","country":"BE","price":379,"shipping":null,"be":true,"available":true,"source":"mo-e50","level":"catalogue fabricant"}
+      ]
+    },
+    {
+      "id":"mo-s70","brand":"MOVA","name":"S70 Roller","year":2026,
+      "mop":"rouleau","pa":28000,"robot":[350,350,90],"raised":null,"dock":[340,255,503],"dimState":"partial","dimNote":"340 × 255 × 503 mm est la cote publiée de la base seule ; inclusion de la rampe non précisée. Profondeur réelle avec robot / rampe NON validée : ne pas choisir une niche sur 25,5 cm.",
+      "lift":12,"detach":false,"edgeMop":true,"edgeBrush":true,"rinse":true,"camera":null,"nav":"dToF intégré ; dispositif précis de reconnaissance des petits objets non recoupé","brush":"Rouleau caoutchouc ; TriCut vendu en accessoire","anti":"basic","wash":80,"dry":true,"dryC":null,"detergent":null,
+      "battery":5200,"bin":240,"bag":3.2,"waterClean":5,"waterDirty":null,"robotWater":150,"runtime":"Pas d'essai indépendant comparable retenu.","ha":"dr","haCode":"mova.vacuum.r5769a / f / g / h / q / t","matter":"Non établi","matterState":"unknown",
+      "sources":["mo-s70","be-s70","ha-dr-list"],"tested":false,"risk":"Deux des six avis visibles lus décrivent un remplissage automatique insuffisant et un rouleau travaillant à sec. Échantillon limité, pas un taux de panne ; correctif du firmware non vérifié.",
+      "pros":["399 € avec un rouleau 27 cm rincé en continu et un robot de 90 mm.","17 N revendiqués, base avec grand réservoir et lavage 80 °C."],
+      "cons":["Moins de recul indépendant ; incidents de remplissage dans les avis consultés.","Brossette qui peut disperser les miettes ; bruit perçu de façon variable.","Encombrement complet et reconnaissance d'objets à vérifier."],
+      "verdict":"La promesse rouleau/prix est séduisante pour vos sols durs, mais pas un achat à l'aveugle. Tester le remplissage et le lavage en mode automatique pendant la période de retour.",
+      "review":{"rating":4.4,"count":"94","source":"be-s70","sample":6,"plus":["Lavage sur carrelage et vinyle, station et application appréciés.","Navigation méthodique et bonne aspiration rapportées."],"minus":["Deux avis décrivent un lavage à sec faute de remplissage automatique ; un utilisateur programme des retours par m².","Miettes dispersées par la brossette dans un avis ; avis contrastés sur le bruit."],"note":"Six avis visibles de la variante S70 Roller BK lus ; certains datent de premières utilisations. Aucune fréquence réelle de défaut ne peut en être déduite."},
+      "offers":[
+        {"shop":"Amazon Belgique","country":"BE","price":399,"shipping":0,"be":true,"available":true,"source":"be-s70","level":"fiche marchand","seller":"Amazon.com.be","delivery":"18 novembre affiché","note":"Plus bas sur 30 jours affiché : 429 € ; gain documenté de 30 €, pas les 200 € du prix barré."},
+        {"shop":"MOVA Belgique","country":"BE","price":399,"shipping":null,"be":true,"available":true,"source":"mo-s70","level":"catalogue fabricant"}
+      ]
+    },
+    {
+      "id":"mo-p50","brand":"MOVA","name":"P50 Pro Ultra","year":2025,
+      "mop":"rotatifs","pa":19000,"robot":[null,null,103.8],"raised":null,"dock":[420,470,458],"dimState":"partial","dimNote":"Base 42 l × 45,8 h × 47 p cm selon le test ; diamètre du robot non recoupé.",
+      "lift":null,"detach":true,"edgeMop":true,"edgeBrush":true,"rinse":false,"camera":true,"nav":"LiDAR + RGB AI SmartSight ; quatre cartes annoncées","brush":"TriCut ; petits amas possibles aux axes","anti":"advanced","wash":75,"dry":true,"dryC":null,"detergent":true,
+      "battery":null,"bin":null,"bag":null,"waterClean":null,"waterDirty":null,"runtime":"117 min mesurées en mode automatique chez Labo Maison.","ha":"dr","haCode":"mova.vacuum.r2475a / h / t, r2587a, r9416d","matter":"Non établi","matterState":"unknown",
+      "sources":["mo-p50","test-p50","ha-dr-list"],"tested":true,
+      "pros":["Deux extensions, caméra et dosage de détergent à 399 € direct.","Station plus basse que celle des Dreame L50."],
+      "cons":["Taches incrustées : plusieurs passages ; brosse à surveiller aux axes.","Pas de saut spectaculaire en nettoyage malgré les Pa supérieurs aux anciens modèles."],
+      "verdict":"À 399 € sur la boutique BE, concurrent crédible du L40s ; moins intéressant à 498 € sur l'annonce Amazon consultée.",
+      "review":{"rating":4.3,"count":"787","source":"be-p50","sample":0,"plus":[],"minus":[],"note":"Note Amazon BE ; les constats de nettoyage et d'axes proviennent du test, pas d'une analyse statistique d'avis."},
+      "metrics":[{"label":"Débris sur sol dur, protocole Labo Maison","value":"100 %","source":"test-p50"},{"label":"Débris sur tapis ras","value":"97 %","source":"test-p50"},{"label":"Débris sur tapis long","value":"89 %","source":"test-p50"}],
+      "offers":[
+        {"shop":"MOVA Belgique","country":"BE","price":399,"shipping":null,"be":true,"available":true,"source":"mo-p50","level":"catalogue fabricant"},
+        {"shop":"Amazon Belgique","country":"BE","price":498,"shipping":0,"be":true,"available":true,"source":"be-p50","level":"recherche marchand","delivery":"20–23 novembre ; une unité affichée"}
+      ]
+    },
+    {
+      "id":"mo-p70","brand":"MOVA","name":"P70 Pro Ultra","year":2026,
+      "mop":"rotatifs","pa":30000,"robot":[null,null,104],"raised":null,"dock":[420,470,458],"dimState":"partial","dimNote":"Base et hauteur du robot selon Labo Maison ; diamètre non recoupé séparément.",
+      "lift":null,"detach":true,"edgeMop":true,"edgeBrush":true,"rinse":false,"camera":true,"nav":"LiDAR + caméra RGB / lumière structurée ; trajectoires très prudentes dans l'essai","brush":"Brosse principale conventionnelle ; emmêlement aux axes possible","anti":"basic","wash":100,"dry":true,"dryC":null,"detergent":true,
+      "battery":null,"bin":null,"bag":null,"waterClean":null,"waterDirty":null,"runtime":"Un appartement de 78 m² nettoyé environ 1,5 fois avant 15 % dans l'essai ; pas une garantie de couverture.","ha":"dr","haCode":"mova.vacuum.r5977a / c / f / g / h / k / t, r5770 / r590q","matter":"Non établi","matterState":"unknown",
+      "sources":["mo-p70","test-p70","bf-market","ha-dr-list"],"tested":true,
+      "pros":["Patins 12 N et 260 tr/min revendiqués ; nettoyage et lavage de station appréciés.","Lavage à 100 °C et séchage annoncé en une heure ; double extension."],
+      "cons":["Brosse moins avancée que les systèmes duo ; levage des patins jugé insuffisant sur tapis.","Prend une grande marge autour des obstacles ; vidage parfois incomplet dans l'essai."],
+      "verdict":"Bon candidat à patins pour privilégier le lavage sans dépasser 500 €. Il ne faut pas payer pour ses 30 000 Pa, mais pour la station et la pression des patins.",
+      "review":{"rating":4.2,"count":"115","source":"be-p70","sample":0,"plus":[],"minus":[],"note":"Note BE de l'annonce noire ; thèmes textuels non audités. Les réserves sur la brosse proviennent de l'essai."},
+      "metrics":[{"label":"Bruit sur tapis, Labo Maison","value":"≈ 61 dB(A)","source":"test-p70"}],
+      "offers":[
+        {"shop":"Amazon Belgique","country":"BE","price":469,"shipping":0,"be":true,"available":true,"source":"be-p70","level":"recherche marchand","variant":"Noir","delivery":"23 novembre affiché"},
+        {"shop":"MOVA Belgique","country":"BE","price":469,"shipping":null,"be":true,"available":true,"source":"mo-p70","level":"catalogue fabricant","variant":"Noir"},
+        {"shop":"Coolblue Belgique","country":"BE","price":499,"shipping":null,"be":null,"available":null,"source":"ret-p70","level":"index de recherche","unverified":true},
+        {"shop":"Amazon France, via Les Numériques","country":"FR","price":469,"shipping":null,"be":null,"available":null,"source":"bf-market","level":"comparateur secondaire","url":"https://www.amazon.fr/dp/B0GVV2SRGV"}
+      ]
+    },
+    {
+      "id":"mo-v50","brand":"MOVA","name":"V50 Ultra Complete","year":2025,
+      "mop":"rotatifs","pa":24000,"robot":[350,350,89.5],"raised":110.5,"dock":[null,null,null],"dockRaw":"458 × 420 × 470 mm (ordre constructeur)","dimState":"ambiguous","dimNote":"Les axes de la station ne sont pas clairement identifiés par la fiche consultée ; pas de validation automatique de niche. Hauteur du robot : 89,5 mm rétracté, 110,5 mm relevé.",
+      "lift":10.5,"detach":null,"edgeMop":true,"edgeBrush":true,"rinse":false,"camera":true,"nav":"FlexiRise dToF rétractable + reconnaissance IA","brush":"Double système anti-emmêlement ; brosses relevables","anti":"advanced","wash":80,"dry":true,"dryC":60,"detergent":true,
+      "battery":6400,"bin":300,"bag":3.2,"waterClean":null,"waterDirty":null,"runtime":"Pas de mesure indépendante exploitée dans cette recherche.","ha":"dr","haCode":"mova.vacuum.r2582a / c / h / k pour les variantes Complete","matter":"Non établi","matterState":"unknown",
+      "sources":["mo-v50","fiche-v50","ha-dr-list"],"tested":false,
+      "pros":["Ancien haut de gamme à 499 € ; batterie 6 400 mAh, LiDAR rétractable.","Deux bras, dosage de solution et séchage 60 °C revendiqué."],
+      "cons":["Gadgets de franchissement moins utiles pour votre logement.","Pas de test complet exploité ici ; dimensions de station à qualifier.","Ne pas confondre V50 Ultra Complete (patins) et les modèles Roller."],
+      "verdict":"Alternative de déstockage à examiner à 499 €, mais je ne la place pas devant un modèle mieux documenté sur la seule fiche technique.",
+      "review":{"rating":null,"count":null,"sample":0,"plus":[],"minus":[],"note":"Aucun corpus Amazon de cette référence vérifié. Un avis sur une boutique ne permet pas une synthèse robuste."},
+      "offers":[{"shop":"MOVA Belgique","country":"BE","price":499,"shipping":null,"be":true,"available":true,"source":"mo-v50","level":"catalogue fabricant","variant":"Complete"}]
+    },
+    {
+      "id":"mo-z60","brand":"MOVA","name":"Z60 Ultra Roller SA","year":2025,
+      "mop":"rouleau","pa":26000,"robot":[350,350,96],"raised":119.6,"dock":[420,278,470],"dimState":"partial","dimNote":"Cote de base seule 420 × 278 × 470 mm ; profondeur réelle rampe / robot non recoupée. Ne pas hériter des dimensions de Complete.",
+      "lift":14,"detach":false,"edgeMop":true,"edgeBrush":true,"rinse":true,"camera":null,"nav":"FlexScope dToF rétractable ; reconnaissance exacte du SA à confirmer","brush":"TroboWave DuoBrush selon la fiche SA ; vérifier le kit","anti":"advanced","wash":80,"dry":true,"dryC":null,"detergent":true,
+      "battery":6400,"bin":210,"bag":3.2,"waterClean":null,"waterDirty":null,"runtime":"Non relevée dans un test comparable.","ha":"dr","haCode":"SA : mova.vacuum.r9544b ; Standalone : mova.vacuum.r9544a, tous deux nommés dans la liste Tasshack","matter":"Non établi","matterState":"unknown",
+      "sources":["mo-z60","be-z60","ha-dr","ha-dr-list"],"tested":false,
+      "pros":["Rouleau protégé AutoShield et lavage 80 °C ; 469 € observés.","LiDAR rétractable ; distributeur de solution 600 ml revendiqué."],
+      "cons":["Déclinaison SA distincte de Complete : 26 000 et non 28 000 Pa.","Note BE 3,6/5 ; thèmes textuels non audités, donc prudence sans interprétation inventée.","Profondeur complète et comportement de cette variante à vérifier ; le support HA doit correspondre au code SA / Standalone, pas Complete."],
+      "verdict":"Alternative rouleau à 469 €, mais moins de certitudes dans ce dossier. Ne pas l'acheter en important automatiquement les essais ou la fiche du Complete.",
+      "review":{"rating":3.6,"count":"146","source":"be-z60","sample":0,"plus":[],"minus":[],"note":"Note Amazon BE ; aucune raison particulière de cette note n'est affirmée faute de lecture du corpus."},
+      "offers":[
+        {"shop":"Amazon Belgique","country":"BE","price":469,"shipping":0,"be":true,"available":true,"source":"be-z60","level":"recherche marchand","variant":"SA blanc"},
+        {"shop":"MOVA Belgique","country":"BE","price":469,"shipping":null,"be":true,"available":true,"source":"mo-z60","level":"catalogue fabricant","variant":"Standalone / SA"}
+      ]
+    },
+    {
+      "id":"eu-x10","brand":"eufy","name":"X10 Pro Omni","year":2024,
+      "mop":"rotatifs","pa":8000,"robot":[327,353,113.5],"raised":null,"dock":[366,null,null],"dockRaw":"366 × 460 × 480 mm (FAQ) ; P/H inversés dans un autre tableau","dimState":"ambiguous","dimNote":"Incohérence de la fiche eufy entre FAQ et tableau comparatif. Largeur 366 mm ; profondeur / hauteur de 460 et 480 mm à confirmer. Dégagement vertical de 850 mm recommandé par eufy.",
+      "lift":12,"detach":false,"edgeMop":false,"edgeBrush":false,"rinse":false,"camera":true,"nav":"iPath LiDAR + AI.See RGB / éclairage","brush":"Pro-Detangle avec inversion et peigne","anti":"advanced","wash":null,"washNote":"Lavage à l'eau propre, chauffage non établi ; ne pas confondre avec séchage 45 °C.","dry":true,"dryC":45,"detergent":null,
+      "battery":null,"bin":null,"bag":2.5,"waterClean":3,"waterDirty":null,"robotWater":80,"runtime":"136 min aspiration + lavage en standard selon tableau eufy ; revendication constructeur.","ha":"eu-x10","haCode":"T2351 explicitement cité / testé dans Eufy Clean","matter":"Non établi","matterState":"unknown",
+      "sources":["eu-x10","ha-eu","eu-ship"],"tested":false,
+      "pros":["HACS X10 explicitement testé par le mainteneur.","Station complète et caméra ; relevage 12 mm."],
+      "cons":["599 € en autres offres BE, sans offre principale ; trop cher face aux concurrents du jour.","Robot de 11,35 cm ; pas de patin extensible.","La boutique eufy EU-en consultée ne livre pas la Belgique."],
+      "verdict":"À ne considérer qu'après une forte baisse et une vérification des dimensions. À son tarif observé, son ancienneté ne crée pas une bonne affaire.",
+      "review":{"rating":4.1,"count":"717","source":"be-x10","sample":0,"plus":[],"minus":[],"note":"Note BE ; thèmes non audités."},
+      "offers":[{"shop":"Amazon Belgique, autres offres","country":"BE","price":599,"shipping":null,"be":true,"available":null,"source":"be-x10","level":"autres offres non détaillées","secondaryOffer":true,"note":"Pas d'offre mise en avant ; prix non assimilé à une offre ferme disponible."}]
+    },
+    {
+      "id":"eu-e25","brand":"eufy","name":"Omni E25","year":2025,
+      "mop":"rouleau","pa":20000,"robot":[326,348,112],"raised":null,"dock":[370,462,437],"dimState":"qualified","dimNote":"Conversion arrondie des pouces du tableau eufy : robot 12,83 × 13,72 × 4,40 ; base 14,55 × 18,18 × 17,19. Prévoir une marge de mesure.",
+      "lift":10.5,"detach":false,"edgeMop":false,"edgeBrush":true,"rinse":true,"camera":true,"nav":"LiDAR + RGB AI.See / LED","brush":"DuoSpiral anti-emmêlement","anti":"advanced","wash":null,"washNote":"Lavage automatique confirmé ; chauffe de l'eau de station non établie par les sources retenues.","dry":true,"dryC":null,"detergent":true,
+      "battery":null,"bin":300,"bag":3,"waterClean":2.5,"waterDirty":1.8,"runtime":"125 min aspiration + lavage selon tableau constructeur ; environ 110 min dans l'analyse Vacuum Wars.","ha":"eu-e25","haCode":"T2353 : pas nommé dans la liste HACS consultée","matter":"Mentionné par Vacuum Wars ; confirmation fabricant / firmware insuffisante","matterState":"review",
+      "sources":["eu-e25","test-e25","ha-eu"],"tested":true,
+      "pros":["Bon lavage et très bon ramassage des poils dans le protocole Vacuum Wars.","Dosage automatique, anti-emmêlement efficace ; base relativement basse."],
+      "cons":["Rouleau non extensible : bordures moins proches.","Robot haut, petit collecteur, HA riche non validé.","Historique de premiers réservoirs fuyards, correction rapportée mais lot à vérifier."],
+      "verdict":"À 520,99 €, le léger dépassement est surtout défendable pour le rouleau et les poils, pas pour Home Assistant. Vérifier le réservoir révisé et le retour.",
+      "review":{"rating":3.8,"count":"152 (noir)","source":"be-e25","sample":0,"plus":["Vacuum Wars rapporte une amélioration des retours après remplacement du réservoir."],"minus":["Fuites de réservoir d'eau sale sur les premières unités, rapportées dans la revue secondaire."],"note":"Pas de taux de défaut actuel ; ne pas comparer cette annonce noire à la blanche, notée 4,6 avec seulement cinq avis."},
+      "metrics":[{"label":"Obstacles, Vacuum Wars","value":"21 / 24","source":"test-e25"},{"label":"Taches sèches, points VW","value":"115","source":"test-e25"},{"label":"Poils aplatis sur tapis","value":"93 %","source":"test-e25"}],
+      "offers":[{"shop":"Amazon Belgique","country":"BE","price":520.99,"shipping":0,"be":true,"available":true,"source":"be-e25","level":"recherche marchand","variant":"Noir","delivery":"21 novembre affiché"}]
+    },
+    {
+      "id":"ec-t80","brand":"Ecovacs","name":"Deebot T80 Omni","year":2025,
+      "mop":"rouleau","pa":18000,"robot":[null,null,98],"raised":null,"dock":[338,459,500],"dimState":"partial","dimNote":"Base et hauteur d'après le test ; largeur / profondeur séparées du robot non recoupées.",
+      "lift":null,"detach":false,"edgeMop":true,"edgeBrush":false,"rinse":true,"camera":true,"nav":"LiDAR intégré + AIVI 3D 3.0 ; petits objets perfectibles dans l'essai","brush":"ZeroTangle 3.0","anti":"advanced","wash":75,"dry":true,"dryC":45,"detergent":false,
+      "battery":null,"bin":null,"bag":null,"waterClean":null,"waterDirty":null,"runtime":"Non retenue pour une comparaison directe.","ha":"ec","haCode":"Support exact à vérifier dans deebot-client","matter":"Non établi","matterState":"unknown",
+      "sources":["ec-t80","test-t80","ha-ec"],"tested":true,
+      "pros":["Rouleau rincé, station assez compacte, bon anti-emmêlement dans l'essai.","Offres FR de déstockage potentiellement bien inférieures au tarif BE."],
+      "cons":["499 € BE : mal placé face au T90 Pro observé autour de 472 € livré.","Coins / câbles et cartographie perfectibles ; sol parfois humide.","Pas de dosage automatique de détergent."],
+      "verdict":"Pertinent seulement avec un vrai déstockage autour de 330–350 € et un vendeur sérieux. Pas à 499 € dans ce marché.",
+      "review":{"rating":4.1,"count":"361, annonce blanche","source":"be-t80","sample":0,"plus":[],"minus":[],"note":"Note BE ; l'annonce noire a une autre famille d'avis, ne pas les additionner."},
+      "metrics":[{"label":"Débris sur parquet, Labo Maison","value":"88 %","source":"test-t80"},{"label":"Débris sur tapis ras","value":"92 %","source":"test-t80"}],
+      "offers":[
+        {"shop":"Amazon Belgique","country":"BE","price":499,"shipping":0,"be":true,"available":true,"source":"be-t80","level":"recherche marchand","variant":"Blanc","delivery":"21 novembre affiché"},
+        {"shop":"Amazon France Marketplace, via Labo Maison","country":"FR","price":329,"shipping":null,"be":null,"available":null,"source":"test-t80","level":"comparateur secondaire","variant":"Blanc"}
+      ]
+    },
+    {
+      "id":"ec-t90","brand":"Ecovacs","name":"Deebot T90 Pro Omni","year":2026,
+      "mop":"rouleau","pa":30000,"robot":[null,null,95],"raised":null,"dock":[450,430,540],"dimState":"partial","dimNote":"Base 45 l × 54 h × 43 p cm selon Labo Maison. Diamètre du robot non recoupé. Cette station n'est pas celle du T90 Max Pro.",
+      "lift":null,"detach":false,"edgeMop":true,"edgeBrush":false,"rinse":true,"camera":true,"nav":"LiDAR mini-ToF intégré + RGB AIVI 3D 4.0","brush":"ZeroTangle 4.0 ; brosses relevables Triple Lift","anti":"advanced","wash":75,"dry":true,"dryC":null,"detergent":true,
+      "battery":null,"bin":250,"bag":null,"waterClean":null,"waterDirty":null,"runtime":"PowerBoost revendique 10 % de charge en 3 min pendant le lavage du rouleau ; pas une autonomie de batterie illimitée.","ha":"ec","haCode":"Intégration Core existante, référence exacte à confirmer","matter":"Compatibilité mentionnée dans le test Vacuum Wars ; firmware et fonctions exactes à contrôler","matterState":"review",
+      "sources":["ec-t90","test-t90","test-t90-vw","ha-ec"],"tested":true,
+      "pros":["Lavage à rouleau 27 cm très bien mesuré chez Vacuum Wars.","Évitement 23/24 objets, bon anti-emmêlement et dosage de solution.","30 000 Pa mais un équipement de navigation plus riche que Max Pro."],
+      "cons":["Offre à 444 € avec 27,73 € de port, vendeur non vérifié et stock annoncé d'une unité.","Coins / bords perfectibles dans l'autre essai ; option de gestion des liquides à activer.","Petit collecteur de 250 ml ; compatibilité HA exacte à confirmer."],
+      "verdict":"Le candidat rouleau à regarder de près pour vos sols durs : 471,73 € livraison comprise dans l'offre relevée. Mais le vendeur et le support HA doivent être sécurisés avant de le préférer au Roborock.",
+      "review":{"rating":4.3,"count":"823, famille d'annonces","source":"be-t90","sample":0,"plus":[],"minus":[],"note":"Thèmes clients non audités ; ne pas transposer le score à T90 Max / Max Pro."},
+      "metrics":[{"label":"Obstacles, Vacuum Wars","value":"23 / 24","source":"test-t90-vw"},{"label":"Taches sèches, points VW","value":"157","source":"test-t90-vw"},{"label":"Poils aplatis sur tapis","value":"100 %","source":"test-t90-vw"},{"label":"Bruit standard à 1 m, Labo Maison","value":"56,7 dB(A)","source":"test-t90"}],
+      "offers":[{"shop":"Amazon Belgique","country":"BE","price":444,"shipping":27.73,"be":true,"available":true,"source":"be-t90","level":"recherche marchand","variant":"T90 Pro Omni blanc","seller":"Non vérifié","delivery":"21–24 novembre ; une unité affichée"}]
+    },
+    {
+      "id":"ec-max","brand":"Ecovacs","name":"Deebot T90 Max Pro Omni","year":2026,
+      "mop":"rouleau","pa":40000,"robot":[null,null,95],"raised":null,"dock":[338,280,470],"dimState":"partial","dimNote":"Cote de base selon la présentation : 338 × 280 × 470 mm. Rampe et projection avec robot non établies ; profondeur d'installation non garantie.",
+      "lift":15,"detach":false,"edgeMop":true,"edgeBrush":false,"rinse":true,"camera":false,"nav":"LiDAR dToF intégré + TrueDetect 3D ; pas AIVI RGB 4.0 du T90 Pro","brush":"ZeroTangle 4.0","anti":"advanced","wash":100,"dry":true,"dryC":45,"detergent":null,
+      "battery":5200,"bin":null,"bag":2.5,"waterClean":null,"waterDirty":null,"runtime":"Revendiquer une grande surface ne prouve pas une autonomie réelle ; pas de test indépendant propre au Max Pro exploité.","ha":"ec","haCode":"Support exact du nouveau Max Pro non établi","matter":"Non établi ; ne pas hériter de celui du T90 Pro","matterState":"unknown",
+      "sources":["ec-max","fiche-t90max","ha-ec","ret-vdb"],"tested":false,
+      "pros":["Rouleau 27 cm, lavage en station 100 °C, hauteur robot 95 mm.","479 € et fiche belge officielle disponible."],
+      "cons":["Nom trompeur : plus de Pa et plus chaud, mais reconnaissance moins avancée que T90 Pro.","Pas encore de test indépendant spécifique dans ce dossier.","Description Amazon mêlant des fonctions d'autres variantes : privilégier la fiche constructeur pour les caractéristiques."],
+      "verdict":"Alternative récente de lavage à 479 €, à ne pas traiter comme un T90 Pro amélioré partout. Si les câbles et HA sont décisifs, demander des confirmations spécifiques.",
+      "review":{"rating":4.4,"count":"111","source":"be-max","sample":0,"plus":[],"minus":[],"note":"Petit corpus récent ; pas d'analyse textuelle spécifique et pas d'extrapolation depuis T90 Pro."},
+      "offers":[
+        {"shop":"Amazon Belgique","country":"BE","price":479,"shipping":0,"be":true,"available":true,"source":"be-max","level":"recherche marchand","variant":"Max Pro noir","delivery":"19 novembre affiché"},
+        {"shop":"Amazon France Marketplace, via Labo Maison","country":"FR","price":399,"shipping":null,"be":null,"available":null,"source":"fiche-t90max","level":"comparateur secondaire","variant":"Blanc","url":"https://www.amazon.fr/dp/B0H9XM6LRM"},
+        {"shop":"Hifi Luxembourg","country":"LU","price":479,"shipping":null,"be":null,"available":null,"source":"ret-max","level":"index de recherche","unverified":true},
+        {"shop":"Vanden Borre Belgique","country":"BE","price":null,"shipping":null,"be":true,"available":null,"source":"ret-vdb","level":"fiche sans prix"}
+      ]
+    },
+    {
+      "id":"xi-x20","brand":"Xiaomi","name":"Robot Vacuum X20 Max","year":2024,
+      "mop":"rotatifs","pa":8000,"robot":[350,350,97],"raised":null,"dock":[340,420,563],"dimState":"qualified","dimNote":"Cotes officielles ; vérifier si l'extension de plateau amovible est incluse dans l'encombrement final.",
+      "lift":10,"detach":false,"edgeMop":true,"edgeBrush":false,"rinse":false,"camera":false,"nav":"LDS + lumière structurée 120° / capteur de bord","brush":"Brosse coupe-cheveux fournie séparément à installer","anti":"advanced","wash":55,"dry":true,"dryC":null,"detergent":null,
+      "battery":5200,"bin":null,"bag":null,"waterClean":4,"waterDirty":null,"runtime":"120 min revendiquées en aspiration + lavage standard ; 5 200 mAh nominaux, 4 800 mAh utiles indiqués.","ha":"xi-x20","haCode":"xiaomi.vacuum.d109gl explicitement listé chez Tasshack","matter":"Non établi","matterState":"unknown",
+      "sources":["xi-x20","xi-x20-dim","test-x20","ha-dr-list","ha-xi"],"tested":true,
+      "pros":["Chauffage 55 °C, patin extensible et accessoires répandus à environ 330 €.","Voie HACS nommée pour le code D109GL."],
+      "cons":["Lavage jugé moyen et câbles / textiles mal détectés par Les Numériques.","Brosse coupe-cheveux à monter ; pas de caméra.","Moins intéressant si un robot plus récent et mieux équipé coûte le même prix."],
+      "verdict":"Alternative raisonnable de budget, sans payer un gros surcoût pour la marque. La recommandation doit tenir compte de son lavage moyen mesuré.",
+      "review":{"rating":3.8,"count":"environ 1 200","source":"be-x20","sample":0,"plus":[],"minus":[],"note":"Note Amazon BE ; limites de lavage et d'évitement issues du test Les Numériques, pas d'une analyse du corpus clients."},
+      "offers":[
+        {"shop":"Amazon Belgique","country":"BE","price":332.49,"shipping":0,"be":true,"available":true,"source":"be-x20","level":"recherche marchand","variant":"X20 Max EU","delivery":"25 novembre affiché"},
+        {"shop":"Amazon France, via Les Numériques","country":"FR","price":329.9,"shipping":null,"be":null,"available":null,"source":"test-x20","level":"comparateur secondaire","url":"https://www.amazon.fr/dp/B0DFHW2JTT"}
+      ]
+    },
+    {
+      "id":"xi-5","brand":"Xiaomi","name":"Robot Vacuum 5 Pro","year":2025,
+      "mop":"rotatifs","pa":20000,"robot":[350,350,88],"clearance":95,"raised":null,"dock":[360,470,572],"dimState":"qualified","dimNote":"Fiche : 470 × 360 × 572 mm avec rampe, 260 × 360 × 572 mm sans ; axes au sol normalisés. Corps 88 mm MAIS accès annoncé seulement au-dessus de 95 mm, radar abaissé.",
+      "lift":15,"detach":null,"edgeMop":true,"edgeBrush":true,"rinse":false,"camera":true,"nav":"dToF rétractable + RGB / deux caméras IR / projection 3D","brush":"Brosse coupe-cheveux à deux lames, brossette anti-nœuds","anti":"advanced","wash":80,"dry":true,"dryC":null,"detergent":null,
+      "battery":5200,"bin":null,"bag":null,"waterClean":4,"waterDirty":null,"runtime":"140 min revendiquées ; conditions de la fiche, pas une mesure indépendante.","ha":"xi-5","haCode":"OV21GL ; support précis non validé dans ce dossier","matter":"Non établi","matterState":"unknown",
+      "sources":["xi-5","xi-5-dim","ha-xi"],"tested":false,
+      "pros":["Reconnaissance RGB / IR, deux extensions, station 80 °C.","La fiche explicite le besoin réel de dégagement et les dimensions sans rampe."],
+      "cons":["540,79 € sur une annonce alternative, 599,99 € sur la principale : au-dessus du budget.","Pas de support HA complet établi pour ce modèle exact.","Ne pas confondre avec Robot Vacuum 5 sans Pro ni avec 6 / 6 Max."],
+      "verdict":"Pas de raison évidente de dépasser 500 € avec les offres du jour. À reconsidérer après une vraie baisse et une confirmation du support domotique.",
+      "review":{"rating":4.0,"count":"309, famille","source":"be-5","sample":0,"plus":[],"minus":[],"note":"La famille de notes peut inclure Robot Vacuum 5 ; thèmes non audités. Annonce alternative : 31 avis."},
+      "offers":[
+        {"shop":"Amazon Belgique, annonce principale","country":"BE","price":599.99,"shipping":0,"be":true,"available":true,"source":"be-5","level":"recherche marchand","variant":"5 Pro","delivery":"23 novembre affiché"},
+        {"shop":"Amazon Belgique, annonce alternative","country":"BE","price":540.79,"shipping":0,"be":true,"available":true,"source":"be-5-alt","level":"recherche marchand","variant":"BHR07WFEU, vendeur à contrôler","delivery":"24–26 novembre affiché"}
+      ]
+    }
+  ],
+  "watchlist": [
+    {"name":"Ecovacs T50 Omni Gen 3","price":"231,69 € sur Amazon BE","url":"https://www.amazon.com.be/dp/B0GQT56FRV","note":"Vraie station de lavage, 81 mm et 25 000 Pa annoncés dans le résultat. 3,9/5 sur 186 avis BE. Fiche exacte / dimensions de station / support HA non suffisamment recoupés pour le classement principal ; ne pas confondre avec T50 d'origine."},
+    {"name":"Xiaomi Robot Vacuum 6","price":"449,99 € sur Amazon DE","url":"https://www.amazon.de/dp/B0GYDN3N2V","note":"Rouleau et 30 000 Pa annoncés dans la recherche ; TVA et livraison BE à vérifier. Ne pas confondre avec le 6 Max à environ 800 €. Modèle à surveiller, mais dimensions et HA pas assez documentés dans ce dossier."},
+    {"name":"Dreame L10s Ultra Gen 2","price":"279 € sur Amazon FR","url":"https://www.amazon.fr/dp/B0DCVYS9FQ","note":"Déstockage observé, livraison BE non validée. Ne pas payer presque le prix du Gen 3 sans comparer le double bras, la station et le contenu du kit."},
+    {"name":"Dreame X50 Ultra Complete","price":"599 € sur Amazon DE ; boutique BE à 599 € indisponible","url":"https://www.amazon.de/dp/B0DPB7RN2L","note":"LiDAR rétractable et franchissement avancé ; votre absence de seuils ne justifie pas à elle seule +100 €. Pas classé automatiquement à partir d'une offre étrangère."},
+    {"name":"Dreame L40 Ultra AE / L40 Ultra A","price":"AE à 599 € BE ; A à 409 € BE, 329 € FR","url":"https://www.amazon.com.be/dp/B0F53MJY8T","note":"Deux références distinctes (19 000 vs 24 000 Pa dans les annonces). Ne pas fusionner A, AE, L40 Ultra et L40s Pro Ultra. Le L50 AE à 429 € rend certaines annonces peu intéressantes."},
+    {"name":"Narwal, eureka, iRobot, Samsung","price":"Pas d'offre comparable suffisamment recoupée","url":null,"note":"Pas écartés par principe : le classement exige un croisement prix accessible Belgique, fiche exacte, encombrement et domotique. Leur absence du classement n'est pas un jugement de mauvaise qualité."}
+  ],
+  "recommendations": [
+    {"id":"rr-10r","title":"Le choix polyvalent le plus étayé","text":"Saros 10R à 499,99 € affichés chez Roborock, livraison Belgique annoncée. Très bon évitement mesuré, faible hauteur et HA Core. Vérifier la variante standard, pas le Set à 999,99 €, et le total TTC belge final."},
+    {"id":"rr-edge2","title":"Si Amazon Belgique reste prioritaire","text":"Qrevo Edge 2 blanc à 489,99 €, vendeur Roborock Official EU / expédition Amazon. Il reste dans le budget avec caméra et 79,8 mm ; moins de recul indépendant propre à cette version que pour le Saros."},
+    {"id":"rr-2pro","title":"Dépenser moins sans revenir au basique","text":"Qrevo 2 Pro Set : 379,99 € direct ou 399,99 € Amazon BE. Patin extensible, retrait des patins et bon lavage intensif dans l'essai. Ranger les petits câbles."},
+    {"id":"ec-t90","title":"Le rouleau à examiner pour les sols durs","text":"T90 Pro Omni à 444 € + 27,73 € de port dans l'offre Amazon BE relevée. Résultats de lavage solides, mais vendeur et compatibilité HA du modèle à valider. Ce n'est PAS le T90 Max Pro."},
+    {"id":"dr-l40s","title":"Le rapport équipement/prix chez Dreame","text":"L40s Pro Ultra à 399 € Amazon BE : duo anti-cheveux, caméra et dosage. Attention au délai standard annoncé en janvier ; à choisir si un délai rapide acceptable est confirmé."},
+    {"id":"mo-s70","title":"Le rouleau économique, sous réserve","text":"S70 Roller à 399 € : prometteur, mais deux avis visibles lus évoquent un rouleau à sec par défaut de remplissage. À tester soigneusement durant le délai de retour, pas un premier choix sans cette précaution."}
+  ]
+}

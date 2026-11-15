@@ -1,0 +1,1131 @@
+<!doctype html>
+<!--
+THESIS: A sourced buying workbench, not a catalogue of marketing scores.
+OWN-WORLD: User-directed white and friendly blue, cool neutral dividers,
+Segoe UI and readable comparison tables. The cp token API is retained.
+Manufacturer facts, tests, customer reports and uncertainty stay distinct.
+STORY: Choose a buying scope, inspect useful differences, measure the space,
+then verify the actual delivered offer. No purchase or network automation.
+FIRST VIEWPORT: Compact title and navigation, a concise decision strip,
+quiet filters at left and the inventory in view. No oversized promotional hero.
+FORM: Operate, a white-and-blue buying workbench with explicit evidence.
+Signature interaction: same-scale robot and dock gabarits with explicit caveats.
+-->
+<html lang="fr-BE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Comparateur local et sourcé d'aspirateurs robots laveurs pour la Belgique, budget 500 €, Black Friday 2026 et Home Assistant.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; connect-src 'none'; font-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <title>Le bon robot — Comparateur Belgique</title>
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme = param || "light";
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --cp-bg: #ffffff;
+      --cp-bg-elevated: #f8fafc;
+      --cp-surface: #ffffff;
+      --cp-surface-soft: #f1f5f9;
+      --cp-border: #e2e8f0;
+      --cp-border-strong: #8292a8;
+      --cp-text: #17243b;
+      --cp-text-muted: #52647e;
+      --cp-text-soft: #52647e;
+      --cp-accent: #2563eb;
+      --cp-accent-hover: #1d4ed8;
+      --cp-accent-soft: #eff6ff;
+      --cp-accent-fg: #ffffff;
+      --cp-success: #16a34a;
+      --cp-danger: #dc2626;
+      --cp-warning: #f59e0b;
+      --cp-link: #1d4ed8;
+      --cp-shadow: 0 3px 12px rgba(23, 36, 59, 0.06);
+      --cp-overlay: rgba(255, 255, 255, 0.8);
+      --cp-panel: rgba(255, 255, 255, 0.86);
+      --cp-panel-strong: rgba(255, 255, 255, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.55);
+      --cp-highlight: rgba(37, 99, 235, 0.10);
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --cp-bg: #0b1220;
+      --cp-bg-elevated: #101b2c;
+      --cp-surface: #142035;
+      --cp-surface-soft: #1a2942;
+      --cp-border: #2c3e59;
+      --cp-border-strong: #7185a3;
+      --cp-text: #e7eefb;
+      --cp-text-muted: #b0c1d9;
+      --cp-text-soft: #b0c1d9;
+      --cp-accent: #7cb3ff;
+      --cp-accent-hover: #9cc7ff;
+      --cp-accent-soft: rgba(124, 179, 255, 0.12);
+      --cp-accent-fg: #0b1220;
+      --cp-success: #4ade80;
+      --cp-danger: #f87171;
+      --cp-warning: #fbbf24;
+      --cp-link: #7cb3ff;
+      --cp-shadow: 0 3px 12px rgba(0, 0, 0, 0.20);
+      --cp-overlay: rgba(11, 18, 32, 0.88);
+      --cp-panel: rgba(20, 32, 53, 0.90);
+      --cp-panel-strong: rgba(20, 32, 53, 0.98);
+      --cp-sheen: rgba(255, 255, 255, 0.04);
+      --cp-highlight: rgba(124, 179, 255, 0.16);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 128px; }
+    body { margin: 0; background: var(--cp-bg); color: var(--cp-text); font: 15px/1.55 "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif; }
+    button, input, select, textarea { font: inherit; }
+    button, input, select, textarea { color: var(--cp-text); }
+    button, a, input, select, summary { -webkit-tap-highlight-color: var(--cp-highlight); }
+    button, summary, input[type="checkbox"] { cursor: pointer; }
+    button { border: 1px solid var(--cp-border); background: var(--cp-surface); border-radius: 9px; padding: 8px 12px; min-height: 40px; font-weight: 550; }
+    button:hover { border-color: var(--cp-border-strong); background: var(--cp-surface-soft); }
+    button:disabled { cursor: not-allowed; opacity: .58; }
+    button.primary { background: var(--cp-accent); border-color: var(--cp-accent); color: var(--cp-accent-fg); font-weight: 650; }
+    button.primary:hover { background: var(--cp-accent-hover); }
+    button.text { border: 0; background: none; padding: 4px; min-height: 32px; color: var(--cp-accent); font-weight: 600; }
+    button.small { padding: 5px 9px; min-height: 32px; font-size: 13px; }
+    :focus-visible { outline: 3px solid var(--cp-accent); outline-offset: 3px; }
+    a { color: var(--cp-accent); text-decoration-thickness: 1px; text-underline-offset: 3px; overflow-wrap: anywhere; }
+    a:hover { color: var(--cp-accent); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { font-size: clamp(26px, 2.4vw, 32px); letter-spacing: -.025em; line-height: 1.2; margin-bottom: 8px; font-weight: 650; text-wrap: balance; }
+    h2 { font-size: 23px; letter-spacing: -.015em; line-height: 1.25; margin-bottom: 12px; font-weight: 650; }
+    h3 { font-size: 17px; line-height: 1.35; margin-bottom: 8px; }
+    p { margin-bottom: 12px; }
+    p:last-child { margin-bottom: 0; }
+    ul, ol { padding-left: 22px; margin: 8px 0 16px; }
+    li { margin-bottom: 7px; }
+    code { font: 13px/1.5 Consolas, "Courier New", Courier, monospace; overflow-wrap: anywhere; }
+    [hidden] { display: none !important; }
+    .muted, .fine { color: var(--cp-text-soft); }
+    .fine { font-size: 13px; }
+    .num { font-variant-numeric: tabular-nums; }
+    .nowrap { white-space: nowrap; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .skip { position: fixed; top: -100px; left: 16px; z-index: 20; padding: 12px; background: var(--cp-surface); }
+    .skip:focus { top: 8px; }
+    .topbar { height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 28px; background: var(--cp-surface); border-bottom: 1px solid var(--cp-border); position: sticky; top: 0; z-index: 10; }
+    .wordmark { display: flex; gap: 10px; align-items: center; color: var(--cp-text); font-weight: 700; font-size: 18px; text-decoration: none; letter-spacing: -.02em; }
+    .wordmark svg { width: 32px; height: 32px; flex: 0 0 auto; }
+    .top-actions, .row-actions, .pills, .toolbar, .inline-fields { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+    .top-actions > .fine { margin-right: 8px; }
+    .shell { display: grid; grid-template-columns: 276px minmax(0,1fr); max-width: 1800px; margin: auto; }
+    .sidebar { padding: 24px 20px; border-right: 1px solid var(--cp-border); background: var(--cp-surface); min-width: 0; }
+    .sidebar > details > summary { list-style: none; font-weight: 650; font-size: 17px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+    .sidebar > details > summary::-webkit-details-marker { display: none; }
+    .sidebar > details > summary::after { content: "−"; color: var(--cp-accent); }
+    .sidebar > details:not([open]) > summary::after { content: "+"; }
+    .filter-group { margin: 0 0 22px; border: 0; padding: 0; min-width: 0; }
+    .field { display: grid; gap: 6px; margin-bottom: 14px; }
+    .field > label, .field-label { font-size: 13px; font-weight: 650; }
+    input[type="search"], input[type="number"], input[type="text"], input[type="url"], select, textarea { min-width: 0; width: 100%; background: var(--cp-bg-elevated); border: 1px solid var(--cp-border-strong); border-radius: 8px; padding: 9px 11px; min-height: 42px; }
+    input[type="range"] { width: 100%; accent-color: var(--cp-accent); margin: 6px 0; }
+    input[type="checkbox"] { accent-color: var(--cp-accent); width: 18px; height: 18px; margin: 0; flex: 0 0 auto; }
+    .check { display: flex; align-items: flex-start; gap: 9px; font-size: 13px; margin: 10px 0; }
+    .check input { margin-top: 2px; }
+    .budget-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .budget-input { display: flex; align-items: center; gap: 6px; }
+    .budget-input input { width: 86px; font-weight: 650; }
+    .filter-details { border-top: 1px solid var(--cp-border); padding-top: 16px; margin-top: 16px; }
+    .filter-details summary { font-size: 14px; font-weight: 650; margin-bottom: 12px; }
+    .weight { display: grid; grid-template-columns: 1fr 26px; gap: 4px; font-size: 13px; margin-top: 12px; }
+    .weight input { grid-column: 1/-1; }
+    .weight output { text-align: right; font-variant-numeric: tabular-nums; }
+    .presets { display: flex; flex-wrap: wrap; gap: 6px; }
+    .presets button[aria-pressed="true"] { border-color: var(--cp-accent); background: var(--cp-accent-soft); color: var(--cp-accent); }
+    .sidebar-note { padding-top: 16px; border-top: 1px solid var(--cp-border); margin-top: 24px; }
+    main { min-width: 0; padding: 28px 32px 112px; }
+    .page-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; margin-bottom: 16px; }
+    .page-heading p { max-width: 72ch; font-size: 14px; }
+    .meta-badge, .badge { display: inline-flex; align-items: center; gap: 5px; border: 1px solid var(--cp-border); border-radius: 6px; padding: 2px 7px; font-size: 12px; line-height: 1.6; font-weight: 600; background: var(--cp-surface); color: var(--cp-text); }
+    .meta-badge { white-space: nowrap; padding: 5px 9px; }
+    .badge.proof { color: var(--cp-accent); background: var(--cp-accent-soft); }
+    .badge.warning { border-style: dashed; border-color: var(--cp-border-strong); }
+    .badge.warning::before { content: "!"; color: var(--cp-accent); font-weight: 800; }
+    .notice { margin-bottom: 16px; padding: 12px 16px; border: 1px solid var(--cp-border-strong); border-radius: 10px; background: var(--cp-surface); display: flex; gap: 12px; justify-content: space-between; align-items: flex-start; font-size: 14px; }
+    .notice.error { border-color: var(--cp-danger); }
+    .snapshot { font-size: 13px; color: var(--cp-text-soft); padding-bottom: 16px; }
+    .tabs { display: flex; gap: 4px; padding: 5px; background: var(--cp-bg-elevated); border: 1px solid var(--cp-border); border-radius: 12px; margin-bottom: 24px; overflow-x: auto; scrollbar-width: thin; }
+    .tabs button { flex: 0 0 auto; border: 0; border-radius: 8px; background: none; padding: 9px 12px; min-height: 40px; color: var(--cp-text-soft); font-size: 14px; }
+    .tabs button[aria-current="page"] { color: var(--cp-accent-fg); background: var(--cp-accent); font-weight: 650; }
+    .tabs button:hover { background: var(--cp-accent-soft); }
+    .tabs button[aria-current="page"]:hover { background: var(--cp-accent-hover); }
+    #content { min-height: 420px; }
+    .editor-pick { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 20px; padding: 20px 24px; background: var(--cp-accent-soft); border: 1px solid var(--cp-border); border-radius: 14px; margin-bottom: 16px; }
+    .editor-pick h2 { font-size: 19px; margin-bottom: 8px; }
+    .editor-pick p { max-width: 78ch; font-size: 14px; }
+    .editor-pick .pick-actions { display: flex; flex-direction: column; justify-content: center; align-items: stretch; gap: 8px; min-width: 168px; }
+    .eyeline { display: inline; font-weight: 600; color: var(--cp-accent); }
+    .shortlist-links { display: flex; gap: 8px 20px; flex-wrap: wrap; font-size: 13px; margin-bottom: 20px; }
+    .shortlist-links button { font-size: 13px; text-align: left; }
+    .result-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 12px; }
+    .result-head h2 { margin: 0; font-size: 19px; }
+    .result-head select { width: auto; min-width: 195px; font-size: 13px; }
+    .segmented { display: inline-flex; border: 1px solid var(--cp-border); border-radius: 10px; overflow: hidden; }
+    .segmented button { border: 0; border-radius: 0; min-height: 36px; font-size: 13px; }
+    .segmented button[aria-pressed="true"] { background: var(--cp-accent-soft); color: var(--cp-accent); font-weight: 650; }
+    .table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--cp-border); border-radius: 12px; background: var(--cp-surface); scrollbar-width: thin; }
+    table { border-collapse: separate; border-spacing: 0; width: 100%; font-size: 13.5px; text-align: left; }
+    caption { text-align: left; padding: 12px 16px; background: var(--cp-bg-elevated); color: var(--cp-text-soft); font-size: 13px; }
+    th { font-weight: 650; background: var(--cp-bg-elevated); }
+    th, td { padding: 15px 16px; vertical-align: top; border-bottom: 1px solid var(--cp-border); }
+    tbody tr:last-child > * { border-bottom: 0; }
+    tbody tr:hover > td, tbody tr:hover > th { background: var(--cp-bg-elevated); }
+    .models-table { min-width: 930px; }
+    .models-table .select-cell { width: 42px; padding-right: 2px; padding-top: 23px; }
+    .models-table .name-cell { min-width: 210px; max-width: 290px; }
+    .name-button { display: block; min-height: 0; border: 0; border-radius: 0; background: none; padding: 0; text-align: left; font-size: 15px; font-weight: 650; line-height: 1.35; color: var(--cp-text); margin: 0 0 5px; }
+    .name-button:hover { background: none; color: var(--cp-accent); }
+    .brand { display: block; font-size: 12px; font-weight: 500; color: var(--cp-text-soft); margin-bottom: 2px; }
+    .cell-sub { display: block; font-size: 12px; margin-top: 4px; color: var(--cp-text-soft); line-height: 1.45; }
+    .money { color: var(--cp-accent); font-size: 19px; font-weight: 680; line-height: 1.25; white-space: nowrap; font-variant-numeric: tabular-nums; }
+    .score { color: var(--cp-text-soft); font-size: 17px; font-weight: 650; font-variant-numeric: tabular-nums; }
+    .score small { font-size: 12px; font-weight: 400; }
+    .row-selected > td { background: var(--cp-accent-soft); }
+    .risk-line { font-size: 12px; font-weight: 600; color: var(--cp-accent); margin-top: 7px; }
+    .mini-source { display: inline-block; font-size: 12px; margin-right: 10px; margin-top: 4px; }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(280px,1fr)); gap: 16px; }
+    .robot-card { background: var(--cp-surface); border: 1px solid var(--cp-border); border-radius: 14px; padding: 20px; min-width: 0; box-shadow: var(--cp-shadow); }
+    .robot-card.selected { border-color: var(--cp-accent); }
+    .robot-card h3 { margin: 10px 0; }
+    .robot-card .name-button { font-size: 18px; }
+    .robot-card .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+    .robot-card p { font-size: 13px; margin-top: 12px; }
+    .card-specs { margin: 14px 0; border-top: 1px solid var(--cp-border); }
+    .card-specs div { display: flex; justify-content: space-between; gap: 12px; padding-top: 9px; font-size: 13px; }
+    .card-specs span:last-child { text-align: right; max-width: 62%; }
+    .empty { border: 1px dashed var(--cp-border-strong); border-radius: 12px; padding: 32px; background: var(--cp-surface); max-width: 780px; }
+    .empty p { max-width: 65ch; }
+    .method-note { margin: 14px 0 24px; font-size: 13px; color: var(--cp-text-soft); max-width: 95ch; }
+    .sticky-compare { position: fixed; bottom: 16px; left: 300px; right: 24px; max-width: 1450px; margin: auto; z-index: 11; border: 1px solid var(--cp-border); border-radius: 12px; padding: 12px 16px; background: var(--cp-surface); box-shadow: var(--cp-shadow); display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .sticky-compare p { margin: 0; font-size: 13px; }
+    .compare-table { min-width: 720px; table-layout: fixed; }
+    .compare-table thead th { position: sticky; top: 0; }
+    .compare-table th:first-child { width: 176px; position: sticky; left: 0; z-index: 2; background: var(--cp-surface-soft); }
+    .compare-table th:not(:first-child) { width: 250px; }
+    .compare-table td { min-width: 220px; overflow-wrap: anywhere; }
+    .compare-table .group-row th { background: var(--cp-bg-elevated); color: var(--cp-accent); font-size: 14px; padding-top: 18px; }
+    .compare-table .same-row { color: var(--cp-text-soft); }
+    .compare-table .changed td { background: var(--cp-accent-soft); }
+    .section { margin-bottom: 32px; }
+    .section + .section { padding-top: 28px; border-top: 1px solid var(--cp-border); }
+    .two-col { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 24px; }
+    .three-col { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+    .prose { max-width: 78ch; }
+    .prose p { margin-bottom: 15px; }
+    .prose h2 { margin-top: 34px; }
+    .guide-toc { display: flex; flex-wrap: wrap; gap: 8px 16px; padding: 16px 0; border-top: 1px solid var(--cp-border); border-bottom: 1px solid var(--cp-border); margin: 20px 0 28px; font-size: 13px; }
+    .recommendation { padding: 16px 0; border-bottom: 1px solid var(--cp-border); }
+    .recommendation:first-child { padding-top: 0; }
+    .recommendation h3 { margin-bottom: 6px; }
+    .recommendation p { font-size: 14px; max-width: 80ch; }
+    .source-links { display: flex; flex-wrap: wrap; gap: 6px 12px; margin-top: 12px; }
+    .source-links a { font-size: 12px; }
+    .sources-list { list-style: none; padding: 0; }
+    .sources-list li { padding: 16px 0; border-bottom: 1px solid var(--cp-border); }
+    .sources-list h3 { margin: 7px 0 4px; font-size: 15px; }
+    .sources-list p { max-width: 92ch; font-size: 13px; margin: 6px 0; }
+    .sources-list .source-url { display: block; font-size: 12px; overflow-wrap: anywhere; }
+    .detail-header { padding-bottom: 20px; border-bottom: 1px solid var(--cp-border); margin-bottom: 24px; }
+    .detail-header h2 { font-size: 30px; margin-bottom: 10px; }
+    .detail-lead { display: grid; grid-template-columns: minmax(0,1fr) 230px; gap: 24px; margin-top: 18px; }
+    .detail-price { padding: 18px; background: var(--cp-surface); border: 1px solid var(--cp-border); border-radius: 12px; }
+    .detail-price .money { font-size: 27px; }
+    .key-facts { display: flex; flex-wrap: wrap; gap: 12px 24px; margin: 16px 0; font-size: 14px; }
+    .key-facts strong { display: block; font-size: 16px; }
+    .facts { margin: 0; }
+    .facts > div { display: grid; grid-template-columns: minmax(145px,.8fr) minmax(0,1.3fr); gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--cp-border); font-size: 14px; }
+    .facts dt { color: var(--cp-text-soft); }
+    .facts dd { margin: 0; overflow-wrap: anywhere; }
+    .callout { padding: 16px 20px; background: var(--cp-bg-elevated); border: 1px solid var(--cp-border); border-radius: 10px; margin: 16px 0; }
+    .callout strong { display: inline; }
+    .callout p { font-size: 14px; max-width: 88ch; }
+    .offer-table { min-width: 880px; }
+    .offer-table td:first-child { min-width: 180px; }
+    .offer-table td:nth-child(2) { min-width: 170px; }
+    .offer-table .offer-notes { min-width: 240px; max-width: 370px; }
+    .offer-table .archived { color: var(--cp-text-soft); }
+    .form-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 16px; }
+    .form-grid .wide { grid-column: 1/-1; }
+    .personal-price { margin: 24px 0; padding: 18px 20px; border: 1px solid var(--cp-border); border-radius: 12px; background: var(--cp-surface); }
+    .personal-price summary { font-weight: 650; margin-bottom: 12px; }
+    .error-text { color: var(--cp-danger); font-weight: 600; }
+    .metrics { display: flex; flex-wrap: wrap; gap: 20px; border-top: 1px solid var(--cp-border); border-bottom: 1px solid var(--cp-border); padding: 16px 0; margin: 16px 0; }
+    .metrics > div { max-width: 230px; }
+    .metrics strong { display: block; font-size: 23px; }
+    .metrics span { font-size: 13px; }
+    .sizing-form { background: var(--cp-surface); padding: 20px; border: 1px solid var(--cp-border); border-radius: 12px; margin-bottom: 20px; }
+    .sizing-form input { max-width: 160px; }
+    .size-selectors { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+    .schematic { width: 100%; height: auto; display: block; background: var(--cp-surface); border: 1px solid var(--cp-border); border-radius: 12px; }
+    .fit-result { padding: 12px 0; border-bottom: 1px solid var(--cp-border); font-size: 14px; }
+    .fit-result strong { display: block; margin-bottom: 5px; }
+    .tco-inputs { display: grid; grid-template-columns: repeat(4,minmax(110px,1fr)); gap: 14px; margin: 18px 0; }
+    .tco-table { max-width: 800px; }
+    .checklist { display: grid; gap: 8px; }
+    .checklist .check { font-size: 14px; align-items: flex-start; margin: 0; padding: 8px 0; }
+    .ha-profile { padding: 20px 0; border-bottom: 1px solid var(--cp-border); }
+    .ha-profile p { max-width: 92ch; font-size: 14px; }
+    .brand-picker { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 24px; }
+    .brand-picker button[aria-pressed="true"] { background: var(--cp-accent); color: var(--cp-accent-fg); border-color: var(--cp-accent); }
+    .family-table { min-width: 760px; }
+    .family-table th:first-child { width: 180px; }
+    .family-table td:nth-child(2) { min-width: 270px; }
+    .family-table td:nth-child(3) { min-width: 200px; }
+    .family-model { display: block; margin: 8px 0; }
+    .range-pair { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 20px; align-items: center; padding: 18px 0; border-bottom: 1px solid var(--cp-border); }
+    .range-pair p { margin: 0; font-size: 14px; max-width: 80ch; }
+    .range-pair h3 { margin-bottom: 6px; }
+    .suffix-list { margin: 0; }
+    .suffix-list > div { display: grid; grid-template-columns: 150px minmax(0,1fr); gap: 20px; padding: 15px 0; border-bottom: 1px solid var(--cp-border); }
+    .suffix-list dt { font-weight: 650; color: var(--cp-accent); }
+    .suffix-list dd { margin: 0; }
+    .export-box { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--cp-border); }
+    .export-box select { margin: 8px 0; }
+    footer { padding-top: 32px; margin-top: 36px; border-top: 1px solid var(--cp-border); max-width: 105ch; font-size: 12px; color: var(--cp-text-soft); }
+    .desktop-hint { display: none; }
+    .mobile-only { display: none; }
+    @media(min-width: 1700px) { .sticky-compare { left: calc((100vw - 1800px)/2 + 300px); } }
+    @media(max-width: 1160px) {
+      .shell { grid-template-columns: 240px minmax(0,1fr); }
+      .sidebar { padding: 20px 16px; }
+      main { padding: 24px 20px 110px; }
+      .topbar { padding: 0 20px; }
+      .sticky-compare { left: 256px; right: 16px; }
+      .editor-pick { grid-template-columns: 1fr; gap: 12px; }
+      .editor-pick .pick-actions { flex-direction: row; justify-content: flex-start; }
+      .three-col { grid-template-columns: 1fr 1fr; }
+      .tco-inputs { grid-template-columns: 1fr 1fr; }
+    }
+    @media(max-width: 850px) {
+      .shell { grid-template-columns: minmax(0,1fr); }
+      .sidebar { border-right: 0; border-bottom: 1px solid var(--cp-border); padding: 14px 20px; }
+      .sidebar > details > summary { margin-bottom: 0; min-height: 28px; font-size: 15px; }
+      .sidebar > details[open] > summary { margin-bottom: 20px; }
+      .sidebar > details[open] #filters { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+      .sidebar-note, .export-box { grid-column: 1/-1; }
+      main { padding-top: 22px; }
+      .sticky-compare { left: 16px; }
+      .top-actions > .fine { display: none; }
+      .two-col { grid-template-columns: 1fr; gap: 24px; }
+      .detail-lead { grid-template-columns: 1fr; gap: 16px; }
+      .detail-price { max-width: 400px; }
+      .page-heading .meta-badge { display: none; }
+      .desktop-hint { display: block; }
+      .page-heading { margin-bottom: 14px; }
+    }
+    @media(max-width: 540px) {
+      .topbar { height: 60px; padding: 0 16px; gap: 8px; }
+      .wordmark { font-size: 16px; gap: 7px; }
+      .top-actions { gap: 4px; }
+      .top-actions button { padding: 6px 9px; }
+      main { padding: 20px 16px 120px; }
+      .sidebar { padding: 13px 16px; }
+      .sidebar > details[open] #filters { display: block; }
+      .page-heading p { font-size: 13px; }
+      .tabs { margin-bottom: 20px; }
+      .tabs button { padding: 10px 11px; }
+      .editor-pick { padding: 18px; }
+      .editor-pick .pick-actions { flex-direction: column; }
+      .editor-pick h2 { font-size: 19px; }
+      .shortlist-links { gap: 4px; }
+      .shortlist-links button { display: block; width: 100%; }
+      .three-col, .form-grid, .size-selectors { grid-template-columns: 1fr; }
+      .tco-inputs { grid-template-columns: 1fr 1fr; }
+      .sticky-compare { bottom: 10px; left: 10px; right: 10px; padding: 10px 12px; gap: 10px; }
+      .sticky-compare p { max-width: 145px; font-size: 12px; }
+      .sticky-compare .row-actions { flex-wrap: nowrap; gap: 4px; }
+      .sticky-compare .text { font-size: 12px; }
+      .sticky-compare button { font-size: 13px; padding: 7px 9px; }
+      .facts > div { grid-template-columns: minmax(110px,.75fr) minmax(0,1.25fr); gap: 12px; font-size: 13px; }
+      .result-head { align-items: flex-start; }
+      .result-head .toolbar { width: 100%; }
+      .result-head select { flex: 1; min-width: 150px; }
+      .detail-header h2 { font-size: 26px; }
+      .callout { padding: 14px 16px; }
+      .sizing-form { padding: 16px; }
+      .range-pair, .suffix-list > div { grid-template-columns: 1fr; gap: 10px; }
+      .mobile-only { display: inline; }
+      .desktop-only { display: none; }
+      .page-heading h1 { font-size: 25px; line-height: 1.2; }
+      .editor-pick { padding: 14px 16px; gap: 12px; }
+      .editor-pick h2 { font-size: 17px; margin: 0; }
+      .editor-pick p, .shortlist-links { display: none; }
+      .editor-pick .pick-actions { flex-direction: row; gap: 8px; }
+      .editor-pick .pick-actions button { flex: 1; padding: 8px 7px; font-size: 12px; }
+    }
+    @media(prefers-reduced-motion: no-preference) {
+      button { transition: background-color 140ms ease-out, border-color 140ms ease-out; }
+      .robot-card.selected { transition: border-color 160ms ease-out; }
+    }
+    @media print {
+      @page { size: A4; margin: 13mm; }
+      body { background: var(--cp-surface); font-size: 11px; }
+      .topbar, .sidebar, .tabs, .sticky-compare, .no-print, .export-box, .snapshot, #notice { display: none !important; }
+      .shell { display: block; max-width: none; }
+      main { padding: 0; }
+      .page-heading { margin-bottom: 16px; }
+      .page-heading h1 { font-size: 23px; }
+      .table-wrap { overflow: visible; border-radius: 0; }
+      table { font-size: 10px; min-width: 0 !important; table-layout: fixed; }
+      th, td { padding: 5px; overflow-wrap: anywhere; min-width: 0 !important; }
+      .compare-table th:first-child { position: static; width: 100px; }
+      .compare-table th:not(:first-child) { width: auto; }
+      .compare-table td { min-width: 0; }
+      .comparison-section { page: comparison; }
+      @page comparison { size: A4 landscape; }
+      .prose { max-width: none; }
+      .prose h2 { break-after: avoid; }
+      .recommendation, .ha-profile { break-inside: avoid; }
+      .money { font-size: 14px; }
+      .two-col { gap: 14px; }
+      .source-links a { font-size: 10px; }
+      footer { margin-top: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#content">Aller au comparateur</a>
+  <header class="topbar">
+    <a class="wordmark" href="#modeles" data-nav="models" aria-label="Le bon robot, revenir aux modèles">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="3" y="3" width="34" height="34" rx="11" fill="var(--cp-accent-soft)" stroke="var(--cp-accent)"/><circle cx="20" cy="21" r="10" fill="none" stroke="var(--cp-accent)" stroke-width="1.7"/><path d="M12 16h16M17 29h6" fill="none" stroke="var(--cp-accent)" stroke-width="1.7"/><circle cx="20" cy="19" r="2" fill="var(--cp-accent)"/></svg>
+      Le bon robot
+    </a>
+    <div class="top-actions">
+      <span class="fine">Belgique · 15 novembre 2026 · hors ligne</span>
+      <button id="theme-button" class="small" type="button" aria-label="Changer le thème">Thème</button>
+      <button type="button" class="small" data-act="print">Imprimer</button>
+    </div>
+  </header>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Filtres et préférences">
+      <details id="filter-panel" open>
+        <summary>Vos critères <span id="filter-count" class="fine"></span></summary>
+        <form id="filters">
+          <div class="filter-group">
+            <div class="field"><label for="search">Rechercher un modèle</label><input id="search" type="search" placeholder="Saros, L40s, rouleau…" data-setting="q" autocomplete="off"></div>
+            <div class="field">
+              <div class="budget-row"><label for="budget-number" class="field-label">Budget</label><div class="budget-input"><input id="budget-number" type="number" min="100" max="2000" step="1" value="500" data-setting="budget" aria-label="Budget en euros"><span>€</span></div></div>
+              <input id="budget-range" type="range" min="100" max="2000" step="10" value="500" data-setting="budget" aria-label="Ajuster le budget">
+              <label class="check"><input type="checkbox" data-setting="stretch"><span>Voir aussi jusqu'à <strong id="stretch-label">650 €</strong><br><span class="fine">+150 €, dépassement signalé</span></span></label>
+            </div>
+            <div class="field"><label for="purchase-scope">Prix utilisé pour le tri</label><select id="purchase-scope" data-setting="purchase"><option value="be">Offres accessibles Belgique</option><option value="amazon">Amazon Belgique uniquement</option><option value="cross">Inclure FR / DE à confirmer</option></select></div>
+            <div class="field"><label for="brand-filter">Marque</label><select id="brand-filter" data-setting="brand"><option value="">Toutes les marques</option></select></div>
+            <div class="field"><label for="mop-filter">Lavage</label><select id="mop-filter" data-setting="mop"><option value="">Patins et rouleaux</option><option value="rouleau">Rouleau rincé en continu</option><option value="rotatifs">Deux patins rotatifs</option></select></div>
+          </div>
+          <div class="filter-group">
+            <div class="field"><label for="ha-filter">Home Assistant</label><select id="ha-filter" data-setting="ha"><option value="">Toutes les situations</option><option value="core">Core : famille documentée</option><option value="hacs">HACS : modèle nommé</option><option value="local">Toutes fonctions hors cloud confirmées</option></select></div>
+            <div class="field"><label for="camera-filter">Caméra de reconnaissance</label><select id="camera-filter" data-setting="camera"><option value="">Avec, sans ou NC</option><option value="yes">Caméra confirmée</option><option value="no">Sans RGB établie</option></select></div>
+            <div class="field"><label for="remote-camera-filter">Caméra accessible à distance</label><select id="remote-camera-filter" data-setting="remoteCamera"><option value="">Toutes les situations</option><option value="yes">Vidéo en direct confirmée</option><option value="no">Pas de vidéo en direct documentée</option><option value="unknown">Accès vidéo non confirmé</option></select><p class="fine" style="margin-top:6px">Caméra IA ≠ vidéo consultable. La vidéo de l'app ne prouve pas sa disponibilité dans HA.</p></div>
+            <label class="check"><input type="checkbox" data-setting="heat"><span>Chauffage du lavage confirmé</span></label>
+            <label class="check"><input type="checkbox" data-setting="tested"><span>Avec essai indépendant exploité</span></label>
+            <label class="check"><input type="checkbox" data-setting="frandroidOnly"><span>Avec un test Frandroid exact</span></label>
+            <label class="check"><input type="checkbox" data-setting="unknownPrices"><span>Inclure les prix non confirmés / absents</span></label>
+            <details class="filter-details">
+              <summary>Place disponible</summary>
+              <div class="field"><label for="clearance-filter">Hauteur libre sous les meubles (cm)</label><input id="clearance-filter" type="number" min="0" max="100" step="0.1" placeholder="Sans limite" data-setting="clearance"></div>
+              <div class="field"><label for="margin-filter">Marge de sécurité du robot (mm)</label><input id="margin-filter" type="number" min="0" max="50" step="1" value="5" data-setting="margin"></div>
+              <div class="field"><label for="dock-height-filter">Hauteur du corps de base max. (cm)</label><input id="dock-height-filter" type="number" min="0" max="200" step="0.1" placeholder="Sans limite" data-setting="dockHeight"></div>
+              <p class="fine">Les modèles sans cote nécessaire sont exclus lorsqu'une limite est renseignée. La base seule ne valide pas son installation.</p>
+            </details>
+            <details class="filter-details">
+              <summary>Pondérer l'équipement</summary>
+              <div class="presets">
+                <button type="button" class="small" data-preset="hard">Sols durs</button>
+                <button type="button" class="small" data-preset="budget">Économe</button>
+                <button type="button" class="small" data-preset="pets">Poils</button>
+                <button type="button" class="small" data-preset="ha">Domotique</button>
+              </div>
+              <div id="weight-controls"></div>
+              <p class="fine">Indice d'équipement, pas note de nettoyage. NC = aucun point documenté. Les Pa ne rapportent aucun point.</p>
+            </details>
+          </div>
+          <div class="sidebar-note">
+            <button type="button" class="small" data-act="reset-filters">Réinitialiser les filtres</button>
+            <p class="fine" style="margin-top:12px">Vos prix personnels et votre sélection sont conservés. Tout reste dans ce navigateur.</p>
+          </div>
+          <div class="export-box">
+            <label for="export-type" class="field-label">Emporter la recherche</label>
+            <select id="export-type"><option value="report">Analyse complète (.md)</option><option value="csv">Tableau filtré (.csv)</option><option value="data">Données et sources (.json)</option><option value="settings">Vos préférences et relevés (.json)</option></select>
+            <div class="row-actions"><button type="button" class="small" data-act="export">Exporter</button><button type="button" class="small" data-act="import">Importer vos réglages</button></div>
+            <input id="import-file" class="sr-only" type="file" accept=".json,application/json" aria-label="Importer un fichier de préférences">
+            <p class="fine" style="margin-top:10px">Déplacer le fichier HTML peut changer son stockage. Exportez vos réglages avant.</p>
+          </div>
+        </form>
+      </details>
+    </aside>
+    <main>
+      <div class="page-heading">
+        <div><h1><span class="desktop-only">Le bon robot pour votre quotidien.</span><span class="mobile-only">Quel robot pour vos sols ?</span></h1><p class="muted">Prix belges, lavage, dimensions et domotique en clair.<br>26 modèles · Budget de départ 500 € · Sols durs en priorité.</p></div>
+        <span class="meta-badge" id="dataset-badge">26 modèles · 6 marques</span>
+      </div>
+      <div id="notice" class="notice" role="status" hidden><span id="notice-text"></span><button type="button" class="text small" data-act="dismiss" aria-label="Fermer le message">Fermer</button></div>
+      <div class="snapshot" id="snapshot"></div>
+      <nav class="tabs" aria-label="Sections du comparateur">
+        <button type="button" data-nav="models">Modèles</button>
+        <button type="button" data-nav="ranges">Gammes</button>
+        <button type="button" data-nav="compare">Comparer <span id="compare-count">0</span></button>
+        <button type="button" data-nav="sizes">Dimensions</button>
+        <button type="button" data-nav="offers">Prix & coût</button>
+        <button type="button" data-nav="analysis">Analyse</button>
+        <button type="button" data-nav="ha">Home Assistant</button>
+        <button type="button" data-nav="sources">Sources</button>
+      </nav>
+      <div id="content" tabindex="-1"></div>
+      <footer>
+        <p><strong>Recherche du 15 novembre 2026.</strong> Prix archivés, pas de synchronisation automatique. Avant achat : total TTC belge, port, vendeur, variante, délai, dimensions installées et firmware à vérifier. NC signifie non confirmé ou non relevé, pas absence certaine.</p>
+        <p>Ce fichier fonctionne sans installation ni connexion. Les avis visibles et les essais cités ne mesurent pas la fiabilité de tous les lots. Aucun achat ni changement de compte n'a été effectué.</p>
+      </footer>
+    </main>
+  </div>
+  <div id="compare-tray" class="sticky-compare" hidden aria-label="Votre sélection">
+    <p id="tray-label"></p>
+    <div class="row-actions"><button type="button" class="text small" data-act="clear-selection">Vider</button><button type="button" class="primary" data-nav="compare" id="tray-button">Comparer</button></div>
+  </div>
+  <noscript><div class="callout">Ce comparateur autonome a besoin de JavaScript pour ses filtres et tableaux. Aucune connexion Internet n'est requise. L'analyse Markdown fournie séparément reste lisible sans JavaScript.</div></noscript>
+  <script id="market-data" type="application/json">__MARKET_DATA__</script>
+  <script>
+  (() => {
+    "use strict";
+    const DATA = JSON.parse(document.getElementById("market-data").textContent);
+    const $ = (s, root = document) => root.querySelector(s);
+    const $$ = (s, root = document) => [...root.querySelectorAll(s)];
+    const esc = value => String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+    const money = n => Number.isFinite(n) ? new Intl.NumberFormat("fr-BE", {style:"currency",currency:"EUR"}).format(n) : "NC";
+    const number = (n, digits = 1) => Number.isFinite(n) ? new Intl.NumberFormat("fr-BE", {maximumFractionDigits:digits}).format(n) : "NC";
+    const bool = x => x === true ? "Oui" : x === false ? "Non" : "NC";
+    const dateFormat = new Intl.DateTimeFormat("fr-BE",{day:"numeric",month:"long",year:"numeric",timeZone:"UTC"});
+    const monthFormat = new Intl.DateTimeFormat("fr-BE",{month:"long",year:"numeric",timeZone:"UTC"});
+    const dateText = value => value ? dateFormat.format(new Date(`${value}T12:00:00Z`)) : "NC";
+    const releaseMonth = m => m.release.month ? monthFormat.format(new Date(`${m.release.month}-01T12:00:00Z`)) : "Mois non confirmé";
+    const modelMap = new Map(DATA.models.map(m => [m.id,m]));
+    const sourceMap = new Map(DATA.sources.map((s,i) => [s.id,{...s,no:i+1}]));
+    const STORE = "robot-comparator-be-v1";
+    const WEIGHT_LABELS = {mop:"Mécanisme de lavage",edges:"Extensions des bords",avoid:"Capteurs de reconnaissance",hair:"Anti-emmêlement",care:"Automatisation de l'entretien",ha:"Parcours Home Assistant",compact:"Faible hauteur utile",price:"Prix / budget"};
+    const PRESETS = {
+      hard:{mop:5,edges:4,avoid:3,hair:2,care:4,ha:3,compact:2,price:4},
+      budget:{mop:3,edges:2,avoid:2,hair:2,care:3,ha:2,compact:1,price:5},
+      pets:{mop:3,edges:3,avoid:5,hair:5,care:4,ha:2,compact:2,price:3},
+      ha:{mop:3,edges:2,avoid:3,hair:2,care:3,ha:5,compact:2,price:3}
+    };
+    const defaults = () => ({
+      version:1,q:"",brand:"",mop:"",ha:"",camera:"",remoteCamera:"",frandroidOnly:false,budget:500,stretch:true,purchase:"be",heat:false,tested:false,unknownPrices:true,
+      clearance:0,margin:5,dockHeight:0,weights:{...PRESETS.hard},preset:"hard",selected:[],view:"models",sort:"editorial",
+      cards:window.matchMedia("(max-width:680px)").matches,differences:false,current:"rr-10r",sourceQuery:"",sourceType:"",
+      diagramA:"rr-10r",diagramB:"rr-flow",diagramMode:"front",
+      niche:{width:0,depth:0,height:0,front:70,top:30,side:5},
+      tco:{years:3,consumables:50,detergent:20,kwh:30,rate:.35},
+      overrides:{},checks:[],theme:"light",rangeBrand:"Roborock"
+    });
+    let state = defaults(), lastView = "models", storageAvailable = true, searchTimer;
+
+    function safeUrl(value) {
+      try { const u = new URL(String(value)); return ["https:","http:"].includes(u.protocol) ? u.href : null; }
+      catch { return null; }
+    }
+    function external(url, label, cls = "") {
+      const u = safeUrl(url);
+      return u ? `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer" class="${esc(cls)}">${esc(label)} ↗</a>` : `<span>${esc(label)}${url ? " · lien invalide" : ""}</span>`;
+    }
+    function notify(text, error = false) {
+      $("#notice-text").textContent = text;
+      $("#notice").hidden = false;
+      $("#notice").classList.toggle("error",error);
+      $("#notice").setAttribute("role",error ? "alert" : "status");
+    }
+    function save() {
+      try { localStorage.setItem(STORE,JSON.stringify(state)); storageAvailable = true; return true; }
+      catch (err) { storageAvailable = false; console.warn("Stockage local indisponible",err); notify("Le navigateur ne permet pas la sauvegarde locale. Vos changements ne valent que pour cette ouverture : exportez vos réglages.",true); return false; }
+    }
+    function checkedNumber(x, lo, hi, name) {
+      if (typeof x !== "number" || !Number.isFinite(x) || x < lo || x > hi) throw new Error(`${name} : valeur hors limites.`);
+      return x;
+    }
+    function validateSettings(input) {
+      if (!input || input.version !== 1 || typeof input !== "object" || Array.isArray(input)) throw new Error("Ce fichier n'est pas un export de préférences compatible (version 1).");
+      const s = defaults();
+      const enums = {brand:["",...new Set(DATA.models.map(m=>m.brand))],mop:["","rouleau","rotatifs"],ha:["","core","hacs","local"],camera:["","yes","no"],purchase:["be","amazon","cross"],view:["models","ranges","compare","sizes","offers","analysis","ha","sources","detail"],sort:["editorial","score","price","height","name"],diagramMode:["front","top"],theme:["auto","light","dark"],preset:["","hard","budget","pets","ha"]};
+      for (const [k,values] of Object.entries(enums)) { if (!values.includes(input[k])) throw new Error(`Préférence inconnue : ${k}.`); s[k]=input[k]; }
+      if (input.remoteCamera!==undefined) {
+        if (!["","yes","no","unknown"].includes(input.remoteCamera)) throw new Error("Filtre de caméra distante inconnu.");
+        s.remoteCamera=input.remoteCamera;
+      }
+      if (input.frandroidOnly!==undefined) {
+        if (typeof input.frandroidOnly!=="boolean") throw new Error("Filtre Frandroid invalide.");
+        s.frandroidOnly=input.frandroidOnly;
+      }
+      for (const k of ["q","sourceQuery","sourceType"]) { if (typeof input[k]!=="string" || input[k].length>300) throw new Error(`Texte invalide : ${k}.`); s[k]=input[k]; }
+      for (const k of ["stretch","heat","tested","unknownPrices","cards","differences"]) { if (typeof input[k]!=="boolean") throw new Error(`Préférence invalide : ${k}.`); s[k]=input[k]; }
+      for (const [k,lo,hi] of [["budget",100,2000],["clearance",0,100],["margin",0,50],["dockHeight",0,200]]) s[k]=checkedNumber(input[k],lo,hi,k);
+      if (!input.weights || typeof input.weights!=="object") throw new Error("Pondérations absentes.");
+      for (const k of Object.keys(WEIGHT_LABELS)) s.weights[k]=checkedNumber(input.weights[k],0,5,k);
+      if (!Array.isArray(input.selected) || input.selected.length>4 || new Set(input.selected).size!==input.selected.length || input.selected.some(id=>!modelMap.has(id))) throw new Error("Sélection invalide : quatre modèles différents au maximum.");
+      s.selected=[...input.selected];
+      if (input.rangeBrand!==undefined) {
+        if (!DATA.ranges.brands.some(g=>g.brand===input.rangeBrand)) throw new Error("Marque inconnue dans le guide des gammes.");
+        s.rangeBrand=input.rangeBrand;
+      }
+      for (const k of ["current","diagramA","diagramB"]) { if (!modelMap.has(input[k])) throw new Error(`Modèle inconnu : ${k}.`); s[k]=input[k]; }
+      for (const k of Object.keys(s.niche)) s.niche[k]=checkedNumber(input.niche?.[k],0,1000,`Dimensions ${k}`);
+      for (const [k,hi] of [["years",15],["consumables",2000],["detergent",1000],["kwh",5000],["rate",10]]) s.tco[k]=checkedNumber(input.tco?.[k],0,hi,`Coût ${k}`);
+      if (!Array.isArray(input.checks) || input.checks.some(i=>!Number.isInteger(i)||i<0||i>=DATA.analysis.checklist.length)) throw new Error("Liste de vérification invalide.");
+      s.checks=[...new Set(input.checks)];
+      if (!input.overrides || typeof input.overrides!=="object" || Array.isArray(input.overrides)) throw new Error("Relevés de prix invalides.");
+      for (const [id,o] of Object.entries(input.overrides)) {
+        if (!modelMap.has(id)||!o||typeof o!=="object") throw new Error("Relevé associé à un modèle inconnu.");
+        const price=checkedNumber(o.price,.01,10000,"Prix personnel");
+        const shipping=o.shipping===null?null:checkedNumber(o.shipping,0,2000,"Port personnel");
+        if (![true,false,null].includes(o.be)||typeof o.shop!=="string"||!o.shop.trim()||o.shop.length>120||typeof o.note!=="string"||o.note.length>1000||typeof o.at!=="string"||!Number.isFinite(Date.parse(o.at))) throw new Error("Relevé personnel incomplet ou invalide.");
+        if (o.url && !safeUrl(o.url)) throw new Error("Le lien du relevé doit commencer par https:// ou http://.");
+        s.overrides[id]={price,shipping,be:o.be,shop:o.shop.trim(),note:o.note,url:o.url?safeUrl(o.url):"",at:o.at};
+      }
+      return s;
+    }
+    function load() {
+      try {
+        const raw=localStorage.getItem(STORE);
+        if (raw) state=validateSettings(JSON.parse(raw));
+      } catch (err) { console.warn("Préférences non chargées",err); notify(`Préférences non chargées : ${err.message} Les réglages initiaux sont affichés, sans effacer le fichier importé.`,true); }
+    }
+    function sourceLinks(ids=[]) {
+      return `<div class="source-links">${[...new Set(ids)].map(id=>{
+        const s=sourceMap.get(id);
+        return s?external(s.url,`S${String(s.no).padStart(3,"0")} · ${s.type}`):`<span class="error-text">Source manquante : ${esc(id)}</span>`;
+      }).join("")}</div>`;
+    }
+    function haProfile(m) { return DATA.haProfiles[m.ha]; }
+    function haKind(m) { return m.haConditional?"conditional":haProfile(m).kind; }
+    function offerUrl(o) { return o.url || sourceMap.get(o.source)?.url || ""; }
+    function offerTotal(o) { return o.price + (o.shipping ?? 0); }
+    function eligible(o) {
+      if (!Number.isFinite(o.price)||o.unverified||o.secondaryOffer||o.available!==true) return false;
+      if (state.purchase==="amazon") return /^Amazon(?:\s+Belgique|\.com\.be)\b/i.test(o.shop) && o.be===true;
+      return state.purchase==="cross" ? o.be!==false : o.be===true;
+    }
+    function personal(m) {
+      const o=state.overrides[m.id];
+      return o?{...o,country:o.be===true?"BE":"?",available:true,manual:true,level:"votre relevé",source:null,variant:"Votre prix de référence"}:null;
+    }
+    function bestOffer(m) {
+      const own=personal(m);
+      if (own) return eligible(own)?own:null;
+      return m.offers.filter(eligible).slice().sort((a,b)=>offerTotal(a)-offerTotal(b)||(a.shipping===null?1:0)-(b.shipping===null?1:0))[0]||null;
+    }
+    function baseHeight(m) { return Number.isFinite(m.dock[2])?m.dock[2]:null; }
+    function usefulHeight(m) { return Number.isFinite(m.clearance)?m.clearance:m.robot[2]; }
+    function dim(arr, raw) {
+      if (raw) return raw;
+      return arr.map(v=>Number.isFinite(v)?number(v/10,2):"NC").join(" × ")+" cm";
+    }
+    function heightText(m) {
+      const h=m.robot[2];
+      return Number.isFinite(h)?`${number(h/10,2)} cm${m.raised?` / ${number(m.raised/10,2)} cm relevé`:""}`:"Hauteur NC";
+    }
+    function drying(m) {
+      if (m.dry!==true) return m.dry===false?"Non":"NC";
+      if (m.dryType==="froid") return "Air froid (confirmé)";
+      return m.dryC?`Air chaud ${number(m.dryC)}\u00a0°C`:"Air chaud · température NC";
+    }
+    function washText(m) { return m.washMode==="ambient"?"Eau non chauffée, station":m.wash!==null?`${m.wash}\u00a0°C, station`:"Automatique · chauffe NC"; }
+    function detergentText(m) { return m.detergentNote || bool(m.detergent); }
+    function releaseText(m) { return `${releaseMonth(m)} · ${m.release.market} · ${m.release.basis}`; }
+    function cameraText(m) { return `${bool(m.camera)} · ${m.cameraInfo.kind}`; }
+    function remoteCameraText(m) { return `${bool(m.remoteCamera.available)} · ${m.remoteCamera.note}`; }
+    function frandroidScore(m) {
+      const f=m.frandroid;
+      return f.status==="tested"?`${number(f.score,0)}/10 · test du ${dateText(f.published)}${f.updated!==f.published?` · article mis à jour le ${dateText(f.updated)}`:""}`:`— · test exact non repéré au ${dateText(f.checkedAt)}`;
+    }
+    function frandroidSummary(m) {
+      const f=m.frandroid;
+      return f.status==="tested"?f.summary:`${f.summary} ${f.note}`;
+    }
+    function equipment(m) {
+      const o=bestOffer(m), price=o?offerTotal(o):null, h=usefulHeight(m);
+      const careValues=[m.dry===true?(m.dryType==="froid"?.5:1):m.dry===false?0:null,m.detergent===true?1:m.detergent===false?0:null,m.wash!==null?1:m.washMode==="ambient"?0:null,m.detach===true?1:m.detach===false?0:null];
+      const care=careValues.reduce((sum,n)=>sum+(n??0),0)/4*100;
+      const kind=haKind(m);
+      const values={
+        mop:{score:m.rinse?100:70,coverage:1,why:m.rinse?"Rouleau rincé pendant le lavage":"Deux patins, rinçage au retour station"},
+        edges:{score:50*Number(m.edgeMop===true)+50*Number(m.edgeBrush===true),coverage:(Number(m.edgeMop!==null)+Number(m.edgeBrush!==null))/2,why:`Lavage extensible : ${bool(m.edgeMop)} ; brossette : ${bool(m.edgeBrush)}`},
+        avoid:{score:m.camera===true?100:m.camera===false?50:0,coverage:m.camera===null?0:1,why:"Présence de RGB + capteurs, pas performance d'évitement mesurée"},
+        hair:{score:m.anti==="advanced"?100:40,coverage:1,why:m.brush},
+        care:{score:care,coverage:careValues.filter(v=>v!==null).length/4,why:"Séchage, dosage de solution, chauffe établie et retrait des patins"},
+        ha:{score:kind==="core"?100:kind==="hacs"?80:kind==="conditional"?35:0,coverage:kind==="uncertain"?0:1,why:haProfile(m).label},
+        compact:{score:Number.isFinite(h)?h<=85?100:h<=95?80:h<=105?60:30:0,coverage:Number.isFinite(h)?1:0,why:`Hauteur utile ${Number.isFinite(h)?number(h/10,2)+" cm":"NC"}`},
+        price:{score:price===null?0:Math.max(0,100-Math.max(0,price-state.budget)/state.budget*200),coverage:price===null?0:o.shipping===null?.75:1,why:price===null?"Aucun prix éligible confirmé":`${money(price)}${o.shipping===null?" + port NC":""}`}
+      };
+      const weight=Object.values(state.weights).reduce((a,b)=>a+b,0);
+      if (!weight) return {score:null,coverage:0,values};
+      const score=Object.keys(values).reduce((n,k)=>n+state.weights[k]*values[k].score,0)/weight;
+      const coverage=Object.keys(values).reduce((n,k)=>n+state.weights[k]*values[k].coverage,0)/weight;
+      return {score:Math.round(score),coverage:Math.round(coverage*100),values};
+    }
+    const editorialOrder=["rr-10r","rr-edge2","rr-2pro","ec-t90","dr-l40s","mo-p70","mo-p50","dr-l50ae","rr-spro","mo-s70","mo-e50","dr-gen3","mo-e40","xi-x20","rr-flow","mo-v50","rr-curvpro","ec-max","eu-e25","mo-z60","dr-l50s","rr-qv","ec-t80","xi-5","eu-x10","dr-aqua"];
+    function filtered() {
+      const q=state.q.toLocaleLowerCase("fr");
+      const max=state.budget+(state.stretch?150:0);
+      const result=DATA.models.filter(m=>{
+        const o=bestOffer(m), price=o?offerTotal(o):null;
+        if (state.brand&&m.brand!==state.brand||state.mop&&m.mop!==state.mop) return false;
+        if (q&&!`${m.brand} ${m.name} ${m.nav} ${m.mop} ${m.brush}`.toLocaleLowerCase("fr").includes(q)) return false;
+        if (price===null&&!state.unknownPrices||price!==null&&price>max) return false;
+        if (state.heat&&m.wash===null||state.tested&&!m.tested) return false;
+        if (state.camera==="yes"&&m.camera!==true||state.camera==="no"&&m.camera!==false) return false;
+        if (state.remoteCamera==="yes"&&m.remoteCamera.available!==true||state.remoteCamera==="no"&&m.remoteCamera.available!==false||state.remoteCamera==="unknown"&&m.remoteCamera.available!==null) return false;
+        if (state.frandroidOnly&&m.frandroid.status!=="tested") return false;
+        if (state.ha==="core"&&haKind(m)!=="core"||state.ha==="hacs"&&haKind(m)!=="hacs"||state.ha==="local") return false;
+        if (state.clearance&&(!Number.isFinite(usefulHeight(m))||usefulHeight(m)+state.margin>state.clearance*10)) return false;
+        if (state.dockHeight&&(!Number.isFinite(baseHeight(m))||baseHeight(m)>state.dockHeight*10)) return false;
+        return true;
+      });
+      return result.sort((a,b)=>{
+        if (state.sort==="score") return (equipment(b).score??-1)-(equipment(a).score??-1)||a.name.localeCompare(b.name);
+        if (state.sort==="price") return (bestOffer(a)?offerTotal(bestOffer(a)):Infinity)-(bestOffer(b)?offerTotal(bestOffer(b)):Infinity)||a.name.localeCompare(b.name);
+        if (state.sort==="height") return (usefulHeight(a)??Infinity)-(usefulHeight(b)??Infinity)||a.name.localeCompare(b.name);
+        if (state.sort==="name") return `${a.brand} ${a.name}`.localeCompare(`${b.brand} ${b.name}`,"fr");
+        return editorialOrder.indexOf(a.id)-editorialOrder.indexOf(b.id);
+      });
+    }
+    function labelOf(m) { return `${m.brand} ${m.name}`; }
+    function modelButton(m,cls="name-button") { return `<button type="button" class="${cls}" data-model="${m.id}"><span class="brand">${esc(m.brand)}</span>${esc(m.name)}</button>`; }
+    function priceHtml(m) {
+      const o=bestOffer(m);
+      if (!o) {
+        const alt=m.offers.find(x=>x.secondaryOffer);
+        return `<span class="money">NC</span><span class="cell-sub">${state.overrides[m.id]?"Votre relevé est hors du périmètre choisi.":alt?`${money(alt.price)} en autres offres non confirmées`:"Pas de prix éligible relevé."}</span>`;
+      }
+      const total=offerTotal(o),over=total>state.budget;
+      return `<span class="money">${money(total)}</span><span class="cell-sub">${esc(o.shop)}${o.manual?" · saisi par vous":""}</span><span class="cell-sub">${o.shipping===null?"Port non relevé · total provisoire":o.shipping>0?`${money(o.price)} + ${money(o.shipping)} de port`:"Livraison affichée incluse"}${o.be===null?" · BE à confirmer":""}</span>${over?`<span class="badge warning">+${money(total-state.budget)} / budget</span>`:""}${o.source?external(offerUrl(o),"Vérifier l'offre","mini-source"):o.url?external(o.url,"Votre lien","mini-source"):""}`;
+    }
+    function reviewHtml(m) {
+      const r=m.review;
+      return r.rating!==null?`${number(r.rating,1)}/5 <span class="cell-sub">${esc(r.count)} avis · famille d'annonce${r.sample?` · ${r.sample} lus`:" · textes non audités"}</span>`:"Pas de note client vérifiée";
+    }
+    function scoreHtml(m) {
+      const n=equipment(m);
+      return `<span class="score">${n.score===null?"—":n.score}<small>${n.score===null?"":"/100"}</small></span><span class="cell-sub">${n.score===null?"Pondérations à zéro":`${n.coverage} % documenté`}</span>`;
+    }
+    function selectionInput(m,origin) { return `<label class="check" style="margin:0"><input type="checkbox" data-select="${m.id}" data-origin="${origin}" ${state.selected.includes(m.id)?"checked":""} aria-label="Comparer ${esc(labelOf(m))}"><span class="sr-only">Comparer ${esc(m.name)}</span></label>`; }
+    function badges(m) { return `<span class="badge ${m.tested?"proof":""}">${m.tested?"Essai exploité":"Fiche / recul limité"}</span>${m.frandroid.status==="tested"?` ${external(m.frandroid.url,`Frandroid ${m.frandroid.score}/10`,"badge proof")}`:""}${m.risk?` <span class="badge warning">Vigilance</span>`:""}${state.overrides[m.id]?` <span class="badge">Votre prix</span>`:""}`; }
+    function emptyHtml() {
+      return `<div class="empty"><h2>Aucun modèle ne remplit ces critères.</h2><p>${state.ha==="local"?"Aucun de ces robots n'est documenté comme entièrement indépendant du cloud pour toutes ses fonctions. Matter peut offrir des commandes locales limitées, sans remplacer toutes les fonctions de l'application.":"Le budget, les cotes inconnues ou le périmètre d'achat peuvent écarter des modèles. Les données manquantes ne sont pas transformées en garanties."}</p><div class="row-actions"><button data-act="reset-filters">Réinitialiser les filtres</button><button data-nav="ha">Comprendre Home Assistant</button></div></div>`;
+    }
+    function sortControl() {
+      return `<label class="sr-only" for="sort-models">Trier les modèles</label><select id="sort-models" data-action-setting="sort"><option value="editorial">Sélection éditoriale</option><option value="score">Indice d'équipement</option><option value="price">Prix croissant</option><option value="height">Hauteur utile croissante</option><option value="name">Marque et modèle</option></select>`;
+    }
+    function renderModels() {
+      const list=filtered();
+      return `<section class="editor-pick"><div><h2><span class="desktop-only">Le choix polyvalent autour de 500 € : Saros 10R.</span><span class="mobile-only">Choix polyvalent : Saros 10R, environ 500&nbsp;€.</span></h2><p>Faible hauteur, évitement étayé par un essai et Home Assistant Core. <strong>499,99 € affichés en direct</strong>, livraison Belgique annoncée.</p><p class="fine">Sélection éditoriale du 15 novembre · Variante standard et TVA belge finale à vérifier. Les alternatives restent comparables ci-dessous.</p></div><div class="pick-actions"><button class="primary" data-model="rr-10r">Voir la recommandation</button><button data-act="finalists">Comparer les finalistes</button></div></section>
+      <div class="shortlist-links"><button class="text" data-model="rr-edge2">Amazon BE : Qrevo Edge 2 →</button><button class="text" data-model="ec-t90">Priorité rouleau : T90 Pro Omni →</button><button class="text" data-model="dr-l40s">Dreame à 399 € : L40s, attention au délai →</button></div>
+      <div class="result-head"><h2>${list.length} modèles affichés <span class="fine">/ ${DATA.models.length}</span></h2><div class="toolbar">${sortControl()}<div class="segmented" aria-label="Présentation"><button data-act="layout-table" aria-pressed="${!state.cards}">Tableau</button><button data-act="layout-cards" aria-pressed="${state.cards}">Cartes</button></div></div></div>
+      <p class="fine" id="price-scope-note">Prix du périmètre : <strong>${state.purchase==="amazon"?"Amazon Belgique":state.purchase==="cross"?"Belgique + offres étrangères non validées BE":"offres dont l'accès Belgique est documenté"}</strong>. Les frais inconnus restent signalés. Votre propre relevé, s'il existe, remplace le prix de référence archivé.</p>
+      ${list.length?(state.cards?`<div class="card-grid">${list.map(m=>`<article class="robot-card ${state.selected.includes(m.id)?"selected":""}"><div class="card-top">${badges(m)}${selectionInput(m,"card")}</div><h3>${modelButton(m)}</h3><div>${priceHtml(m)}</div><div class="card-specs"><div><span>Lavage</span><span>${m.mop==="rouleau"?"Rouleau rincé":"Deux patins"} · ${washText(m)}</span></div><div><span>Hauteur robot</span><span>${heightText(m)}</span></div><div><span>HA</span><span>${esc(haProfile(m).label)}</span></div><div><span>Indice équipement</span><span>${scoreHtml(m)}</span></div></div><p>${esc(m.verdict)}</p><button class="small" data-model="${m.id}">Fiche, avis et offres</button></article>`).join("")}</div>`:
+      `<div class="table-wrap" tabindex="0" aria-label="Tableau des modèles, défilement horizontal possible"><table class="models-table"><caption>Cocher 2 à 4 modèles pour comparer. Cliquer sur un nom pour ouvrir sa fiche. Prix et sources au 15 novembre 2026.</caption><thead><tr><th scope="col"><span class="sr-only">Sélection</span></th><th scope="col">Modèle / recul</th><th scope="col">Prix relevé</th><th scope="col">Lavage / station</th><th scope="col">Gabarit</th><th scope="col">Home Assistant</th><th scope="col">Équipement</th></tr></thead><tbody>${list.map(m=>`<tr class="${state.selected.includes(m.id)?"row-selected":""}"><td class="select-cell">${selectionInput(m,"table")}</td><td class="name-cell">${modelButton(m)}${badges(m)}${m.risk?`<div class="risk-line">Lire la réserve avant achat.</div>`:""}</td><td>${priceHtml(m)}</td><td>${m.mop==="rouleau"?"Rouleau rincé en continu":"Deux patins rotatifs"}<span class="cell-sub">${washText(m)} · ${drying(m)}</span><span class="cell-sub">Extension lavage : ${bool(m.edgeMop)}</span></td><td>${heightText(m)}<span class="cell-sub">Base : ${esc(dim(m.dock,m.dockRaw))}</span>${m.dimState!=="qualified"?`<span class="cell-sub">⚠ Cotes partielles / axes à confirmer</span>`:""}</td><td>${esc(haProfile(m).label)}<span class="cell-sub">${esc(haProfile(m).local)}</span></td><td>${scoreHtml(m)}<button class="text small" data-model="${m.id}" aria-label="Détail de l'indice de ${esc(m.name)}">Détail</button></td></tr>`).join("")}</tbody></table></div>`):emptyHtml()}
+      <p class="method-note">L'indice décrit des fonctions documentées, pas la qualité de nettoyage ni la fiabilité. Une inconnue n'apporte aucun point ; la couverture est affichée. Les modèles sans cote nécessaire ne passent pas un filtre d'encombrement.</p>
+      <details class="section"><summary><strong>Autres références repérées, pas suffisamment recoupées pour être classées</strong></summary>${DATA.watchlist.map(m=>`<div class="recommendation"><h3>${esc(m.name)} · ${esc(m.price)}</h3><p>${esc(m.note)}</p>${m.url?external(m.url,"Référence repérée"):""}</div>`).join("")}</details>`;
+    }
+    function factsFor(m) {
+      const ha=haProfile(m);
+      return [
+        ["Prix et sortie",[
+          ["Prix retenu / périmètre",()=>{const o=bestOffer(m);return o?`${money(offerTotal(o))}${o.shipping===null?" + port NC":""} · ${o.shop}${o.manual?" · votre relevé":""}`:"NC — aucune offre éligible confirmée";}],
+          ["Date de sortie (mois et année)",()=>releaseText(m)],
+          ["Verdict daté",()=>m.verdict],
+          ["Points de vigilance",()=>m.risk||m.cons.join(" · ")]
+        ]],
+        ["Lavage et station",[
+          ["Mécanisme",()=>m.mop==="rouleau"?"Rouleau rincé en continu":"Deux patins rotatifs"],
+          ["Rinçage durant le lavage",()=>bool(m.rinse)],
+          ["Lavage extensible",()=>bool(m.edgeMop)],
+          ["Brossette extensible",()=>bool(m.edgeBrush)],
+          ["Retrait automatique des patins",()=>bool(m.detach)],
+          ["Relevage",()=>m.lift?`${number(m.lift)} mm${m.liftNote?" · "+m.liftNote:""}`:"NC"],
+          ["Lavage en station",()=>washText(m)],
+          ["Séchage",()=>drying(m)],
+          ["Dosage automatique de détergent",()=>detergentText(m)],
+          ["Sac à poussière",()=>m.bag?`${number(m.bag)} L`:"NC"],
+          ["Bacs propre / sale station",()=>`${m.waterClean?number(m.waterClean)+" L":"NC"} / ${m.waterDirty?number(m.waterDirty)+" L":"NC"}`]
+        ]],
+        ["Aspiration et navigation",[
+          ["Dépression max. revendiquée",()=>`${number(m.pa,0)} Pa — pas une note mesurée`],
+          ["Brosse",()=>m.brush],
+          ["Navigation / obstacles",()=>m.nav],
+          ["Caméra",()=>cameraText(m)],
+          ["Caméra accessible à distance",()=>remoteCameraText(m)],
+          ["Collecteur robot",()=>m.bin?`${number(m.bin,0)} ml`:"NC"],
+          ["Batterie",()=>m.battery?`${number(m.battery,0)} mAh`:"NC"],
+          ["Autonomie et conditions",()=>m.runtime]
+        ]],
+        ["Dimensions",[
+          ["Robot L × P × H",()=>dim(m.robot)],
+          ["Hauteur LiDAR relevé",()=>m.raised?`${number(m.raised/10,2)} cm`:"NC / non applicable"],
+          ["Hauteur utile d'accès",()=>Number.isFinite(usefulHeight(m))?`${number(usefulHeight(m)/10,2)} cm avant votre marge`:"NC"],
+          ["Base L × P × H",()=>dim(m.dock,m.dockRaw)],
+          ["Limites des cotes",()=>m.dimNote]
+        ]],
+        ["Domotique",[
+          ["Parcours Home Assistant",()=>ha.label],
+          ["Niveau de confirmation",()=>m.haConditional?"Déclinaison exacte non recoupée":ha.kind==="core"?"Famille documentée Core, pas test personnel":ha.kind==="hacs"?"Modèle nommé dans la liste HACS":"Support précis à confirmer"],
+          ["Code / variante",()=>m.haCode],
+          ["Local ou cloud",()=>ha.local],
+          ["Protocoles",()=>ha.protocol],
+          ["Radio",()=>ha.radio],
+          ["Matter",()=>m.matter]
+        ]],
+        ["Preuves",[
+          ["Résumé test Frandroid",()=>frandroidSummary(m)],
+          ["Note frandroid",()=>frandroidScore(m)],
+          ["Essai indépendant exploité",()=>m.tested?"Oui — consulter les sources et conditions":"Pas de synthèse complète de performance retenue ici"],
+          ["Résultats de laboratoire",()=>(m.metrics||[]).map(x=>`${x.label} : ${x.value}`).join(" · ")||"Pas de métrique comparable retenue"],
+          ["Avis clients",()=>m.review.rating===null?"Pas de note vérifiée":`${number(m.review.rating,1)}/5 · ${m.review.count} · ${m.review.sample||0} avis textuels lus`],
+          ["Précautions sur les avis",()=>m.review.note],
+          ["Atouts",()=>m.pros.join(" · ")],
+          ["Limites",()=>m.cons.join(" · ")]
+        ]]
+      ];
+    }
+    function renderCompare() {
+      const list=state.selected.map(id=>modelMap.get(id));
+      if (list.length<2) return `<section><h2>Les différences, côte à côte.</h2><p>Choisissez deux à quatre modèles. La sélection reste conservée quand vous changez de filtre.</p><div class="row-actions"><button class="primary" data-act="finalists">Saros 10R · Edge 2 · Qrevo 2 Pro</button><button data-act="roller-finalists">Comparer 3 rouleaux</button><button data-nav="models">Choisir les modèles</button></div>${list.length?`<p style="margin-top:20px">Déjà sélectionné : ${esc(labelOf(list[0]))}.</p>`:""}</section>`;
+      const groups=factsFor(list[0]);
+      return `<section class="comparison-section"><div class="result-head"><h2>${list.length} robots, les différences utiles</h2><label class="check"><input type="checkbox" data-action-setting="differences" ${state.differences?"checked":""}>Seulement les différences</label></div><p class="fine">« NC » ne signifie pas « Non ». Vidéo via l'app constructeur ≠ vidéo dans HA. Les dates de sortie précisent leur provenance et leur marché ; les notes Frandroid gardent la date initiale du test et restent séparées de l'indice d'équipement.</p><div class="table-wrap" tabindex="0"><table class="compare-table"><caption>Comparaison des caractéristiques, preuves et limites. Prix du périmètre choisi à gauche.</caption><thead><tr><th scope="col">Critère</th>${list.map(m=>`<th scope="col">${modelButton(m)}<button class="text small" data-unselect="${m.id}">Retirer</button></th>`).join("")}</tr></thead><tbody>${groups.map(([group,rows],gi)=>{
+        const rendered=rows.map(([label],ri)=>{
+          const values=list.map(m=>factsFor(m)[gi][1][ri][1]());
+          const different=new Set(values).size>1;
+          if (state.differences&&!different) return "";
+          return `<tr class="${different?"changed":"same-row"}"><th scope="row">${esc(label)}</th>${values.map((v,i)=>{
+            const m=list[i];
+            const link=label==="Note frandroid"&&m.frandroid.url?external(m.frandroid.url,"Lire le test Frandroid","mini-source"):label==="Date de sortie (mois et année)"?external(sourceMap.get(m.release.sources[0]).url,"Source de la date","mini-source"):"";
+            return `<td>${esc(v)}${link}</td>`;
+          }).join("")}</tr>`;
+        }).join("");
+        return rendered?`<tr class="group-row"><th colspan="${list.length+1}">${esc(group)}</th></tr>${rendered}`:"";
+      }).join("")}<tr><th scope="row">Sources de la fiche</th>${list.map(m=>`<td>${sourceLinks([...m.sources,...haProfile(m).sources,...m.offers.map(o=>o.source).filter(Boolean)])}</td>`).join("")}</tr></tbody></table></div></section>`;
+    }
+    function offerTable(list, includeModel=true) {
+      const rows=list.flatMap(m=>{
+        const own=personal(m);
+        return [...(own?[own]:[]),...m.offers].map(o=>({m,o,archived:!!own&&!o.manual}));
+      });
+      return `<div class="table-wrap" tabindex="0"><table class="offer-table"><caption>Prix archivés du 15 novembre 2026, sauf vos relevés datés. Port NC : le total livré n'est pas établi.</caption><thead><tr>${includeModel?"<th>Modèle</th>":""}<th>Enseigne / variante</th><th>Article</th><th>Port</th><th>Total connu</th><th>Accès BE / preuve</th><th>Vendeur, délai et réserves</th></tr></thead><tbody>${rows.map(({m,o,archived})=>{
+        const status=o.unverified?"Index seulement — exclu du minimum":o.available===false?"Indisponible — exclu du minimum":o.available===null?"Stock / offre à confirmer":o.manual?"Saisi par vous":o.level;
+        return `<tr class="${archived?"archived":""}">${includeModel?`<td>${modelButton(m)}</td>`:""}<td><strong>${esc(o.shop)}</strong><span class="cell-sub">${esc(o.variant||"Variante à vérifier")}</span>${archived?`<span class="badge">Archive remplacée pour votre tri</span>`:""}<div>${external(offerUrl(o),o.level==="comparateur secondaire"?"Source de l'offre":"Ouvrir / vérifier")}</div></td><td class="num">${money(o.price)}</td><td class="num">${o.shipping===null?"NC":money(o.shipping)}</td><td class="num">${Number.isFinite(o.price)&&o.shipping!==null?money(offerTotal(o)):"Non établi"}</td><td>${o.be===true?"Belgique documentée":o.be===false?"Pas de livraison BE":"BE à confirmer"}<span class="cell-sub">${esc(status)}</span>${o.manual?`<span class="cell-sub">${esc(new Date(o.at).toLocaleDateString("fr-BE"))}</span>`:""}</td><td class="offer-notes">${o.seller?`Vendeur : ${esc(o.seller)}<br>`:"Vendeur non relevé<br>"}${o.delivery?`${esc(o.delivery)}<br>`:"Délai à vérifier<br>"}${esc(o.note||"Prix TTC final, kit, retour et garantie à contrôler au panier.")}</td></tr>`;
+      }).join("")}</tbody></table></div>`;
+    }
+    function priceForm(m) {
+      const o=state.overrides[m.id];
+      return `<details class="personal-price no-print"><summary>Ajouter ou modifier votre prix de référence</summary><p class="fine">Ce relevé manuel remplace le prix archivé de ce modèle pour votre tri, même s'il est plus élevé. Il n'est pas vérifié sur Internet. Les offres d'origine restent consultables.</p><form id="personal-form" data-id="${m.id}"><div class="form-grid">
+      <div class="field"><label for="own-price">Prix article (€)</label><input id="own-price" name="price" type="number" min="0.01" max="10000" step="0.01" required value="${o?o.price:""}"></div>
+      <div class="field"><label for="own-shipping">Port (€), vide si inconnu</label><input id="own-shipping" name="shipping" type="number" min="0" max="2000" step="0.01" value="${o?.shipping??""}"></div>
+      <div class="field"><label for="own-shop">Enseigne</label><input id="own-shop" name="shop" type="text" maxlength="120" placeholder="Ex. Amazon Belgique" required value="${esc(o?.shop||"")}"></div>
+      <div class="field"><label for="own-be">Livraison en Belgique</label><select id="own-be" name="be" required><option value="" disabled ${o?"":"selected"}>À renseigner</option><option value="yes" ${o?.be===true?"selected":""}>Vérifiée par vous</option><option value="unknown" ${o&&o.be===null?"selected":""}>À confirmer</option><option value="no" ${o?.be===false?"selected":""}>Non disponible</option></select></div>
+      <div class="field wide"><label for="own-url">Lien de l'offre (facultatif, http/https)</label><input id="own-url" name="url" type="url" maxlength="2000" value="${esc(o?.url||"")}"></div>
+      <div class="field wide"><label for="own-note">Vendeur, coupon, kit ou délai (facultatif)</label><textarea id="own-note" name="note" maxlength="1000" rows="2">${esc(o?.note||"")}</textarea></div></div>
+      <div id="price-form-error" class="error-text" role="alert"></div><div class="row-actions"><button type="submit" class="primary">Utiliser ce prix</button>${o?`<button type="button" data-remove-price="${m.id}">Retirer votre relevé</button>`:""}</div></form></details>`;
+    }
+    function detailFacts(rows) { return `<dl class="facts">${rows.map(([a,b])=>`<div><dt>${esc(a)}</dt><dd>${esc(b)}</dd></div>`).join("")}</dl>`; }
+    function renderFrandroidDetail(m) {
+      const f=m.frandroid,tested=f.status==="tested";
+      const rows=tested?[["Note frandroid",`${f.score}/10`],["Date du test Frandroid",dateText(f.published)],...(f.updated!==f.published?[["Mise à jour de l'article",dateText(f.updated)]]:[])]:[["Note frandroid","Non attribuée — test exact non repéré"],["Recherche vérifiée le",dateText(f.checkedAt)]];
+      return `<section class="section" data-frandroid-status="${f.status}"><div class="result-head"><h3>Test Frandroid</h3>${tested?external(f.url,"Lire le test Frandroid"):""}</div>${detailFacts(rows)}<p style="margin-top:16px"><strong>Résumé test Frandroid :</strong> ${esc(frandroidSummary(m))}</p>${tested?`<p class="fine"><strong>Périmètre :</strong> ${esc(f.scope)}</p><p class="fine">Note éditoriale dans le contexte de cet essai, pas taux d'efficacité ni points supplémentaires dans l'indice d'équipement.</p>`:""}${sourceLinks(f.sources)}</section>`;
+    }
+    function renderDetail() {
+      const m=modelMap.get(state.current),h=haProfile(m),n=equipment(m);
+      const sections=factsFor(m);
+      return `<article><div class="detail-header"><button class="text no-print" data-nav="${lastView==="detail"?"models":lastView}">← Revenir</button><h2>${esc(labelOf(m))}</h2><div class="pills">${badges(m)}<span class="badge">Génération ${m.year}</span></div><div class="detail-lead"><div><p style="font-size:17px">${esc(m.verdict)}</p>${m.risk?`<div class="callout"><strong>Vigilance documentée.</strong><p>${esc(m.risk)}</p></div>`:""}<div class="key-facts"><span><strong>${m.mop==="rouleau"?"Rouleau rincé":"Deux patins"}</strong>technologie de lavage</span><span><strong>${heightText(m)}</strong>hauteur du robot</span><span><strong>${number(m.pa,0)} Pa</strong>revendiqués, pas une note</span></div><div class="row-actions no-print"><button class="primary" data-toggle-select="${m.id}">${state.selected.includes(m.id)?"Retirer de la comparaison":"Ajouter à la comparaison"}</button><button data-act="dimension-model" data-id="${m.id}">Voir le gabarit</button></div></div><div class="detail-price">${priceHtml(m)}<p class="fine" style="margin-top:12px">Les frais inconnus et la TVA finale restent à vérifier. Relevés datés, pas une synchronisation.</p></div></div></div>
+      <section class="section two-col"><div><h3>Ce qui fait la différence</h3><ul>${m.pros.map(t=>`<li>${esc(t)}</li>`).join("")}</ul></div><div><h3>Ce qu'il faut accepter ou vérifier</h3><ul>${m.cons.map(t=>`<li>${esc(t)}</li>`).join("")}</ul></div></section>
+      <section class="section"><h3>Date de sortie et provenance</h3>${detailFacts([["Date de sortie (mois et année)",releaseText(m)],["Précision sur cette date",m.release.note]])}${sourceLinks(m.release.sources)}</section>
+      <section class="section"><h3>Offres et prix</h3>${offerTable([m],false)}${priceForm(m)}</section>
+      <section class="section two-col"><div><h3>Lavage et station</h3>${detailFacts(sections[1][1].map(([a,f])=>[a,f()]))}${m.washNote?`<p class="fine" style="margin-top:12px">${esc(m.washNote)}</p>`:""}</div><div><h3>Aspiration, navigation et autonomie</h3>${detailFacts(sections[2][1].map(([a,f])=>[a,f()]))}<p class="fine" style="margin-top:12px">${esc(m.cameraInfo.note)} La vidéo de l'application constructeur ne confirme pas sa disponibilité dans Home Assistant.</p>${sourceLinks([...m.cameraInfo.sources,...m.remoteCamera.sources])}</div></section>
+      <section class="section"><h3>Dimensions et installation</h3>${detailFacts(sections[3][1].map(([a,f])=>[a,f()]))}<div class="callout"><p>Conserver de l'espace devant la base, au-dessus pour sortir les réservoirs et pour ventiler / entretenir. Les dimensions du colis ou du corps seul ne valident pas une niche.</p></div></section>
+      <section class="section"><h3>Home Assistant et protocoles</h3>${detailFacts(sections[4][1].map(([a,f])=>[a,f()]))}<p style="margin-top:16px">${esc(h.detail)}</p>${sourceLinks(h.sources)}</section>
+      ${renderFrandroidDetail(m)}
+      <section class="section"><h3>Essais : ce qui a réellement été observé</h3><p>${m.tested?"Un essai indépendant complet a été exploité pour cette référence. Les conditions et les réserves de cet essai restent importantes.":"Pas de synthèse complète d'un essai de performance retenue ici. Des sources peuvent servir uniquement aux caractéristiques ou au calendrier : elles ne constituent pas une mesure comparative du nettoyage."}</p>${m.metrics?.length?`<div class="metrics">${m.metrics.map(x=>`<div><strong>${esc(x.value)}</strong><span>${esc(x.label)}</span>${sourceLinks([x.source])}</div>`).join("")}</div>`:""}${sourceLinks(m.sources)}</section>
+      <section class="section"><h3>Avis clients : ${m.review.rating===null?"pas de note vérifiée":`${number(m.review.rating,1)}/5`}</h3><p class="fine">${m.review.count?`${esc(m.review.count)} avis dans la famille d'annonce ; `:""}${m.review.sample?`${m.review.sample} avis textuels visibles lus.`:"Aucun corpus textuel spécifique audité."}</p><div class="two-col"><div><h3>Points appréciés</h3>${m.review.plus.length?`<ul>${m.review.plus.map(t=>`<li>${esc(t)}</li>`).join("")}</ul>`:"<p>Pas de synthèse client inventée en l'absence de lecture du corpus.</p>"}</div><div><h3>Réserves rapportées</h3>${m.review.minus.length?`<ul>${m.review.minus.map(t=>`<li>${esc(t)}</li>`).join("")}</ul>`:"<p>Pas de réserve spécifique attribuée aux clients sans source textuelle exploitée. Cela ne signifie pas absence de problème.</p>"}</div></div><p class="fine">${esc(m.review.note)}</p>${m.review.source?sourceLinks([m.review.source]):""}</section>
+      <details class="section"><summary><strong>Comment est calculé son indice d'équipement ? ${n.score===null?"Sans pondération":n.score+"/100"}</strong></summary><p class="fine">Une aide à trier des fonctions, pas une note de qualité. ${n.coverage} % des critères pondérés sont documentés. Les Pa, notes clients, notes Frandroid et résultats de labo ne sont pas additionnés.</p><div class="table-wrap"><table><thead><tr><th>Critère</th><th>Poids /5</th><th>Points fonctionnels /100</th><th>Base du calcul</th></tr></thead><tbody>${Object.entries(n.values).map(([k,v])=>`<tr><th>${esc(WEIGHT_LABELS[k])}</th><td>${state.weights[k]}</td><td>${Math.round(v.score)}${v.coverage<1?" · partiellement NC":""}</td><td>${esc(v.why)}</td></tr>`).join("")}</tbody></table></div></details>
+      <section class="section"><h3>Avant de commander</h3>${renderChecklist()}</section></article>`;
+    }
+    function renderChecklist() { return `<div class="checklist">${DATA.analysis.checklist.map((t,i)=>`<label class="check"><input type="checkbox" data-check="${i}" ${state.checks.includes(i)?"checked":""}><span>${esc(t)}</span></label>`).join("")}</div>`; }
+    function renderRanges() {
+      const guide=DATA.ranges.brands.find(g=>g.brand===state.rangeBrand);
+      return `<section><h2>Comprendre les gammes, pas deviner avec le nom.</h2><p class="prose">${esc(DATA.ranges.intro)}</p><div class="brand-picker" aria-label="Choisir la marque à décoder">${DATA.ranges.brands.map(g=>`<button type="button" data-range-brand="${esc(g.brand)}" aria-pressed="${g.brand===state.rangeBrand}">${esc(g.brand)}</button>`).join("")}</div>
+      <section class="section"><h2>${esc(guide.brand)} : les repères utiles</h2><p class="prose">${esc(guide.summary)}</p><div class="callout"><p><strong>Avec votre budget :</strong> ${esc(guide.budget)}</p></div>
+      <div class="table-wrap" tabindex="0"><table class="family-table"><caption>Repères de catalogue au 15 novembre 2026, pas une hiérarchie universelle. Les générations et promotions se chevauchent.</caption><thead><tr><th>Famille</th><th>Ce que cela indique</th><th>À vérifier / modèles du dossier</th></tr></thead><tbody>${guide.families.map(f=>`<tr><th scope="row">${esc(f.name)}<span class="cell-sub">${esc(f.position)}</span></th><td>${esc(f.meaning)}</td><td>${esc(f.warning)}${f.models.map(id=>{const m=modelMap.get(id),o=bestOffer(m);return `<div class="family-model">${modelButton(m)}<span class="fine">${o?money(offerTotal(o))+(o.shipping===null?" + port NC":""):"Prix éligible NC"} · ${m.mop==="rouleau"?"rouleau":"patins"}</span></div>`;}).join("")}${!f.models.length?'<span class="cell-sub">Hors comparaison détaillée de ce dossier.</span>':""}</td></tr>`).join("")}</tbody></table></div>${sourceLinks(guide.sources)}</section>
+      <section class="section"><h2>Les suffixes : ce qu'ils disent — et ne disent pas</h2><dl class="suffix-list">${guide.suffixes.map(s=>`<div><dt>${esc(s.term)}</dt><dd><p>${esc(s.meaning)}</p><p class="fine"><strong>Piège :</strong> ${esc(s.trap)}</p></dd></div>`).join("")}</dl></section>
+      <section class="section"><h2>Les confusions à défaire, en un clic</h2>${guide.pairs.map(p=>`<div class="range-pair"><div><h3>${esc(p.title)}</h3><p>${esc(p.text)}</p></div><button type="button" data-compare-pair="${p.a}|${p.b}">Voir côte à côte</button></div>`).join("")}</section>
+      <section class="section"><h3>La bonne manière de comparer deux gammes</h3><p class="prose">Lire d'abord la technologie de lavage et la station, puis le gabarit et les capteurs. Vérifier ensuite le code exact, les essais, le logiciel et le support HA. Comparer enfin le total livré et le contenu du kit. Ne jamais hériter des caractéristiques ou des avis d'une famille voisine.</p><div class="row-actions no-print"><button class="primary" data-act="filter-range-brand">Voir les modèles ${esc(guide.brand)}</button><button data-nav="analysis">Lire l'analyse complète</button></div></section></section>`;
+    }
+    function guideHtml() {
+      return `<section><div class="result-head"><h2>Analyse de marché · votre usage d'abord</h2><button class="small no-print" data-export="report">Télécharger l'analyse</button></div><p class="prose">${esc(DATA.analysis.intro)}</p><div class="callout"><p><strong>Périmètre honnête :</strong> ${esc(DATA.meta.scope)} Relevés du 15 novembre 2026, sans achat ni essai personnel.</p></div>
+      <div class="section"><h3>Les choix que je regarderais en premier</h3>${DATA.recommendations.map(r=>`<div class="recommendation"><h3><button class="text" data-model="${r.id}">${esc(r.title)} · ${esc(modelMap.get(r.id).name)}</button></h3><p>${esc(r.text)}</p></div>`).join("")}</div>
+      <nav class="guide-toc no-print" aria-label="Sommaire de l'analyse">${DATA.analysis.sections.map(s=>`<a href="#guide-${s.id}">${esc(s.title.split(":")[0])}</a>`).join("")}</nav>
+      ${DATA.analysis.sections.map(s=>`<section class="section prose" id="guide-${s.id}"><h2>${esc(s.title)}</h2>${s.paragraphs.map(p=>`<p>${esc(p)}</p>`).join("")}${sourceLinks(s.sources)}</section>`).join("")}
+      <section class="section"><h2>Votre liste de vérification</h2>${renderChecklist()}</section></section>`;
+    }
+    function renderHa() {
+      const list=filtered();
+      return `<section><h2>Compatible HA ne veut pas dire sans Internet.</h2><p class="prose">Le parcours d'intégration, la preuve de support et la dépendance au cloud sont séparés. « Core » signifie intégré à Home Assistant, pas nécessairement API officielle du fabricant ni contrôle entièrement local.</p><div class="callout"><p><strong>Exigence 100 % locale :</strong> aucune preuve de toutes les fonctions hors cloud pour ces 26 références. Matter peut fournir des commandes locales de base ; les cartes, routines et actions de station peuvent rester dépendantes de l'écosystème constructeur.</p></div>
+      <div class="table-wrap" tabindex="0"><table class="offer-table"><caption>${list.length} modèles correspondant à vos filtres</caption><thead><tr><th>Modèle</th><th>Intégration</th><th>Preuve / code</th><th>Local / cloud</th><th>Matter</th></tr></thead><tbody>${list.map(m=>`<tr><td>${modelButton(m)}</td><td>${esc(haProfile(m).label)}${m.haConditional?'<span class="badge warning">Variante à vérifier</span>':""}</td><td><code>${esc(m.haCode)}</code></td><td>${esc(haProfile(m).local)}</td><td>${esc(m.matter)}</td></tr>`).join("")}</tbody></table></div>
+      <h2 style="margin-top:32px">Les protocoles, sans raccourci</h2>${Object.entries(DATA.haProfiles).map(([id,h])=>`<section class="ha-profile"><h3>${esc(h.label)}</h3><p><strong>Radio :</strong> ${esc(h.radio)}</p><p><strong>Transport :</strong> ${esc(h.protocol)}</p><p>${esc(h.detail)}</p>${sourceLinks(h.sources)}</section>`).join("")}
+      <div class="callout"><p><strong>Wi-Fi, Bluetooth, Matter et MQTT ne sont pas interchangeables.</strong> Un Bluetooth d'appairage ne fournit pas une API locale. Le MQTT d'un fabricant ne signifie pas que le robot accepte votre broker Mosquitto. Un robot Matter sur Wi-Fi ne requiert pas, par principe, un réseau Thread ou Zigbee.</p></div>${sourceLinks(["ha-matter"])}</section>`;
+    }
+    function optionsModels(selected) { return DATA.models.map(m=>`<option value="${m.id}" ${selected===m.id?"selected":""}>${esc(labelOf(m))}</option>`).join(""); }
+    function schematic() {
+      const models=[modelMap.get(state.diagramA),modelMap.get(state.diagramB)];
+      const scale=.35,front=state.diagramMode==="front";
+      const drawings=models.map((m,i)=>{
+        const cx=190+i*360, bh=front?m.dock[2]:m.dock[1], bw=m.dock[0], rw=m.robot[0], rh=m.robot[2];
+        const dockKnown=Number.isFinite(bw)&&Number.isFinite(bh);
+        const robotKnown=Number.isFinite(rw)&&(front?Number.isFinite(rh):true);
+        const baseY=260;
+        return `<g><text x="${cx}" y="32" text-anchor="middle" fill="var(--cp-text)" font-size="16" font-weight="650">${esc(m.brand)}</text><text x="${cx}" y="55" text-anchor="middle" fill="var(--cp-text)" font-size="15">${esc(m.name)}</text>
+        ${dockKnown?`<rect x="${cx-bw*scale/2}" y="${baseY-bh*scale}" width="${bw*scale}" height="${bh*scale}" rx="7" fill="var(--cp-surface-soft)" stroke="var(--cp-border-strong)" stroke-width="1.5"/><path d="M${cx-bw*scale/2} ${baseY+12}h${bw*scale}" stroke="var(--cp-text-soft)"/><text x="${cx}" y="${baseY+31}" text-anchor="middle" fill="var(--cp-text)" font-size="13">${number(bw/10,2)} cm</text><text x="${cx+bw*scale/2+12}" y="${baseY-bh*scale/2}" fill="var(--cp-text)" font-size="13">${number(bh/10,2)} cm</text><text x="${cx}" y="${baseY-bh*scale-12}" text-anchor="middle" fill="var(--cp-text-soft)" font-size="12">Base · ${front?"vue de face":"vue du dessus"}</text>`:`<rect x="${cx-90}" y="115" width="180" height="110" rx="7" fill="var(--cp-surface-soft)" stroke="var(--cp-border-strong)" stroke-dasharray="5 5"/><text x="${cx}" y="165" text-anchor="middle" fill="var(--cp-text)" font-size="14">Axes de base NC</text><text x="${cx}" y="187" text-anchor="middle" fill="var(--cp-text-soft)" font-size="12">Pas de gabarit inventé</text>`}
+        ${robotKnown?(front?`<rect x="${cx-rw*scale/2}" y="${370-rh*scale}" width="${rw*scale}" height="${rh*scale}" rx="7" fill="var(--cp-accent-soft)" stroke="var(--cp-accent)" stroke-width="1.5"/><text x="${cx+rw*scale/2+10}" y="${370-rh*scale/2+4}" fill="var(--cp-text)" font-size="13">${number(rh/10,2)} cm</text>`:`<circle cx="${cx}" cy="358" r="${rw*scale/2}" fill="var(--cp-accent-soft)" stroke="var(--cp-accent)" stroke-width="1.5"/><text x="${cx}" y="363" text-anchor="middle" fill="var(--cp-text)" font-size="13">${number(rw/10,2)} cm</text>`):`<text x="${cx}" y="360" text-anchor="middle" fill="var(--cp-text-soft)" font-size="13">Robot : cote incomplète</text>`}
+        <text x="${cx}" y="${front?395:437}" text-anchor="middle" fill="var(--cp-text-soft)" font-size="12">Robot · schéma non contractuel</text></g>`;
+      }).join("");
+      return `<svg class="schematic" viewBox="0 0 740 460" role="img" aria-label="Gabarits déclarés à la même échelle, robot et base représentés séparément"><line x1="370" x2="370" y1="80" y2="430" stroke="var(--cp-border)"/>${drawings}</svg>`;
+    }
+    function fitAdvice(m) {
+      const n=state.niche;
+      if (!n.width&&!n.depth&&!n.height) return "Renseignez au moins une dimension de votre emplacement. Les marges proposées sont vos hypothèses, pas une notice constructeur.";
+      if (m.dimState!=="qualified"||m.dock.some(x=>!Number.isFinite(x))) return "Validation non possible : axes / rampe / dimensions insuffisamment qualifiés. Lire la réserve de cette fiche et mesurer l'ensemble installé.";
+      const req=m.install?m.install.map(x=>x/10):[m.dock[0]/10+2*n.side,m.dock[1]/10+n.front,m.dock[2]/10+n.top];
+      const failures=[["largeur",n.width,req[0]],["profondeur",n.depth,req[1]],["hauteur",n.height,req[2]]].filter(([,v,min])=>v>0&&v<min);
+      return `${failures.length?"Ne rentre pas avec ces hypothèses : "+failures.map(([label,,v])=>`${label} nécessaire ${number(v,1)} cm`).join(", "):"Le gabarit et les marges renseignées rentrent mathématiquement."} ${m.install?"Espace conseillé par le fabricant utilisé":"Marges utilisateur utilisées"} : ${req.map(x=>number(x,1)).join(" × ")} cm. ${m.install?"Consulter aussi la notice.":"Ce calcul ne garantit pas l'installation ni l'accès aux réservoirs."}`;
+    }
+    function renderSizes() {
+      const a=modelMap.get(state.diagramA),b=modelMap.get(state.diagramB);
+      return `<section><h2>La place réelle, avant l'achat.</h2><p class="prose">Robot, base, rampe et dégagement de service sont différents. Les gabarits utilisent uniquement les cotes déclarées ; ils ne représentent pas la forme exacte du produit ni la projection du robot dans la station.</p><div class="size-selectors"><div class="field"><label for="diagram-a">Premier modèle</label><select id="diagram-a" data-action-setting="diagramA">${optionsModels(state.diagramA)}</select></div><div class="field"><label for="diagram-b">Second modèle</label><select id="diagram-b" data-action-setting="diagramB">${optionsModels(state.diagramB)}</select></div></div><div class="segmented no-print" style="margin-bottom:16px"><button data-diagram="front" aria-pressed="${state.diagramMode==="front"}">Hauteurs · vue de face</button><button data-diagram="top" aria-pressed="${state.diagramMode==="top"}">Empreintes · dessus</button></div>${schematic()}
+      <div class="two-col" style="margin-top:16px">${[a,b].map(m=>`<div><h3>${esc(labelOf(m))}</h3><p>Robot : <strong>${esc(dim(m.robot))}</strong><br>Base : <strong>${esc(dim(m.dock,m.dockRaw))}</strong></p><p class="fine">${esc(m.dimNote)}</p>${m.clearance?`<p><strong>Accès utile : plus de ${number(m.clearance/10,2)} cm</strong>, même si le corps est plus bas.</p>`:""}${sourceLinks(m.sources.filter(id=>!id.startsWith("ha-")))}</div>`).join("")}</div>
+      <section class="section" style="margin-top:28px"><h3>Essayer votre emplacement</h3><p class="fine">Dimensions et marges en cm. Ne bloquez pas l'accès, la ventilation ou la sortie des réservoirs. Si la notice donne un espace total conseillé (QV 35A), celui-ci a priorité sur les marges de scénario.</p><div class="sizing-form"><div class="three-col">${[["width","Largeur disponible"],["depth","Profondeur disponible"],["height","Hauteur disponible"],["side","Marge de chaque côté"],["front","Espace libre devant"],["top","Espace libre au-dessus"]].map(([k,label])=>`<div class="field"><label for="niche-${k}">${label} (cm)</label><input id="niche-${k}" type="number" min="0" max="1000" step="0.1" value="${state.niche[k]||""}" data-niche="${k}" placeholder="Non renseignée"></div>`).join("")}</div><div id="fit-results">${[a,b].map(m=>`<div class="fit-result"><strong>${esc(labelOf(m))}</strong>${esc(fitAdvice(m))}</div>`).join("")}</div></div></section>
+      <section class="section"><h3>Tous les gabarits correspondant aux filtres</h3><div class="table-wrap" tabindex="0"><table style="min-width:780px"><caption>L × P × H en cm, sauf mention d'ordre constructeur non qualifié. NC reste NC.</caption><thead><tr><th>Modèle</th><th>Robot</th><th>Base</th><th>Réserve d'installation</th></tr></thead><tbody>${filtered().map(m=>`<tr><td>${modelButton(m)}</td><td>${esc(dim(m.robot))}${m.raised?`<span class="cell-sub">Relevé : ${number(m.raised/10,2)} cm</span>`:""}${m.clearance?`<span class="cell-sub">Accès utile > ${number(m.clearance/10,2)} cm</span>`:""}</td><td>${esc(dim(m.dock,m.dockRaw))}</td><td style="max-width:420px">${esc(m.dimNote)}</td></tr>`).join("")}</tbody></table></div></section></section>`;
+    }
+    function tcoFor(m) {
+      const o=bestOffer(m);
+      return o?offerTotal(o)+state.tco.years*(state.tco.consumables+state.tco.detergent+state.tco.kwh*state.tco.rate):null;
+    }
+    function renderOffers() {
+      const list=filtered(),top=(state.selected.length?state.selected.map(id=>modelMap.get(id)):list.slice(0,6));
+      return `<section><h2>Le prix de l'appareil n'est pas toujours le prix livré.</h2><p class="prose">Le minimum de votre tri ne retient pas les index non confirmés, les prix sans disponibilité établie ni les « autres offres » non détaillées. Les offres étrangères non validées BE restent hors du calcul sauf choix explicite. Les archives restent visibles ci-dessous pour comprendre le marché.</p><div class="callout"><p><strong>Exemple :</strong> T90 Pro Omni : 444 € + 27,73 € = 471,73 € dans l'annonce consultée. Roborock France annonce livrer gratuitement les aspirateurs en Belgique ; TVA de destination à contrôler. Les prix de boutique eufy EU-en ne sont pas retenus, car la Belgique n'est pas listée.</p>${sourceLinks(["be-t90","rr-delivery","eu-ship"])}</div>${list.length?offerTable(list):emptyHtml()}
+      <section class="section" style="margin-top:32px"><h2>Coût d'usage : votre scénario, pas une prédiction.</h2><p class="prose fine">Hypothèses communes et modifiables pour les modèles sélectionnés, ou six premiers résultats. Le calcul inclut achat + années × (consommables + détergent + kWh × tarif). Il n'est pas une mesure électrique ni une estimation de panne, batterie, eau ou main-d'œuvre. Un port NC demeure inconnu.</p><div class="tco-inputs">${[["years","Durée (années)",1,0,15],["consumables","Sacs / filtres / textiles (€ par an)",1,0,2000],["detergent","Détergent (€ par an)",1,0,1000],["kwh","Électricité (kWh par an)",1,0,5000],["rate","Prix de l'énergie (€ / kWh)",.01,0,10]].map(([k,label,step,min,max])=>`<div class="field"><label for="tco-${k}">${label}</label><input id="tco-${k}" type="number" min="${min}" max="${max}" step="${step}" value="${state.tco[k]}" data-tco="${k}"></div>`).join("")}</div><div id="tco-results">${tcoTable(top)}</div></section>
+      <section class="section"><h3>Vérifier aussi sur un autre site</h3><p class="fine">Les fiches individuelles proposent des liens de recherche Amazon BE / FR / DE, bol et Coolblue. Ce sont des recherches, pas des offres avec un prix inventé.</p>${renderChecklist()}</section></section>`;
+    }
+    function tcoTable(list) {
+      return `<div class="table-wrap tco-table"><table><thead><tr><th>Modèle</th><th>Achat retenu</th><th>Scénario ${number(state.tco.years)} ans</th></tr></thead><tbody>${list.map(m=>{const o=bestOffer(m);return `<tr><th>${esc(labelOf(m))}</th><td>${o?money(offerTotal(o)):"NC"}${o?.shipping===null?" + port NC":""}</td><td>${money(tcoFor(m))}${o?.shipping===null?" + port NC":""}</td></tr>`;}).join("")}</tbody></table></div>`;
+    }
+    function renderSources() {
+      const q=state.sourceQuery.toLocaleLowerCase("fr");
+      const list=DATA.sources.filter(s=>(!q||`${s.id} ${s.label} ${s.note||""} ${s.url}`.toLocaleLowerCase("fr").includes(q))&&(!state.sourceType||s.type===state.sourceType));
+      const types=[...new Set(DATA.sources.map(s=>s.type))];
+      return `<section><div class="result-head"><h2>${list.length} liens documentés <span class="fine">/ ${DATA.sources.length}</span></h2><button class="small" data-export="data">Exporter la base et ses sources</button></div><p class="prose">Date de consultation : 15 novembre 2026. La quantité de liens n'est pas un nombre d'essais indépendants : plusieurs références sont des fiches de prix ou d'une même marque. Sources fabricant, essais, présentations et témoignages restent distingués.</p><div class="two-col no-print"><div class="field"><label for="source-query">Rechercher une source</label><input id="source-query" type="search" value="${esc(state.sourceQuery)}" placeholder="Modèle, domaine, protocole…" data-source-query></div><div class="field"><label for="source-type">Type de preuve</label><select id="source-type" data-source-type><option value="">Tous les types</option>${types.map(t=>`<option value="${esc(t)}" ${state.sourceType===t?"selected":""}>${esc(t)}</option>`).join("")}</select></div></div><div id="source-results">${sourceList(list)}</div><div class="callout"><p><strong>Accès limités :</strong> moteur de recherche intégré indisponible au départ, anti-trafic Google, plusieurs pages fabricant bloquées en lecture automatique, Coolblue 403 et Hifi en erreur. Amazon et plusieurs fiches constructeur ont été consultés au navigateur. Les données encore incertaines sont conservées comme NC ; aucun blocage n'a été transformé en prix ou spécification inventés.</p></div></section>`;
+    }
+    function sourceList(list) {
+      if (!list.length) return `<p>Aucune source ne correspond. Essayez le nom du modèle ou effacez le filtre.</p>`;
+      return `<ol class="sources-list">${list.map(s=>`<li id="source-${s.id}"><span class="badge">S${String(s.no).padStart(3,"0")} · ${esc(s.type)}</span><h3>${external(s.url,s.label)}</h3><span class="source-url muted">${esc(s.url)}</span>${s.note?`<p>${esc(s.note)}</p>`:""}</li>`).join("")}</ol>`;
+    }
+    function shoppingLinks(m) {
+      const q=encodeURIComponent(labelOf(m));
+      return `<div class="row-actions">${[
+        [`https://www.amazon.com.be/s?k=${q}`,"Amazon Belgique"],
+        [`https://www.amazon.fr/s?k=${q}`,"Amazon France"],
+        [`https://www.amazon.de/s?k=${q}`,"Amazon Allemagne"],
+        [`https://www.bol.com/be/fr/s/?searchtext=${q}`,"bol Belgique"],
+        [`https://www.coolblue.be/fr/recherche?query=${q}`,"Coolblue Belgique"]
+      ].map(([u,l])=>external(u,`Rechercher : ${l}`,"mini-source")).join("")}</div>`;
+    }
+    function render() {
+      const renderers={models:renderModels,ranges:renderRanges,compare:renderCompare,detail:renderDetail,sizes:renderSizes,offers:renderOffers,analysis:guideHtml,ha:renderHa,sources:renderSources};
+      $("#content").innerHTML=renderers[state.view]();
+      if (state.view==="detail") {
+        const extra=document.createElement("section");extra.className="section";extra.innerHTML=`<h3>Recherches marchands supplémentaires</h3><p class="fine">Liens de recherche sans prix garanti. Vérifiez le nom complet et le SKU avant de comparer les montants.</p>${shoppingLinks(modelMap.get(state.current))}`;
+        $("#content article").append(extra);
+      }
+      $$(".tabs button").forEach(b=>b.setAttribute("aria-current",b.dataset.nav===state.view?"page":"false"));
+      $("#compare-count").textContent=String(state.selected.length);
+      $("#compare-tray").hidden=state.selected.length===0||state.view==="compare";
+      $("#tray-label").textContent=`${state.selected.length}/4 sélectionnés · ${state.selected.map(id=>modelMap.get(id).name).join(" · ")}`;
+      $("#tray-button").disabled=state.selected.length<2;
+      $("#filter-count").textContent=`${filtered().length}/${DATA.models.length}`;
+      const sort=$("#sort-models");if(sort)sort.value=state.sort;
+    }
+    function syncFilters() {
+      $$("[data-setting]").forEach(el=>{
+        const k=el.dataset.setting;
+        if(el.type==="checkbox")el.checked=state[k];
+        else el.value=["clearance","dockHeight"].includes(k)&&!state[k]?"":state[k];
+      });
+      $("#stretch-label").textContent=money(state.budget+150);
+      $$("[data-weight]").forEach(el=>{el.value=state.weights[el.dataset.weight];$(`#out-${el.dataset.weight}`).textContent=String(el.value);});
+      $$("[data-preset]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.preset===state.preset?"true":"false"));
+    }
+    function go(view, focus=true) {
+      if (!["models","ranges","compare","detail","sizes","offers","analysis","ha","sources"].includes(view)) return;
+      if (view==="detail"&&state.view!=="detail") lastView=state.view;
+      state.view=view;save();render();
+      if(focus){$("#content").focus({preventScroll:true});$("#content").scrollIntoView({block:"start",behavior:"instant"});}
+    }
+    function toggleSelection(id, desired) {
+      const has=state.selected.includes(id),next=desired??!has;
+      if(next&&!has&&state.selected.length>=4){notify("Quatre modèles au maximum. Retirez-en un avant d'en ajouter un autre.");render();const item=$$(`[data-select="${id}"]`).find(el=>el.getClientRects().length);if(item)item.focus({preventScroll:true});return;}
+      state.selected=next?[...new Set([...state.selected,id])]:state.selected.filter(x=>x!==id);
+      save();render();
+      const target=$$(`[data-select="${id}"]`).find(el=>el.getClientRects().length);
+      if(target)target.focus({preventScroll:true});
+    }
+    function csvCell(value) {
+      let s=String(value??"NC");
+      if(/^[=+\-@]/.test(s.trimStart()))s="'"+s;
+      return `"${s.replace(/"/g,'""')}"`;
+    }
+    function reportMarkdown() {
+      const lines=[`# ${DATA.meta.title}`,``, `Recherche du **15 novembre 2026** · Belgique · budget de départ 500 €.`,``,DATA.meta.profile,``,DATA.meta.priceNotice,``,`## Conclusions et recommandations`,``,...DATA.recommendations.flatMap(r=>[`### ${r.title}`,r.text,``]),...DATA.analysis.sections.flatMap(s=>[`## ${s.title}`,``,...s.paragraphs.flatMap(p=>[p,``]),`Sources : ${s.sources.map(id=>{const s=sourceMap.get(id);return `[${s.label}](${s.url})`;}).join(" ; ")}.`,``]),`## Comprendre les gammes`,``,DATA.ranges.intro,``];
+      for (const g of DATA.ranges.brands) {
+        lines.push(`### Les gammes ${g.brand}`,``,g.summary,``,g.budget,``,...g.families.flatMap(f=>[`#### ${f.name} — ${f.position}`,``,f.meaning,``,`Attention : ${f.warning}`,``]),...g.suffixes.map(s=>`- **${s.term}** : ${s.meaning} Piège : ${s.trap}`),``,...g.pairs.map(p=>`- **${p.title}** : ${p.text}`),``,`Sources : ${g.sources.map(id=>{const s=sourceMap.get(id);return `[${s.label}](${s.url})`;}).join(" ; ")}.`,``);
+      }
+      lines.push(`## Inventaire des modèles`,``,`Les prix ci-dessous utilisent votre périmètre actuel et vos éventuels relevés personnels, pas une mise à jour automatique.`,``,`| Modèle | Prix de référence | Robot L × P × H | Base L × P × H | Home Assistant |`,`|---|---|---|---|---|`);
+      for(const m of DATA.models){const o=bestOffer(m);lines.push(`| ${labelOf(m)} | ${o?money(offerTotal(o))+(o.shipping===null?" + port NC":"")+" · "+o.shop:"NC"} | ${dim(m.robot)} | ${dim(m.dock,m.dockRaw)} | ${haProfile(m).label} |`);}
+      lines.push(``,`## Caméras, dates de sortie et tests Frandroid`,``,`${DATA.reviewResearch.tested} tests exacts repérés ; ${DATA.reviewResearch.notFound} références sans test exact repéré au ${dateText(DATA.reviewResearch.checkedAt)}. La vidéo désigne l'application constructeur, pas une intégration vidéo HA. Le marché et la provenance des dates sont conservés.`,``,`| Modèle | Date de sortie (mois et année) | Caméra RGB | Caméra accessible à distance | Note frandroid et date du test |`,`|---|---|---|---|---|`);
+      for(const m of DATA.models)lines.push(`| ${labelOf(m)} | ${releaseText(m)} | ${bool(m.camera)} | ${bool(m.remoteCamera.available)} | ${frandroidScore(m)} |`);
+      for(const m of DATA.models){
+        lines.push(``,`### ${labelOf(m)}`,``,m.verdict,``,`**Date de sortie (mois et année) :** ${releaseText(m)}. ${m.release.note}`,``,`**Caméra :** ${cameraText(m)}. ${m.cameraInfo.note}`,``,`**Caméra accessible à distance :** ${remoteCameraText(m)}`,``,`**Note frandroid :** ${frandroidScore(m)}${m.frandroid.url?` · [Lire le test Frandroid](${m.frandroid.url})`:""}`,``,`**Résumé test Frandroid :** ${frandroidSummary(m)}`,...(m.frandroid.scope?[``,`Périmètre du test : ${m.frandroid.scope}`]:[]),``,...m.pros.map(t=>`- Atout : ${t}`),...m.cons.map(t=>`- Réserve : ${t}`),``,`Dimensions : ${m.dimNote}`,``,`HA : ${m.haCode}. ${haProfile(m).local}. Matter : ${m.matter}.`,``,`Avis clients : ${m.review.rating===null?"pas de note vérifiée":number(m.review.rating,1)+"/5 ; "+m.review.count+" avis"} ; ${m.review.sample||0} textes lus. ${m.review.note}`,``,...m.review.plus.map(t=>`- Apprécié : ${t}`),...m.review.minus.map(t=>`- Réserve rapportée : ${t}`),``,...m.offers.map(o=>`- ${o.shop} — ${money(o.price)} ; port ${o.shipping===null?"NC":money(o.shipping)} ; ${o.available===false?"indisponible":o.available===null?"disponibilité à confirmer":"disponible lors du relevé"} ; BE ${o.be===true?"documentée":"à confirmer"} ; ${o.level}. ${offerUrl(o)}`),``,`Sources : ${[...new Set([...m.sources,...haProfile(m).sources])].map(id=>{const s=sourceMap.get(id);return `[${s.label}](${s.url})`;}).join(" ; ")}.`);
+      }
+      lines.push(``,`## Liste de vérification`,``,...DATA.analysis.checklist.map(t=>`- [ ] ${t}`),``,`## Sources documentées`,``,...DATA.sources.flatMap((s,i)=>[`### S${String(i+1).padStart(3,"0")} · ${s.label}`,`Type : ${s.type} · consulté le 15/11/2026.`,``,s.url,``,...(s.note?[s.note,``]:[])]));
+      return lines.join("\n");
+    }
+    function download(text,filename,type) {
+      try { const blob=new Blob([text],{type});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download=filename;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000); }
+      catch(err){console.error("Export impossible",err);notify(`Export impossible : ${err.message}. Essayez d'ouvrir le fichier HTML dans un navigateur complet.`,true);}
+    }
+    function exportFile(kind) {
+      if(kind==="settings")download(JSON.stringify(state,null,2),"mes-criteres-robots.json","application/json;charset=utf-8");
+      else if(kind==="data")download(JSON.stringify({...DATA,personalSettings:state},null,2),"marche-robots-sources-2026-11-15.json","application/json;charset=utf-8");
+      else if(kind==="report")download(reportMarkdown(),"analyse-aspirateurs-robots.md","text/markdown;charset=utf-8");
+      else{
+        const rows=[["Marque","Modèle","Prix de référence EUR","Port connu","Enseigne","Lavage","Pa revendiqués","Hauteur robot mm","Hauteur utile mm","Base","Station lavage °C","Séchage","Détergent automatique","Caméra","Type de caméra","Caméra accessible à distance","Précision caméra distante","Date de sortie (mois et année)","Marché de sortie","Provenance date de sortie","Précision date de sortie","Résumé test Frandroid","Note frandroid (/10)","Date du test Frandroid","Mise à jour article Frandroid","Lien test Frandroid","Statut recherche Frandroid","HA","Local / cloud","Matter","Indice équipement","Couverture %","Réserve","Sources"]];
+        for(const m of filtered()){const o=bestOffer(m),n=equipment(m),f=m.frandroid;rows.push([m.brand,m.name,o?offerTotal(o):"NC",o?o.shipping??"NC":"NC",o?.shop??"NC",m.mop,m.pa,m.robot[2]??"NC",usefulHeight(m)??"NC",dim(m.dock,m.dockRaw),m.washMode==="ambient"?"Non chauffée":m.wash??"NC",drying(m),detergentText(m),bool(m.camera),m.cameraInfo.kind,bool(m.remoteCamera.available),m.remoteCamera.note,releaseMonth(m),m.release.market,m.release.basis,m.release.note,frandroidSummary(m),f.score??"Non attribuée",f.published??"Non repéré",f.updated??"Non repéré",f.url??"",f.status==="tested"?"Test exact repéré":`Test exact non repéré au ${f.checkedAt}`,haProfile(m).label,haProfile(m).local,m.matter,n.score??"Sans pondération",n.coverage,m.risk||m.cons.join(" / "),m.sources.map(id=>sourceMap.get(id).url).join(" | ")]);}
+        download("\uFEFF"+rows.map(r=>r.map(csvCell).join(";")).join("\r\n"),"comparaison-robots.csv","text/csv;charset=utf-8");
+      }
+    }
+    function restoreContentFocus(selector) { const el=$(selector);if(el){el.focus({preventScroll:true});if(el.type==="search")el.setSelectionRange(el.value.length,el.value.length);} }
+    document.addEventListener("click",ev=>{
+      const target=ev.target.closest("button,a[data-nav]");
+      if(!target)return;
+      if(target.dataset.nav){ev.preventDefault();go(target.dataset.nav);return;}
+      if(target.dataset.model){state.current=target.dataset.model;go("detail");return;}
+      if(target.dataset.toggleSelect){toggleSelection(target.dataset.toggleSelect);return;}
+      if(target.dataset.unselect){toggleSelection(target.dataset.unselect,false);return;}
+      if(target.dataset.preset){state.preset=target.dataset.preset;state.weights={...PRESETS[state.preset]};syncFilters();save();render();return;}
+      if(target.dataset.rangeBrand){state.rangeBrand=target.dataset.rangeBrand;save();render();return;}
+      if(target.dataset.comparePair){state.selected=target.dataset.comparePair.split("|");go("compare");return;}
+      if(target.dataset.diagram){state.diagramMode=target.dataset.diagram;save();render();return;}
+      if(target.dataset.export){exportFile(target.dataset.export);return;}
+      if(target.dataset.removePrice){const id=target.dataset.removePrice;if(confirm("Retirer votre relevé de ce modèle et reprendre les prix archivés ?")){delete state.overrides[id];save();render();notify("Votre relevé a été retiré ; le prix de référence utilise à nouveau les archives.");}return;}
+      const act=target.dataset.act;
+      if(act==="dismiss")$("#notice").hidden=true;
+      else if(act==="print")window.print();
+      else if(act==="export")exportFile($("#export-type").value);
+      else if(act==="import")$("#import-file").click();
+      else if(act==="layout-cards"||act==="layout-table"){state.cards=act==="layout-cards";save();render();}
+      else if(act==="clear-selection"){state.selected=[];save();render();}
+      else if(act==="finalists"){state.selected=["rr-10r","rr-edge2","rr-2pro"];go("compare");}
+      else if(act==="roller-finalists"){state.selected=["ec-t90","rr-flow","mo-s70"];go("compare");}
+      else if(act==="dimension-model"){state.diagramA=target.dataset.id;go("sizes");}
+      else if(act==="filter-range-brand"){state.brand=state.rangeBrand;syncFilters();go("models");}
+      else if(act==="reset-filters"){
+        const fresh=defaults();
+        for(const k of ["q","brand","mop","ha","camera","remoteCamera","frandroidOnly","budget","stretch","purchase","heat","tested","unknownPrices","clearance","margin","dockHeight","weights","preset"])state[k]=fresh[k];
+        syncFilters();save();render();notify("Filtres réinitialisés. Votre sélection et vos prix personnels sont conservés.");
+      }
+    });
+    document.addEventListener("change",ev=>{
+      const el=ev.target;
+      if(el.matches("[data-select]")){toggleSelection(el.dataset.select,el.checked);return;}
+      if(el.matches("[data-check]")){const i=Number(el.dataset.check);state.checks=el.checked?[...new Set([...state.checks,i])]:state.checks.filter(x=>x!==i);save();return;}
+      if(el.matches("[data-action-setting]")){state[el.dataset.actionSetting]=el.type==="checkbox"?el.checked:el.value;save();render();return;}
+      if(el.matches("[data-source-type]")){state.sourceType=el.value;save();render();restoreContentFocus("#source-type");}
+    });
+    document.addEventListener("input",ev=>{
+      const el=ev.target;
+      if(el.matches("[data-setting]")){
+        const k=el.dataset.setting;
+        let value=el.type==="checkbox"?el.checked:el.type==="number"||el.type==="range"?(el.value===""?0:Number(el.value)):el.value;
+        if(k==="budget"&&(!Number.isFinite(value)||value<100||value>2000))return;
+        if(["clearance","margin","dockHeight"].includes(k)&&(!Number.isFinite(value)||value<0||value>Number(el.max)))return;
+        state[k]=value;
+        if(k==="budget"){const other=el.id==="budget-number"?$("#budget-range"):$("#budget-number");other.value=value;$("#stretch-label").textContent=money(value+150);}
+        clearTimeout(searchTimer);
+        if(k==="q")searchTimer=setTimeout(()=>{save();render();},130);
+        else{save();render();}
+      } else if(el.matches("[data-weight]")){state.weights[el.dataset.weight]=Number(el.value);state.preset="";syncFilters();save();render();}
+      else if(el.matches("[data-niche]")){
+        const v=el.value===""?0:Number(el.value);if(!Number.isFinite(v)||v<0||v>1000)return;
+        state.niche[el.dataset.niche]=v;save();$("#fit-results").innerHTML=[state.diagramA,state.diagramB].map(id=>{const m=modelMap.get(id);return `<div class="fit-result"><strong>${esc(labelOf(m))}</strong>${esc(fitAdvice(m))}</div>`;}).join("");
+      } else if(el.matches("[data-tco]")){
+        const v=el.value===""?0:Number(el.value);if(!Number.isFinite(v)||v<0||v>Number(el.max))return;
+        state.tco[el.dataset.tco]=v;save();$("#tco-results").innerHTML=tcoTable(state.selected.length?state.selected.map(id=>modelMap.get(id)):filtered().slice(0,6));
+      } else if(el.matches("[data-source-query]")){
+        state.sourceQuery=el.value;clearTimeout(searchTimer);searchTimer=setTimeout(()=>{save();render();restoreContentFocus("#source-query");},130);
+      }
+    });
+    document.addEventListener("submit",ev=>{
+      ev.preventDefault();
+      if(ev.target.id!=="personal-form")return;
+      const form=ev.target,f=new FormData(form),id=form.dataset.id;
+      try {
+        const price=checkedNumber(Number(f.get("price")),.01,10000,"Prix");
+        const rawPort=String(f.get("shipping")).trim(),shipping=rawPort===""?null:checkedNumber(Number(rawPort),0,2000,"Port");
+        const shop=String(f.get("shop")).trim(),rawUrl=String(f.get("url")).trim(),choice=f.get("be");
+        if(!shop||shop.length>120)throw new Error("Indiquez une enseigne valide.");
+        if(!["yes","no","unknown"].includes(choice))throw new Error("Précisez la situation de livraison en Belgique.");
+        if(rawUrl&&!safeUrl(rawUrl))throw new Error("Le lien doit commencer par https:// ou http://.");
+        state.overrides[id]={price,shipping,shop,be:choice==="yes"?true:choice==="no"?false:null,url:rawUrl?safeUrl(rawUrl):"",note:String(f.get("note")).slice(0,1000),at:new Date().toISOString()};
+        const persisted=save();render();
+        if(persisted)notify("Votre prix de référence a été enregistré localement. Il remplace l'archive pour ce modèle dans votre tri.");
+      }catch(err){$("#price-form-error").textContent=err.message;console.warn("Relevé refusé",err);}
+    });
+    $("#import-file").addEventListener("change",async ev=>{
+      const file=ev.target.files?.[0];if(!file)return;
+      try {
+        if(file.size>300000)throw new Error("Fichier trop volumineux : importer uniquement un export de préférences (300 Ko maximum).");
+        const candidate=validateSettings(JSON.parse(await file.text()));
+        state=candidate;syncFilters();const persisted=save();render();
+        if(persisted)notify("Vos préférences et relevés ont été importés. La base de recherche datée n'a pas été modifiée.");
+      }catch(err){console.warn("Import refusé",err);notify(`Import refusé : ${err.message} Vos données actuelles n'ont pas été remplacées.`,true);}
+      finally{ev.target.value="";}
+    });
+    function applyTheme() {
+      const forced=new URLSearchParams(location.search).get("scoutTheme");
+      if(!forced)document.documentElement.dataset.theme=state.theme==="auto"?"light":state.theme;
+      $("#theme-button").textContent=document.documentElement.dataset.theme==="dark"?"Clair":"Sombre";
+      $("#theme-button").setAttribute("aria-label",document.documentElement.dataset.theme==="dark"?"Passer au thème clair":"Passer au thème sombre");
+    }
+    $("#theme-button").addEventListener("click",()=>{
+      state.theme=document.documentElement.dataset.theme==="dark"?"light":"dark";
+      document.documentElement.dataset.theme=state.theme;save();applyTheme();
+    });
+    function init() {
+      load();
+      $("#brand-filter").insertAdjacentHTML("beforeend",[...new Set(DATA.models.map(m=>m.brand))].sort().map(b=>`<option value="${esc(b)}">${esc(b)}</option>`).join(""));
+      $("#weight-controls").innerHTML=Object.entries(WEIGHT_LABELS).map(([k,label])=>`<label class="weight" for="weight-${k}"><span>${esc(label)}</span><output id="out-${k}" for="weight-${k}">${state.weights[k]}</output><input id="weight-${k}" type="range" min="0" max="5" step="1" value="${state.weights[k]}" data-weight="${k}"></label>`).join("");
+      $("#filters").addEventListener("submit",e=>e.preventDefault());
+      if(window.matchMedia("(max-width:850px)").matches)$("#filter-panel").open=false;
+      $("#dataset-badge").textContent=`${DATA.models.length} modèles · ${new Set(DATA.models.map(m=>m.brand)).size} marques`;
+      const age=Math.floor((Date.now()-Date.parse(DATA.meta.date+"T23:59:59+01:00"))/86400000);
+      $("#snapshot").textContent=`Relevés du 15 novembre 2026${age>0?` · archives d'environ ${age} jour${age>1?"s":""}`:""} · ${DATA.models.reduce((n,m)=>n+m.offers.length,0)} relevés d'offres, dont certains non confirmés · ${DATA.sources.length} liens documentés. Pas de prix en temps réel.`;
+      syncFilters();applyTheme();render();
+    }
+    try { init(); }
+    catch(err){console.error("Initialisation impossible",err);$("#content").innerHTML=`<div class="callout"><h2>Le comparateur n'a pas pu démarrer.</h2><p>${esc(err.message)}</p><p>Ouvrez le fichier HTML complet dans un navigateur récent, ou utilisez l'analyse Markdown fournie.</p></div>`;notify("Erreur de chargement : aucune comparaison fiable ne peut être affichée.",true);}
+    window.RobotComparator={getState:()=>JSON.parse(JSON.stringify(state)),getData:()=>DATA,getFiltered:()=>filtered().map(m=>m.id),equipment:id=>equipment(modelMap.get(id)),bestOffer:id=>bestOffer(modelMap.get(id)),reportMarkdown,validateSettings};
+  })();
+  </script>
+</body>
+</html>

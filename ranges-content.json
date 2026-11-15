@@ -1,0 +1,137 @@
+{
+  "intro": "Une gamme donne une orientation, pas un classement universel. Croisez toujours famille, génération, variante exacte, équipement et prix du jour. Un chiffre plus grand, « Pro » ou « Max » ne garantit ni meilleur lavage, ni meilleure navigation, ni meilleur support Home Assistant.",
+  "brands": [
+    {
+      "brand": "Roborock",
+      "summary": "Q / QV, Qrevo et Saros coexistent. La vraie séparation utile est souvent la technologie de lavage et la station, pas une simple montée alphabétique. Les promotions rapprochent aujourd'hui un Saros ancien haut de gamme d'un Qrevo récent.",
+      "budget": "Pour 500 €, comparer S Pro / 2 Pro pour économiser, Edge 2 pour le gabarit et la caméra, Saros 10R pour un ensemble haut de gamme bien étayé. Curv 2 Flow mérite une lecture séparée : c'est un rouleau, mais le robot fait 11,9 cm.",
+      "families": [
+        {"name":"Q et QV","position":"Lignes orientées prix / équipement accessible","meaning":"Ne pas confondre Q7 / Q10 et QV 35 : QV 35A dispose bien d'une station de lavage et de deux patins. Certaines autres séries Q ont une station de vidage seulement.","models":["rr-qv"],"warning":"Le signe + sur un Q ne garantit pas une station qui lave les serpillières."},
+        {"name":"Qrevo S Pro / 2 Pro","position":"Compromis station complète / prix","meaning":"S Pro : 75 °C, pas de bras de lavage extensible. 2 Pro : patin extensible, DuoDivide et retrait des patins. Le 2 Pro ne possède pas pour autant la caméra de l'Edge 2.","models":["rr-spro","rr-2pro"],"warning":"Le mot Pro est partagé ; il faut lire les fonctions plutôt que supposer une équivalence."},
+        {"name":"Qrevo Edge / Curv","position":"Plusieurs branches, pas une seule échelle","meaning":"Edge 2 et Curv 2 Pro utilisent des patins. Curv 2 Flow passe au rouleau rincé en continu. La base ronde Curv de 45 cm de haut ne dit rien de la hauteur du robot.","models":["rr-edge2","rr-curvpro","rr-flow"],"warning":"Curv 2 Flow : 119 mm ; Curv 2 Pro : 79,8 mm. Flow n'est pas simplement un Pro amélioré."},
+        {"name":"Saros","position":"Famille haut de gamme et innovations de navigation","meaning":"Saros 10R associe StarSight et deux patins. Saros 10 utilise une autre architecture de navigation et de lavage. Les générations Saros 20 coexistent avec les 10 en promotion.","models":["rr-10r"],"warning":"10 et 10R sont des modèles différents ; Set n'est pas la lettre R."}
+      ],
+      "suffixes": [
+        {"term":"Qrevo","meaning":"Famille avec des variantes de station et de lavage ; historiquement patins, mais Flow introduit le rouleau.","trap":"Ne suffit plus à identifier le mécanisme de lavage."},
+        {"term":"Flow","meaning":"Dans les modèles étudiés, branche à rouleau rincé.","trap":"Vérifier hauteur et station : ce n'est pas une amélioration sans compromis."},
+        {"term":"Pro","meaning":"Variante d'équipement au sein d'une famille.","trap":"Aucune définition universelle entre S Pro, 2 Pro et Curv 2 Pro."},
+        {"term":"Set","meaning":"Offre / kit distinct ; vérifier précisément les accessoires inclus.","trap":"Le Saros 10R standard a déjà deux patins rotatifs. Le Set ne change pas cette technologie."},
+        {"term":"+","meaning":"Souvent associé à une offre de station de vidage sur les séries Q.","trap":"Vidage de poussière ≠ lavage, remplissage et séchage des patins."}
+      ],
+      "pairs": [
+        {"a":"rr-qv","b":"rr-spro","title":"Même prix direct, pas le même séchage","text":"Les deux sont affichés à 299,99 €. QV 35A annonce l'air froid ; S Pro annonce 45 °C et lavage 75 °C."},
+        {"a":"rr-flow","b":"rr-curvpro","title":"Flow ou Pro : rouleau contre faible hauteur","text":"Rouleau 27 cm / robot 119 mm contre deux patins / robot 79,8 mm. Aucun nom ne remplace cet arbitrage."},
+        {"a":"rr-2pro","b":"rr-edge2","title":"2 Pro ou Edge 2 : ce que paie le supplément","text":"Edge 2 ajoute notamment caméra RGB, deux bras et faible hauteur ; le 2 Pro reste moins cher avec patin extensible."}
+      ],
+      "sources":["rr-lineup","rr-qv","rr-spro","rr-2pro","rr-edge2","rr-flow","rr-curvpro","rr-10r","rr-store"]
+    },
+    {
+      "brand":"Dreame",
+      "summary":"D, L, X, Aqua et Matrix ne forment pas une progression simple. L couvre déjà des stations complètes ; X met en avant des innovations haut de gamme ; Aqua nomme des architectures de lavage ; Matrix ajoute une logique multi-serpillières.",
+      "budget":"Le nom L50 ne rend pas le L40s Pro Ultra obsolète. À 399 €, le L40s conserve duo de brosses, caméra et détergent. L50 AE à 429 € privilégie station 100 °C / profil 97 mm, alors que L50s Pro Ultra à 499 € fait 103,8 mm et n'a pas convaincu sur tous les scénarios de lavage.",
+      "families":[
+        {"name":"D","position":"Ligne plus accessible, selon référence","meaning":"D10 / D20 et variantes Plus / Air Plus apparaissent dans le catalogue belge. Les stations de vidage et lingettes d'appoint ne sont pas équivalentes à une station complète Ultra.","models":[],"warning":"Un appareil « 2-en-1 » peut seulement traîner une lingette."},
+        {"name":"L / Ls / Ultra","position":"Grand cœur de gamme, du milieu au haut de gamme","meaning":"L10s Ultra Gen 3, L40s Pro Ultra, L50 Ultra AE et L50s Pro Ultra illustrent des architectures et des compromis distincts.","models":["dr-gen3","dr-l40s","dr-l50ae","dr-l50s"],"warning":"L50 Ultra AE, L50 Pro Ultra et L50s Pro Ultra ne sont pas trois écritures du même robot."},
+        {"name":"X","position":"Innovations et automatisation haut de gamme","meaning":"Le catalogue belge comporte X50 / X60 et plusieurs variantes. Leur franchissement et équipement supplémentaires peuvent être peu utiles dans un logement sans seuil particulier.","models":[],"warning":"Un X50 déstocké peut coûter moins qu'un L récent : comparer le prix réel."},
+        {"name":"Aqua","position":"Branche définie par le lavage","meaning":"Aqua10 Ultra Roller Complete emploie un rouleau rincé. Les appellations Roller et Track désignent des architectures à ne pas fusionner.","models":["dr-aqua"],"warning":"Aqua10 Roller et Aqua10 Ultra Roller ne partagent pas nécessairement les mêmes problèmes, station ou accessoires."},
+        {"name":"Matrix","position":"Approche multi-serpillières / forte automatisation","meaning":"Le catalogue belge met en avant la commutation de serpillières de certains Matrix et X60 Matrix, au-delà du budget visé ici.","models":[],"warning":"Le changement de textiles peut être utile, mais n'établit pas à lui seul un meilleur résultat mesuré."}
+      ],
+      "suffixes":[
+        {"term":"Ultra","meaning":"Indique souvent une offre à station multifonction dans les références étudiées.","trap":"Les fonctions exactes, le chauffage et le détergent changent selon le modèle."},
+        {"term":"s / Pro","meaning":"Révision ou variante, dont le contenu se vérifie dans la fiche exacte.","trap":"Le L40s conserve des atouts que le chiffre supérieur L50 AE ne garantit pas."},
+        {"term":"AE / A / CE","meaning":"Déclinaisons commerciales / techniques distinctes ; pas de décodeur universel fiable.","trap":"Ne pas inventer une signification de sigle ni fusionner leurs avis, capteurs ou stations."},
+        {"term":"Gen 2 / Gen 3","meaning":"Génération d'un nom de modèle.","trap":"Ne garantit pas la même navigation ni les mêmes accessoires que toutes les autres générations."},
+        {"term":"Kit / Complete / -A","meaning":"Contenu ou édition commerciale à vérifier, parfois avec accessoires supplémentaires.","trap":"Pas une preuve automatique d'identité matérielle, de code HA ou de firmware entre annonces."}
+      ],
+      "pairs":[
+        {"a":"dr-l40s","b":"dr-l50ae","title":"L40s ou L50 AE : le chiffre n'est pas une hiérarchie","text":"L40s : duo HyperStream et caméra établis. L50 AE : 100 °C, TriCut et 97 mm, mais pas de RGB établie sur la fiche fabricant."},
+        {"a":"dr-l50ae","b":"dr-l50s","title":"AE ou s Pro : payer les fonctions utiles","text":"28 000 contre 30 000 Pa ne suffit pas à choisir. Brosses, reconnaissance, hauteur et essai de lavage importent davantage."}
+      ],
+      "sources":["dr-shop","dr-bf","dr-gen3","dr-l50ae","dr-l50s","test-l40s","test-l50s","dr-aqua"]
+    },
+    {
+      "brand":"MOVA",
+      "summary":"E, P, V, S et Z couvrent des branches qui se chevauchent. Un E récent peut afficher plus de Pa et une station plus chaude qu'un P ancien tout en ayant moins de reconnaissance. La mention Roller est plus informative que la lettre seule pour votre lavage.",
+      "budget":"Les vraies confrontations à ce prix sont E50 Pro Ultra / P50 Pro Ultra pour les patins, S70 Roller pour un rouleau à 399 €, P70 pour le lavage à patins, et V50 Complete en déstockage. Ne pas importer la fiche du Z60 Complete dans le Z60 SA.",
+      "families":[
+        {"name":"E","position":"Offres orientées équipement / prix","meaning":"E40 Ultra et E50 Pro Ultra ont une station complète. Le E50 annonce lavage 100 °C et pression 12 N, mais l'évitement reste un laser frontal à ligne unique.","models":["mo-e40","mo-e50"],"warning":"CleanChop peut être une option, pas la brosse fournie."},
+        {"name":"P","position":"Branches à patins rotatifs, bien équipées","meaning":"P50 Pro Ultra ajoute notamment caméra, extensions et dosage ; P70 monte en pression / chauffage et conserve ses propres compromis.","models":["mo-p50","mo-p70"],"warning":"Plus de Pa ou 100 °C ne règle pas l'emmêlement aux axes ni les tapis humides."},
+        {"name":"V","position":"Ligne d'innovations et d'automatisation","meaning":"V50 Ultra Complete : patins, dToF rétractable, batterie 6 400 mAh, fonctions avancées. Les V70 récents ne sont pas présumés identiques.","models":["mo-v50"],"warning":"V50 Complete n'est pas un modèle à rouleau."},
+        {"name":"S Roller","position":"Branche à rouleau, plusieurs niveaux","meaning":"S70 Roller à 399 € et S70 Ultra Roller sont des références différentes. Le S70 étudié a un corps de 90 mm et un rouleau 27 cm.","models":["mo-s70"],"warning":"Ne pas importer le moteur 32 000 Pa ou l'équipement du S70 Ultra dans le S70 Roller 28 000 Pa."},
+        {"name":"Z Roller","position":"Autres déclinaisons à rouleau et station","meaning":"Z60 Ultra Roller SA / Standalone : 26 000 Pa dans l'offre étudiée. Le Z60 Complete annonce une autre configuration.","models":["mo-z60"],"warning":"Standalone / SA est ici livré AVEC station. Le mot ne veut pas dire robot vendu seul."}
+      ],
+      "suffixes":[
+        {"term":"Roller","meaning":"Rouleau de lavage ; vérifier rinçage, extension et protection.","trap":"N'établit pas une navigation ou une station identiques entre S et Z."},
+        {"term":"Ultra / Pro","meaning":"Positionnement commercial et variantes d'équipement.","trap":"Ces mots ne donnent pas une échelle comparable entre toutes les lettres."},
+        {"term":"Complete","meaning":"Déclinaison / kit qui peut aussi se distinguer techniquement.","trap":"Ne pas considérer que tous les autres suffixes n'enlèvent que des accessoires."},
+        {"term":"SA / Standalone","meaning":"Nom de la déclinaison Z60 étudiée, qui inclut une station.","trap":"Le Z60 SA n'a pas simplement toute la fiche du Complete à prix inférieur."}
+      ],
+      "pairs":[
+        {"a":"mo-e50","b":"mo-p50","title":"E50 plus récent ou P50 mieux doté en reconnaissance ?","text":"E50 : 100 °C / 30 000 Pa sur le papier. P50 : caméra et dosage documentés, essai indépendant disponible."},
+        {"a":"mo-s70","b":"mo-z60","title":"Deux rouleaux, pas deux clones","text":"90 mm fixes et 28 000 Pa sur S70 ; 96 mm rétracté / 119,6 mm relevé et 26 000 Pa sur Z60 SA. Vérifier aussi les circuits et la fiabilité."},
+        {"a":"mo-p70","b":"mo-v50","title":"P70 ou V50 : nouveautés contre déstockage","text":"Patins dans les deux cas, mais pression, navigation rétractable, batterie et équipement diffèrent. Aucune lettre ne décide seule."}
+      ],
+      "sources":["mo-shop","mo-e40","mo-e50","mo-p50","mo-p70","mo-s70","mo-v50","mo-z60","test-p50","test-p70"]
+    },
+    {
+      "brand":"eufy",
+      "summary":"C / L, X, E et S ont des usages qui se chevauchent. La gamme E mélange même plusieurs formats : E20 3-en-1 n'est pas le même concept que E25 / E28 laveurs. Les Omni C récents ne sont pas tous de simples entrées de gamme à lingette.",
+      "budget":"X10 Pro Omni a deux patins et un support HACS nommé, mais l'offre BE consultée est chère. E25 apporte un rouleau et un bon résultat de lavage dans l'essai, avec un support HA exact non établi. Vérifier aussi les C28 récents, sans leur attribuer un prix belge non relevé.",
+      "families":[
+        {"name":"L / C","position":"Lignes accessibles, plusieurs architectures","meaning":"Le guide 2026 distingue L60 ancien, C10 d'aspiration, C20 à patins et C28 à rouleau. La lettre C ne prouve donc plus une simple lingette passive.","models":[],"warning":"Les annonces de fin de gamme et les disponibilités US ne valent pas automatiquement pour la Belgique."},
+        {"name":"X","position":"Ligne X10 Pro Omni à patins","meaning":"X10 : AI.See, deux patins, station de lavage / séchage / vidage. HACS le nomme explicitement comme testé.","models":["eu-x10"],"warning":"Ancien prix haut de gamme ne suffit pas à en faire le bon achat aujourd'hui."},
+        {"name":"E","position":"Hybrides et laveurs selon le numéro","meaning":"E25 : rouleau HydroJet. E28 : concept proche avec nettoyeur détachable pour tissus. E20 : autre concept 3-en-1 d'aspiration.","models":["eu-e25"],"warning":"Le nettoyeur de tissus de l'E28 n'est pas une fonction supplémentaire du robot E25."},
+        {"name":"S","position":"Branche premium de lavage et perception","meaning":"S1, S2 et S2 Pro sont des générations / variantes à distinguer ; le guide 2026 rapporte encore des spécifications non testées pour S2 Pro.","models":[],"warning":"Des innovations UV / hygiène annoncées ne sont pas une preuve de désinfection en usage réel."}
+      ],
+      "suffixes":[
+        {"term":"Omni","meaning":"Offre à station multifonction dans les modèles étudiés.","trap":"Ne garantit pas chauffage de l'eau, détergent ou même technologie de lavage partout."},
+        {"term":"HydroJet","meaning":"Nom du système à rouleau rincé dans les E25 / E28 et certaines autres lignes.","trap":"Pas un indice de compatibilité HA ni d'équivalence de réservoir."},
+        {"term":"MopMaster","meaning":"Désigne notamment le système à deux patins du X10.","trap":"Ne pas confondre avec HydroJet à rouleau."},
+        {"term":"Pro / S2 Pro","meaning":"Variante au sein de sa famille.","trap":"Une spécification de lancement n'est pas un résultat indépendant mesuré."}
+      ],
+      "pairs":[{"a":"eu-x10","b":"eu-e25","title":"X10 ou E25 : deux générations de lavage","text":"Patins et HACS X10 documenté contre rouleau rincé et parcours HA E25 à valider. La préférence domotique peut inverser celle de lavage."}],
+      "sources":["eu-lineup","eu-x10","eu-e25","test-e25","ha-eu"]
+    },
+    {
+      "brand":"Ecovacs",
+      "summary":"Le catalogue belge distingue N (équilibre prix), T (usage quotidien), X (fonctions premium) et mini (compacité). À l'intérieur d'une même génération T, Pro / Max / Max Pro peuvent recombiner moteur, perception et station : ce ne sont pas toujours des inclusions successives.",
+      "budget":"Le T90 Pro Omni est ici plus riche en perception que le T90 Max Pro, malgré ses 30 000 Pa au lieu de 40 000. Le Max Pro augmente la température de station, pas tous les équipements. Un T80 déstocké peut être intéressant ; à 499 € BE, il est mal placé face aux offres T90.",
+      "families":[
+        {"name":"DEEBOT N","position":"Équilibre prix / fonctions dans le catalogue","meaning":"Les N sont orientés prix ; vérifier le type précis de station et le lavage plutôt que supposer une expérience T / X.","models":[],"warning":"Une station de vidage ne veut pas dire station qui lave le textile."},
+        {"name":"DEEBOT T","position":"Milieu de gamme large et quotidien","meaning":"T50, T80 / T80S et T90 sont des familles avec plusieurs variantes. T80 et T90 de ce dossier utilisent un rouleau, mais T ne signifie pas rouleau pour toute référence.","models":["ec-t80","ec-t90","ec-max"],"warning":"T90 Pro, T90 Max, T90 Max Pro et T90S Pro ne sont pas interchangeables."},
+        {"name":"DEEBOT X","position":"Fonctions premium et nouvelles stations","meaning":"Le catalogue belge présente X8, X9, X11 et X12 ; chaque déclinaison et station doit être vérifiée.","models":[],"warning":"Un ancien X peut être déstocké face à un nouveau T : le prix de transaction décide de la comparaison."},
+        {"name":"DEEBOT mini","position":"Compacité","meaning":"Famille explicitement séparée dans le catalogue belge ; dimension et capacité sont des arbitrages propres.","models":[],"warning":"Compact ne signifie pas mêmes bacs, autonomie ou perception qu'un T90."}
+      ],
+      "suffixes":[
+        {"term":"OMNI","meaning":"Station multifonction dans ces offres.","trap":"Ses températures, dimensions et dosage ne sont pas identiques partout."},
+        {"term":"OZMO Roller","meaning":"Système à rouleau ; numéro de génération important.","trap":"Le T80 étudié a un rouleau 18 cm selon l'essai ; T90 passe à 27 cm. Les résultats d'un modèle ne valent pas pour l'autre."},
+        {"term":"Pro / Max / Max Pro","meaning":"Combinaisons d'équipements à l'intérieur d'une famille.","trap":"Max Pro n'est pas une preuve de meilleure caméra : le T90 Pro a RGB AIVI 4.0, le Max Pro étudié TrueDetect 3D."},
+        {"term":"Care Kit","meaning":"Offre avec accessoires à vérifier dans la boîte.","trap":"Ne pas confondre la valeur du kit et une évolution du robot."},
+        {"term":"OmniCyclone","meaning":"Autre architecture de station, à vérifier sur la fiche exacte.","trap":"Ce nom seul ne donne ni gabarit ni fonctions de lavage ni compatibilité domotique."}
+      ],
+      "pairs":[
+        {"a":"ec-t90","b":"ec-max","title":"Le piège : Pro ou Max Pro ?","text":"Pro : RGB AIVI 4.0, station 75 °C, essai exploité. Max Pro : TrueDetect 3D, station 100 °C, 40 000 Pa, pas d'essai spécifique dans ce dossier."},
+        {"a":"ec-t80","b":"ec-t90","title":"T80 ou T90 Pro : un saut de génération réel à examiner","text":"Rouleau élargi et navigation revue, mais pas des coins parfaits. Le prix de déstockage et le vendeur peuvent décider."}
+      ],
+      "sources":["ec-lineup","ec-t80","ec-t90","ec-max","test-t80","test-t90","test-t90-vw","fiche-t90max"]
+    },
+    {
+      "brand":"Xiaomi",
+      "summary":"La gamme européenne comporte plusieurs générations et variantes qui coexistent. X20+, X20 Pro et X20 Max ne sont pas le même modèle ; Robot Vacuum 5 / 5 Pro puis 6 / 6 Max ne doivent pas être lus comme une continuité de fonctionnalités garantie.",
+      "budget":"Le X20 Max à environ 332 € BE est le repère budget documenté ici, avec lavage jugé moyen dans l'essai. Le 5 Pro est plus riche en perception mais les offres relevées dépassent 500 €. Le Vacuum 6 à rouleau aperçu en Allemagne n'est pas le 6 Max et reste hors classement faute de recoupement suffisant.",
+      "families":[
+        {"name":"X20+, X20 Pro, X20 Max","position":"Génération de stations complètes et variantes","meaning":"X20 Max étudié : deux patins, extension de lavage, 55 °C à la station et brosse coupe-cheveux. Les autres variantes doivent être vérifiées individuellement.","models":["xi-x20"],"warning":"Ni le mot Max ni le signe + ne transmettent automatiquement chauffage, détection de tapis ou accessoires."},
+        {"name":"Robot Vacuum 5 / 5 Pro","position":"Génération suivante, plusieurs perceptions","meaning":"5 Pro étudié : triple caméra, radar rétractable, deux extensions, station 80 °C. La fiche du 5 sans Pro ne doit pas être fusionnée.","models":["xi-5"],"warning":"88 mm de corps ne signifient pas accès sous 88 mm : Xiaomi demande plus de 95 mm."},
+        {"name":"Robot Vacuum 6 / 6 Max","position":"Nouvelles branches à étudier séparément","meaning":"Le 6 repéré sur Amazon DE annonce un rouleau ; le 6 Max est proposé bien plus haut dans la sélection de promotions consultée. Leurs dimensions et leur HA n'ont pas été assez recoupés ici.","models":[],"warning":"Pas de classement fiable à partir d'un numéro, d'un prix étranger ou d'une annonce seule."},
+        {"name":"Autres lignes régionales S / H…","position":"Hors recoupement détaillé de ce dossier","meaning":"Des noms et disponibilités changent selon marché. Toujours partir de la référence européenne et de son code produit.","models":[],"warning":"Une proximité de nom ne prouve pas une équivalence de firmware, de station ou d'intégration HA."}
+      ],
+      "suffixes":[
+        {"term":"+ / Pro / Max","meaning":"Variantes d'une génération, dont les différences se vérifient dans la fiche.","trap":"Pas de sens universel valable d'un X20 à un 6."},
+        {"term":"EU / GL et code D109GL / OV21GL","meaning":"Référence de marché / modèle utile pour notice et intégration.","trap":"Le support HACS du X20 Max D109GL ne prouve pas celui du 5 Pro OV21GL."},
+        {"term":"Xiaomi Home / MIoT","meaning":"Écosystème et protocole, pas gamme de performance.","trap":"Officiel Xiaomi via HACS n'est pas livré dans Core et n'est pas forcément hors cloud."}
+      ],
+      "pairs":[{"a":"xi-x20","b":"xi-5","title":"X20 Max ou 5 Pro : génération, prix et support","text":"Le supplément du 5 Pro paie notamment la perception et le radar rétractable, pas une compatibilité HA complète automatiquement meilleure."}],
+      "sources":["xi-x20","xi-x20-dim","xi-5","xi-5-dim","test-x20","bf-market","ha-dr-list","ha-xi"]
+    }
+  ]
+}

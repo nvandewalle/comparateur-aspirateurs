@@ -1,0 +1,184 @@
+{
+  "intro": "Pour votre usage — surtout des sols durs, aspirer et laver avec un seul appareil, sans seuils particuliers — les priorités sont la qualité de lavage réelle, le renouvellement des serpillières, la couverture des bords, l'entretien et la stabilité logicielle. La capacité à enjamber une marche et les records de pascals passent après.",
+  "sections": [
+    {
+      "id": "conclusion",
+      "title": "Mon avis : 500 € suffisent déjà pour un très bon ensemble",
+      "paragraphs": [
+        "Le Saros 10R à 499,99 € affichés sur la boutique Roborock est le choix polyvalent le plus étayé de cette sélection : navigation et évitement bien mesurés, faible hauteur, dosage de détergent, patins déposables et intégration HA Core documentée. La boutique française annonce explicitement livrer la Belgique. Il faut sélectionner le robot standard, pas le Set beaucoup plus cher de la même fiche, et vérifier le total TTC belge final.",
+        "Si Amazon Belgique reste la priorité, le Qrevo Edge 2 blanc à 489,99 € est une alternative cohérente sous le budget : 79,8 mm, caméra, deux bras et station chauffante. Je distingue toutefois sa bonne fiche technique du recul indépendant plus important sur le Saros 10R. Pour économiser, le Qrevo 2 Pro Set à 379,99 € direct ou 399,99 € Amazon BE évite de payer pour des fonctions de franchissement inutiles dans votre cas.",
+        "Si le lavage au rouleau est déterminant, le T90 Pro Omni est à examiner : 444 € + 27,73 € de port dans l'offre Amazon BE relevée. Son lavage est très convaincant dans le protocole Vacuum Wars. L'offre est toutefois fragile (une unité annoncée, vendeur non contrôlé), la station est plus volumineuse et le support HA de la référence exacte reste à valider. Un bon rouleau n'est pas une raison de négliger le vendeur."
+      ],
+      "sources": ["rr-shop","rr-delivery","test-10r","be-edge","test-2pro","be-t90","test-t90-vw"]
+    },
+    {
+      "id": "market",
+      "title": "Le marché de novembre 2026 : comparer les prix de transaction, pas les gammes",
+      "paragraphs": [
+        "Les promotions sont déjà engagées, sans attendre le vendredi 27 novembre 2026. Dreame Belgique affiche une campagne du 5 au 30 novembre. Le milieu de gamme accueille désormais des stations chauffantes, des bras extensibles et parfois des rouleaux rincés. Des anciens modèles haut de gamme rejoignent les 500 € : le prix de lancement ne décrit plus leur position réelle.",
+        "Autour de 280–330 €, on trouve déjà station de vidage et lavage, séchage et parfois un bras de patin. Mais le chauffage de l'eau, le type de séchage et la reconnaissance d'objets varient beaucoup. Exemple révélateur : QV 35A et Qrevo S Pro sont affichés à 299,99 € direct ; la fiche du QV précise un séchage à air froid, tandis que le S Pro annonce lavage 75 °C et séchage 45 °C.",
+        "Vers 380–430 €, Qrevo 2 Pro, L40s Pro Ultra, L50 Ultra AE, P50 Pro Ultra et S70 Roller proposent des compromis très différents. À 470–500 €, le choix porte surtout sur la reconnaissance, le gabarit et la technologie de lavage. Les 550–650 € ne sont plus un passage obligé : ils doivent résoudre un problème concret, pas seulement améliorer une ligne marketing."
+      ],
+      "sources": ["dr-bf","rr-qv","rr-spro","rr-2pro-price","mo-shop","dr-shop","rr-store"]
+    },
+    {
+      "id": "washing",
+      "title": "Patins rotatifs ou rouleau : le mécanisme compte, le résultat aussi",
+      "paragraphs": [
+        "Deux patins rotatifs frottent le sol puis retournent à la station pour être lavés. Ils sont éprouvés, les consommables sont simples, et un patin extensible peut bien longer les plinthes. Leur limite est de transporter une partie de la saleté entre deux lavages. Réduire l'intervalle de rinçage et faire deux passages peut améliorer nettement le résultat, au prix de temps, d'eau et de bruit.",
+        "Un rouleau rincé en continu reçoit de l'eau propre pendant qu'une raclette récupère l'eau sale dans un circuit séparé. C'est un avantage structurel pour éviter de repasser avec un textile souillé. Mais cela ajoute un réservoir sale, des filtres, joints et conduits à entretenir. La pression annoncée, la raclette, le débit d'eau et le logiciel restent décisifs ; un rouleau ne garantit ni des coins parfaits ni un sol sec.",
+        "Les essais le montrent : le Curv 2 Flow a un rouleau intéressant, mais Labo Maison note un lavage intensif parfois nécessaire, l'absence de dosage de détergent et des brossettes restant actives dans les liquides. À l'inverse, TechRadar obtient un excellent lavage intensif avec les patins du Qrevo 2 Pro, mais avec plus de temps et d'humidité. Ces observations ne viennent pas du même protocole et ne doivent pas être converties en un classement chiffré commun."
+      ],
+      "sources": ["test-flow","test-2pro","test-t90","test-t90-vw"]
+    },
+    {
+      "id": "temperature",
+      "title": "75, 80 ou 100 °C : de l'eau chaude à la station, pas une désinfection du sol",
+      "paragraphs": [
+        "La plupart des températures mises en avant concernent la sortie du chauffage, le système PTC de la planche de lavage ou l'eau distribuée dans la base. Roborock et Dreame l'expliquent dans leurs notes. Cela aide à dissoudre les graisses et à entretenir le textile ; cela ne signifie pas que le sol est frotté à 100 °C ni qu'il est désinfecté.",
+        "Distinguez toujours lavage des patins, séchage à l'air chaud, éventuel remplissage du robot à l'eau chaude et nettoyage du plateau de station. Une mention « station autonettoyante » ne dit pas laquelle de ces tâches est chauffée. Les valeurs 176 °F et 212 °F deviennent respectivement 80 et 100 °C : certaines annonces Amazon traduites mélangent les unités, jusqu'à écrire 176 °C.",
+        "Sur parquet, stratifié et pierres sensibles, l'autorisation de lavage humide dépend du fabricant du revêtement. Utiliser un débit adapté, vérifier le séchage et ne pas ajouter de détergent moussant non approuvé. Un aspirateur-laveur robot n'est pas automatiquement un aspirateur de liquides : ne pas l'envoyer sur une flaque importante, huile ou sirop en supposant qu'il protégera son circuit d'aspiration."
+      ],
+      "sources": ["rr-spro","rr-edge2","dr-l50ae","dr-l50s","test-l50s","test-t90"]
+    },
+    {
+      "id": "suction",
+      "title": "Les pascals ne constituent pas une note d'aspiration",
+      "paragraphs": [
+        "Le chiffre en Pa est une dépression maximale revendiquée, souvent mesurée dans des conditions propres à la marque. Il ne résume ni le débit d'air, ni le contact de la brosse, ni l'étanchéité sur tapis, ni la récupération des miettes en bordure. Le comparateur l'affiche, mais ne lui attribue aucun point dans l'indice d'équipement.",
+        "Les résultats dépendent aussi du parcours. Une brossette trop énergique peut repousser des grains déjà approchés ; plusieurs essais l'observent. Des poils sans emmêlement sur la brosse ne prouvent pas que tous les poils ont été aspirés dans le tapis. Le duo de rouleaux, la coupe des cheveux et la brosse caoutchouc simple sont donc décrits séparément.",
+        "Pour vos sols durs, une aspiration bien réglée et des bords correctement couverts valent souvent mieux qu'un nouveau record de Pa. Les résultats d'un organisme sont conservés avec leur nom et leur unité, sans moyenne inventée entre « points de taches », pourcentage de récupération et satisfaction client."
+      ],
+      "sources": ["test-p50","test-t80","test-flow","test-e25","test-t90-vw"]
+    },
+    {
+      "id": "navigation",
+      "title": "LiDAR, caméra, ToF : cartographier n'est pas reconnaître un câble",
+      "paragraphs": [
+        "Un LiDAR sert d'abord à établir la carte et à planifier le trajet. Pour les petits objets, le robot peut ajouter laser frontal, lumière structurée, ToF, caméra RGB et éclairage. Une caméra ne garantit pas la réussite ; elle donne des informations supplémentaires que le logiciel doit bien exploiter.",
+        "Le Qrevo 2 Pro s'est coincé sur un câble USB dans l'essai TechRadar malgré une navigation globalement réussie. Le Saros 10R a évité 24 obstacles sur 24 dans le test Vacuum Wars de 2025, sensibilité réglée au maximum. Ce n'est pas une promesse d'éviter chaque câble chez vous, ni une garantie contre les accidents d'animaux.",
+        "Sans seuils particuliers, je ne surpondère pas le châssis grimpeur. Les mentions 4, 6 ou 8 cm peuvent concerner plusieurs ressauts successifs, pas une marche verticale unique. L'évitement fiable, le passage sous vos meubles et la possibilité de reprendre une carte comptent davantage."
+      ],
+      "sources": ["test-2pro","test-10r","test-l40s","rr-10r"]
+    },
+    {
+      "id": "dimensions",
+      "title": "Mesurer la base installée, pas le carton ni le corps seul",
+      "paragraphs": [
+        "Les cotes sont distinguées : robot, LiDAR relevé ou rétracté, corps de station, rampe et espace nécessaire pour sortir les réservoirs. Une base de 45 cm de haut ne rentre pas forcément sous une étagère de 46 cm si les bacs se lèvent par le dessus. Une profondeur de 25,5 ou 28 cm peut exclure la rampe et la projection du robot.",
+        "Deux pièges concrets : le Curv 2 Flow fait 11,9 cm de haut, contre 7,98 cm pour le Curv 2 Pro malgré des noms proches. Et le Xiaomi 5 Pro a un corps de 88 mm, mais Xiaomi n'annonce l'accès sous les meubles qu'au-dessus de 95 mm. Le filtre de hauteur utilise cette seconde valeur, plus une marge réglable.",
+        "Les incohérences ne sont pas corrigées à l'intuition : certains sites inversent L/P, et la propre FAQ eufy X10 inverse hauteur et profondeur par rapport à son tableau. Ces cas restent signalés. Pour le QV 35A, la FAQ donne un véritable espace conseillé : environ 40 cm de large, 120 cm de profondeur et 90 cm de haut. Les gabarits dessinés sont des schémas, pas un plan de montage."
+      ],
+      "sources": ["rr-flow","rr-curvpro","xi-5","xi-5-dim","mo-s70","mo-z60","eu-x10","rr-qv"]
+    },
+    {
+      "id": "ha",
+      "title": "Home Assistant : Core, HACS et local sont trois questions différentes",
+      "paragraphs": [
+        "Roborock dispose d'une intégration dans HA Core. La documentation actuelle annonce les familles QV, Qrevo et Saros prises en charge. Les commandes locales passent notamment par TCP 58867 et la découverte par UDP 58866, mais le compte et le cloud restent nécessaires au fonctionnement documenté ; cartes et routines viennent du cloud. Le label Local Polling n'est donc pas une promesse d'indépendance.",
+        "Dreame et MOVA passent ici par l'intégration communautaire Dreame Vacuum de Tasshack, distribuée via HACS. La liste de modèles et codes exacts a été consultée, y compris les sections repliées MOVA et Mijia. Le mode local à jeton n'est prévu que pour les modèles appairables à Xiaomi Home, sans cartes par cette API ; on ne peut pas le généraliser aux DreameHome et MOVAhome récents.",
+        "Ecovacs a une intégration Core, mais cela ne démontre pas à lui seul le support complet de chaque T90 récent : la bibliothèque issue de rétro-ingénierie doit reconnaître le modèle. Le X10 Pro Omni est nommé comme testé par Eufy Clean HACS ; le E25 ne l'est pas dans la liste consultée. Xiaomi Home est soutenu officiellement par Xiaomi mais distribué via HACS, pas livré dans Core. Le X20 Max est également listé chez Tasshack ; le 5 Pro ne doit pas hériter de cette preuve."
+      ],
+      "sources": ["ha-rr","ha-dr","ha-dr-list","ha-dr-local","ha-ec","ha-ec-lib","ha-eu","ha-xi"]
+    },
+    {
+      "id": "matter",
+      "title": "Matter : utile pour les commandes de base, pas un remplacement automatique de l'application",
+      "paragraphs": [
+        "Matter est un protocole applicatif sur IP, pas une radio concurrente du Wi-Fi. Un robot Matter sur Wi-Fi ne nécessite pas automatiquement un réseau Thread ni une passerelle Zigbee. Le Bluetooth peut servir à l'appairage, sans fournir une API Bluetooth de commande quotidienne.",
+        "Il faut vérifier la disponibilité sur le firmware réellement livré et le support du contrôleur HA. Les pages S Pro, Curv 2 Flow et Curv 2 Pro consultées parlent encore d'une future mise à jour OTA : une promesse n'est pas considérée comme une fonction vérifiée. Pour d'autres modèles, la mention vient du fabricant ou d'un test ; cette provenance est explicitée.",
+        "Même quand Matter fonctionne, ne présumez pas récupérer les cartes détaillées, les routines du fabricant, tous les réglages de lavage ou l'ensemble des actions de station. Si votre exigence est « toutes les fonctions sans Internet », aucun des 26 modèles n'est certifié comme tel dans cette recherche. Le filtre correspondant ne fabrique donc pas un gagnant."
+      ],
+      "sources": ["ha-matter","ha-rr","rr-spro","rr-flow","rr-curvpro","test-e25","test-t90-vw"]
+    },
+    {
+      "id": "reviews",
+      "title": "Ce que disent les clients — et ce qu'ils ne permettent pas de conclure",
+      "paragraphs": [
+        "Les avis Amazon sont affichés avec le pays, la famille d'annonce et le nombre relevé lorsqu'il existe. Ils ne servent pas à produire une moyenne toutes boutiques confondues. Certains ASIN regroupent plusieurs modèles, générations ou couleurs. Sur la fiche Edge 2, des avis mentionnent explicitement Edge S5A ; ils ont été exclus de la synthèse. Une note de 4,8 avec 24 avis n'est pas plus probante, par principe, qu'un corpus beaucoup plus large.",
+        "L40s : six avis visibles de la bonne variante soulignent surtout la simplicité, le gain de temps et la récupération des poils ; des réserves concernent les taches incrustées et les chocs. Saros 10R Set : sept avis apprécient le nettoyage quotidien et la faible hauteur, avec une prise en main de l'application et un regret sur le supplément du Set. Ce sont des thèmes observés, pas des pourcentages représentatifs.",
+        "S70 Roller : six avis lus ; plusieurs sont très positifs sur le lavage, mais deux décrivent un rouleau à sec par défaut de remplissage automatique. L'échantillon ne mesure pas un taux de défaut. Autres signaux : Vacuum Wars rapporte d'anciens réservoirs E25 fuyards puis une correction, et des fuites de station Aqua10 Ultra Roller dans des avis US portant sur 2025. Aucun de ces récits ne prouve à lui seul le comportement d'un lot belge de 2026."
+      ],
+      "sources": ["be-l40s","be-edge","be-10r","be-s70","test-e25","risk-aqua"]
+    },
+    {
+      "id": "care",
+      "title": "Autonome ne veut pas dire sans entretien",
+      "paragraphs": [
+        "La station automatise des tâches, elle ne les supprime pas. Il reste à vider l'eau sale, rincer les réservoirs, ôter les cheveux des axes et roulettes, nettoyer le filtre et la planche de lavage, remplacer le sac, contrôler les joints et laver ou remplacer les textiles. Un rouleau ajoute son réservoir et son circuit d'eau sale.",
+        "Les durées « 65 / 75 / 90 jours sans intervention » concernent généralement le sac à poussière dans un scénario constructeur, pas l'eau et l'hygiène de la station. Le séchage dure souvent plusieurs heures et peut rester audible. Les niveaux de bruit ne sont comparables que si mode, distance et protocole concordent ; les valeurs disponibles sont gardées dans leurs fiches, sans classement acoustique artificiel.",
+        "Avant de choisir, vérifier le prix et la disponibilité des filtres, sacs, patins ou rouleaux d'origine, et la facilité de démontage du plateau. Les kits génériques peuvent réduire le coût, mais leur filtration, leurs joints ou leurs lames ne sont pas automatiquement équivalents. Le calcul de coût du comparateur est un scénario modifiable, pas une prévision de panne ou de consommation."
+      ],
+      "sources": ["test-flow","test-t80","test-p70","test-l40s","eu-x10"]
+    },
+    {
+      "id": "blackfriday",
+      "title": "Une stratégie Black Friday sans urgence artificielle",
+      "paragraphs": [
+        "Le vendredi 27 novembre 2026 est un repère de calendrier, pas une garantie du plus bas prix. Plusieurs offres sont déjà actives. Je ne prédis pas une baisse future et n'utilise pas le prix public barré pour affirmer une économie réelle. Sur la fiche BE Edge 2, 489,99 € sont comparés à une référence des 30 jours de 539,99 € affichée par le vendeur : 50 € d'écart, pas les 400 € suggérés par le prix public barré. S70 : 399 € contre 429 € affichés sur 30 jours, soit 30 €.",
+        "Choisissez deux ou trois finalistes, enregistrez leurs vrais prix et le kit exact, puis comparez le montant livré. Un prix identique avec retour simple, facture claire et vendeur fiable peut valoir davantage qu'une remise supplémentaire de 20 €. La préférence Amazon Belgique est intégrée comme filtre de prix, sans supposer que FR ou DE seront systématiquement moins chers.",
+        "Le suivi intégré est volontairement manuel : vous pouvez saisir une offre, son port, son vendeur et sa provenance, puis exporter vos réglages. Le fichier ne surveille pas Internet et n'annonce pas d'alerte automatique. Une offre saisie par vous reste clairement distincte des relevés documentés."
+      ],
+      "sources": ["dr-bf","be-edge","be-s70","rr-delivery"]
+    },
+    {
+      "id": "buying",
+      "title": "Acheter depuis la Belgique : le bon site est aussi le bon vendeur",
+      "paragraphs": [
+        "Amazon.com.be est distingué d'Amazon.fr et Amazon.de, et « vendu par » de « expédié par ». Les offres étrangères non validées pour la Belgique ne définissent pas le meilleur prix par défaut. Le port connu est ajouté, les frais inconnus sont affichés comme tels, et les offres sans vendeur ou stock confirmé restent marquées. Les prix de recherche ne sont pas présentés comme une validation de panier.",
+        "La politique Roborock française mentionne expressément Belgique, livraison gratuite des aspirateurs et retours sous 30 jours selon conditions. À l'inverse, la boutique eufy EU-en consultée ne liste pas la Belgique ; son prix n'est pas retenu comme offre accessible. Coolblue P70 et Hifi T90 Max ont été vus dans un index, mais les fiches directes étaient bloquées ou en erreur : leurs prix restent non confirmés et exclus du minimum.",
+        "Avant de payer : vérifier pays livré, TVA finale, frais, délai réel, état neuf ou reconditionné, contenu du Set / Complete / Kit, prise et région européenne, interlocuteur de garantie et conditions de retour. Pour un achat transfrontalier, ne pas supposer que les avantages Prime ou le retour gratuit d'un pays s'appliquent dans un autre. Aucun compte n'a été modifié, aucun formulaire de commande soumis."
+      ],
+      "sources": ["rr-delivery","eu-ship","be-l40s","be-edge","be-t90","ret-p70","ret-max"]
+    },
+    {
+      "id": "camera-video",
+      "title": "Caméra de reconnaissance et caméra accessible à distance : deux fonctions différentes",
+      "paragraphs": [
+        "La ligne Caméra distingue une caméra RGB de reconnaissance des lasers, du LiDAR et des capteurs de profondeur. La ligne Caméra accessible à distance répond à une autre question : peut-on voir une image vidéo en direct depuis l'application ? Une carte, une photo d'obstacle, un bouton de déplacement ou une vidéo promotionnelle ne suffisent pas à répondre Oui.",
+        "Exemples utiles : les eufy X10 Pro Omni et E25 ont une caméra de reconnaissance, mais pas de vidéosurveillance en direct dans les essais consultés. À l'inverse, les P50 Pro Ultra, P70 Pro Ultra et Z60 Standalone proposent un accès caméra explicitement décrit pour leurs références. Pour le S70 Roller sans Ultra, RGB et vidéo restent non confirmées : les fonctions de l'Ultra ne sont pas héritées.",
+        "Quand la vidéo est disponible, il s'agit ici de l'application constructeur. Activation, code de sécurité, compte, région et firmware peuvent intervenir. Cela ne prouve ni un flux vidéo compatible Home Assistant, ni RTSP, ONVIF ou une consultation entièrement locale. Vérifiez aussi l'éclairage, l'indicateur d'activité, le microphone, les autorisations et les zones privées si cette fonction est décisive."
+      ],
+      "sources": ["test-x10-camera","test-e25","sh-mo-p50","sh-mo-p70","sh-mo-z60","mo-s70","sh-mo-s70","ha-rr","ha-dr"]
+    },
+    {
+      "id": "release-dates",
+      "title": "Date de sortie : toujours préciser le marché et la provenance",
+      "paragraphs": [
+        "Le mois et l'année sont ajoutés pour les 26 références, avec la provenance et le territoire lorsqu'il est connu. Les fiches Frandroid comportent un champ Date de sortie ; d'autres dates viennent du champ Erscheinungsdatum de SmarthomeAssistent ou d'articles annonçant explicitement la commercialisation. Le marché est indiqué comme non précisé lorsque la source ne le donne pas : écrire en allemand ne prouve pas une première vente allemande.",
+        "Une annonce de salon, un début de vente et la publication d'un test sont des événements distincts. Exemple : le X20 Max est donné sorti en décembre 2024, alors que le test Frandroid date d'octobre 2025. Pour le X10 Pro Omni, février 2024 correspond à la commercialisation américaine annoncée ; le premier mois de vente européen n'a pas été confirmé. Ce repère ne doit pas être présenté comme une disponibilité belge.",
+        "Pour le QV 35A, mai 2025 désigne l'arrivée européenne rapportée par Notebookcheck, tandis qu'une autre fiche indique mars sans marché : les deux informations sont conservées dans la note de provenance. Un pack Kit, Set ou Complete peut aussi être référencé à une autre date que la génération du robot. Aucune de ces dates ne garantit la durée restante des mises à jour ou du support cloud."
+      ],
+      "sources": ["fr-sheet-xi-x20","launch-eu-x10","sh-eu-x10","launch-rr-qv","sh-rr-qv","launch-dr-gen3"]
+    },
+    {
+      "id": "frandroid",
+      "title": "Frandroid : 12 tests exacts repérés, avec note et date originale",
+      "paragraphs": [
+        "Les cinq pages du catalogue de tests et les catalogues des six marques ont été parcourus. Douze références ont un test Frandroid identifié ; pour les quatorze autres, le comparateur affiche Test exact non repéré au 15/11/2026, jamais une note zéro. Ce résultat de recherche n'est pas une garantie qu'aucun article n'existe en dehors des index consultés.",
+        "Chaque test est résumé avec ses points forts et ses limites, sa note sur 10, sa date de publication originale et, lorsqu'elle diffère, sa date de mise à jour. Exemple : le test du Saros 10R est du 30 mars 2025, mis à jour le 27 juin ; celui du Curv 2 Flow est du 20 mars 2026, mis à jour le 27 août. Une date de mise à jour ne rajeunit pas artificiellement un essai.",
+        "Les notes restent celles d'une rédaction dans le contexte et au prix de son test : elles ne sont ni une mesure universelle d'efficacité ni une moyenne avec les autres laboratoires. Elles ne sont pas ajoutées à l'indice d'équipement. Le test du X20 Max traite aussi du X20 Plus, ce qui est signalé. Les Gen 2/Gen 3, L40/L40s, L50 AE/L50s, S70/S70 Ultra, Z60 SA/Complete et T90 Pro/Max Pro restent distincts."
+      ],
+      "sources": ["fr-index","fr-catalog-dreame","fr-catalog-roborock","fr-catalog-mova","fr-catalog-eufy","fr-catalog-ecovacs","fr-catalog-xiaomi","fr-test-rr-10r","fr-test-rr-flow","fr-test-xi-x20"]
+    },
+    {
+      "id": "method",
+      "title": "Méthode, limites et fraîcheur des données",
+      "paragraphs": [
+        "Recherche arrêtée au 15 novembre 2026. Les caractéristiques ont été recoupées autant que possible entre fabricant, notice ou présentation et essai indépendant. La base conserve les données absentes ou contradictoires au lieu d'hériter d'un modèle voisin. Une présentation de produit sans essai n'est pas étiquetée « testé ». Les sites bloqués n'ont pas donné lieu à des prix inventés.",
+        "Le périmètre couvre 26 modèles de 6 marques, avec des modèles de déstockage et des versions récentes, plus une liste d'appareils repérés mais insuffisamment recoupés. Ce n'est ni un catalogue exhaustif de toutes les marques ni un essai à domicile. Les sources commerciales et les médias peuvent contenir des liens d'affiliation ; nos liens directs n'ajoutent pas de code affilié.",
+        "L'indice personnalisable est un indice d'équipement documenté, pas une note de nettoyage : mécanisme de lavage, extensions, capteurs, anti-emmêlement, automatisation, parcours HA, hauteur utile et prix. Les Pa, notes clients, notes Frandroid et résultats de laboratoires hétérogènes ne sont pas additionnés. La vidéo distante et la date de sortie ne rapportent pas de points supplémentaires. Une donnée inconnue n'apporte pas de points et la couverture documentaire reste visible. Aucun indice ne remplace la lecture des réserves de fiabilité et de logiciel."
+      ],
+      "sources": ["ha-rr","ha-dr-list","test-l50s","test-flow","test-2pro"]
+    }
+  ],
+  "checklist": [
+    "Référence exacte et variante du kit vérifiées, sans confusion A / AE / Pro / Max / Gen.",
+    "Vendeur et expéditeur identifiés ; facture, garantie et retour depuis la Belgique compris.",
+    "Prix total TTC, TVA de destination, port et délai effectivement vérifiés au panier.",
+    "Passage sous les meubles et place de la station avec rampe, robot et réservoirs mesurés.",
+    "Réglages de lavage adaptés au revêtement ; détergent autorisé par le constructeur.",
+    "Support Home Assistant du code modèle et du firmware vérifié si décisif.",
+    "Pendant le retour : cartographie, câbles, lavage, remplissage, vidage et absence de fuite contrôlés."
+  ]
+}

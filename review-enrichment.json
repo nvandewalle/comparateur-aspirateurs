@@ -1,0 +1,255 @@
+{
+  "checkedAt": "2026-11-15",
+  "method": "Recherche des références exactes dans les cinq pages du catalogue de tests Frandroid et les catalogues des six marques. Une présentation, une fiche produit ou le test d'une autre variante ne remplace pas un test de la référence. Les dates de sortie sont qualifiées par leur source et leur marché ; elles ne sont jamais déduites de la date du test.",
+  "catalogue": {
+    "index": "fr-index",
+    "brands": {
+      "Dreame": "fr-catalog-dreame",
+      "Roborock": "fr-catalog-roborock",
+      "MOVA": "fr-catalog-mova",
+      "eufy": "fr-catalog-eufy",
+      "Ecovacs": "fr-catalog-ecovacs",
+      "Xiaomi": "fr-catalog-xiaomi"
+    }
+  },
+  "sources": [
+    {"id":"fr-index","type":"Catalogue de tests","label":"Frandroid : catalogue des tests d'aspirateurs robots","url":"https://www.frandroid.com/test/aspirateur-robot","note":"Pages 1 à 5 parcourues le 15/11/2026, puis recoupement par les six catalogues de marque. « Non repéré » ne démontre pas l'absence absolue d'un article hors de ces index. Les tests de variantes voisines ne sont pas transférés."},
+    {"id":"fr-catalog-dreame","type":"Catalogue de produits","label":"Frandroid : références Dreame et liens vers les tests","url":"https://www.frandroid.com/produits/aspirateur-robot/dreame"},
+    {"id":"fr-catalog-roborock","type":"Catalogue de produits","label":"Frandroid : références Roborock et liens vers les tests","url":"https://www.frandroid.com/produits/aspirateur-robot/roborock"},
+    {"id":"fr-catalog-mova","type":"Catalogue de produits","label":"Frandroid : références MOVA et liens vers les tests","url":"https://www.frandroid.com/produits/aspirateur-robot/mova"},
+    {"id":"fr-catalog-eufy","type":"Catalogue de produits","label":"Frandroid : références Anker / eufy et liens vers les tests","url":"https://www.frandroid.com/produits/aspirateur-robot/anker"},
+    {"id":"fr-catalog-ecovacs","type":"Catalogue de produits","label":"Frandroid : références Ecovacs et liens vers les tests","url":"https://www.frandroid.com/produits/aspirateur-robot/ecovacs"},
+    {"id":"fr-catalog-xiaomi","type":"Catalogue de produits","label":"Frandroid : références Xiaomi et liens vers les tests","url":"https://www.frandroid.com/produits/aspirateur-robot/xiaomi"},
+    {"id":"fr-test-dr-l50s","type":"Essai indépendant · Frandroid","label":"Frandroid : test Dreame L50s Pro Ultra, 8/10","url":"https://www.frandroid.com/marques/dreame/3240357_test-du-dreame-l50s-pro-ultra-un-robot-aspirateur-laveur-ultra-complet-a-un-tarif-tres-seduisant","note":"Publication originale : 13/09/2026. Note éditoriale 8/10. Référence L50s Pro Ultra, pas L50 Ultra AE."},
+    {"id":"fr-test-dr-aqua","type":"Essai indépendant · Frandroid","label":"Frandroid : test Dreame Aqua10 Ultra Roller Complete, 8/10","url":"https://www.frandroid.com/marques/dreame/2800375_test-du-dreame-aqua10-ultra-roller-complete-que-vaut-le-robot-aspirateur-laveur-a-la-serpilliere-qui-reste-propre","note":"Publication originale : 24/09/2025. Note 8/10. Le bon résultat de cet essai n'annule pas les anciens signalements de fuite documentés séparément."},
+    {"id":"fr-test-rr-flow","type":"Essai indépendant · Frandroid","label":"Frandroid : test Roborock Qrevo Curv 2 Flow, 8/10","url":"https://www.frandroid.com/produits-android/maison-connectee/robot-aspirateur/3004403_test-roborock-qrevo-curv-2-flow","note":"Test publié le 20/03/2026 ; article mis à jour le 27/08/2026. Ne pas utiliser la mise à jour comme date du test ni transférer la note au Curv 2 Pro."},
+    {"id":"fr-test-rr-curvpro","type":"Essai indépendant · Frandroid","label":"Frandroid : test Roborock Qrevo Curv 2 Pro, 9/10","url":"https://www.frandroid.com/marques/roborock/2804417_test-du-roborock-qrevo-curv-2-pro-le-milieu-de-gamme-qui-a-tout-dun-grand","note":"Publication originale : 03/10/2025. Note 9/10. Modèle à patins, différent du Curv 2 Flow à rouleau."},
+    {"id":"fr-test-rr-10r","type":"Essai indépendant · Frandroid","label":"Frandroid : test Roborock Saros 10R, 8/10","url":"https://www.frandroid.com/test/2541115_test-roborock-saros-10r","note":"Publication originale : 30/03/2025 ; mise à jour le 27/06/2025. Les réserves sur la navigation et le lavage appartiennent à ce protocole, sans moyenne inventée avec Vacuum Wars."},
+    {"id":"fr-test-mo-e40","type":"Essai indépendant · Frandroid","label":"Frandroid : test MOVA E40 Ultra, 9/10","url":"https://www.frandroid.com/marques/mova/2901181_test-du-mova-e40-ultra-un-aspirateur-robot-ultra-complet-a-un-prix-tout-petit","note":"Publication originale : 10/12/2025 ; mise à jour le 06/05/2026. Confirme notamment l'absence de RGB, le lavage non chauffé des patins et le réservoir de détergent optionnel."},
+    {"id":"fr-test-mo-v50","type":"Essai indépendant · Frandroid","label":"Frandroid : test MOVA V50 Ultra Complete, 9/10","url":"https://www.frandroid.com/test/2642527_test-du-mova-v50-ultra-complete-le-robot-aspirateur-laveur-qui-lave-les-sols-a-leau-chaude","note":"Publication originale : 14/07/2025. Note 9/10. L'URL canonique du test diffère d'une ancienne route produits-android ; les métadonnées du test ont été recoupées."},
+    {"id":"fr-test-eu-e25","type":"Essai indépendant · Frandroid","label":"Frandroid : test Anker eufy Omni E25, 8/10","url":"https://www.frandroid.com/marques/anker/2793149_test-de-lanker-eufy-omni-e25-pourquoi-cet-aspirateur-robot-peut-inquieter-la-concurrence","note":"Publication originale : 12/09/2025. Note 8/10. La caméra de reconnaissance ne prouve pas l'existence d'un flux vidéo distant ; ce point est vérifié séparément chez Vacuum Wars."},
+    {"id":"fr-test-ec-t80","type":"Essai indépendant · Frandroid","label":"Frandroid : test Ecovacs Deebot T80 Omni, 9/10","url":"https://www.frandroid.com/produits-android/maison-connectee/robot-aspirateur/2610353_test-ecovacs-deebot-t80-omni","note":"Publication originale : 11/05/2025 ; mise à jour le 24/06/2025. Test du T80, pas du T80s. Accès vidéo distant et zones de confidentialité décrits."},
+    {"id":"fr-test-ec-t90","type":"Essai indépendant · Frandroid","label":"Frandroid : test Ecovacs Deebot T90 Pro Omni, 9/10","url":"https://www.frandroid.com/produits-android/maison-connectee/robot-aspirateur/3208289_test-ecovacs-deebot-t90-pro-omni","note":"Publication originale : 11/08/2026. Note 9/10. Ne pas attribuer ce résultat au T90 Max Pro Omni, référence différente."},
+    {"id":"fr-test-xi-x20","type":"Essai indépendant · Frandroid","label":"Frandroid : test Xiaomi X20 Max, 8/10, article commun avec le X20 Plus","url":"https://www.frandroid.com/marques/xiaomi/2736611_test-du-xiaomi-robot-vacuum-x20-max-des-aspirateurs-robots-complets-a-petit-prix","note":"Publication originale : 01/10/2025. Le X20 Max fait bien partie du test, mais l'article traite aussi du X20 Plus : le périmètre commun est explicité."},
+    {"id":"fr-test-xi-5","type":"Essai indépendant · Frandroid","label":"Frandroid : test Xiaomi Robot Vacuum 5 Pro, 8/10","url":"https://www.frandroid.com/test/2841757_test-du-xiaomi-robot-vacuum-5-pro-un-nettoyage-presque-parfait-pour-un-prix-imbattable","note":"Publication originale : 30/10/2025 ; mise à jour le 17/12/2025. Référence 5 Pro, pas 5, 6 ou 6 Max."},
+    {"id":"fr-sheet-dr-l50s","type":"Fiche produit · date de sortie","label":"Frandroid : date de sortie du Dreame L50s Pro Ultra","url":"https://www.frandroid.com/produits/aspirateur-robot/dreame/3222893-dreame-l50s-pro-ultra","note":"Champ « Date de sortie » : 19/01/2026. Marché non précisé sur la fiche ; ne prouve pas le premier stock belge."},
+    {"id":"fr-sheet-dr-aqua","type":"Fiche produit · date de sortie","label":"Frandroid : date de sortie de l'Aqua10 Ultra Roller Complete","url":"https://www.frandroid.com/produits/aspirateur-robot/dreame/2804813-dreame-aqua10-ultra-roller-complete","note":"Champ « Date de sortie » : 05/09/2025 ; marché non précisé."},
+    {"id":"fr-sheet-rr-flow","type":"Fiche produit · date de sortie","label":"Frandroid : date de sortie du Curv 2 Flow","url":"https://www.frandroid.com/produits/aspirateur-robot/roborock/3033859-roborock-qrevo-curv-2-flow","note":"Champ « Date de sortie » : 15/01/2026 ; marché non précisé."},
+    {"id":"fr-sheet-rr-curvpro","type":"Fiche produit · date de sortie","label":"Frandroid : date de sortie du Curv 2 Pro","url":"https://www.frandroid.com/produits/aspirateur-robot/roborock/2813237-roborock-qrevo-curv-2-pro","note":"Champ « Date de sortie » : 02/10/2025 ; marché non précisé."},
+    {"id":"fr-sheet-rr-10r","type":"Fiche produit · date de sortie","label":"Frandroid : date de sortie du Saros 10R","url":"https://www.frandroid.com/produits/aspirateur-robot/roborock/2541217-roborock-saros-10r","note":"Champ « Date de sortie » : 10/02/2025 ; marché non précisé."},
+    {"id":"fr-sheet-mo-e40","type":"Fiche produit · date de sortie","label":"Frandroid : date de sortie du MOVA E40 Ultra","url":"https://www.frandroid.com/produits/aspirateur-robot/mova/2902057-mova-e40-ultra","note":"Champ « Date de sortie » : 08/09/2025 ; marché non précisé."},
+    {"id":"fr-sheet-mo-v50","type":"Fiche produit · date de sortie","label":"Frandroid : date de sortie du MOVA V50 Ultra Complete","url":"https://www.frandroid.com/produits/aspirateur-robot/mova/2722645-mova-v50-ultra-complete","note":"Champ « Date de sortie » : 24/04/2025 ; marché non précisé."},
+    {"id":"fr-sheet-eu-e25","type":"Fiche produit · date de sortie","label":"Frandroid : date de sortie de l'eufy Omni E25","url":"https://www.frandroid.com/produits/aspirateur-robot/anker/2790939-anker-eufy-omni-e25","note":"Champ « Date de sortie » : 23/06/2025 ; marché non précisé."},
+    {"id":"fr-sheet-ec-t80","type":"Fiche produit · date de sortie","label":"Frandroid : date de sortie du T80 Omni","url":"https://www.frandroid.com/produits/aspirateur-robot/ecovacs/2610451-ecovacs-deebot-t80-omni","note":"Champ « Date de sortie » : 01/05/2025 ; marché non précisé."},
+    {"id":"fr-sheet-ec-t90","type":"Fiche produit · date de sortie","label":"Frandroid : date de sortie du T90 Pro Omni","url":"https://www.frandroid.com/produits/aspirateur-robot/ecovacs/3091345-ecovacs-deebot-t90-pro-omni","note":"Champ « Date de sortie » : 19/01/2026 ; marché non précisé. Date distincte de la publication du test en août."},
+    {"id":"fr-sheet-xi-x20","type":"Fiche produit · date de sortie","label":"Frandroid : date de sortie du Xiaomi X20 Max","url":"https://www.frandroid.com/produits/aspirateur-robot/xiaomi/2798569-xiaomi-robot-vacuum-x20-max","note":"Champ « Date de sortie » : 16/12/2024 ; marché non précisé. Le test d'octobre 2025 n'est pas sa date de sortie."},
+    {"id":"fr-sheet-xi-5","type":"Fiche produit · date de sortie","label":"Frandroid : date de sortie du Xiaomi 5 Pro","url":"https://www.frandroid.com/produits/aspirateur-robot/xiaomi/2807315-xiaomi-robot-vacuum-5-pro","note":"Champ « Date de sortie » : 01/10/2025 ; marché non précisé."},
+    {"id":"sh-dr-l40s","type":"Essai · caractéristiques recoupées","label":"SmarthomeAssistent : L40s Pro Ultra, caméra et cotes du robot","url":"https://www.smarthomeassistent.de/saugroboter/dreame-l40s-pro-ultra/","note":"Fiche : sortie 05/2025, robot 35 × 35 × 10,38 cm ; texte décrivant la RGB et le pilotage avec image en temps réel. Source utilisée pour ces caractéristiques, sans convertir sa note allemande en note Frandroid. La base conserve la convention retenue avec l'utilisateur."},
+    {"id":"sh-dr-l50ae","type":"Fiche technique · date de sortie","label":"SmarthomeAssistent : date de sortie du L50 Ultra AE","url":"https://www.smarthomeassistent.de/saugroboter/dreame-l50-ultra-ae/","note":"Champ Erscheinungsdatum : 03/2026 ; marché non précisé. La date de publication du test n'est pas utilisée comme date de sortie."},
+    {"id":"sh-rr-edge2","type":"Essai · caractéristiques recoupées","label":"SmarthomeAssistent : Edge 2, sortie et vidéo en direct","url":"https://www.smarthomeassistent.de/saugroboter/roborock-qrevo-edge-2/","note":"Champ Erscheinungsdatum : 05/2026. Le texte décrit une caméra frontale, une image en direct après code de sécurité et des patrouilles. Ne pas reprendre le test de l'Edge S5A."},
+    {"id":"sh-rr-qv","type":"Fiche technique · date de sortie","label":"SmarthomeAssistent : fiche Roborock QV 35A","url":"https://www.smarthomeassistent.de/saugroboter/roborock-qv-35a/","note":"Champ Erscheinungsdatum : 03/2025, sans marché précisé. Différent de l'arrivée en Europe rapportée en mai par Notebookcheck. La mention générique « Kamera / strukturiertes Licht » n'est pas une preuve de caméra RGB."},
+    {"id":"sh-rr-spro","type":"Essai · caractéristiques recoupées","label":"SmarthomeAssistent : Qrevo S Pro, sortie et absence de caméra","url":"https://www.smarthomeassistent.de/saugroboter/roborock-qrevo-s-pro/","note":"Champ Erscheinungsdatum : 04/2026. Le texte précise explicitement un évitement à lumière structurée sans caméra ; la liste indique Keine Kamera (RGB). Source utilisée ici pour ces caractéristiques."},
+    {"id":"sh-rr-2pro","type":"Fiche technique · caractéristiques","label":"SmarthomeAssistent : Qrevo 2 Pro, sortie et absence de RGB","url":"https://www.smarthomeassistent.de/saugroboter/roborock-qrevo-2-pro/","note":"Champ Erscheinungsdatum : 08/2026, cohérent avec le lancement explicite de TechRadar. La fiche précise Keine Kamera (RGB) ; pas de transfert de la vidéo de l'Edge 2."},
+    {"id":"sh-mo-e50","type":"Fiche technique · caractéristiques","label":"SmarthomeAssistent : E50 Pro Ultra, sortie et absence de RGB","url":"https://www.smarthomeassistent.de/saugroboter/mova-e50-pro-ultra/","note":"Champ Erscheinungsdatum : 06/2026 ; Keine Kamera (RGB). L'article propose des résultats de test mais annonce encore son compte rendu écrit : utilisé ici pour les caractéristiques, sans note de performance attribuée."},
+    {"id":"sh-mo-s70","type":"Essai · caractéristiques recoupées","label":"SmarthomeAssistent : S70 Roller standard, date de sortie","url":"https://www.smarthomeassistent.de/saugroboter/mova-s70-roller/","note":"Le texte et le champ Erscheinungsdatum indiquent mars 2026. Modèle S70 Roller, pas S70 Ultra Roller. La catégorie générique « caméra / lumière structurée » ne permet pas de confirmer une RGB ou son accès distant."},
+    {"id":"sh-mo-p50","type":"Essai · caractéristiques recoupées","label":"SmarthomeAssistent : P50 Pro Ultra, sortie et caméra distante","url":"https://www.smarthomeassistent.de/saugroboter/mova-p50-pro-ultra/","note":"Champ Erscheinungsdatum : 01/2025. Le texte décrit la RGB, l'accès en temps réel, le pilotage manuel, les patrouilles et les conversations. Pas une déduction tirée d'une vidéo promotionnelle."},
+    {"id":"sh-mo-p70","type":"Essai · caractéristiques recoupées","label":"SmarthomeAssistent : P70 Pro Ultra, sortie et caméra distante","url":"https://www.smarthomeassistent.de/saugroboter/mova-p70-pro-ultra/","note":"Champ Erscheinungsdatum : 04/2026, cohérent avec l'offre de lancement Labo Maison du 29 avril au 12 mai. Le texte décrit explicitement vidéo en temps réel, pilotage, patrouilles et conversations."},
+    {"id":"sh-mo-z60","type":"Essai · caractéristiques recoupées","label":"SmarthomeAssistent : Z60 Ultra Roller StandAlone, accès caméra","url":"https://www.smarthomeassistent.de/saugroboter/mova-z60-ultra-roller-standalone/","note":"Référence StandAlone exacte : caméra et accès caméra explicitement décrits. Erscheinungsdatum : 11/2025. Les fonctions ne sont pas simplement héritées du Complete."},
+    {"id":"sh-eu-x10","type":"Fiche technique · date de sortie","label":"SmarthomeAssistent : fiche eufy X10 Pro Omni","url":"https://www.smarthomeassistent.de/saugroboter/eufy-x10-pro-omni/","note":"Champ Erscheinungsdatum : 02/2024, sans précision de marché. Ne suffit pas à démontrer une première disponibilité européenne en février."},
+    {"id":"launch-dr-gen3","type":"Actualité de lancement","label":"Notebookcheck : commercialisation européenne du L10s Ultra Gen 3","url":"https://www.notebookcheck.net/Dreame-releases-new-robot-vacuum-with-powerful-suction.1154963.0.html","note":"Article du 04/11/2025 signalant l'arrivée en Europe, notamment en Allemagne, après l'Asie. Mois de commercialisation rapporté, pas déduction d'après un test. Le pack Kit peut avoir une autre date de référencement."},
+    {"id":"launch-dr-l40s","type":"Actualité de lancement","label":"Notebookcheck : lancement européen du L40s Pro Ultra","url":"https://www.notebookcheck.net/Dreame-L40s-Pro-Ultra-New-powerful-robot-vacuum-cleaner-launches.1009811.0.html","note":"Article du 03/05/2025 signalant disponibilité au Royaume-Uni, en Espagne, Italie et Allemagne. Concorde avec le champ 05/2025 de SmarthomeAssistent."},
+    {"id":"launch-rr-qv","type":"Actualité de lancement","label":"Notebookcheck : arrivée du Roborock QV 35A en Europe","url":"https://www.notebookcheck.net/Roborock-QV-35A-New-cheaper-robot-vacuum-and-mop-arrives.1010980.0.html","note":"Article du 06/05/2025 : arrivée en Amérique du Nord et en Europe, disponibilité allemande. Mai est retenu pour cette arrivée européenne ; une autre fiche indique mars sans marché."},
+    {"id":"test-x10-camera","type":"Essai indépendant","label":"Les Numériques : caméra du X10 Pro Omni sans vidéosurveillance","url":"https://www.lesnumeriques.com/aspirateur-robot/eufy-x10-pro-omni-p74471/test.html","note":"Décrit les photos de reconnaissance d'obstacles, mais précise que la caméra ne peut pas être détournée en caméra de surveillance. Photographies d'obstacles et flux vidéo en direct sont distingués."},
+    {"id":"launch-eu-x10","type":"Annonce de commercialisation","label":"Les Numériques : X10 Pro Omni, disponibilité américaine annoncée","url":"https://www.lesnumeriques.com/aspirateur-robot/ces-2024-avec-le-x10-pro-omni-eufy-lance-enfin-son-premier-aspirateur-robot-avec-vidange-et-lavage-automatique-n217363.html","note":"Article du 10/01/2024 : vente américaine annoncée pour le 20/02/2024 ; calendrier européen non communiqué à cette date. Ne pas transformer janvier, date de l'annonce CES, en mois de sortie commerciale."},
+    {"id":"launch-mo-z60","type":"Annonce de commercialisation","label":"uGeek : lancement du Z60 Ultra Roller Standalone","url":"https://ugeek.fr/2025/11/13/mova-z60-ultra-roller-standalone-un-robot-aspirateur-performant-a-moins-de-1000e/","note":"Article du 13/11/2025 annonçant une disponibilité le 20/11/2025 pour le Standalone 26 000 Pa, distinct du Complete. Date annoncée, pas vérification de livraison belge."}
+  ],
+  "models": [
+    {
+      "id": "dr-gen3",
+      "release": {"month":"2025-11","market":"Europe","basis":"Commercialisation rapportée","note":"Arrivée européenne de la génération Gen 3 signalée le 4 novembre 2025 après l'Asie. Le référencement du pack Kit n'est pas daté séparément ; premier stock belge non confirmé.","sources":["launch-dr-gen3"]},
+      "cameraInfo": {"value":false,"kind":"Pas de RGB établie ; LiDAR et évitement laser 3DAdapt","note":"Les capteurs de profondeur ne sont pas assimilés à une caméra RGB de reconnaissance.","sources":["dr-gen3","fiche-gen3"]},
+      "remoteCamera": {"available":false,"note":"Pas de fonction de visionnage vidéo documentée ; la carte et les commandes de nettoyage à distance ne sont pas un flux caméra.","sources":["dr-gen3"]},
+      "frandroid": {"status":"not-found","note":"Gen 3 Kit exact : aucun test repéré. Les tests du L10s Ultra et du Gen 2 ne lui sont pas attribués."}
+    },
+    {
+      "id": "dr-l40s",
+      "release": {"month":"2025-05","market":"Europe","basis":"Commercialisation rapportée","note":"Lancement signalé le 3 mai 2025 ; le champ de sortie du test allemand indique aussi 05/2025. Ce n'est pas le mois de publication d'un test pris par défaut.","sources":["launch-dr-l40s","sh-dr-l40s"]},
+      "cameraInfo": {"value":true,"kind":"RGB frontale et lumière structurée","note":"Reconnaissance visuelle des obstacles, distincte du LiDAR de cartographie.","sources":["test-l40s","sh-dr-l40s"]},
+      "remoteCamera": {"available":true,"note":"Image en temps réel, pilotage manuel, patrouilles et conversation via l'application DreameHome, après activation des fonctions de sécurité.","sources":["test-l40s","sh-dr-l40s"]},
+      "frandroid": {"status":"not-found","note":"L40s Pro Ultra exact : aucun test repéré. Le L40 Ultra est un autre modèle."},
+      "updates": {"robot":[350,350,103.8],"dimNote":"Base retenue pour le comparateur : 45,7 × 34 × 59 cm (L × P × H). L'écart entre 45,5 et 45,7 cm est traité comme un arrondi non bloquant de 2 mm, avec 45,7 cm retenus à votre demande. Robot : 35 × 35 × 10,38 cm d'après la fiche du test SmarthomeAssistent, relevé séparé de la station. Prévoir les dégagements habituels pour la rampe et l'accès aux réservoirs."}
+    },
+    {
+      "id": "dr-l50ae",
+      "release": {"month":"2026-03","market":"Marché non précisé","basis":"Fiche SmarthomeAssistent","note":"Champ Erscheinungsdatum : 03/2026. Date déclarée par la fiche, pas date garantie de première livraison belge.","sources":["sh-dr-l50ae"]},
+      "cameraInfo": {"value":false,"kind":"Pas de RGB établie ; évitement laser / profondeur 3DAdapt","note":"Ne pas hériter de la caméra ni de la vidéosurveillance du L50s Pro Ultra, référence différente.","sources":["dr-l50ae","fiche-l50ae"]},
+      "remoteCamera": {"available":false,"note":"Aucun visionnage vidéo distant documenté pour le L50 Ultra AE ; ne pas lui attribuer celui du L50s.","sources":["dr-l50ae"]},
+      "frandroid": {"status":"not-found","note":"L50 Ultra AE exact : aucun test repéré. Le test du L50s Pro Ultra ne s'applique pas à l'AE."}
+    },
+    {
+      "id": "dr-l50s",
+      "release": {"month":"2026-01","market":"Marché non précisé","basis":"Fiche Frandroid","note":"Le champ « Date de sortie » indique le 19 janvier 2026. Le test a été publié en septembre : ces deux dates ne sont pas confondues.","sources":["fr-sheet-dr-l50s"]},
+      "cameraInfo": {"value":true,"kind":"RGB IA frontale et éclairage","note":"Caméra de reconnaissance décrite dans le test de cette référence.","sources":["fr-test-dr-l50s","dr-l50s"]},
+      "remoteCamera": {"available":true,"note":"Visionnage en direct sécurisé et pilotage du robot depuis DreameHome ; accès à activer et protéger dans l'application.","sources":["fr-test-dr-l50s"]},
+      "frandroid": {"status":"tested","score":8,"published":"2026-09-13","updated":"2026-09-13","source":"fr-test-dr-l50s","scope":"Dreame L50s Pro Ultra exact, pas L50 Ultra AE.","summary":"Aspiration, autonomie et entretien automatisé convaincants, avec de nombreux réglages. Frandroid est moins convaincu par la navigation et la détection des taches ; la tourelle fixe limite aussi l'accès sous les meubles bas."}
+    },
+    {
+      "id": "dr-aqua",
+      "release": {"month":"2025-09","market":"Marché non précisé","basis":"Fiche Frandroid","note":"Le champ « Date de sortie » indique le 5 septembre 2025 pour l'Aqua10 Ultra Roller Complete.","sources":["fr-sheet-dr-aqua"]},
+      "cameraInfo": {"value":true,"kind":"RGB IA frontale, éclairage et capteurs 3D","note":"Reconnaissance visuelle et détection d'obstacles décrites dans le test exact.","sources":["fr-test-dr-aqua","dr-aqua"]},
+      "remoteCamera": {"available":true,"note":"Vidéo en direct, déplacement manuel et audio bidirectionnel dans DreameHome ; protection et activation dans l'application.","sources":["fr-test-dr-aqua"]},
+      "frandroid": {"status":"tested","score":8,"published":"2025-09-24","updated":"2025-09-24","source":"fr-test-dr-aqua","scope":"Aqua10 Ultra Roller Complete exact. Les signalements historiques de fuite restent documentés à part.","summary":"Bonne aspiration, rouleau lavant convaincant et évitement efficace, avec LiDAR rétractable et réglages riches. Les petits réservoirs, l'autonomie, les coins et l'entretien des cheveux autour des composants tempèrent le bilan ; cet essai ne mesure pas la fiabilité de tous les lots."}
+    },
+    {
+      "id": "rr-qv",
+      "release": {"month":"2025-05","market":"Europe","basis":"Arrivée commerciale rapportée","note":"Notebookcheck rapporte l'arrivée européenne le 6 mai 2025. Une fiche allemande indique 03/2025 sans marché précisé : mai est retenu ici pour l'Europe. La date de création du Set d'accessoires n'est pas établie.","sources":["launch-rr-qv","sh-rr-qv"]},
+      "cameraInfo": {"value":false,"kind":"Pas de RGB établie ; Reactive Tech à lumière structurée","note":"La cartographie LiDAR et la mesure de profondeur ne fournissent pas une caméra RGB de reconnaissance.","sources":["rr-qv"]},
+      "remoteCamera": {"available":false,"note":"Pas de visionnage vidéo documenté sur le QV 35A. Le contrôle depuis l'application et la carte distante sont des fonctions différentes.","sources":["rr-qv"]},
+      "frandroid": {"status":"not-found","note":"QV 35A / Set exact : aucun test repéré. Les Qrevo voisins ne lui prêtent pas leurs notes."}
+    },
+    {
+      "id": "rr-spro",
+      "release": {"month":"2026-04","market":"Marché non précisé","basis":"Fiche SmarthomeAssistent","note":"Champ Erscheinungsdatum : 04/2026 ; le premier jour de vente en Belgique n'est pas établi.","sources":["sh-rr-spro"]},
+      "cameraInfo": {"value":false,"kind":"Sans caméra RGB ; évitement à lumière structurée","note":"L'absence de caméra est explicitement décrite dans le test allemand, et pas déduite d'une illustration.","sources":["sh-rr-spro","rr-spro"]},
+      "remoteCamera": {"available":false,"note":"Pas de caméra de vidéosurveillance accessible dans l'application.","sources":["sh-rr-spro"]},
+      "frandroid": {"status":"not-found","note":"Qrevo S Pro exact : aucun test repéré. Ne pas confondre avec Qrevo S, Pro ou Edge."}
+    },
+    {
+      "id": "rr-2pro",
+      "release": {"month":"2026-08","market":"International","basis":"Lancement explicite dans TechRadar","note":"TechRadar indique expressément août 2026 comme lancement ; la fiche technique allemande donne aussi 08/2026. Ce n'est pas une déduction tirée de la publication du test.","sources":["test-2pro","sh-rr-2pro"]},
+      "cameraInfo": {"value":false,"kind":"Sans RGB ; Reactive Tech à lumière structurée","note":"La fiche précise l'absence de caméra RGB. Ne pas transférer la reconnaissance et la vidéo de l'Edge 2.","sources":["sh-rr-2pro","rr-2pro"]},
+      "remoteCamera": {"available":false,"note":"Pas de flux vidéo distant ; l'application sert à la carte, au pilotage du nettoyage et aux réglages.","sources":["sh-rr-2pro","test-2pro"]},
+      "frandroid": {"status":"not-found","note":"Qrevo 2 Pro exact : aucun test repéré. Le test indépendant exploité ailleurs dans le dossier vient de TechRadar, pas de Frandroid."}
+    },
+    {
+      "id": "rr-edge2",
+      "release": {"month":"2026-05","market":"Marché non précisé","basis":"Fiche SmarthomeAssistent","note":"Champ Erscheinungsdatum : 05/2026. Une promotion d'octobre ne constitue pas sa date de lancement.","sources":["sh-rr-edge2"]},
+      "cameraInfo": {"value":true,"kind":"RGB frontale, lumière structurée et éclairage","note":"RGB confirmée sur la page officielle de l'Edge 2 et dans le test allemand de cette référence.","sources":["rr-edge2","sh-rr-edge2"]},
+      "remoteCamera": {"available":true,"note":"Appels vidéo et patrouilles annoncés par Roborock ; le test décrit l'image en direct après déverrouillage de sécurité.","sources":["rr-edge2","sh-rr-edge2"]},
+      "frandroid": {"status":"not-found","note":"Qrevo Edge 2 exact : aucun test repéré. Ne pas emprunter la note de l'Edge S5A ni les avis de variantes regroupées."}
+    },
+    {
+      "id": "rr-flow",
+      "release": {"month":"2026-01","market":"Marché non précisé","basis":"Fiche Frandroid","note":"Le champ « Date de sortie » indique le 15 janvier 2026 ; test initial en mars et mise à jour en août.","sources":["fr-sheet-rr-flow"]},
+      "cameraInfo": {"value":true,"kind":"RGB Reactive AI et éclairage","note":"Caméra utilisée pour reconnaître les obstacles, distincte du LiDAR de cartographie.","sources":["fr-test-rr-flow","rr-flow"]},
+      "remoteCamera": {"available":true,"note":"Accès distant à la caméra pour surveiller le logement, décrit explicitement par Frandroid ; activation via l'application Roborock.","sources":["fr-test-rr-flow"]},
+      "frandroid": {"status":"tested","score":8,"published":"2026-03-20","updated":"2026-08-27","source":"fr-test-rr-flow","scope":"Qrevo Curv 2 Flow à rouleau, pas Curv 2 Pro à patins.","summary":"Rouleau rincé en continu, gestion des cheveux, application et navigation appréciés. Sa hauteur de 11,9 cm, les coins moins bien servis sans brossette extensible et le franchissement limité à environ 2,5 cm sont les principales concessions."}
+    },
+    {
+      "id": "rr-curvpro",
+      "release": {"month":"2025-10","market":"Marché non précisé","basis":"Fiche Frandroid","note":"Le champ « Date de sortie » indique le 2 octobre 2025. Le test est paru le lendemain, mais n'est pas utilisé pour calculer la sortie.","sources":["fr-sheet-rr-curvpro"]},
+      "cameraInfo": {"value":true,"kind":"RGB Reactive AI et éclairage","note":"Reconnaissance visuelle et fonctions dédiées aux animaux décrites par Frandroid.","sources":["fr-test-rr-curvpro","rr-curvpro"]},
+      "remoteCamera": {"available":true,"note":"Surveillance vidéo, audio bidirectionnel et recherche d'animal depuis l'application Roborock.","sources":["fr-test-rr-curvpro"]},
+      "frandroid": {"status":"tested","score":9,"published":"2025-10-03","updated":"2025-10-03","source":"fr-test-rr-curvpro","scope":"Curv 2 Pro exact ; les observations de cet essai ne sont pas transférées au Curv 2 Flow.","summary":"Nettoyage et navigation très convaincants, station lavant à haute température et séchage du sac appréciés. Le prix et l'absence de réservoir de détergent sont des limites ; Frandroid relève aussi des concessions dans la gestion des brosses sur tapis."},
+      "updates": {"cons":["549 €, +49 € ; le châssis / gestion des tapis apportent peu à votre absence de seuils.","Pas de réservoir de détergent selon Frandroid ; disponibilité effective de Matter OTA à vérifier."],"detergent":false}
+    },
+    {
+      "id": "rr-10r",
+      "release": {"month":"2025-02","market":"Marché non précisé","basis":"Fiche Frandroid","note":"Le champ « Date de sortie » indique le 10 février 2025 ; test initial fin mars, puis mise à jour en juin.","sources":["fr-sheet-rr-10r"]},
+      "cameraInfo": {"value":true,"kind":"RGB et système StarSight à capteurs 3D","note":"La reconnaissance RGB complète les mesures de profondeur ; elle n'est pas assimilée à la seule carte 3D.","sources":["fr-test-rr-10r","rr-10r"]},
+      "remoteCamera": {"available":true,"note":"Surveillance du logement et audio bidirectionnel via l'application Roborock, après activation des options de sécurité.","sources":["fr-test-rr-10r"]},
+      "frandroid": {"status":"tested","score":8,"published":"2025-03-30","updated":"2025-06-27","source":"fr-test-rr-10r","scope":"Saros 10R exact. Comparaison ponctuelle avec le Saros 10 dans cet essai, sans transfert de sa note.","summary":"Nettoyage polyvalent, profil bas, extensions et application réussis, avec peu d'emmêlement. Dans cet essai, la navigation reste moins précise qu'un bon LiDAR et le lavage moins performant que celui du Saros 10 à serpillière vibrante ; ces réserves coexistent avec les bons résultats Vacuum Wars."}
+    },
+    {
+      "id": "mo-e40",
+      "release": {"month":"2025-09","market":"Marché non précisé","basis":"Fiche Frandroid","note":"Le champ « Date de sortie » indique le 8 septembre 2025 ; test initial en décembre, mis à jour en mai 2026.","sources":["fr-sheet-mo-e40"]},
+      "cameraInfo": {"value":false,"kind":"Sans RGB ; détection des petits obstacles basique","note":"L'absence de caméra RGB est explicite dans le test Frandroid.","sources":["fr-test-mo-e40"]},
+      "remoteCamera": {"available":false,"note":"Frandroid confirme l'absence de vidéosurveillance ; ne pas confondre pilotage à distance et image caméra.","sources":["fr-test-mo-e40"]},
+      "frandroid": {"status":"tested","score":9,"published":"2025-12-10","updated":"2026-05-06","source":"fr-test-mo-e40","scope":"MOVA E40 Ultra exact ; réservoir de détergent proposé en option.","summary":"Très bon rapport équipement-prix, station complète et compacte, application réussie et nettoyage quotidien convaincant. Les patins sont lavés sans eau chauffée, l'évitement des petits objets reste simple sans RGB et le réservoir de détergent est optionnel."},
+      "updates": {"washMode":"ambient","washNote":"Frandroid confirme un lavage des patins à l'eau non chauffée. Ce n'est pas une température de 0 °C ; le séchage à l'air chaud est une fonction distincte.","detergentNote":"Réservoir de dosage en option selon Frandroid ; contenu du kit à vérifier.","cons":["Lavage des patins non chauffé ; petits objets moins bien détectés sans RGB.","Réservoir de détergent en option ; kit anti-cheveux à vérifier.","Modèle non disponible sur la boutique directe lors du relevé."]}
+    },
+    {
+      "id": "mo-e50",
+      "release": {"month":"2026-06","market":"Marché non précisé","basis":"Fiche SmarthomeAssistent","note":"Champ Erscheinungsdatum : 06/2026. Mois déclaré sur la fiche, pas premier stock belge vérifié.","sources":["sh-mo-e50"]},
+      "cameraInfo": {"value":false,"kind":"Sans caméra RGB ; capteurs de profondeur","note":"La fiche allemande précise explicitement Keine Kamera (RGB).","sources":["sh-mo-e50","mo-e50"]},
+      "remoteCamera": {"available":false,"note":"Pas de flux RGB de surveillance documenté pour cette référence.","sources":["sh-mo-e50"]},
+      "frandroid": {"status":"not-found","note":"E50 Pro Ultra exact : aucun test repéré. Ne pas lui appliquer la note 9/10 de l'E40 Ultra."}
+    },
+    {
+      "id": "mo-s70",
+      "release": {"month":"2026-03","market":"Marché non précisé","basis":"Fiche et texte SmarthomeAssistent","note":"Le champ de sortie et le texte du test indiquent mars 2026 pour le S70 Roller standard. Ne pas utiliser le calendrier du S70 Ultra Roller.","sources":["sh-mo-s70"]},
+      "cameraInfo": {"value":null,"kind":"RGB non confirmée pour le S70 Roller standard","note":"La page exacte documente la navigation dToF ; la catégorie générique caméra / lumière structurée d'une autre fiche ne permet pas d'établir une RGB. NC n'est ni Oui ni Non.","sources":["mo-s70","sh-mo-s70"]},
+      "remoteCamera": {"available":null,"note":"Accès vidéo non confirmé pour le S70 Roller sans Ultra. Aucune fonction vidéo n'est héritée du S70 Ultra Roller.","sources":["mo-s70","sh-mo-s70"]},
+      "frandroid": {"status":"not-found","note":"S70 Roller standard : aucun test exact repéré. Le test du S70 Ultra Roller concerne une autre référence."}
+    },
+    {
+      "id": "mo-p50",
+      "release": {"month":"2025-01","market":"Marché non précisé","basis":"Fiche SmarthomeAssistent","note":"Champ Erscheinungsdatum : 01/2025, distinct de la date des mises à jour et promotions ultérieures.","sources":["sh-mo-p50"]},
+      "cameraInfo": {"value":true,"kind":"RGB AI SmartSight, lumière structurée et éclairage","note":"RGB décrite explicitement dans le test de cette référence.","sources":["test-p50","sh-mo-p50"]},
+      "remoteCamera": {"available":true,"note":"Image en temps réel, télécommande, patrouilles et conversation via MOVAhome ; fonctions à activer et sécuriser.","sources":["sh-mo-p50"]},
+      "frandroid": {"status":"not-found","note":"P50 Pro Ultra exact : aucun test repéré. Les essais du P50 sans Pro ou des V50 / P70 ne sont pas transférés."}
+    },
+    {
+      "id": "mo-p70",
+      "release": {"month":"2026-04","market":"France / fiche européenne","basis":"Lancement et fiche concordants","note":"Labo Maison situe l'offre de lancement du 29 avril au 12 mai 2026 ; le champ de sortie allemand indique aussi 04/2026. La publication anticipée d'une fiche n'est pas prise pour le lancement.","sources":["test-p70","sh-mo-p70"]},
+      "cameraInfo": {"value":true,"kind":"RGB, lumière structurée et éclairage","note":"Reconnaissance visuelle et éclairage frontal décrits dans les essais exacts.","sources":["test-p70","sh-mo-p70"]},
+      "remoteCamera": {"available":true,"note":"Vidéo en temps réel, déplacement manuel, patrouilles et conversations explicitement décrits dans l'application MOVAhome.","sources":["sh-mo-p70"]},
+      "frandroid": {"status":"not-found","note":"P70 Pro Ultra exact : aucun test repéré. Les essais Labo Maison cités dans le dossier ne sont pas des tests Frandroid."}
+    },
+    {
+      "id": "mo-v50",
+      "release": {"month":"2025-04","market":"Marché non précisé","basis":"Fiche Frandroid","note":"Le champ « Date de sortie » indique le 24 avril 2025 pour le V50 Ultra Complete.","sources":["fr-sheet-mo-v50"]},
+      "cameraInfo": {"value":true,"kind":"RGB et reconnaissance d'obstacles AI SmartSight","note":"Caméra de reconnaissance et éclairage décrits dans le test exact.","sources":["fr-test-mo-v50","mo-v50"]},
+      "remoteCamera": {"available":true,"note":"Vidéo en direct, déplacement manuel, microphone et haut-parleur via MOVAhome ; activation et sécurité dans l'application.","sources":["fr-test-mo-v50"]},
+      "frandroid": {"status":"tested","score":9,"published":"2025-07-14","updated":"2025-07-14","source":"fr-test-mo-v50","scope":"V50 Ultra Complete à patins, pas un modèle Roller.","summary":"Aspiration et lavage à chaud très réussis, évitement fiable, application riche et double solution appréciés. L'aspect plastique, une autonomie pratique autour de deux heures et l'absence de kit de raccordement à l'eau limitent l'enthousiasme."},
+      "updates": {"cons":["Gadgets de franchissement moins utiles pour votre logement.","Autonomie pratique autour de 120 minutes dans le test Frandroid ; dimensions de station à qualifier.","Ne pas confondre V50 Ultra Complete (patins) et les modèles Roller."]}
+    },
+    {
+      "id": "mo-z60",
+      "release": {"month":"2025-11","market":"Europe, annonce francophone","basis":"Disponibilité annoncée","note":"Standalone annoncé disponible le 20 novembre 2025 ; la fiche allemande indique aussi 11/2025. Livraison belge initiale non vérifiée. Ne pas utiliser la date du Complete.","sources":["launch-mo-z60","sh-mo-z60"]},
+      "cameraInfo": {"value":true,"kind":"RGB AI SmartSight, lasers croisés et éclairage","note":"RGB confirmée sur la page exacte Standalone ; la présence était auparavant non confirmée dans le dossier.","sources":["mo-z60","sh-mo-z60"]},
+      "remoteCamera": {"available":true,"note":"Accès caméra et surveillance d'animal décrits pour le StandAlone exact dans MOVAhome ; fonctions non déduites du Complete.","sources":["sh-mo-z60"]},
+      "frandroid": {"status":"not-found","note":"Z60 Ultra Roller SA / Standalone exact : aucun test repéré. La note du Z60 Ultra Roller Complete ne lui est pas attribuée."}
+    },
+    {
+      "id": "eu-x10",
+      "release": {"month":"2024-02","market":"États-Unis ; Europe non confirmée","basis":"Commercialisation annoncée","note":"Disponibilité américaine annoncée pour le 20 février 2024 dans l'article CES ; l'annonce date de janvier. La fiche allemande indique aussi 02/2024 sans marché, ce qui ne démontre pas une sortie européenne en février.","sources":["launch-eu-x10","sh-eu-x10"]},
+      "cameraInfo": {"value":true,"kind":"RGB AI.See et éclairage frontal","note":"Reconnaissance et photos d'obstacles décrites ; cela ne signifie pas flux vidéo consultable.","sources":["eu-x10","test-x10-camera"]},
+      "remoteCamera": {"available":false,"note":"Pas de visionnage vidéo en direct / vidéosurveillance. Des photos d'obstacles peuvent apparaître dans l'application : ce n'est pas une caméra mobile consultable librement.","sources":["test-x10-camera"]},
+      "frandroid": {"status":"not-found","note":"X10 Pro Omni exact : aucun test repéré. Un article d'annonce ou le test de l'E25 ne donne pas une note Frandroid au X10."}
+    },
+    {
+      "id": "eu-e25",
+      "release": {"month":"2025-06","market":"Marché non précisé","basis":"Fiche Frandroid","note":"Le champ « Date de sortie » indique le 23 juin 2025 pour l'Omni E25.","sources":["fr-sheet-eu-e25"]},
+      "cameraInfo": {"value":true,"kind":"RGB AI.See de reconnaissance","note":"Caméra employée pour identifier les obstacles ; fonction distincte de la vidéosurveillance.","sources":["fr-test-eu-e25","test-e25"]},
+      "remoteCamera": {"available":false,"note":"Vacuum Wars précise l'absence de flux vidéo en direct, malgré la caméra RGB. La reconnaissance d'objets ne donne donc pas accès à une image distante.","sources":["test-e25"]},
+      "frandroid": {"status":"tested","score":8,"published":"2025-09-12","updated":"2025-09-12","source":"fr-test-eu-e25","scope":"Anker eufy Omni E25 exact ; ne pas transférer au X10 Pro Omni.","summary":"Aspiration, rouleau lavant et automatisation de la station convaincants. L'évitement trop prudent peut laisser des zones sales, des cheveux s'accumulent sur les brosses latérales, et hauteur proche de 11 cm et coût des consommables sont à prendre en compte."}
+    },
+    {
+      "id": "ec-t80",
+      "release": {"month":"2025-05","market":"Marché non précisé","basis":"Fiche Frandroid","note":"Le champ « Date de sortie » indique le 1er mai 2025 pour le T80 Omni, pas le T80s.","sources":["fr-sheet-ec-t80"]},
+      "cameraInfo": {"value":true,"kind":"RGB AIVI 3D et capteurs de profondeur","note":"Reconnaissance des obstacles et caméra distante testées sur le T80 exact.","sources":["fr-test-ec-t80","ec-t80"]},
+      "remoteCamera": {"available":true,"note":"Vidéo distante testée via ECOVACS HOME ; zones d'exclusion de surveillance et protections de confidentialité décrites.","sources":["fr-test-ec-t80"]},
+      "frandroid": {"status":"tested","score":9,"published":"2025-05-11","updated":"2025-06-24","source":"fr-test-ec-t80","scope":"Deebot T80 Omni exact, pas T80s.","summary":"Rouleau lavant très convaincant, station complète, application et entretien appréciés. La détection peut manquer des câbles et petits objets ; le bruit en puissance maximale et la capacité limitée du bac d'eau sale restent des contraintes."}
+    },
+    {
+      "id": "ec-t90",
+      "release": {"month":"2026-01","market":"Marché non précisé","basis":"Fiche Frandroid","note":"Le champ « Date de sortie » indique le 19 janvier 2026. Le test d'août 2026 ne constitue pas sa date de sortie.","sources":["fr-sheet-ec-t90"]},
+      "cameraInfo": {"value":true,"kind":"RGB IA, lumière structurée 3D et éclairage","note":"Module AIVI et reconnaissance d'obstacles décrits sur le T90 Pro Omni exact.","sources":["fr-test-ec-t90","ec-t90"]},
+      "remoteCamera": {"available":true,"note":"Image en direct, pilotage manuel et appels audio bidirectionnels depuis ECOVACS HOME.","sources":["fr-test-ec-t90"]},
+      "frandroid": {"status":"tested","score":9,"published":"2026-08-11","updated":"2026-08-11","source":"fr-test-ec-t90","scope":"Deebot T90 Pro Omni exact. Ce test n'évalue pas le T90 Max Pro Omni.","summary":"Excellent lavage au rouleau, bonne aspiration sur tapis ordinaires, fonctionnement contenu et évitement nettement amélioré. L'application est touffue, le chatbot peu utile ; tapis épais, câble accroché occasionnellement et petit collecteur de 250 ml restent des limites."}
+    },
+    {
+      "id": "ec-max",
+      "release": {"month":"2026-09","market":"Europe, présentation IFA","basis":"Lancement annoncé","note":"Présentation liée à l'IFA 2026 et offre de lancement courant jusqu'au 23 septembre 2026 dans Labo Maison. Mois de lancement rapporté, pas première livraison belge prouvée.","sources":["fiche-t90max"]},
+      "cameraInfo": {"value":false,"kind":"Pas de RGB établie ; TrueDetect 3D","note":"Le T90 Max Pro Omni met en avant une détection 3D différente de l'AIVI du T90 Pro. Les fonctions de caméra du Pro ne lui sont pas transférées.","sources":["ec-max","fiche-t90max"]},
+      "remoteCamera": {"available":false,"note":"Pas de fonction de vidéosurveillance documentée pour le Max Pro ; ne pas hériter du flux vidéo du T90 Pro Omni.","sources":["ec-max","fiche-t90max"]},
+      "frandroid": {"status":"not-found","note":"T90 Max Pro Omni exact : aucun test repéré. Le 9/10 du T90 Pro Omni n'est pas sa note."}
+    },
+    {
+      "id": "xi-x20",
+      "release": {"month":"2024-12","market":"Marché non précisé","basis":"Fiche Frandroid","note":"Le champ « Date de sortie » indique le 16 décembre 2024. Le test est paru en octobre 2025 : ce n'est pas un modèle lancé à cette date.","sources":["fr-sheet-xi-x20"]},
+      "cameraInfo": {"value":false,"kind":"Sans RGB ; LDS et lumière structurée","note":"Mesure des obstacles par lumière structurée, sans reconnaissance RGB établie.","sources":["xi-x20","fr-test-xi-x20"]},
+      "remoteCamera": {"available":false,"note":"Pas de visionnage vidéo distant documenté sur le X20 Max ; carte Xiaomi Home et vidéo sont distinctes.","sources":["xi-x20","fr-test-xi-x20"]},
+      "frandroid": {"status":"tested","score":8,"published":"2025-10-01","updated":"2025-10-01","source":"fr-test-xi-x20","scope":"Article commun aux X20 Plus et X20 Max : le Max est effectivement testé. Le résumé tient compte de sa station chauffante, sans attribuer toutes les différences du Plus au Max.","summary":"Automatisation et rapport équipement-prix intéressants, avec nettoyage quotidien et autonomie satisfaisants. L'évitement des petits objets, les tapis épais et l'application sont moins convaincants ; pas de dosage de détergent ni de brossette latérale extensible. Article partagé avec le X20 Plus."}
+    },
+    {
+      "id": "xi-5",
+      "release": {"month":"2025-10","market":"Marché non précisé","basis":"Fiche Frandroid","note":"Le champ « Date de sortie » indique le 1er octobre 2025 pour le Robot Vacuum 5 Pro.","sources":["fr-sheet-xi-5"]},
+      "cameraInfo": {"value":true,"kind":"RGB IA et capteurs de profondeur","note":"Reconnaissance visuelle et accès image décrits pour le 5 Pro ; ne pas transférer au 5 non Pro.","sources":["xi-5","fr-test-xi-5"]},
+      "remoteCamera": {"available":true,"note":"Flux en direct via Xiaomi Home après activation de la fonction et de ses protections. Sa disponibilité dans l'application ne démontre pas un flux vidéo dans Home Assistant.","sources":["xi-5","fr-test-xi-5"]},
+      "frandroid": {"status":"tested","score":8,"published":"2025-10-30","updated":"2025-12-17","source":"fr-test-xi-5","scope":"Xiaomi Robot Vacuum 5 Pro exact, pas 5 sans Pro ni génération 6.","summary":"Nettoyage et reconnaissance convaincants pour le prix, avec lavage des patins à 80 °C. Frandroid relève une autonomie pratique d'environ 100 minutes, des hésitations de navigation, des limites sur tapis épais et l'absence de réservoir de détergent."},
+      "updates": {"detergent":false}
+    }
+  ]
+}
