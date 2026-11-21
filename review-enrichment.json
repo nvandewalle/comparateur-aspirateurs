@@ -88,18 +88,19 @@
     },
     {
       "id": "dr-l50s",
+      "checkedAt": "2026-11-21",
       "release": {"month":"2026-01","market":"Marché non précisé","basis":"Fiche Frandroid","note":"Le champ « Date de sortie » indique le 19 janvier 2026. Le test a été publié en septembre : ces deux dates ne sont pas confondues.","sources":["fr-sheet-dr-l50s"]},
-      "cameraInfo": {"value":true,"kind":"RGB IA frontale et éclairage","note":"Caméra de reconnaissance décrite dans le test de cette référence.","sources":["fr-test-dr-l50s","dr-l50s"]},
-      "remoteCamera": {"available":true,"note":"Visionnage en direct sécurisé et pilotage du robot depuis DreameHome ; accès à activer et protéger dans l'application.","sources":["fr-test-dr-l50s"]},
-      "frandroid": {"status":"tested","score":8,"published":"2026-09-13","updated":"2026-09-13","source":"fr-test-dr-l50s","scope":"Dreame L50s Pro Ultra exact, pas L50 Ultra AE.","summary":"Aspiration, autonomie et entretien automatisé convaincants, avec de nombreux réglages. Frandroid est moins convaincu par la navigation et la détection des taches ; la tourelle fixe limite aussi l'accès sous les meubles bas."}
+      "cameraInfo": {"value":true,"kind":"RGB/AI HD et caméra IR, lumière structurée et éclairage","note":"Caméra décrite dans le test exact ; la notice RLL88HE liée à l'annonce -A nomme AI HD et IR. Les capteurs de profondeur restent distincts de la caméra.","sources":["fr-test-dr-l50s","manual-l50s-a","dr-l50s-live"]},
+      "remoteCamera": {"available":true,"note":"Visionnage en direct sécurisé et pilotage décrits par Frandroid, vidéo/audio à distance par Dreame. Fonction de l'application constructeur, pas une preuve de vidéo dans HA ; activation et protection nécessaires.","sources":["fr-test-dr-l50s","dr-l50s-live"]},
+      "frandroid": {"status":"tested","score":8,"published":"2026-09-13","updated":"2026-09-13","source":"fr-test-dr-l50s","searchSources":["fr-dreame-20261121"],"scope":"Dreame L50s Pro Ultra standard exact, pas L50 Ultra AE ni essai séparé du kit marchand -A.","summary":"Note et texte relus le 21 novembre : aspiration, autonomie de plus de trois heures en mode mixte, entretien automatisé et réglages convaincants. Navigation parfois déroutante, tourelle LiDAR fixe et reconnaissance des taches moins fiables ; aucune moyenne inventée avec l'essai Labo Maison."}
     },
     {
       "id": "dr-l60ce",
       "checkedAt": "2026-11-21",
       "release": {"month":null,"market":"Non confirmé pour la Belgique","basis":"Année indiquée par une fiche secondaire","note":"La fiche CE indique 2026, sans mois de commercialisation recoupé. L'offre observée le 21 novembre ne constitue pas une date de lancement ; aucune date du L60 Ultra standard n'est transférée.","sources":["sheet-l60ce","be-l60ce"]},
-      "cameraInfo": {"value":false,"kind":"LiDAR fixe et lumière structurée, sans RGB selon la fiche CE","note":"Vacuum Spain indique explicitement l'absence de caméra IA pour le L60 Ultra CE / RPL71FE0. Source secondaire ; fiche constructeur exacte non recoupée. La mention 3DAdapt du marchand n'est pas une caméra.","sources":["sheet-l60ce","it-l60ce"]},
-      "remoteCamera": {"available":false,"note":"Accès caméra indiqué absent par la fiche secondaire CE ; ne pas reprendre la vidéosurveillance d'une autre variante L60 Ultra.","sources":["sheet-l60ce"]},
-      "frandroid": {"status":"not-found","note":"Recherche ciblée du 21/11/2026 : aucun test Frandroid du L60 Ultra CE exact repéré. Le bon plan L60 Ultra sans CE et les tests d'autres variantes ne sont pas des essais de ce modèle."}
+      "cameraInfo": {"value":null,"kind":"LiDAR fixe / lumière structurée selon la fiche secondaire ; RGB NC","note":"La fiche CE indique pas de caméra IA, mais les descriptions Amazon CE contiennent un paragraphe générique sur l'interaction avec les animaux. Cette contradiction n'établit ni présence ni absence certaine de RGB. Aucun manuel RPL71FE0 recoupé ; le manuel L60 Ultra trouvé est RPL51FE0 et n'est pas transposé.","sources":["sheet-l60ce","be-l60ce-live","it-l60ce-live"]},
+      "remoteCamera": {"available":null,"note":"La fiche secondaire CE indique aucune vidéo distante ; le texte marchand sur les animaux ne constitue pas une démonstration de flux vidéo. Accès non tranché pour RPL71FE0, encore moins dans Home Assistant.","sources":["sheet-l60ce","be-l60ce-live","it-l60ce-live"]},
+      "frandroid": {"status":"not-found","searchSources":["fr-dreame-20261121"],"note":"Recherche ciblée et catalogue Dreame relus au navigateur le 21/11/2026 : aucun test Frandroid du L60 Ultra CE exact repéré. Le bon plan L60 Ultra sans CE et les essais AE, FE ou PE ne sont pas des tests de RPL71FE0 ; le 7,1 de la fiche secondaire n'est pas une note d'essai."}
     },
     {
       "id": "dr-aqua",

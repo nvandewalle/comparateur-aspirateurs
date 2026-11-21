@@ -28,7 +28,7 @@
     {
       "brand":"Dreame",
       "summary":"D, L, X, Aqua et Matrix ne forment pas une progression simple. L couvre déjà des stations complètes ; X met en avant des innovations haut de gamme ; Aqua nomme des architectures de lavage ; Matrix ajoute une logique multi-serpillières.",
-      "budget":"Le nom L50 ou L60 ne rend pas le L40s Pro Ultra obsolète. L50s Pro Ultra-A et L60 Ultra CE sont à 499 € sur la capture du 21 novembre. Le L50s standard testé a une caméra et des réserves de lavage ; la fiche secondaire CE indique 97 mm et pas de RGB. Le L40s à 399 € et le L50 AE à 429 € restent des prix archivés du 15 novembre, à recontrôler.",
+      "budget":"Le 21 novembre, L50s Pro Ultra-A et L60 Ultra CE sont à 499 € port gratuit affiché sur Amazon BE, vendu/expédié Amazon.com.be ; livraison 30 novembre–1 décembre contre 3–4 décembre. Le L50s standard a une caméra et des essais, le CE reste NC pour caméra/vidéo et HA exact. L40s à 399 € et L50 AE à 429 € restent des repères du 15 novembre, pas des offres actualisées ici.",
       "families":[
         {"name":"D","position":"Ligne plus accessible, selon référence","meaning":"D10 / D20 et variantes Plus / Air Plus apparaissent dans le catalogue belge. Les stations de vidage et lingettes d'appoint ne sont pas équivalentes à une station complète Ultra.","models":[],"warning":"Un appareil « 2-en-1 » peut seulement traîner une lingette."},
         {"name":"L / Ls / Ultra","position":"Grand cœur de gamme, du milieu au haut de gamme","meaning":"L10s Ultra Gen 3, L40s Pro Ultra, L50 Ultra AE, L50s Pro Ultra / -A et L60 Ultra CE illustrent des architectures et des compromis distincts.","models":["dr-gen3","dr-l40s","dr-l50ae","dr-l50s","dr-l60ce"],"warning":"L60 Ultra CE n'hérite pas de la caméra ou du LiDAR rétractable d'un L60 Ultra sans CE. AE, FE, PE, Pro et CE ne sont pas interchangeables."},
@@ -46,9 +46,9 @@
       "pairs":[
         {"a":"dr-l40s","b":"dr-l50ae","title":"L40s ou L50 AE : le chiffre n'est pas une hiérarchie","text":"L40s : duo HyperStream et caméra établis. L50 AE : 100 °C, TriCut et 97 mm, mais pas de RGB établie sur la fiche fabricant."},
         {"a":"dr-l50ae","b":"dr-l50s","title":"AE ou s Pro : payer les fonctions utiles","text":"28 000 contre 30 000 Pa ne suffit pas à choisir. Brosses, reconnaissance, hauteur et essai de lavage importent davantage."},
-        {"a":"dr-l50s","b":"dr-l60ce","title":"Deux offres à 499 €, pas une hiérarchie L50 / L60","text":"Le L50s standard testé a une caméra RGB ; la fiche CE indique LiDAR fixe et pas de caméra. 30 000 contre 35 000 Pa ne démontre aucun progrès de lavage. L'édition -A, la fiche constructeur CE et le support HA exact restent à vérifier."}
+        {"a":"dr-l50s","b":"dr-l60ce","title":"Deux offres à 499 €, pas une hiérarchie L50 / L60","text":"L50s : caméra et test Frandroid 8/10 sur le standard ; notice RLL88HE liée au -A. CE : fiche secondaire sans RGB, texte marchand contradictoire, donc caméra/vidéo NC et HACS exact non établi. Les 35 000 Pa ne démontrent pas un meilleur lavage ; délais BE 30 novembre–1 décembre contre 3–4 décembre au contrôle du 21 novembre."}
       ],
-      "sources":["dr-shop","dr-bf","dr-gen3","dr-l50ae","dr-l50s","test-l40s","test-l50s","dr-aqua","be-l50s","be-l60ce","sheet-l60ce","it-l60ce"]
+      "sources":["dr-shop","dr-bf","dr-gen3","dr-l50ae","dr-l50s","test-l40s","test-l50s","dr-aqua","be-l50s-live","be-l60ce-live","dr-l50s-live","manual-l50s-a","sheet-l60ce","ha-dreame-20261121"]
     },
     {
       "brand":"MOVA",

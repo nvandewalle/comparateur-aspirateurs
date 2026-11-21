@@ -33,12 +33,13 @@
     },
     {
       "id": "dr-l50s",
+      "checkedAt": "2026-11-21",
       "sourceTitle": "Dreame L50s Pro Ultra Robotstofzuiger",
       "sourceUrl": "https://be.dreametech.com/fr/products/dreame-l50s-pro-ultra-robotstofzuiger",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0886/5198/9284/files/L50s_Pro_Ultra-Total-top.jpg?v=1773304190&width=480&format=webp",
       "credit": "Dreame",
       "alt": "Dreame L50s Pro Ultra",
-      "note": "Photo officielle du modèle standard ; l'offre Amazon BE est l'édition -A, dont le contenu exact reste à vérifier.",
+      "note": "Photo du L50s standard · kit -A à vérifier",
       "width": 480,
       "height": 480
     },
@@ -262,6 +263,14 @@
       "alt": "Xiaomi Robot Vacuum 5 Pro",
       "width": 480,
       "height": 480
+    }
+  ],
+  "unavailable": [
+    {
+      "id": "dr-l60ce",
+      "checkedAt": "2026-11-21",
+      "sourceUrl": "https://www.amazon.com.be/dp/B0HBCD8SS5",
+      "reason": "Visuel constructeur CE non recoupé. L'annonce exacte contient des photos, mais un avis questionne leur identité et aucun packshot fabricant RPL71FE0 ne la confirme. Ne pas utiliser une photo d'un autre L60 ou d'un L50."
     }
   ]
 }

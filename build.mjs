@@ -25,6 +25,7 @@ const sourceIds = new Set(data.sources.map(s => s.id));
 const sourceMap = new Map(data.sources.map(s => [s.id,s]));
 assert(modelIds.size === data.models.length, "Duplicate model id");
 assert(sourceIds.size === data.sources.length, "Duplicate source id");
+assert(Array.isArray(data.meta.reviewedModels) && data.meta.reviewedModels.every(id => modelIds.has(id)), "Invalid reviewed model scope");
 const enrichmentMap = new Map(enrichment.models.map(m => [m.id,m]));
 assert(enrichmentMap.size === enrichment.models.length, "Duplicate enrichment model id");
 assert(enrichmentMap.size === modelIds.size && [...enrichmentMap.keys()].every(id => modelIds.has(id)), "Enrichment must cover every model exactly once");
@@ -43,7 +44,7 @@ for (const m of data.models) {
   assert(e.release && e.cameraInfo && e.remoteCamera && e.frandroid, `Incomplete enrichment ${m.id}`);
   assert(["tested","not-found"].includes(e.frandroid.status), `Invalid Frandroid status ${m.id}`);
   const tested = e.frandroid.status === "tested";
-  const reviewSources = tested ? [e.frandroid.source] : [enrichment.catalogue.index,enrichment.catalogue.brands[m.brand]];
+  const reviewSources = [...new Set([...(tested ? [e.frandroid.source] : [enrichment.catalogue.index,enrichment.catalogue.brands[m.brand]]),...(e.frandroid.searchSources || [])])];
   assert(reviewSources.every(id => sourceMap.has(id)), `Missing Frandroid evidence ${m.id}`);
   m.release = e.release;
   m.cameraInfo = e.cameraInfo;
@@ -67,6 +68,7 @@ for (const m of data.models) {
 }
 data.reviewResearch = {
   checkedAt:enrichment.checkedAt,method:enrichment.method,catalogue:enrichment.catalogue,
+  updatedAt:data.models.reduce((latest,m) => m.frandroid.checkedAt > latest ? m.frandroid.checkedAt : latest,enrichment.checkedAt),
   tested:data.models.filter(m => m.frandroid.status === "tested").length,
   notFound:data.models.filter(m => m.frandroid.status === "not-found").length
 };
@@ -82,7 +84,9 @@ for (const s of data.sources) {
 for (const m of data.models) {
   assert(m.name && m.brand && data.haProfiles[m.ha], `Incomplete model ${m.id}`);
   assert(["rotatifs","rouleau"].includes(m.mop), `Invalid mop ${m.id}`);
-  assert(m.robot.length === 3 && m.dock.length === 3, `Invalid dimensions ${m.id}`);
+  assert(Array.isArray(m.robot) && Array.isArray(m.dock) && m.robot.length === 3 && m.dock.length === 3, `Invalid dimensions ${m.id}`);
+  if (m.checkedAt !== undefined) assert(validDate(m.checkedAt) && m.checkedAt <= data.meta.updatedAt, `Invalid model verification date ${m.id}`);
+  if (m.review.checkedAt !== undefined) assert(validDate(m.review.checkedAt), `Invalid customer review date ${m.id}`);
   assert([...m.robot,...m.dock].every(v => v === null || Number.isFinite(v) && v > 0), `Invalid dimension value ${m.id}`);
   assert(m.release.month === null || /^\d{4}-(0[1-9]|1[0-2])$/.test(m.release.month), `Invalid release month ${m.id}`);
   assert(m.release.market && m.release.basis && m.release.note, `Unqualified release date ${m.id}`);
@@ -110,6 +114,7 @@ for (const m of data.models) {
   for (const metric of m.metrics || []) checkSources([metric.source], `${m.id} metrics`);
   for (const o of m.offers) {
     if (o.checkedAt !== undefined) assert(validDate(o.checkedAt), `Invalid offer date ${m.id}`);
+    if (o.archived !== undefined) assert(typeof o.archived === "boolean" && validDate(o.checkedAt), `Invalid archived offer ${m.id}`);
     checkSources([o.source], `${m.id} offer`);
     assert(o.price === null || Number.isFinite(o.price) && o.price > 0, `Invalid price ${m.id}`);
     assert(o.shipping === null || Number.isFinite(o.shipping) && o.shipping >= 0, `Invalid shipping ${m.id}`);
@@ -138,6 +143,15 @@ for (const photo of photos.images) {
   assert(Number.isInteger(photo.width) && photo.width > 0, `Invalid photo width ${photo.id}`);
   assert(Number.isInteger(photo.height) && photo.height > 0, `Invalid photo height ${photo.id}`);
   model.photo = {...photo,src:photo.imageUrl};
+  if (photo.checkedAt !== undefined) assert(validDate(photo.checkedAt), `Invalid photo verification date ${photo.id}`);
+}
+const unavailable = photos.unavailable || [];
+assert(Array.isArray(unavailable) && new Set(unavailable.map(photo => photo.id)).size === unavailable.length, "Invalid unavailable photo catalogue");
+for (const photo of unavailable) {
+  const model = data.models.find(m => m.id === photo.id);
+  assert(model && !model.photo && photo.reason && validDate(photo.checkedAt), `Invalid unavailable photo ${photo.id}`);
+  assert(new URL(photo.sourceUrl).protocol === "https:", `Invalid unavailable photo source ${photo.id}`);
+  model.photoUnavailable = photo;
 }
 data.photoResearch = {
   checkedAt:photos.checkedAt,

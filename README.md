@@ -4,7 +4,9 @@
 
 Comparateur interactif et sourcé d'aspirateurs robots laveurs pour la Belgique. La recherche de cette première publication est datée du **15 novembre 2026** : les prix sont des observations archivées, pas des prix en temps réel. L'analyse est consultable dans l'application et exportable en Markdown.
 
-Le **21 novembre 2026**, l'offre **L50s Pro Ultra-A** a été actualisée et le **L60 Ultra CE** ajouté, chacun à **499 €** sur la capture Amazon BE fournie. Le comparateur couvre désormais **27 modèles**. Les autres prix restent ceux du relevé initial. Les essais du L50s standard ne certifient pas séparément l'édition -A ; la fiche secondaire CE, ses limites et l'absence d'essai exact sont distinguées des autres L60. Aucune photo officielle exacte du CE n'a été recoupée : son emplacement indique explicitement la photo manquante.
+Le **21 novembre 2026**, les ajouts de `main` ont été intégrés, puis les **L50s Pro Ultra-A** et **L60 Ultra CE** revérifiés au navigateur : **499 €** chacun sur Amazon Belgique, vendu/expédié Amazon.com.be et port gratuit affiché, avec livraison **30 novembre–1 décembre** et **3–4 décembre** respectivement. Le L50s est aussi à 499 € chez Dreame Belgique ; le CE noir affiche 512,30 € article et port depuis Amazon Italie vers la Belgique, TVA finale à vérifier. Le coupon BLACK26 nécessitant une connexion n'est pas déduit.
+
+Le comparateur conserve **27 modèles**. Les autres prix restent ceux du relevé initial ; les offres du 15 novembre et les captures remplacées restent datées et visibles comme archives, exclues du minimum des modèles revérifiés. Les essais Frandroid et Labo Maison du L50s standard ne sont pas des tests séparés du kit -A. Caméra/vidéo, mois de sortie et HACS exact du CE restent NC lorsque les sources ne les tranchent pas. Aucune photo constructeur CE exacte n'a été recoupée : un emplacement explicite et un lien vers l'annonce remplacent tout visuel de variante trompeur.
 
 ## Mise à jour automatique
 
