@@ -34,9 +34,12 @@ function validDate(value) {
   return Number.isFinite(date.getTime()) && date.toISOString().slice(0,10) === value;
 }
 assert(validDate(enrichment.checkedAt), "Invalid review research date");
+assert(validDate(data.meta.date) && validDate(data.meta.updatedAt) && data.meta.date <= data.meta.updatedAt, "Invalid dataset dates");
 const updateKeys = new Set(["robot","dimNote","cons","detergent","detergentNote","washMode","washNote"]);
 for (const m of data.models) {
   const e = enrichmentMap.get(m.id);
+  const checkedAt = e.checkedAt ?? enrichment.checkedAt;
+  assert(validDate(checkedAt), `Invalid review research date ${m.id}`);
   assert(e.release && e.cameraInfo && e.remoteCamera && e.frandroid, `Incomplete enrichment ${m.id}`);
   assert(["tested","not-found"].includes(e.frandroid.status), `Invalid Frandroid status ${m.id}`);
   const tested = e.frandroid.status === "tested";
@@ -48,9 +51,9 @@ for (const m of data.models) {
   m.remoteCamera = e.remoteCamera;
   m.frandroid = {
     score:null,published:null,updated:null,source:null,url:null,
-    summary:`Test exact non repéré au ${enrichment.checkedAt.split("-").reverse().join("/")}.`,
+    summary:`Test exact non repéré au ${checkedAt.split("-").reverse().join("/")}.`,
     ...e.frandroid,
-    max:10,checkedAt:enrichment.checkedAt,sources:reviewSources
+    max:10,checkedAt,sources:reviewSources
   };
   if (tested) {
     m.frandroid.url = sourceMap.get(e.frandroid.source).url;
@@ -72,6 +75,7 @@ function checkSources(ids, where) {
   for (const id of ids) assert(sourceIds.has(id), `Missing source ${id} in ${where}`);
 }
 for (const s of data.sources) {
+  if (s.checkedAt !== undefined) assert(validDate(s.checkedAt), `Invalid source date ${s.id}`);
   const u = new URL(s.url);
   assert(u.protocol === "https:", `Unexpected source URL: ${s.id}`);
 }
@@ -92,7 +96,7 @@ for (const m of data.models) {
   if (m.frandroid.status === "tested") {
     assert(Number.isFinite(m.frandroid.score) && m.frandroid.score > 0 && m.frandroid.score <= 10 && m.frandroid.max === 10, `Invalid Frandroid score ${m.id}`);
     assert(validDate(m.frandroid.published) && validDate(m.frandroid.updated), `Invalid Frandroid dates ${m.id}`);
-    assert(m.frandroid.published <= m.frandroid.updated && m.frandroid.updated <= enrichment.checkedAt, `Invalid Frandroid chronology ${m.id}`);
+    assert(m.frandroid.published <= m.frandroid.updated && m.frandroid.updated <= m.frandroid.checkedAt, `Invalid Frandroid chronology ${m.id}`);
     assert(m.frandroid.summary && m.frandroid.scope, `Incomplete Frandroid summary ${m.id}`);
     assert(new URL(m.frandroid.url).hostname === "www.frandroid.com", `Unexpected review publisher ${m.id}`);
   } else {
@@ -105,6 +109,7 @@ for (const m of data.models) {
   if (m.review.source) checkSources([m.review.source], `${m.id} reviews`);
   for (const metric of m.metrics || []) checkSources([metric.source], `${m.id} metrics`);
   for (const o of m.offers) {
+    if (o.checkedAt !== undefined) assert(validDate(o.checkedAt), `Invalid offer date ${m.id}`);
     checkSources([o.source], `${m.id} offer`);
     assert(o.price === null || Number.isFinite(o.price) && o.price > 0, `Invalid price ${m.id}`);
     assert(o.shipping === null || Number.isFinite(o.shipping) && o.shipping >= 0, `Invalid shipping ${m.id}`);

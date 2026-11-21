@@ -1,13 +1,14 @@
 {
   "meta": {
     "date": "2026-11-15",
+    "updatedAt": "2026-11-21",
     "locale": "fr-BE",
     "budget": 500,
     "blackFriday": "2026-11-27",
     "title": "Bien choisir son robot aspirateur-laveur",
     "profile": "Surtout des sols durs, aspiration et lavage tout-en-un, pas de seuils particuliers. Comparaison volontairement généraliste.",
-    "scope": "Sélection étendue de 26 modèles de 6 marques, autour de 280 à 650 €, plus des références à surveiller. Ce n'est pas un inventaire exhaustif du marché.",
-    "priceNotice": "Instantané du 15 novembre 2026, pas des prix en temps réel. Prix article TTC affiché ; frais, TVA de destination, vendeur, variante, disponibilité et délai à recontrôler au panier. Aucune commande n'a été effectuée.",
+    "scope": "Sélection étendue de 27 modèles de 6 marques, autour de 280 à 650 €, plus des références à surveiller. Ce n'est pas un inventaire exhaustif du marché.",
+    "priceNotice": "Relevé initial du 15 novembre 2026, complété le 21 novembre pour les offres Amazon BE L50s Pro Ultra-A et L60 Ultra CE à 499 € sur la capture fournie. Les autres prix n'ont pas été actualisés. Pas de prix en temps réel : frais, TVA de destination, vendeur, variante, disponibilité et délai à recontrôler au panier. Aucune commande n'a été effectuée.",
     "evidenceNotice": "Fiches fabricant, essais indépendants, avis clients et jugements éditoriaux sont distingués. NC signifie non confirmé ou non relevé, jamais absence certaine. Les chiffres de laboratoire ne sont pas directement comparables entre organismes.",
     "privacyNotice": "Aucun compte, publicité, outil d'analyse ou police distante dans l'application. Préférences et prix personnels restent dans le navigateur. Les photos se chargent depuis les sites officiels et leurs CDN, sans en-tête Referer : ces hôtes voient les requêtes d'images et l'adresse IP, mais ne reçoivent ni vos réglages ni vos relevés personnels. Les données restent utilisables sans les photos."
   },
@@ -80,7 +81,10 @@
     {"id":"be-l40s","type":"Prix et avis clients, navigateur","label":"Amazon Belgique : L40s Pro Ultra","url":"https://www.amazon.com.be/dp/B0DY8V59LY","note":"399 € sur la fiche ; vendu et expédié par Amazon.com.be ; 6 avis visibles de la variante L40s Pro Ultra lus. Livraison standard annoncée au 7 janvier, rapide au 25 novembre : à recontrôler."},
     {"id":"be-gen3","type":"Prix marchand, navigateur","label":"Amazon Belgique : L10s Ultra Gen 3 Kit-A","url":"https://www.amazon.com.be/dp/B0H2FPG8NY"},
     {"id":"be-l50ae","type":"Prix marchand, navigateur","label":"Amazon Belgique : L50 Ultra AE-A","url":"https://www.amazon.com.be/dp/B0H2FKQRNG"},
-    {"id":"be-l50s","type":"Prix marchand, navigateur","label":"Amazon Belgique : L50s Pro Ultra-A","url":"https://www.amazon.com.be/dp/B0H2F5YPTN"},
+    {"id":"be-l50s","type":"Prix marchand, capture fournie","label":"Amazon Belgique : L50s Pro Ultra-A","url":"https://www.amazon.com.be/dp/B0H2F5YPTN","checkedAt":"2026-11-21","note":"499 € sur la capture du 21/11/2026 ; en stock, livraison gratuite Prime affichée au 25 novembre. Vendeur et contenu de l'édition -A non visibles. Le modèle standard était déjà documenté : ce relevé ne prouve pas une nouvelle génération ni l'identité de tous les composants."},
+    {"id":"be-l60ce","type":"Prix marchand, capture fournie","label":"Amazon Belgique : Dreame L60 Ultra CE, RPL71FE0","url":"https://www.amazon.com.be/dp/B0HBCD8SS5","checkedAt":"2026-11-21","note":"499 € sur la capture du 21/11/2026, livraison gratuite les 28–29 novembre pour les membres Prime. Nom CE et code RPL71FE0 recoupés dans la fiche marchande indexée. Vendeur non visible, panier non validé ; prix barrés non utilisés comme preuve d'économie."},
+    {"id":"sheet-l60ce","type":"Fiche technique secondaire, pas essai","label":"Vacuum Spain : Dreame L60 Ultra CE, RPL71FE0","url":"https://vacuumspain.com/fr/aspirateur-robot/dreame/l60-ultra-ce/","checkedAt":"2026-11-21","note":"Fiche exacte consultée via l'index web : LiDAR fixe, pas de caméra IA ni vidéo distante, robot 351 × 351 × 97 mm, base 340 × 457 × 589 mm, deux patins relevables de 10,5 mm, station 100 °C / séchage 45 °C. Source secondaire, notice constructeur non recoupée. Son indice d'équipement n'est pas une note d'essai ; l'alias AE indiqué n'est pas adopté."},
+    {"id":"it-l60ce","type":"Fiche marchand, variante exacte","label":"Amazon Italie : L60 Ultra CE, RPL71FE0, navigation et lavage","url":"https://www.amazon.it/dp/B0HBWQ5KXC","checkedAt":"2026-11-21","note":"Description indexée : 35 000 Pa, HyperStream DuoBrush, Pathfinder / 3DAdapt, AceClean DryBoard et lavage des patins à 100 °C. Code RPL71FE0 identique à la fiche BE. Champs génériques incohérents (E50, 30 000 Pa, année 2024) exclus ; aucune offre italienne ni livraison BE retenue."},
     {"id":"be-spro","type":"Prix marchand, navigateur","label":"Amazon Belgique : Qrevo S Pro Set","url":"https://www.amazon.com.be/dp/B0GHMV8ML5"},
     {"id":"be-2pro","type":"Prix marchand, navigateur","label":"Amazon Belgique : Qrevo 2 Pro Set noir","url":"https://www.amazon.com.be/dp/B0GZZ96X7N"},
     {"id":"be-edge","type":"Prix et avis clients, navigateur","label":"Amazon Belgique : Qrevo Edge 2 blanc","url":"https://www.amazon.com.be/dp/B0GMH82CGG","note":"489,99 € sur la fiche, et non le prix barré 889,99 € ; vendeur Roborock Official EU, expédition Amazon ; famille d'avis contenant aussi Edge S5A : avis de cette variante exclus de la synthèse."},
@@ -181,12 +185,26 @@
       "sources":["dr-l50s","test-l50s","ha-dr-list"],"tested":true,
       "pros":["Brosses duo, deux bras extensibles, station chauffante.","Aspiration et autonomie appréciées dans l'essai."],
       "cons":["CleanGenius a étalé huile et sirop dans l'essai ; retour au lavage des patins perfectible.","Tapis long pris pour un obstacle dans l'essai.","Plus haut que le L50 AE ; pas un progrès évident pour votre seul usage sols durs."],
-      "verdict":"À 499 €, il ne justifie pas automatiquement 100 € de plus que le L40s à 399 €. Je privilégierais les fonctionnalités utiles et les retours du lot plutôt que les 30 000 Pa.",
+      "verdict":"L'offre L50s Pro Ultra-A à 499 € est confirmée par la capture du 21 novembre. Bon candidat Dreame, mais pas mon premier choix pour vos sols durs : le modèle standard testé n'a pas convaincu sur tous les scénarios de lavage, et 100 € de plus que le L40s à son prix archivé ne sont pas automatiquement justifiés. Les essais portent sur le L50s Pro Ultra standard ; vérifier le contenu et le matériel de l'édition -A avant de lui attribuer tous ces résultats.",
       "review":{"rating":4.6,"count":"47","source":"be-l50s","sample":0,"plus":[],"minus":[],"note":"Petite famille d'avis de la variante -A. Les limites CleanGenius citées ici viennent du test indépendant, pas d'un sondage clients."},
       "offers":[
-        {"shop":"Amazon Belgique","country":"BE","price":499,"shipping":0,"be":true,"available":true,"source":"be-l50s","level":"recherche marchand","variant":"Pro Ultra-A","delivery":"24 novembre affiché"},
+        {"shop":"Amazon Belgique","country":"BE","price":499,"shipping":0,"be":true,"available":true,"source":"be-l50s","level":"capture fournie","variant":"L50s Pro Ultra-A","checkedAt":"2026-11-21","delivery":"Livraison gratuite Prime affichée au 25 novembre","note":"En stock sur la capture. Vendeur non visible ; vérifier le contenu -A et les conditions de livraison, notamment hors Prime. Les essais et la photo documentent le modèle standard, pas un examen séparé de l'édition -A."},
         {"shop":"Dreame Belgique","country":"BE","price":499,"shipping":null,"be":true,"available":true,"source":"dr-l50s","level":"catalogue fabricant"},
         {"shop":"Amazon France","country":"FR","price":499,"shipping":null,"be":null,"available":true,"source":"fr-l50s","level":"recherche marchand","delivery":"1er décembre affiché"}
+      ]
+    },
+    {
+      "id":"dr-l60ce","brand":"Dreame","name":"L60 Ultra CE","year":2026,
+      "mop":"rotatifs","pa":35000,"robot":[351,351,97],"raised":null,"dock":[340,457,589],"dimState":"partial","dimNote":"Fiche secondaire de la référence CE / RPL71FE0 : robot 351 × 351 × 97 mm ; base 340 × 457 × 589 mm (L × P × H). Notice fabricant, rampe et dégagement de service non recoupés : confirmer l'ensemble installé. Ne pas reprendre les 82 / 89 mm ou le LiDAR rétractable de certaines variantes L60 Ultra.",
+      "lift":10.5,"detach":false,"edgeMop":true,"edgeBrush":true,"rinse":false,"camera":false,"nav":"LiDAR fixe + 3DAdapt / lumière structurée ; absence de RGB indiquée par la fiche secondaire CE","brush":"HyperStream DuoBrush, deux rouleaux anti-emmêlement","anti":"advanced","wash":100,"washNote":"Lavage des patins en station à 100 °C annoncé dans la fiche marchande exacte ; pas de lavage du sol à 100 °C.","dry":true,"dryC":45,"detergent":null,"detergentNote":"Réservoir 600 ml annoncé par la fiche secondaire ; dosage automatique non recoupé.",
+      "battery":5200,"bin":null,"bag":3.2,"waterClean":4.5,"waterDirty":4,"runtime":"180 min annoncées dans la fiche secondaire ; aucune autonomie mesurée exploitée pour la variante CE.","ha":"dr","haConditional":true,"haCode":"RPL71FE0 est le code commercial, pas un identifiant dreame.vacuum ; support HACS exact et firmware non validés","matter":"Non établi pour la variante CE","matterState":"unknown",
+      "sources":["be-l60ce","sheet-l60ce","it-l60ce","ha-dr","ha-dr-list"],"tested":false,
+      "pros":["499 € sur Amazon BE dans la capture, donc dans le budget de 500 €.","Deux extensions, duo anti-cheveux et lavage des patins en station à 100 °C annoncés."],
+      "cons":["Aucun essai indépendant exact exploité ; les 35 000 Pa ne prouvent pas un meilleur lavage.","Pas de caméra RGB ni de vidéo distante selon la fiche secondaire CE ; ne pas hériter de celles du L60 Ultra standard.","Dimensions, dosage et compatibilité HA à faire confirmer ; vendeur non visible sur la capture."],
+      "verdict":"À 499 €, intéressant sur le papier mais pas mon premier choix actuellement. Pour vos sols durs, les 35 000 Pa ne démontrent aucun gain de lavage ; la fiche CE annonce un évitement sans caméra et les essais / le support HA exact manquent. Je garderais les finalistes mieux étayés avant lui. À envisager seulement avec vendeur fiable, retour simple et confirmation des caractéristiques CE, pas parce que L60 semble supérieur à L50.",
+      "review":{"rating":null,"count":null,"source":null,"sample":0,"plus":[],"minus":[],"note":"Aucune note ni synthèse de clients vérifiée pour la variante CE ; aucun avis du L60 Ultra, FE, PE ou Pro transféré."},
+      "offers":[
+        {"shop":"Amazon Belgique","country":"BE","price":499,"shipping":0,"be":true,"available":true,"source":"be-l60ce","level":"capture fournie","variant":"L60 Ultra CE blanc · RPL71FE0","checkedAt":"2026-11-21","delivery":"Livraison gratuite les 28–29 novembre pour les membres Prime","note":"Offre avec délai de livraison affichée sur la capture, panier non validé. Vendeur et stock exact à revérifier ; gratuité du port conditionnée à Prime. Ne pas substituer une annonce L60 Ultra sans CE."}
       ]
     },
     {
@@ -532,6 +550,8 @@
     {"id":"rr-2pro","title":"Dépenser moins sans revenir au basique","text":"Qrevo 2 Pro Set : 379,99 € direct ou 399,99 € Amazon BE. Patin extensible, retrait des patins et bon lavage intensif dans l'essai. Ranger les petits câbles."},
     {"id":"ec-t90","title":"Le rouleau à examiner pour les sols durs","text":"T90 Pro Omni à 444 € + 27,73 € de port dans l'offre Amazon BE relevée. Résultats de lavage solides, mais vendeur et compatibilité HA du modèle à valider. Ce n'est PAS le T90 Max Pro."},
     {"id":"dr-l40s","title":"Le rapport équipement/prix chez Dreame","text":"L40s Pro Ultra à 399 € Amazon BE : duo anti-cheveux, caméra et dosage. Attention au délai standard annoncé en janvier ; à choisir si un délai rapide acceptable est confirmé."},
+    {"id":"dr-l50s","title":"L50s Pro Ultra-A à 499 € : candidat, pas premier choix","text":"Offre du 21 novembre, déjà présente dans le comparateur et actualisée. Le modèle standard est bien équipé et testé, mais ses limites de lavage ne justifient pas automatiquement le supplément sur le L40s. Vérifier l'édition -A ; les essais du standard ne certifient pas cette variante séparément."},
+    {"id":"dr-l60ce","title":"L60 Ultra CE à 499 € : pas recommandé en priorité","text":"Nouveau dans la sélection. Station 100 °C et duo anti-cheveux intéressants, mais pas de gain de lavage démontré, absence de RGB indiquée par la fiche CE et support HA exact non validé. À ce prix, je privilégie les finalistes mieux documentés. Ne pas lui attribuer les fonctions ou essais d'un autre L60."},
     {"id":"mo-s70","title":"Le rouleau économique, sous réserve","text":"S70 Roller à 399 € : prometteur, mais deux avis visibles lus évoquent un rouleau à sec par défaut de remplissage. À tester soigneusement durant le délai de retour, pas un premier choix sans cette précaution."}
   ]
 }

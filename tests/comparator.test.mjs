@@ -147,25 +147,127 @@ async function stickyComparison(page, width, touch, filename) {
   return { width, touch, pageScroll: await page.evaluate(() => window.scrollY), headerHeight: vertical.height, maximumAlignmentError: Math.max(...alignment.errors), names: alignment.names };
 }
 
+test("Dreame additions preserve exact variants, dated prices and offline comparison", { timeout: 120000 }, async () => {
+  execFileSync(process.execPath, ["build.mjs", output], { cwd: root });
+  const html = await readFile(resolve(output, "comparateur-aspirateurs.html"), "utf8");
+  const server = createServer((request, response) => {
+    response.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+    response.end(html);
+  });
+  server.listen(0, "127.0.0.1");
+  await once(server, "listening");
+  let browser;
+  try {
+    browser = await chromium.launch({ headless: true, ...(process.platform === "win32" ? { channel: "msedge" } : {}) });
+    const context = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
+    await context.route("https://**/*", route => route.abort("internetdisconnected"));
+    const page = await context.newPage();
+    const errors = [];
+    page.on("pageerror", error => errors.push(error.message));
+    await page.goto(`http://127.0.0.1:${server.address().port}/`);
+    await page.waitForFunction(() => !!window.RobotComparator);
+    const data = await page.evaluate(() => RobotComparator.getData());
+    assert.equal(data.models.filter(model => model.id === "dr-l50s").length, 1, "Update the existing L50s rather than duplicate it");
+    const l60 = data.models.find(model => model.id === "dr-l60ce");
+    assert.equal(l60.tested, false);
+    assert.equal(l60.frandroid.score, null, "Never transfer an adjacent L60's rating");
+    assert.equal(l60.frandroid.checkedAt, "2026-11-21");
+    assert.equal(data.models.find(model => model.id === "dr-l50s").frandroid.checkedAt, "2026-11-15", "Do not redatestamp the original research");
+    assert.ok(l60.haConditional, "Do not inherit confirmed HACS support from the brand");
+    assert.equal(l60.release.month, null, "The screenshot is not a launch date");
+    assert.equal(l60.photo, undefined, "Do not use another L60 variant's photo");
+    assert.ok(data.recommendations.some(item => item.id === "dr-l60ce"));
+    assert.ok(data.recommendations.some(item => item.id === "dr-l50s"));
+    assert.equal(await page.locator('[data-model-card="dr-l60ce"] .photo-missing').count(), 1);
+    for (const [id, query] of [["dr-l50s", "L50s Pro Ultra-A"], ["dr-l60ce", "L60 Ultra CE"]]) {
+      await page.locator("#search").fill(query);
+      await page.waitForFunction(expected => RobotComparator.getFiltered().join() === expected, id);
+      assert.match(await page.locator(`[data-model-card="${id}"]`).innerText(), /21 novembre 2026/);
+      const offer = await page.evaluate(modelId => RobotComparator.bestOffer(modelId), id);
+      assert.equal(offer.price + offer.shipping, 499);
+      assert.equal(offer.level, "capture fournie");
+      assert.equal(offer.seller, undefined);
+      assert.match(offer.delivery, /Prime/);
+      await click(page, `[data-select="${id}"]`);
+    }
+    await click(page, '[data-act="reset-filters"]');
+    await page.locator('[data-setting="stretch"]').uncheck();
+    await page.locator("#budget-number").fill("499");
+    assert.ok(await page.evaluate(() => ["dr-l50s", "dr-l60ce"].every(id => RobotComparator.getFiltered().includes(id))));
+    await page.locator("#budget-number").fill("498");
+    assert.ok(await page.evaluate(() => ["dr-l50s", "dr-l60ce"].every(id => !RobotComparator.getFiltered().includes(id))));
+    await click(page, '[data-act="reset-filters"]');
+    await click(page, ".filter-details:has(#camera-filter) > summary");
+    await page.locator("#camera-filter").selectOption("yes");
+    assert.ok(!(await page.evaluate(() => RobotComparator.getFiltered())).includes("dr-l60ce"));
+    await page.locator("#camera-filter").selectOption("no");
+    assert.ok((await page.evaluate(() => RobotComparator.getFiltered())).includes("dr-l60ce"));
+    await click(page, '[data-act="reset-filters"]');
+    await page.locator('[data-setting="ha"]').selectOption("hacs");
+    assert.ok(!(await page.evaluate(() => RobotComparator.getFiltered())).includes("dr-l60ce"));
+    await click(page, '[data-act="reset-filters"]');
+    await click(page, '[data-nav="compare"]');
+    assert.equal(await page.locator(".compare-core [data-model=dr-l60ce]").count(), 2);
+    assert.match(await page.locator(".compare-core").innerText(), /L50s Pro Ultra-A/);
+    await noPageOverflow(page);
+    await click(page, '.compare-core [data-model="dr-l60ce"]');
+    await click(page, '.detail-page > details:has-text("Notre avis & les réserves") > summary');
+    assert.match(await page.locator(".detail-page .disclosure-body .prose").innerText(), /pas mon premier choix/);
+    assert.match(await page.locator(".detail-summary").innerText(), /21 novembre 2026/);
+    await click(page, '.detail-page > details:has-text("Prix & offres") > summary');
+    assert.match(await page.locator(".offer-table").innerText(), /Vendeur non relevé/);
+    assert.match(await page.locator(".offer-table").innerText(), /RPL71FE0/);
+    const markdown = await page.evaluate(() => RobotComparator.reportMarkdown());
+    assert.match(markdown, /complément du \*\*21 novembre 2026\*\*/);
+    assert.match(markdown, /L60 Ultra CE à 499 € : pas recommandé en priorité/);
+    assert.match(markdown, /aucun test Frandroid du L60 Ultra CE exact repéré/);
+    assert.match(markdown, /Les autres prix n'ont pas été actualisés/);
+    await page.reload();
+    await page.waitForFunction(() => !!window.RobotComparator);
+    assert.deepEqual(await page.evaluate(() => RobotComparator.getState().selected), ["dr-l50s", "dr-l60ce"]);
+
+    await mkdir(artifacts, { recursive: true });
+    await stickyComparison(page, 1440, false, "dreame-update-desktop-sticky.png");
+    const mobile = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
+    await mobile.route("https://**/*", route => route.abort("internetdisconnected"));
+    const phone = await mobile.newPage();
+    phone.on("pageerror", error => errors.push(error.message));
+    await phone.goto(`http://127.0.0.1:${server.address().port}/`);
+    await phone.waitForFunction(() => !!window.RobotComparator);
+    await click(phone, '[data-select="dr-l50s"]');
+    await click(phone, '[data-select="dr-l60ce"]');
+    await click(phone, '[data-nav="compare"]');
+    await noPageOverflow(phone);
+    await click(phone, '.compare-core [data-model="dr-l60ce"]');
+    await noPageOverflow(phone);
+    await stickyComparison(phone, 390, true, "dreame-update-mobile-sticky-390.png");
+    await stickyComparison(phone, 360, true, "dreame-update-mobile-sticky-360.png");
+    assert.deepEqual(errors, []);
+  } finally {
+    if (browser) await browser.close();
+    await new Promise((resolveClose, reject) => server.close(error => error ? reject(error) : resolveClose()));
+  }
+});
+
 test("the comparator preserves research, works responsively and loads all 26 official photos", { timeout: 240000 }, async () => {
   execFileSync(process.execPath, ["build.mjs", output], { cwd: root });
   const html = await readFile(resolve(output, "comparateur-aspirateurs.html"), "utf8");
   const data = JSON.parse(html.match(/<script id="market-data"[^>]*>([\s\S]*?)<\/script>/u)[1]);
   const market = JSON.parse(await readFile(resolve(root, "market-data.json"), "utf8"));
-  assert.equal(data.models.length, 26);
-  assert.equal(data.sources.length, 153);
+  assert.equal(data.models.length, 27);
+  assert.equal(data.sources.length, 156);
   assert.equal(data.reviewResearch.tested, 12);
-  assert.equal(data.models.reduce((count, model) => count + model.offers.length, 0), 59);
+  assert.equal(data.models.reduce((count, model) => count + model.offers.length, 0), 60);
   assert.deepEqual(data.models.map(model => model.offers), market.models.map(model => model.offers));
   assert.deepEqual([...new Set(data.models.map(model => model.mop))].sort(), ["rotatifs", "rouleau"]);
   assert.deepEqual(data.models.find(model => model.id === "dr-l40s").dock, [457, 340, 590]);
   assert.equal(data.models.find(model => model.id === "dr-l40s").dimState, "qualified");
   assert.equal(data.photoResearch.available, 26);
-  assert.deepEqual(data.photoResearch.missing, []);
+  assert.deepEqual(data.photoResearch.missing, ["dr-l60ce"]);
   assert.ok(Buffer.byteLength(html) < 450000, "Keep the application HTML below 450 KB");
   assert.ok(!html.includes("__IMAGE_HOSTS__"));
   assert.ok(!/(?:file:\/\/|C:\\Users\\|\.copilot)/i.test(html));
-  const imageOrigins = [...new Set(data.models.map(model => new URL(model.photo.imageUrl).origin))].sort();
+  const imageOrigins = [...new Set(data.models.filter(model => model.photo).map(model => new URL(model.photo.imageUrl).origin))].sort();
   const imagePolicy = html.match(/img-src ([^;]+);/u)[1].split(/\s+/).filter(value => value.startsWith("https:")).sort();
   assert.deepEqual(imagePolicy, imageOrigins);
   await mkdir(artifacts, { recursive: true });
@@ -205,7 +307,7 @@ test("the comparator preserves research, works responsively and loads all 26 off
     page.on("response", recordPhoto);
     await page.goto(url);
     await page.waitForFunction(() => !!window.RobotComparator);
-    assert.equal(await page.locator(".robot-card").count(), 26);
+    assert.equal(await page.locator(".robot-card").count(), 27);
     assert.ok(await page.locator("img[data-photo-model]").evaluateAll(images => images.every(image => image.loading === "lazy")));
     report.photos.desktop = await loadPhotos(page);
     page.off("response", recordPhoto);
@@ -345,8 +447,8 @@ test("the comparator preserves research, works responsively and loads all 26 off
     await offline.locator("img[data-photo-model]").evaluateAll(images => images.forEach(image => { image.loading = "eager"; }));
     await offline.waitForFunction(() => [...document.querySelectorAll(".photo-frame")].every(frame => frame.dataset.photoState === "error"));
     assert.equal(await offline.locator(".photo-status[role=img]").count(), 26);
-    assert.equal(await offline.evaluate(() => RobotComparator.getFiltered().length), 26);
-    assert.equal(await offline.evaluate(() => RobotComparator.getData().sources.length), 153);
+    assert.equal(await offline.evaluate(() => RobotComparator.getFiltered().length), 27);
+    assert.equal(await offline.evaluate(() => RobotComparator.getData().sources.length), 156);
     pass("Explicit photo failures without blocking offline comparison data");
 
     assert.deepEqual(pageErrors, []);

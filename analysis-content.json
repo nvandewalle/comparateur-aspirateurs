@@ -12,6 +12,17 @@
       "sources": ["rr-shop","rr-delivery","test-10r","be-edge","test-2pro","be-t90","test-t90-vw"]
     },
     {
+      "id": "dreame-499-update",
+      "title": "Ajout du 21 novembre : L50s Pro Ultra-A et L60 Ultra CE à 499 €",
+      "paragraphs": [
+        "La capture Amazon BE confirme deux offres à 499 €, dans le budget : L50s Pro Ultra-A (déjà présent, offre actualisée) et L60 Ultra CE (ajouté séparément). Livraison gratuite affichée sous conditions Prime : 25 novembre pour le L50s, 28–29 novembre pour le L60 CE. Le vendeur n'est pas visible ; la capture n'est pas une validation du panier. Les autres prix restent ceux du relevé du 15 novembre.",
+        "L50s Pro Ultra-A : bon candidat Dreame, mais pas mon premier choix pour vos sols durs. Le modèle standard est testé et bien équipé ; Frandroid lui attribue 8/10, tandis que Labo Maison relève des limites de CleanGenius sur huile / sirop. Ce ne sont pas des essais séparés de l'édition -A. Je ne paierais pas automatiquement 100 € de plus que le L40s à son prix archivé uniquement pour 30 000 Pa ou un numéro plus élevé.",
+        "L60 Ultra CE : intéressant sur la fiche, pas recommandé en priorité à ce stade. La référence RPL71FE0 annonce duo HyperStream, deux extensions, patins relevables de 10,5 mm et lavage des patins en station à 100 °C. La fiche secondaire exacte indique un LiDAR fixe, un robot de 97 mm et pas de RGB ni de vidéo distante. Certaines fiches L60 Ultra sans CE décrivent au contraire une caméra et une hauteur de 82 ou 89 mm : elles ne sont pas transposées.",
+        "Les 35 000 Pa du L60 CE ne démontrent pas un meilleur lavage. Aucun essai exact exploité ni support HA complet validé ne permet de le placer devant les finalistes plus étayés. Le dosage automatique, les dimensions installées et le matériel de l'édition CE restent à confirmer. Mon avis : garder Saros 10R / Edge 2 parmi les choix prioritaires, sous réserve de recontrôler leurs prix anciens ; envisager le CE seulement avec vendeur fiable et retour simple."
+      ],
+      "sources": ["be-l50s","be-l60ce","sheet-l60ce","it-l60ce","test-l50s","fr-test-dr-l50s","ha-dr-list","test-10r","be-edge"]
+    },
+    {
       "id": "market",
       "title": "Le marché de novembre 2026 : comparer les prix de transaction, pas les gammes",
       "paragraphs": [
@@ -87,7 +98,7 @@
       "paragraphs": [
         "Matter est un protocole applicatif sur IP, pas une radio concurrente du Wi-Fi. Un robot Matter sur Wi-Fi ne nécessite pas automatiquement un réseau Thread ni une passerelle Zigbee. Le Bluetooth peut servir à l'appairage, sans fournir une API Bluetooth de commande quotidienne.",
         "Il faut vérifier la disponibilité sur le firmware réellement livré et le support du contrôleur HA. Les pages S Pro, Curv 2 Flow et Curv 2 Pro consultées parlent encore d'une future mise à jour OTA : une promesse n'est pas considérée comme une fonction vérifiée. Pour d'autres modèles, la mention vient du fabricant ou d'un test ; cette provenance est explicitée.",
-        "Même quand Matter fonctionne, ne présumez pas récupérer les cartes détaillées, les routines du fabricant, tous les réglages de lavage ou l'ensemble des actions de station. Si votre exigence est « toutes les fonctions sans Internet », aucun des 26 modèles n'est certifié comme tel dans cette recherche. Le filtre correspondant ne fabrique donc pas un gagnant."
+        "Même quand Matter fonctionne, ne présumez pas récupérer les cartes détaillées, les routines du fabricant, tous les réglages de lavage ou l'ensemble des actions de station. Si votre exigence est « toutes les fonctions sans Internet », aucun des 27 modèles n'est certifié comme tel dans cette recherche. Le filtre correspondant ne fabrique donc pas un gagnant."
       ],
       "sources": ["ha-matter","ha-rr","rr-spro","rr-flow","rr-curvpro","test-e25","test-t90-vw"]
     },
@@ -145,7 +156,7 @@
       "id": "release-dates",
       "title": "Date de sortie : toujours préciser le marché et la provenance",
       "paragraphs": [
-        "Le mois et l'année sont ajoutés pour les 26 références, avec la provenance et le territoire lorsqu'il est connu. Les fiches Frandroid comportent un champ Date de sortie ; d'autres dates viennent du champ Erscheinungsdatum de SmarthomeAssistent ou d'articles annonçant explicitement la commercialisation. Le marché est indiqué comme non précisé lorsque la source ne le donne pas : écrire en allemand ne prouve pas une première vente allemande.",
+        "Le mois et l'année sont documentés pour les 26 références initiales, avec la provenance et le territoire lorsqu'il est connu. Pour le L60 Ultra CE ajouté le 21 novembre, seul 2026 est indiqué par une fiche secondaire : le mois reste non confirmé. Les fiches Frandroid comportent un champ Date de sortie ; d'autres dates viennent du champ Erscheinungsdatum de SmarthomeAssistent ou d'articles annonçant explicitement la commercialisation. Le marché est indiqué comme non précisé lorsque la source ne le donne pas : écrire en allemand ne prouve pas une première vente allemande.",
         "Une annonce de salon, un début de vente et la publication d'un test sont des événements distincts. Exemple : le X20 Max est donné sorti en décembre 2024, alors que le test Frandroid date d'octobre 2025. Pour le X10 Pro Omni, février 2024 correspond à la commercialisation américaine annoncée ; le premier mois de vente européen n'a pas été confirmé. Ce repère ne doit pas être présenté comme une disponibilité belge.",
         "Pour le QV 35A, mai 2025 désigne l'arrivée européenne rapportée par Notebookcheck, tandis qu'une autre fiche indique mars sans marché : les deux informations sont conservées dans la note de provenance. Un pack Kit, Set ou Complete peut aussi être référencé à une autre date que la génération du robot. Aucune de ces dates ne garantit la durée restante des mises à jour ou du support cloud."
       ],
@@ -155,7 +166,7 @@
       "id": "frandroid",
       "title": "Frandroid : 12 tests exacts repérés, avec note et date originale",
       "paragraphs": [
-        "Les cinq pages du catalogue de tests et les catalogues des six marques ont été parcourus. Douze références ont un test Frandroid identifié ; pour les quatorze autres, le comparateur affiche Test exact non repéré au 15/11/2026, jamais une note zéro. Ce résultat de recherche n'est pas une garantie qu'aucun article n'existe en dehors des index consultés.",
+        "Les cinq pages du catalogue de tests et les catalogues des six marques ont été parcourus lors de la recherche initiale. Douze références ont un test Frandroid identifié ; pour les quatorze autres références initiales, le comparateur affiche Test exact non repéré au 15/11/2026, jamais une note zéro. Le L60 Ultra CE ajouté a fait l'objet d'une recherche ciblée le 21/11/2026, sans test exact repéré. Le test L50s porte sur le modèle standard, pas un examen séparé de l'édition -A. Ce résultat de recherche n'est pas une garantie qu'aucun article n'existe en dehors des index consultés.",
         "Chaque test est résumé avec ses points forts et ses limites, sa note sur 10, sa date de publication originale et, lorsqu'elle diffère, sa date de mise à jour. Exemple : le test du Saros 10R est du 30 mars 2025, mis à jour le 27 juin ; celui du Curv 2 Flow est du 20 mars 2026, mis à jour le 27 août. Une date de mise à jour ne rajeunit pas artificiellement un essai.",
         "Les notes restent celles d'une rédaction dans le contexte et au prix de son test : elles ne sont ni une mesure universelle d'efficacité ni une moyenne avec les autres laboratoires. Elles ne sont pas ajoutées à l'indice d'équipement. Le test du X20 Max traite aussi du X20 Plus, ce qui est signalé. Les Gen 2/Gen 3, L40/L40s, L50 AE/L50s, S70/S70 Ultra, Z60 SA/Complete et T90 Pro/Max Pro restent distincts."
       ],
@@ -165,8 +176,8 @@
       "id": "method",
       "title": "Méthode, limites et fraîcheur des données",
       "paragraphs": [
-        "Recherche arrêtée au 15 novembre 2026. Les caractéristiques ont été recoupées autant que possible entre fabricant, notice ou présentation et essai indépendant. La base conserve les données absentes ou contradictoires au lieu d'hériter d'un modèle voisin. Une présentation de produit sans essai n'est pas étiquetée « testé ». Les sites bloqués n'ont pas donné lieu à des prix inventés.",
-        "Le périmètre couvre 26 modèles de 6 marques, avec des modèles de déstockage et des versions récentes, plus une liste d'appareils repérés mais insuffisamment recoupés. Ce n'est ni un catalogue exhaustif de toutes les marques ni un essai à domicile. Les sources commerciales et les médias peuvent contenir des liens d'affiliation ; nos liens directs n'ajoutent pas de code affilié.",
+        "Recherche initiale arrêtée au 15 novembre 2026, complétée le 21 novembre uniquement pour L50s Pro Ultra-A et L60 Ultra CE. Les prix de ce complément viennent de la capture fournie ; les caractéristiques CE sont qualifiées par les fiches exactes indexées, sans notice constructeur recoupée. La base conserve les données absentes ou contradictoires au lieu d'hériter d'un modèle voisin. Une présentation de produit sans essai n'est pas étiquetée « testé ». Les sites bloqués n'ont pas donné lieu à des prix inventés.",
+        "Le périmètre couvre 27 modèles de 6 marques, avec des modèles de déstockage et des versions récentes, plus une liste d'appareils repérés mais insuffisamment recoupés. Ce n'est ni un catalogue exhaustif de toutes les marques ni un essai à domicile. Les sources commerciales et les médias peuvent contenir des liens d'affiliation ; nos liens directs n'ajoutent pas de code affilié.",
         "L'indice personnalisable est un indice d'équipement documenté, pas une note de nettoyage : mécanisme de lavage, extensions, capteurs, anti-emmêlement, automatisation, parcours HA, hauteur utile et prix. Les Pa, notes clients, notes Frandroid et résultats de laboratoires hétérogènes ne sont pas additionnés. La vidéo distante et la date de sortie ne rapportent pas de points supplémentaires. Une donnée inconnue n'apporte pas de points et la couverture documentaire reste visible. Aucun indice ne remplace la lecture des réserves de fiabilité et de logiciel."
       ],
       "sources": ["ha-rr","ha-dr-list","test-l50s","test-flow","test-2pro"]

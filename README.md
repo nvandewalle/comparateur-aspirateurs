@@ -4,6 +4,8 @@
 
 Comparateur interactif et sourcé d'aspirateurs robots laveurs pour la Belgique. La recherche de cette première publication est datée du **15 novembre 2026** : les prix sont des observations archivées, pas des prix en temps réel. L'analyse est consultable dans l'application et exportable en Markdown.
 
+Le **21 novembre 2026**, l'offre **L50s Pro Ultra-A** a été actualisée et le **L60 Ultra CE** ajouté, chacun à **499 €** sur la capture Amazon BE fournie. Le comparateur couvre désormais **27 modèles**. Les autres prix restent ceux du relevé initial. Les essais du L50s standard ne certifient pas séparément l'édition -A ; la fiche secondaire CE, ses limites et l'absence d'essai exact sont distinguées des autres L60. Aucune photo officielle exacte du CE n'a été recoupée : son emplacement indique explicitement la photo manquante.
+
 ## Mise à jour automatique
 
 Chaque push sur `main` déclenche le [workflow GitHub Pages](.github/workflows/deploy-pages.yml), y compris après une modification des données ou du modèle HTML. Il exécute le générateur et ses validations, renomme le HTML produit en `_site/index.html`, puis publie uniquement ce site généré sur GitHub Pages. Le workflow peut aussi être relancé manuellement depuis l'onglet **Actions**, sur `main`.

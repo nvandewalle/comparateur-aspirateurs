@@ -94,6 +94,14 @@
       "frandroid": {"status":"tested","score":8,"published":"2026-09-13","updated":"2026-09-13","source":"fr-test-dr-l50s","scope":"Dreame L50s Pro Ultra exact, pas L50 Ultra AE.","summary":"Aspiration, autonomie et entretien automatisé convaincants, avec de nombreux réglages. Frandroid est moins convaincu par la navigation et la détection des taches ; la tourelle fixe limite aussi l'accès sous les meubles bas."}
     },
     {
+      "id": "dr-l60ce",
+      "checkedAt": "2026-11-21",
+      "release": {"month":null,"market":"Non confirmé pour la Belgique","basis":"Année indiquée par une fiche secondaire","note":"La fiche CE indique 2026, sans mois de commercialisation recoupé. L'offre observée le 21 novembre ne constitue pas une date de lancement ; aucune date du L60 Ultra standard n'est transférée.","sources":["sheet-l60ce","be-l60ce"]},
+      "cameraInfo": {"value":false,"kind":"LiDAR fixe et lumière structurée, sans RGB selon la fiche CE","note":"Vacuum Spain indique explicitement l'absence de caméra IA pour le L60 Ultra CE / RPL71FE0. Source secondaire ; fiche constructeur exacte non recoupée. La mention 3DAdapt du marchand n'est pas une caméra.","sources":["sheet-l60ce","it-l60ce"]},
+      "remoteCamera": {"available":false,"note":"Accès caméra indiqué absent par la fiche secondaire CE ; ne pas reprendre la vidéosurveillance d'une autre variante L60 Ultra.","sources":["sheet-l60ce"]},
+      "frandroid": {"status":"not-found","note":"Recherche ciblée du 21/11/2026 : aucun test Frandroid du L60 Ultra CE exact repéré. Le bon plan L60 Ultra sans CE et les tests d'autres variantes ne sont pas des essais de ce modèle."}
+    },
+    {
       "id": "dr-aqua",
       "release": {"month":"2025-09","market":"Marché non précisé","basis":"Fiche Frandroid","note":"Le champ « Date de sortie » indique le 5 septembre 2025 pour l'Aqua10 Ultra Roller Complete.","sources":["fr-sheet-dr-aqua"]},
       "cameraInfo": {"value":true,"kind":"RGB IA frontale, éclairage et capteurs 3D","note":"Reconnaissance visuelle et détection d'obstacles décrites dans le test exact.","sources":["fr-test-dr-aqua","dr-aqua"]},
